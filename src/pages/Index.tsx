@@ -43,6 +43,26 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-secondary flex flex-col">
+      <nav className="bg-primary text-secondary py-4 sticky top-0 z-50">
+        <div className="container flex items-center justify-between">
+          <a href="/" className="text-xl font-bold font-general-sans">Holiday Camps</a>
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Home</a>
+            <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Camps</a>
+            <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">About</a>
+            <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Contact</a>
+            <button className="px-4 py-2 bg-accent text-white rounded-full hover:bg-accent/90 transition-colors">
+              Sign Up
+            </button>
+          </div>
+          <button className="md:hidden text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
       <header className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-primary">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/70" />
         <div className="container relative z-10 text-center">
