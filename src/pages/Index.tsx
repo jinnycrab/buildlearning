@@ -1,7 +1,8 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Sparkles, Calendar, Users, GraduationCap, Mail, Phone, MapPin } from "lucide-react";
+import { removeBackground, loadImage } from "../utils/imageProcessing";
 
 const camps = [
   {
@@ -37,10 +38,42 @@ const categories = ["all", "coding", "arts", "cooking"];
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [processedLogoUrl, setProcessedLogoUrl] = useState<string | null>(null);
 
   const filteredCamps = camps.filter(
     (camp) => selectedCategory === "all" || camp.category === selectedCategory
   );
+
+  useEffect(() => {
+    const processLogo = async () => {
+      try {
+        // Fetch the original logo
+        const response = await fetch("/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png");
+        const blob = await response.blob();
+        
+        // Load the image
+        const img = await loadImage(blob);
+        
+        // Remove the background
+        const processedBlob = await removeBackground(img);
+        
+        // Create URL for the processed image
+        const processedUrl = URL.createObjectURL(processedBlob);
+        setProcessedLogoUrl(processedUrl);
+      } catch (error) {
+        console.error("Error processing logo:", error);
+      }
+    };
+
+    processLogo();
+
+    // Cleanup function
+    return () => {
+      if (processedLogoUrl) {
+        URL.revokeObjectURL(processedLogoUrl);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-secondary flex flex-col">
@@ -48,7 +81,7 @@ const Index = () => {
         <div className="container flex items-center justify-between">
           <a href="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png" 
+              src={processedLogoUrl || "/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png"}
               alt="Build Logo" 
               className="h-8 w-auto"
             />
