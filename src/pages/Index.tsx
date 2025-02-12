@@ -1,12 +1,158 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Sparkles, Calendar, Users, GraduationCap } from "lucide-react";
+
+const camps = [
+  {
+    id: 1,
+    title: "Winter Wonderland Coding Camp",
+    description: "Learn to code while celebrating the winter season!",
+    duration: "2 weeks",
+    capacity: "15 students",
+    price: "$299",
+    category: "coding",
+  },
+  {
+    id: 2,
+    title: "Holiday Arts & Crafts",
+    description: "Create beautiful holiday decorations and gifts",
+    duration: "1 week",
+    capacity: "12 students",
+    price: "$199",
+    category: "arts",
+  },
+  {
+    id: 3,
+    title: "Festive Cooking Adventure",
+    description: "Master holiday recipes and baking techniques",
+    duration: "3 days",
+    capacity: "10 students",
+    price: "$149",
+    category: "cooking",
+  },
+];
+
+const categories = ["all", "coding", "arts", "cooking"];
 
 const Index = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const filteredCamps = camps.filter(
+    (camp) => selectedCategory === "all" || camp.category === selectedCategory
+  );
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-secondary">
+      <header className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/70" />
+        <div className="container relative z-10 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl md:text-7xl font-bold mb-6 text-secondary font-general-sans"
+          >
+            Holiday Camp Courses
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl md:text-2xl text-secondary/90 font-inter max-w-2xl mx-auto"
+          >
+            Join our immersive in-person holiday camps and create unforgettable memories
+          </motion.p>
+        </div>
+      </header>
+
+      <main className="container py-16">
+        <section className="mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="p-8 rounded-2xl bg-white shadow-sm"
+            >
+              <Calendar className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-2 font-general-sans">Flexible Schedule</h3>
+              <p className="text-muted-foreground">Choose from various camp durations that fit your schedule</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="p-8 rounded-2xl bg-white shadow-sm"
+            >
+              <Users className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-2 font-general-sans">Small Groups</h3>
+              <p className="text-muted-foreground">Personal attention in small, focused learning groups</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="p-8 rounded-2xl bg-white shadow-sm"
+            >
+              <GraduationCap className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-semibold mb-2 font-general-sans">Expert Instructors</h3>
+              <p className="text-muted-foreground">Learn from passionate and experienced teachers</p>
+            </motion.div>
+          </div>
+        </section>
+
+        <section>
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold font-general-sans">Available Camps</h2>
+            <div className="flex gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    selectedCategory === category
+                      ? "bg-accent text-white"
+                      : "bg-white text-primary hover:bg-accent/10"
+                  }`}
+                >
+                  {category.charAt(0).toUpperCase() + category.slice(1)}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredCamps.map((camp) => (
+              <motion.div
+                key={camp.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                      {camp.category.charAt(0).toUpperCase() + camp.category.slice(1)}
+                    </span>
+                    <Sparkles className="w-5 h-5 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 font-general-sans">{camp.title}</h3>
+                  <p className="text-muted-foreground mb-4">{camp.description}</p>
+                  <div className="flex items-center justify-between pt-4 border-t">
+                    <div className="flex items-center gap-4">
+                      <span className="text-sm text-muted-foreground">{camp.duration}</span>
+                      <span className="text-sm text-muted-foreground">{camp.capacity}</span>
+                    </div>
+                    <span className="text-lg font-semibold text-primary">{camp.price}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 };
