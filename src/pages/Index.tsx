@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Sparkles, Calendar, Users, GraduationCap } from "lucide-react";
+import { Sparkles, Calendar, Users, GraduationCap, Mail, Phone, MapPin } from "lucide-react";
 
 const camps = [
   {
@@ -43,7 +42,7 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-secondary">
+    <div className="min-h-screen bg-secondary flex flex-col">
       <header className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-primary">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/70" />
         <div className="container relative z-10 text-center">
@@ -66,7 +65,7 @@ const Index = () => {
         </div>
       </header>
 
-      <main className="container py-16">
+      <main className="container py-16 flex-1">
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
@@ -153,6 +152,56 @@ const Index = () => {
           </div>
         </section>
       </main>
+
+      <footer className="bg-primary text-secondary py-12">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-4 font-general-sans">About Us</h3>
+              <p className="text-secondary/80 leading-relaxed">
+                We provide engaging holiday-themed camps that combine learning with festive fun. Our mission is to create unforgettable experiences for every participant.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4 font-general-sans">Contact Info</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-accent" />
+                  <span className="text-secondary/80">contact@holidaycamps.com</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Phone className="w-5 h-5 text-accent" />
+                  <span className="text-secondary/80">(555) 123-4567</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-accent" />
+                  <span className="text-secondary/80">123 Camp Street, Holiday Valley</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4 font-general-sans">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">FAQ</a>
+                </li>
+                <li>
+                  <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-secondary/10 mt-8 pt-8 text-center">
+            <p className="text-secondary/60">© {new Date().getFullYear()} Holiday Camp Courses. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
