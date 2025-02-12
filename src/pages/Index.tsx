@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles, Calendar, Users, GraduationCap, Mail, Phone, MapPin } from "lucide-react";
@@ -45,7 +46,13 @@ const Index = () => {
     <div className="min-h-screen bg-secondary flex flex-col">
       <nav className="bg-primary text-secondary py-4 sticky top-0 z-50">
         <div className="container flex items-center justify-between">
-          <a href="/" className="text-xl font-bold font-general-sans">Holiday Camps</a>
+          <a href="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png" 
+              alt="Build Logo" 
+              className="h-8 w-auto"
+            />
+          </a>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Home</a>
             <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Camps</a>
