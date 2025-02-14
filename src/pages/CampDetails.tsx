@@ -1,6 +1,6 @@
 
-import { useParams } from "react-router-dom";
-import { Calendar as CalendarIcon } from "lucide-react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Calendar as CalendarIcon, Minus, Plus } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import { useState } from "react";
 import {
@@ -46,11 +46,18 @@ const camps = [
   },
 ];
 
-interface SignupFormData {
+interface StudentInfo {
   name: string;
-  email: string;
-  phone: string;
-  specialRequirements: string;
+  age: string;
+}
+
+interface SignupFormData {
+  parentName: string;
+  parentEmail: string;
+  parentPhone: string;
+  numberOfStudents: number;
+  students: StudentInfo[];
+  additionalComments: string;
 }
 
 const campDates = {
@@ -61,15 +68,37 @@ const campDates = {
 
 const CampDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { toast } = useToast();
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
-  const form = useForm<SignupFormData>();
+  const [numberOfStudents, setNumberOfStudents] = useState(1);
+  const form = useForm<SignupFormData>({
+    defaultValues: {
+      numberOfStudents: 1,
+      students: [{ name: "", age: "" }],
+    },
+  });
 
   const camp = camps.find((c) => c.id === Number(id));
   
   if (!camp) {
     return <div className="container py-16">Camp not found</div>;
   }
+
+  const basePrice = parseInt(camp.price.replace("$", ""));
+  const totalPrice = basePrice * numberOfStudents;
+
+  const handleStudentCountChange = (increment: boolean) => {
+    const newCount = increment ? numberOfStudents + 1 : Math.max(1, numberOfStudents - 1);
+    setNumberOfStudents(newCount);
+    
+    const currentStudents = form.getValues("students");
+    if (increment) {
+      form.setValue("students", [...currentStudents, { name: "", age: "" }]);
+    } else if (currentStudents.length > 1) {
+      form.setValue("students", currentStudents.slice(0, -1));
+    }
+  };
 
   const handleSubmit = (data: SignupFormData) => {
     if (!selectedDate) {
@@ -81,12 +110,16 @@ const CampDetails = () => {
       return;
     }
 
-    toast({
-      title: "Registration Successful!",
-      description: "We'll contact you soon with further details.",
+    // Navigate to payment page with form data
+    navigate("/payment", {
+      state: {
+        formData: data,
+        campId: id,
+        startDate: selectedDate,
+        totalPrice,
+        campName: camp.title
+      }
     });
-    
-    console.log("Form submitted:", { ...data, startDate: selectedDate });
   };
 
   return (
@@ -126,8 +159,12 @@ const CampDetails = () => {
                   <span className="font-medium">{camp.capacity}</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-muted-foreground">Price:</span>
+                  <span className="text-muted-foreground">Price per student:</span>
                   <span className="font-medium">{camp.price}</span>
+                </li>
+                <li className="flex justify-between border-t pt-3">
+                  <span className="text-primary font-semibold">Total Price:</span>
+                  <span className="font-bold text-primary">${totalPrice}</span>
                 </li>
               </ul>
             </div>
@@ -139,12 +176,12 @@ const CampDetails = () => {
               <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
                 <FormField
                   control={form.control}
-                  name="name"
+                  name="parentName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel>Parent's Full Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Enter your full name" {...field} />
+                        <Input placeholder="Enter parent's full name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -153,12 +190,12 @@ const CampDetails = () => {
 
                 <FormField
                   control={form.control}
-                  name="email"
+                  name="parentEmail"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>Parent's Email</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="Enter your email" {...field} />
+                        <Input type="email" placeholder="Enter parent's email" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -167,27 +204,82 @@ const CampDetails = () => {
 
                 <FormField
                   control={form.control}
-                  name="phone"
+                  name="parentPhone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone Number</FormLabel>
+                      <FormLabel>Parent's Phone Number</FormLabel>
                       <FormControl>
-                        <Input placeholder="Enter your phone number" {...field} />
+                        <Input placeholder="Enter parent's phone number" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
 
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <FormLabel>Number of Students</FormLabel>
+                    <div className="flex items-center gap-4">
+                      <button
+                        type="button"
+                        onClick={() => handleStudentCountChange(false)}
+                        className="p-1 rounded-full hover:bg-accent/10"
+                      >
+                        <Minus className="w-4 h-4" />
+                      </button>
+                      <span className="font-medium">{numberOfStudents}</span>
+                      <button
+                        type="button"
+                        onClick={() => handleStudentCountChange(true)}
+                        className="p-1 rounded-full hover:bg-accent/10"
+                      >
+                        <Plus className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {Array.from({ length: numberOfStudents }).map((_, index) => (
+                    <div key={index} className="space-y-4 pt-4 border-t">
+                      <h4 className="font-medium">Student {index + 1}</h4>
+                      <FormField
+                        control={form.control}
+                        name={`students.${index}.name`}
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Student's Name</FormLabel>
+                            <FormControl>
+                              <Input placeholder="Enter student's name" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name={`students.${index}.age`}
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Student's Age</FormLabel>
+                            <FormControl>
+                              <Input type="number" placeholder="Enter student's age" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                  ))}
+                </div>
+
                 <FormField
                   control={form.control}
-                  name="specialRequirements"
+                  name="additionalComments"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Special Requirements</FormLabel>
+                      <FormLabel>Additional Comments</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="Any dietary requirements or other special needs?"
+                          placeholder="Any additional information you'd like to share?"
                           {...field}
                         />
                       </FormControl>
@@ -200,7 +292,7 @@ const CampDetails = () => {
                   type="submit"
                   className="w-full px-4 py-3 bg-accent text-white rounded-full hover:bg-accent/90 transition-colors font-medium"
                 >
-                  Register for Camp
+                  Continue to Payment - ${totalPrice}
                 </button>
               </form>
             </Form>
