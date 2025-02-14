@@ -14,7 +14,37 @@ import {
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+
+const camps = [
+  {
+    id: 1,
+    title: "Winter Wonderland Coding Camp",
+    description: "Learn to code while celebrating the winter season!",
+    duration: "2 weeks",
+    capacity: "15 students",
+    price: "$299",
+    category: "coding",
+  },
+  {
+    id: 2,
+    title: "Holiday Arts & Crafts",
+    description: "Create beautiful holiday decorations and gifts",
+    duration: "1 week",
+    capacity: "12 students",
+    price: "$199",
+    category: "arts",
+  },
+  {
+    id: 3,
+    title: "Festive Cooking Adventure",
+    description: "Master holiday recipes and baking techniques",
+    duration: "3 days",
+    capacity: "10 students",
+    price: "$149",
+    category: "cooking",
+  },
+];
 
 interface SignupFormData {
   name: string;
