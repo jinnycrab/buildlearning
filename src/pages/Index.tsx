@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Code, Sparkles, Users } from "lucide-react";
+import { Code, Sparkles, Users, BookOpen, FileText, Workflow, Info } from "lucide-react";
 
 const camps = [
   {
@@ -69,16 +70,40 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-secondary flex flex-col">
-      <nav className="border-b bg-white">
+      <nav className="border-b bg-white sticky top-0 z-50">
         <div className="container flex items-center justify-between py-4">
-          <h1 className="text-2xl font-bold font-general-sans">Holiday Camps</h1>
-          <div className="flex items-center gap-4">
-            <button className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium hover:bg-accent/20 transition-colors">
-              Sign In
-            </button>
-            <button className="px-4 py-2 bg-accent text-white rounded-full text-sm font-medium hover:bg-accent/90 transition-colors">
-              Register
-            </button>
+          <Link to="/" className="text-2xl font-bold font-general-sans">
+            Holiday Camps
+          </Link>
+          <div className="flex items-center gap-6">
+            <Link 
+              to="/about" 
+              className="text-muted-foreground hover:text-accent flex items-center gap-2"
+            >
+              <Info className="w-4 h-4" />
+              About
+            </Link>
+            <Link 
+              to="/process" 
+              className="text-muted-foreground hover:text-accent flex items-center gap-2"
+            >
+              <Workflow className="w-4 h-4" />
+              The Build Process™
+            </Link>
+            <Link 
+              to="/blog" 
+              className="text-muted-foreground hover:text-accent flex items-center gap-2"
+            >
+              <FileText className="w-4 h-4" />
+              Blog
+            </Link>
+            <Link 
+              to="/resources" 
+              className="text-muted-foreground hover:text-accent flex items-center gap-2"
+            >
+              <BookOpen className="w-4 h-4" />
+              Resources
+            </Link>
           </div>
         </div>
       </nav>
@@ -234,8 +259,80 @@ const Index = () => {
       </main>
 
       <footer className="border-t bg-white">
-        <div className="container py-8 text-center text-muted-foreground">
-          <p>© 2024 Holiday Camps. All rights reserved.</p>
+        <div className="container py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="font-bold text-lg mb-4 font-general-sans">Holiday Camps</h3>
+              <p className="text-muted-foreground">
+                Empowering young minds to create meaningful solutions through technology and innovation.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 font-general-sans">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/about" className="text-muted-foreground hover:text-accent">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/process" className="text-muted-foreground hover:text-accent">
+                    The Build Process™
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blog" className="text-muted-foreground hover:text-accent">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/resources" className="text-muted-foreground hover:text-accent">
+                    Resources
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 font-general-sans">Categories</h3>
+              <ul className="space-y-2">
+                <li>
+                  <button 
+                    onClick={() => setCategoryFilter("coding")}
+                    className="text-muted-foreground hover:text-accent"
+                  >
+                    Coding Camps
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setCategoryFilter("arts")}
+                    className="text-muted-foreground hover:text-accent"
+                  >
+                    Arts & Crafts
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setCategoryFilter("tech")}
+                    className="text-muted-foreground hover:text-accent"
+                  >
+                    Tech Workshops
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 font-general-sans">Contact</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>Email: info@holidaycamps.com</li>
+                <li>Phone: (555) 123-4567</li>
+                <li>Address: 123 Innovation Way</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
+            <p>© 2024 Holiday Camps. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
