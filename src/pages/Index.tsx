@@ -1,8 +1,6 @@
-
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Sparkles, Calendar, Users, GraduationCap, Mail, Phone, MapPin } from "lucide-react";
-import { removeBackground, loadImage } from "../utils/imageProcessing";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Code, Sparkles, Users } from "lucide-react";
 
 const camps = [
   {
@@ -32,235 +30,212 @@ const camps = [
     price: "$149",
     category: "cooking",
   },
+  {
+    id: 4,
+    title: "Summer Explorers Camp",
+    description: "Discover nature and outdoor adventures",
+    duration: "5 days",
+    capacity: "20 students",
+    price: "$249",
+    category: "outdoor",
+  },
+  {
+    id: 5,
+    title: "Robotics and AI Workshop",
+    description: "Build and program your own robots!",
+    duration: "4 days",
+    capacity: "12 students",
+    price: "$349",
+    category: "tech",
+  },
+  {
+    id: 6,
+    title: "Creative Writing Retreat",
+    description: "Unleash your inner author and write amazing stories",
+    duration: "1 week",
+    capacity: "15 students",
+    price: "$229",
+    category: "writing",
+  },
 ];
 
-const categories = ["all", "coding", "arts", "cooking"];
-
 const Index = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [processedLogoUrl, setProcessedLogoUrl] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState("all");
 
-  const filteredCamps = camps.filter(
-    (camp) => selectedCategory === "all" || camp.category === selectedCategory
-  );
-
-  useEffect(() => {
-    const processLogo = async () => {
-      try {
-        // Fetch the original logo
-        const response = await fetch("/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png");
-        const blob = await response.blob();
-        
-        // Load the image
-        const img = await loadImage(blob);
-        
-        // Remove the background
-        const processedBlob = await removeBackground(img);
-        
-        // Create URL for the processed image
-        const processedUrl = URL.createObjectURL(processedBlob);
-        setProcessedLogoUrl(processedUrl);
-      } catch (error) {
-        console.error("Error processing logo:", error);
-      }
-    };
-
-    processLogo();
-
-    // Cleanup function
-    return () => {
-      if (processedLogoUrl) {
-        URL.revokeObjectURL(processedLogoUrl);
-      }
-    };
-  }, []);
+  const filteredCamps =
+    categoryFilter === "all"
+      ? camps
+      : camps.filter((camp) => camp.category === categoryFilter);
 
   return (
     <div className="min-h-screen bg-secondary flex flex-col">
-      <nav className="bg-primary text-secondary py-4 sticky top-0 z-50">
-        <div className="container flex items-center justify-between">
-          <a href="/" className="flex items-center">
-            <img 
-              src={processedLogoUrl || "/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png"}
-              alt="Build Logo" 
-              className="h-8 w-auto"
-            />
-          </a>
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Home</a>
-            <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Camps</a>
-            <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">About</a>
-            <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Contact</a>
-            <button className="px-4 py-2 bg-accent text-white rounded-full hover:bg-accent/90 transition-colors">
-              Sign Up
+      <nav className="border-b bg-white">
+        <div className="container flex items-center justify-between py-4">
+          <h1 className="text-2xl font-bold font-general-sans">Holiday Camps</h1>
+          <div className="flex items-center gap-4">
+            <button className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium hover:bg-accent/20 transition-colors">
+              Sign In
+            </button>
+            <button className="px-4 py-2 bg-accent text-white rounded-full text-sm font-medium hover:bg-accent/90 transition-colors">
+              Register
             </button>
           </div>
-          <button className="md:hidden text-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
         </div>
       </nav>
 
-      <header className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-primary">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/70" />
-        <div className="container relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-secondary font-general-sans"
-          >
-            Holiday Camp Courses
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-secondary/90 font-inter max-w-2xl mx-auto"
-          >
-            Join our immersive in-person holiday camps and create unforgettable memories
-          </motion.p>
-        </div>
-      </header>
-
       <main className="container py-16 flex-1">
-        <section className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="p-8 rounded-2xl bg-white shadow-sm"
-            >
-              <Calendar className="w-12 h-12 text-accent mb-4" />
-              <h3 className="text-xl font-semibold mb-2 font-general-sans">Flexible Schedule</h3>
-              <p className="text-muted-foreground">Choose from various camp durations that fit your schedule</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="p-8 rounded-2xl bg-white shadow-sm"
-            >
-              <Users className="w-12 h-12 text-accent mb-4" />
-              <h3 className="text-xl font-semibold mb-2 font-general-sans">Small Groups</h3>
-              <p className="text-muted-foreground">Personal attention in small, focused learning groups</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="p-8 rounded-2xl bg-white shadow-sm"
-            >
-              <GraduationCap className="w-12 h-12 text-accent mb-4" />
-              <h3 className="text-xl font-semibold mb-2 font-general-sans">Expert Instructors</h3>
-              <p className="text-muted-foreground">Learn from passionate and experienced teachers</p>
-            </motion.div>
+        <section className="text-center max-w-3xl mx-auto mb-16">
+          <h1 className="text-5xl font-bold mb-6 font-general-sans leading-tight">
+            Develop Solutions for Real World Problems
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            Join our immersive camps where you'll learn to create meaningful projects, 
+            build your portfolio, and prepare for a future in technology and innovation.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <button className="px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors">
+              Explore Camps
+            </button>
+            <button className="px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors">
+              View Student Projects
+            </button>
+          </div>
+        </section>
+
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white rounded-2xl p-6 text-center">
+            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Sparkles className="w-6 h-6 text-accent" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 font-general-sans">Real Projects</h3>
+            <p className="text-muted-foreground">
+              Work on actual problems and create solutions that matter in the real world.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl p-6 text-center">
+            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Code className="w-6 h-6 text-accent" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 font-general-sans">Build Your Portfolio</h3>
+            <p className="text-muted-foreground">
+              Create impressive projects that showcase your skills to future opportunities.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl p-6 text-center">
+            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Users className="w-6 h-6 text-accent" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 font-general-sans">Expert Mentorship</h3>
+            <p className="text-muted-foreground">
+              Learn from industry professionals who guide you through your learning journey.
+            </p>
           </div>
         </section>
 
         <section>
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold font-general-sans">Available Camps</h2>
-            <div className="flex gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    selectedCategory === category
-                      ? "bg-accent text-white"
-                      : "bg-white text-primary hover:bg-accent/10"
-                  }`}
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-4 font-general-sans">Explore Our Camps</h2>
+            <div className="flex gap-4 overflow-x-auto mb-4">
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  categoryFilter === "all"
+                    ? "bg-accent text-white hover:bg-accent/90"
+                    : "bg-accent/10 text-accent hover:bg-accent/20"
+                }`}
+                onClick={() => setCategoryFilter("all")}
+              >
+                All Categories
+              </button>
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  categoryFilter === "coding"
+                    ? "bg-accent text-white hover:bg-accent/90"
+                    : "bg-accent/10 text-accent hover:bg-accent/20"
+                }`}
+                onClick={() => setCategoryFilter("coding")}
+              >
+                Coding
+              </button>
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  categoryFilter === "arts"
+                    ? "bg-accent text-white hover:bg-accent/90"
+                    : "bg-accent/10 text-accent hover:bg-accent/20"
+                }`}
+                onClick={() => setCategoryFilter("arts")}
+              >
+                Arts & Crafts
+              </button>
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  categoryFilter === "cooking"
+                    ? "bg-accent text-white hover:bg-accent/90"
+                    : "bg-accent/10 text-accent hover:bg-accent/20"
+                }`}
+                onClick={() => setCategoryFilter("cooking")}
+              >
+                Cooking
+              </button>
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  categoryFilter === "outdoor"
+                    ? "bg-accent text-white hover:bg-accent/90"
+                    : "bg-accent/10 text-accent hover:bg-accent/20"
+                }`}
+                onClick={() => setCategoryFilter("outdoor")}
+              >
+                Outdoor
+              </button>
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  categoryFilter === "tech"
+                    ? "bg-accent text-white hover:bg-accent/90"
+                    : "bg-accent/10 text-accent hover:bg-accent/20"
+                }`}
+                onClick={() => setCategoryFilter("tech")}
+              >
+                Tech
+              </button>
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  categoryFilter === "writing"
+                    ? "bg-accent text-white hover:bg-accent/90"
+                    : "bg-accent/10 text-accent hover:bg-accent/20"
+                }`}
+                onClick={() => setCategoryFilter("writing")}
+              >
+                Writing
+              </button>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredCamps.map((camp) => (
+                <Link
+                  to={`/camp/${camp.id}`}
+                  key={camp.id}
+                  className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
                 >
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </button>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 font-general-sans">
+                      {camp.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-4">{camp.description}</p>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">
+                        Duration: {camp.duration}
+                      </span>
+                      <span className="font-medium">{camp.price}</span>
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCamps.map((camp) => (
-              <motion.div
-                key={camp.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => window.location.href = `/camp/${camp.id}`}
-              >
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                      {camp.category.charAt(0).toUpperCase() + camp.category.slice(1)}
-                    </span>
-                    <Sparkles className="w-5 h-5 text-accent" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 font-general-sans">{camp.title}</h3>
-                  <p className="text-muted-foreground mb-4">{camp.description}</p>
-                  <div className="flex items-center justify-between pt-4 border-t">
-                    <div className="flex items-center gap-4">
-                      <span className="text-sm text-muted-foreground">{camp.duration}</span>
-                      <span className="text-sm text-muted-foreground">{camp.capacity}</span>
-                    </div>
-                    <span className="text-lg font-semibold text-primary">{camp.price}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </section>
       </main>
 
-      <footer className="bg-primary text-secondary py-12">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 font-general-sans">About Us</h3>
-              <p className="text-secondary/80 leading-relaxed">
-                We provide engaging holiday-themed camps that combine learning with festive fun. Our mission is to create unforgettable experiences for every participant.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 font-general-sans">Contact Info</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2">
-                  <Mail className="w-5 h-5 text-accent" />
-                  <span className="text-secondary/80">contact@holidaycamps.com</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="w-5 h-5 text-accent" />
-                  <span className="text-secondary/80">(555) 123-4567</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-accent" />
-                  <span className="text-secondary/80">123 Camp Street, Holiday Valley</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 font-general-sans">Quick Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Terms & Conditions</a>
-                </li>
-                <li>
-                  <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">FAQ</a>
-                </li>
-                <li>
-                  <a href="#" className="text-secondary/80 hover:text-secondary transition-colors">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-secondary/10 mt-8 pt-8 text-center">
-            <p className="text-secondary/60">© {new Date().getFullYear()} Holiday Camp Courses. All rights reserved.</p>
-          </div>
+      <footer className="border-t bg-white">
+        <div className="container py-8 text-center text-muted-foreground">
+          <p>© 2024 Holiday Camps. All rights reserved.</p>
         </div>
       </footer>
     </div>
