@@ -1,6 +1,8 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Code, Sparkles, Users, BookOpen, FileText, Workflow, Info } from "lucide-react";
+import AnimatedWords from "../components/AnimatedWords";
 
 const camps = [
   {
@@ -74,7 +76,7 @@ const Index = () => {
       <main className="container py-16 flex-1">
         <section className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-5xl font-bold mb-6 font-general-sans leading-tight">
-            Develop Solutions for Real World Problems
+            Innovate solutions for <AnimatedWords />
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Join our immersive camps where you'll learn to create meaningful projects, 
