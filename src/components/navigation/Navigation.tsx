@@ -1,13 +1,14 @@
 
 import { Link } from "react-router-dom";
 import { Info, Workflow, FileText, BookOpen } from "lucide-react";
+import logo from "Untitled design.svg"; //
 
 const Navigation = () => {
   return (
     <nav className="border-b bg-white sticky top-0 z-50">
       <div className="container flex items-center justify-between py-4">
-        <Link to="/" className="text-2xl font-bold font-general-sans">
-          Build Learning Group
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Build Learning Group Logo" className="h-10" /> {/* Adjust height as needed */}
         </Link>
         <div className="flex items-center gap-6">
           <Link 
