@@ -19,7 +19,7 @@ const CampList = ({ camps }: CampListProps) => {
   return (
     <section>
       <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-8 font-general-sans">Explore Our Camps</h2>
+        <h2 className="text-3xl font-bold mb-8 font-general-sans">Explore Our 2025 Camps</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {camps.map((camp) => (
             <Link
@@ -36,7 +36,7 @@ const CampList = ({ camps }: CampListProps) => {
                   <span className="text-muted-foreground">
                     Duration: {camp.duration}
                   </span>
-                  <span className="font-medium">SGD {camp.price}</span>
+                  <span className="font-medium">From SGD {camp.price}</span>
                 </div>
               </div>
             </Link>
