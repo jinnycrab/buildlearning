@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { ReactComponent as BuildLogo } from './buildlogo.svg'; // Adjust path as needed
 
@@ -18,7 +17,7 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
             {/* SVG Logo as a React Component */}
             <BuildLogo className="h-20 mb-2" alt="Build Learning Group Logo" />
             {/* Description text with left indentation */}
-            <p className="text-muted-foreground text-left indent-0"> {/* Removed indent class */}
+            <p className="text-muted-foreground text-left pl-4"> {/* Added padding-left */}
               We are Singapore's first student incubator for tomorrow's innovators and leaders.
             </p>
           </div>
