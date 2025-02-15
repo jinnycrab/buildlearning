@@ -45,12 +45,12 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
             <h3 className="font-bold text-lg mb-4 font-general-sans">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>Email: info@buildlearning.co</li>
-              <li>Phone: (65) 6583 9143</li>
+              <li>Contact: (65) 8223 2551</li>
             </ul>
           </div>
         </div>
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>© 2025 Build Learning Group (C). Developed in Stanford University, USA. All rights reserved.</p>
+          <p> Build Learning Group © 2025. Developed in Stanford University, USA. All rights reserved.</p>
         </div>
       </div>
     </footer>
