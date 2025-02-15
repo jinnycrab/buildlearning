@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { ReactComponent as BuildLogo } from './buildlogo.svg'; // Adjust path as needed
 
 // Define the FooterProps interface for type checking
 interface FooterProps {
@@ -13,11 +14,11 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
       <div className="container py-12">
         {/* Flex container to distribute columns horizontally */}
         <div className="flex flex-wrap justify-between gap-8">
-          <div className="w-full md:w-1/4 flex flex-col items-center"> {/* Changed to flex-col for vertical layout */}
-            {/* SVG Logo with increased size */}
-            <img src="buildlogo.svg" alt="Build Learning Group Logo" className="h-20 mb-2" /> {/* Adjusted height */}
+          <div className="w-full md:w-1/4 flex flex-col items-start"> {/* Align items to the start */}
+            {/* SVG Logo as a React Component */}
+            <BuildLogo className="h-20 mb-2" alt="Build Learning Group Logo" />
             {/* Description text with left indentation */}
-            <p className="text-muted-foreground text-left indent-4"> {/* Added indent class */}
+            <p className="text-muted-foreground text-left indent-0"> {/* Removed indent class */}
               We are Singapore's first student incubator for tomorrow's innovators and leaders.
             </p>
           </div>
