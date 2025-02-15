@@ -8,14 +8,11 @@ const Hero = () => {
         Innovate solutions for <AnimatedWords/>
       </h1>
       <p className="text-xl text-muted-foreground mb-8">
-        At Build, students aged 15+ solve real-world problems, build their portfolios, and prepare for a future in technology and innovation. 
+        Solve real-world problems, build your portfolios, and prepare for a future in AI and innovation. 
       </p>
       <div className="flex gap-4 justify-center">
         <button className="px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors">
-          Explore Camps
-        </button>
-        <button className="px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors">
-          View Student Projects
+          Explore Holiday Camps
         </button>
       </div>
     </section>
