@@ -8,27 +8,27 @@ const Features = () => {
         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <Sparkles className="w-6 h-6 text-accent" />
         </div>
-        <h3 className="text-xl font-semibold mb-2 font-general-sans">Solve Real-World Problems</h3>
+        <h3 className="text-xl font-semibold mb-2 font-general-sans">Real-World Problems</h3>
         <p className="text-muted-foreground">
-          Develop innovative solutions for real-world problems.
+          Develop innovative solutions for carefully curated real-world problems
         </p>
       </div>
       <div className="bg-white rounded-2xl p-6 text-center">
         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <Code className="w-6 h-6 text-accent" />
         </div>
-        <h3 className="text-xl font-semibold mb-2 font-general-sans">Work with AI and Industry Experts</h3>
+        <h3 className="text-xl font-semibold mb-2 font-general-sans">Build your student portfolio</h3>
         <p className="text-muted-foreground">
-          Learn from industry professionals who will share with you latest AI tools.
+          Showcase your potential through your projects and innovative solutions 
         </p>
       </div>
       <div className="bg-white rounded-2xl p-6 text-center">
         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <Users className="w-6 h-6 text-accent" />
         </div>
-        <h3 className="text-xl font-semibold mb-2 font-general-sans">Build your student portfolio</h3>
+        <h3 className="text-xl font-semibold mb-2 font-general-sans">Learn AI tools with industry experts</h3>
         <p className="text-muted-foreground">
-          Showcase your thought process and personality.
+          Experiment with a range of AI tools from research to prototyping as you innovate
         </p>
       </div>
     </section>
