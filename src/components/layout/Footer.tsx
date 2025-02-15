@@ -11,9 +11,9 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4 font-general-sans">Holiday Camps</h3>
+            <h3 className="font-bold text-lg mb-4 font-general-sans">Build Learning Group</h3>
             <p className="text-muted-foreground">
-              Empowering young minds to create meaningful solutions through technology and innovation.
+              Singapore's first student incubator for innovators and leaders
             </p>
           </div>
           <div>
@@ -42,45 +42,15 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-4 font-general-sans">Categories</h3>
-            <ul className="space-y-2">
-              <li>
-                <button 
-                  onClick={() => onCategoryFilter("coding")}
-                  className="text-muted-foreground hover:text-accent"
-                >
-                  Coding Camps
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => onCategoryFilter("arts")}
-                  className="text-muted-foreground hover:text-accent"
-                >
-                  Arts & Crafts
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => onCategoryFilter("tech")}
-                  className="text-muted-foreground hover:text-accent"
-                >
-                  Tech Workshops
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div>
             <h3 className="font-bold text-lg mb-4 font-general-sans">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Email: info@holidaycamps.com</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Address: 123 Innovation Way</li>
+              <li>Email: info@buildlearning.co</li>
+              <li>Phone: (65) 6583 9143</li>
             </ul>
           </div>
         </div>
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>© 2024 Holiday Camps. All rights reserved.</p>
+          <p>© 2025 Build Learning Group (C). Developed in Stanford University, USA. All rights reserved.</p>
         </div>
       </div>
     </footer>
