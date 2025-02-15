@@ -13,11 +13,11 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
       <div className="container py-12">
         {/* Flex container to distribute columns horizontally */}
         <div className="flex flex-wrap justify-between gap-8">
-          <div className="w-full md:w-1/4 flex items-center">
-            {/* SVG Logo */}
-            <img src="buildlogo.svg" alt="Build Learning Group Logo" className="h-10 mr-2" />
+          <div className="w-full md:w-1/4 flex flex-col items-center"> {/* Changed to flex-col for vertical layout */}
+            {/* SVG Logo with increased size */}
+            <img src="buildlogo.svg" alt="Build Learning Group Logo" className="h-20 mb-2" /> {/* Adjusted height */}
             {/* Description text */}
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-center">
               We are Singapore's first student incubator for tomorrow's innovators and leaders.
             </p>
           </div>
