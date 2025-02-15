@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as BuildLogo } from './buildlogo.svg'; // Adjust path as needed
 
 // Define the FooterProps interface for type checking
 interface FooterProps {
@@ -13,17 +12,16 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
       <div className="container py-12">
         {/* Flex container to distribute columns horizontally */}
         <div className="flex flex-wrap justify-between gap-8">
-          <div className="w-full md:w-1/4 flex flex-col items-start"> {/* Align items to the start */}
-            {/* SVG Logo as a React Component */}
-            <BuildLogo className="h-20 mb-2" alt="Build Learning Group Logo" />
-            {/* Description text with left indentation */}
-            <p className="text-muted-foreground text-left pl-4"> {/* Added padding-left */}
+          <div className="w-full md:w-1/3 flex flex-col items-start">
+            {/* Brand Write-up */}
+            <p className="text-muted-foreground text-left">
               We are Singapore's first student incubator for tomorrow's innovators and leaders.
             </p>
           </div>
-          <div className="w-full md:w-1/4">
+          <div className="w-full md:w-1/3">
+            {/* Quick Links */}
             <h3 className="font-bold text-lg mb-4 font-general-sans">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-left">
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-accent">
                   About Us
@@ -46,9 +44,10 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/4">
+          <div className="w-full md:w-1/3">
+            {/* Contact */}
             <h3 className="font-bold text-lg mb-4 font-general-sans">Contact</h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <ul className="space-y-2 text-muted-foreground text-left">
               <li>Email: info@buildlearning.co</li>
               <li>Contact: (65) 8223 2551</li>
             </ul>
