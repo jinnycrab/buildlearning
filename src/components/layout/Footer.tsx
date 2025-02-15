@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 interface FooterProps {
@@ -10,13 +11,13 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
       <div className="container py-12">
         {/* Flex container to distribute columns horizontally */}
         <div className="flex flex-wrap justify-between gap-8">
-          <div className="w-full md:w-1/3"> {/* Changed to 1/3 for equal distribution */}
+          <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg mb-4 font-general-sans">Build Learning Group</h3>
             <p className="text-muted-foreground">
               We are Singapore's first student incubator for tomorrow's innovators and leaders.
             </p>
           </div>
-          <div className="w-full md:w-1/3"> {/* Changed to 1/3 for equal distribution */}
+          <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg mb-4 font-general-sans">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -41,7 +42,7 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/3"> {/* Changed to 1/3 for equal distribution */}
+          <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg mb-4 font-general-sans">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>Email: info@buildlearning.co</li>
@@ -49,7 +50,6 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
             </ul>
           </div>
         </div>
-        {/* Bottom copyright section */}
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
           <p> © Build Learning Group 2025. Program developed in Stanford University, USA. All rights reserved.</p>
         </div>
