@@ -16,8 +16,8 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
           <div className="w-full md:w-1/4 flex flex-col items-center"> {/* Changed to flex-col for vertical layout */}
             {/* SVG Logo with increased size */}
             <img src="buildlogo.svg" alt="Build Learning Group Logo" className="h-20 mb-2" /> {/* Adjusted height */}
-            {/* Description text */}
-            <p className="text-muted-foreground text-center">
+            {/* Description text with left indentation */}
+            <p className="text-muted-foreground text-left indent-4"> {/* Added indent class */}
               We are Singapore's first student incubator for tomorrow's innovators and leaders.
             </p>
           </div>
