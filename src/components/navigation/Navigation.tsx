@@ -1,8 +1,4 @@
 
-import { Link } from "react-router-dom";
-import { Info, Workflow, FileText, BookOpen } from "lucide-react";
-import logo from "<https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/Untitled%20design.svg?token=GHSAT0AAAAAAC6ZUQEOWGO3QRLSWB6XW7RQZ5QKGXQ>"
-  
 const Navigation = () => {
   return (
     <nav className="border-b bg-white sticky top-0 z-50">
