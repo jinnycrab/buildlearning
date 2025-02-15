@@ -8,7 +8,7 @@ const Navigation = () => {
     <nav className="border-b bg-white sticky top-0 z-50">
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Build Learning Group Logo" className="h-10" /> {/* Adjust height as needed */}
+          <img src={logo} alt="Untitled design.svg" className="h-10" /> {/* Adjust height as needed */}
         </Link>
         <div className="flex items-center gap-6">
           <Link 
