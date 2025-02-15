@@ -34,3 +34,4 @@ const AnimatedWords = () => {
 };
 
 export default AnimatedWords;
+
