@@ -16,7 +16,7 @@ const AnimatedWords = () => {
   }, []);
 
   return (
-    <div className="h-[40px] relative overflow-hidden inline-block min-w-[200px]">
+    <div className="h-[40px] relative overflow-hidden inline-block min-w-[300px]">
       <AnimatePresence mode="wait">
         <motion.span
           key={words[index]}
@@ -24,7 +24,7 @@ const AnimatedWords = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -40, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="absolute text-accent whitespace-nowrap"
+          className="absolute left-0 text-accent whitespace-nowrap"
         >
           {words[index]}
         </motion.span>
@@ -34,4 +34,3 @@ const AnimatedWords = () => {
 };
 
 export default AnimatedWords;
-
