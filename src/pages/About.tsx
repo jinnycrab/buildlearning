@@ -1,7 +1,15 @@
+import React from 'react';
+import Navbar from './Navigation'; // Adjust the import path as necessary
+import Footer from './Footer'; // Adjust the import path as necessary
+
 const About = () => {
   return (
-    <div className="min-h-screen bg-secondary">
-      <div className="container py-16">
+    <div className="min-h-screen bg-secondary flex flex-col">
+      {/* Navigation Bar */}
+      <Navbar />
+
+      {/* Main Content */}
+      <div className="container py-16 flex-grow">
         <h1 className="text-4xl font-bold mb-6 font-general-sans">About Us</h1>
 
         {/* Why We Started Build Section */}
@@ -27,8 +35,10 @@ const About = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </section>
-
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
