@@ -11,11 +11,9 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
       <div className="container py-12">
         {/* Flex container to distribute columns horizontally */}
         <div className="flex flex-wrap justify-between gap-8">
-          <div className="w-full md:w-1/4">
+          <div className="w-full md:w-1/4 flex items-center"> {/* Added flex and items-center for vertical alignment */}
+            <img src="buildlogo.svg" alt="Build Learning Group Logo" className="h-10 mr-2" /> {/* Adjust height as needed */}
             <h3 className="font-bold text-lg mb-4 font-general-sans">Build Learning Group</h3>
-            <p className="text-muted-foreground">
-              We are Singapore's first student incubator for tomorrow's innovators and leaders.
-            </p>
           </div>
           <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg mb-4 font-general-sans">Quick Links</h3>
