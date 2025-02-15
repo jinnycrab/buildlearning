@@ -9,14 +9,15 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
   return (
     <footer className="border-t bg-white">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
+        {/* Flex container to distribute columns horizontally */}
+        <div className="flex flex-wrap justify-between gap-8">
+          <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg mb-4 font-general-sans">Build Learning Group</h3>
             <p className="text-muted-foreground">
               Singapore's first student incubator for innovators and leaders
             </p>
           </div>
-          <div>
+          <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg mb-4 font-general-sans">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -41,7 +42,7 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg mb-4 font-general-sans">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>Email: info@buildlearning.co</li>
