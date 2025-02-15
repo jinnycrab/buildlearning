@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const words = ["sustainability", "public health", "technology"];
+const words = ["sustainability", "public health", "technology","mental wellness","education","consumer goods"];
 
 const AnimatedWords = () => {
   const [index, setIndex] = useState(0);
@@ -16,7 +16,7 @@ const AnimatedWords = () => {
   }, []);
 
   return (
-    <div className="h-[40px] relative overflow-hidden inline-block min-w-[300px]">
+    <div className="h-[60px] relative overflow-hidden inline-block min-w-[300px]">
       <AnimatePresence mode="wait">
         <motion.span
           key={words[index]}
