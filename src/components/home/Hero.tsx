@@ -14,6 +14,9 @@ const Hero = () => {
         <button className="px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors">
           Explore Holiday Camps
         </button>
+        <button className="px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors">
+          View Student Projects
+        </button>
       </div>
     </section>
   );
