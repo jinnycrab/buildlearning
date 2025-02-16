@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -13,12 +12,8 @@ const Navigation = () => {
           <img 
             src="/buildlogo.svg" 
             alt="Build Learning Logo" 
-            className="h-8 md:h-10 w-auto object-contain"
+            className="h-8 md:h-10 w-auto object-contain [image-rendering:crisp-edges]"
             loading="eager"
-            style={{ 
-              imageRendering: 'auto',
-              webkitImageRendering: 'crisp-edges'
-            }}
           />
         </Link>
         
