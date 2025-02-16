@@ -24,13 +24,6 @@ const About = () => {
           variants={fadeInUp}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] overflow-hidden rounded-2xl">
-              <img
-                src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/stanford%20ideation.jpeg"
-                alt="Brainstorm at Stanford"
-                className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
-              />
-            </div>
             <div className="space-y-6">
               <div>
                 <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
@@ -49,9 +42,16 @@ const About = () => {
                 students for the challenges of tomorrow.
               </p>
             </div>
+            <div className="relative h-[400px] overflow-hidden rounded-2xl">
+              <img
+                src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/stanford%20ideation.jpeg"
+                alt="Brainstorm at Stanford"
+                className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </div>
         </motion.section>
-
+        
         {/* Our Vision Section */}
         <motion.section
           className="container py-20 bg-white"
