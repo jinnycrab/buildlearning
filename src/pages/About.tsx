@@ -88,7 +88,7 @@ const About = () => {
               </span>
               <h2 className="text-3xl font-bold mt-4 mb-6 font-general-sans">Our Founders</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Meet the visionaries behind Build who are passionate about transforming education and empowering the next generation of innovators.
+                A marriage of industry and education - meet the founders of behind Build who are passionate about transforming education and bridging the academic-industry divide.
               </p>
             </div>
             
@@ -108,7 +108,7 @@ const About = () => {
                     />
                   </div>
                   <a 
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/jinyichua/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg hover:bg-accent hover:text-white transition-colors duration-300"
@@ -116,9 +116,9 @@ const About = () => {
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
-                <h3 className="text-xl font-semibold font-general-sans">Sarah Chen</h3>
+                <h3 className="text-xl font-semibold font-general-sans">Jin Yi Chua</h3>
                 <p className="text-muted-foreground">
-                  Former Head of Innovation at Stanford d.school, Sarah brings 15 years of experience in education technology and design thinking.
+                 Jin Yi has worked at the intersection of research, innovation and strategy since he graduated as the Valedictorian and Gold Medalist at Nanyang Technological University. He led research and innovation projects at Samsung Electronics' Regional Product Innovation Team, and previously consulted for Fortune 500 companies like Google, ByteDance, Unilever and more. He has also taught at the undergraduate level at LASALLE School of the Arts and Macau University.
                 </p>
               </motion.div>
 
@@ -137,7 +137,7 @@ const About = () => {
                     />
                   </div>
                   <a 
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/shi-han-ang?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg hover:bg-accent hover:text-white transition-colors duration-300"
@@ -145,9 +145,9 @@ const About = () => {
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
-                <h3 className="text-xl font-semibold font-general-sans">Michael Zhang</h3>
+                <h3 className="text-xl font-semibold font-general-sans">Ash Ang</h3>
                 <p className="text-muted-foreground">
-                  With a background in AI and education technology, Michael previously led product development at leading EdTech companies.
+                  Ash is an education specialist in EdTech innovation. He graduated from Stanford University Graduate School of Business’ Ignite Executive Program and with a MS in Learning Design and Technology from the Graduate School of Education. Formerly a Singaporean educator, government scholar, and an AI Mentor at Stanford Accelerator for Learning, Ash brings his experience in instructional design to Build. 
                 </p>
               </motion.div>
             </div>
