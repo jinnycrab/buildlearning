@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,6 +32,26 @@
   p {
     @apply text-sm md:text-base;
   }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: transparent;
+}
+
+/* Hide scrollbar when not scrolling */
+body:not(:hover)::-webkit-scrollbar-thumb {
+  background: transparent;
 }
 
 .font-general-sans {

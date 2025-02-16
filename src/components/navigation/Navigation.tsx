@@ -9,8 +9,12 @@ const Navigation = () => {
   return (
     <nav className="border-b bg-white sticky top-0 z-50">
       <div className="container flex items-center justify-between py-4">
-        <Link to="/" className="text-2xl font-bold font-general-sans md:text-2xl text-lg">
-          Build Learning
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/buildlogo.svg" 
+            alt="Build Learning Logo" 
+            className="h-8 md:h-10"
+          />
         </Link>
         
         {/* Mobile Menu Button */}
