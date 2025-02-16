@@ -80,7 +80,7 @@ const About = () => {
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
               <img
-                src="/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png"
+                src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/studentlearning.jpg"
                 alt="Students collaborating"
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
               />
