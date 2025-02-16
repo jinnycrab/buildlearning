@@ -118,7 +118,7 @@ const About = () => {
                 </div>
                 <h3 className="text-xl font-semibold font-general-sans">Jin Yi Chua</h3>
                 <p className="text-muted-foreground">
-                 Jin Yi has worked at the intersection of research, innovation and strategy since he graduated as the Valedictorian and Gold Medalist at Nanyang Technological University. He led research and innovation projects at Samsung Electronics' Regional Product Innovation Team, and previously consulted for Fortune 500 companies like Google, ByteDance, Unilever and more. He has also taught at the undergraduate level at LASALLE School of the Arts and Macau University.
+                Jin Yi has worked at the intersection of innovation and strategy since he graduated Valedictorian and Gold Medalist at Nanyang Technological University. He leads research and innovation projects at Samsung’s regional incubator, and previously consulted for Fortune 500 companies like Google, ByteDance, Unilever. He has also taught at LASALLE School of the Arts and Macau University.
                 </p>
               </motion.div>
 
