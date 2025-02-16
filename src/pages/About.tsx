@@ -157,7 +157,7 @@ const About = () => {
                 <div className="relative group">
                   <div className="relative h-[300px] overflow-hidden rounded-2xl">
                     <img
-                      src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/ash.jpeg"
+                      src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/Ashnew.jpeg"
                       alt="Founder 2"
                       className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                     />
