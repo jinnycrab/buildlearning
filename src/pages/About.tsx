@@ -56,10 +56,10 @@ const About = () => {
             <div className="space-y-6">
               <div>
                 <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                  Looking Forward
+                  Our Vision
                 </span>
               </div>
-              <h2 className="text-3xl font-bold font-general-sans">Our Vision</h2>
+              <h2 className="text-3xl font-bold font-general-sans">Joyful Learning by Innovating</h2>
               <p className="text-lg text-muted-foreground">
                 At Build, we envision a future where every student has the opportunity to develop innovative solutions for real-world challenges. We aim to cultivate a mindset of continuous learning, creativity, and resilience. Through our unique program methodology, we empower students to become confident problem-solvers and future leaders in their chosen fields.
               </p>
@@ -84,9 +84,9 @@ const About = () => {
           <div className="container">
             <div className="text-center mb-12">
               <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                Leadership
+                Our Founders
               </span>
-              <h2 className="text-3xl font-bold mt-4 mb-6 font-general-sans">Our Founders</h2>
+              <h2 className="text-3xl font-bold mt-4 mb-6 font-general-sans">An Industry-Education Marriage</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 A marriage of industry and education - meet the founders of behind Build who are passionate about transforming education and bridging the academic-industry divide.
               </p>
