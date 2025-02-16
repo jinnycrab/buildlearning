@@ -28,7 +28,7 @@ const Features = () => {
         </div>
         <h3 className="text-xl font-semibold mb-2 font-general-sans">Innovate using AI tools</h3>
         <p className="text-muted-foreground">
-          Our industry experts guide you as you use different AI tools to research and prototype
+          Our industry trainers guide you to use various AI tools to research and prototype
         </p>
       </div>
     </section>
