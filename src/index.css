@@ -16,6 +16,23 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
+
+  /* Mobile-first text scaling */
+  h1 {
+    @apply text-2xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-lg md:text-2xl;
+  }
+
+  p {
+    @apply text-sm md:text-base;
+  }
 }
 
 .font-general-sans {
