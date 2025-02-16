@@ -33,14 +33,12 @@ const About = () => {
               <h2 className="text-3xl font-bold font-general-sans">
                 Why We Started Build
               </h2>
-            </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
               <img
                 src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/stanford%20ideation.jpeg"
                 alt="Brainstorm at Stanford"
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
               />
-            </div>
                  <p className="text-lg text-muted-foreground">
                 Build was founded with a vision to transform how students
                 approach innovation and problem-solving. We believe in hands-on
