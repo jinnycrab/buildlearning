@@ -13,7 +13,12 @@ const Navigation = () => {
           <img 
             src="/buildlogo.svg" 
             alt="Build Learning Logo" 
-            className="h-8 md:h-10"
+            className="h-8 md:h-10 w-auto object-contain"
+            loading="eager"
+            style={{ 
+              imageRendering: 'auto',
+              WebkitImageRendering: 'crisp-edges'
+            }}
           />
         </Link>
         
