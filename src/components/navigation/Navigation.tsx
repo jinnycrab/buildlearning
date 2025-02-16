@@ -12,7 +12,7 @@ const Navigation = () => {
           <img 
             src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/1.png" 
             alt="Build Learning Logo" 
-            className="h-12 md:h-14 w-auto object-contain [image-rendering:crisp-edges]"
+            className="h-13 md:h-15 w-auto object-contain [image-rendering:crisp-edges]"
             loading="eager"
           />
         </Link>
