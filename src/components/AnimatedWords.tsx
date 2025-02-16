@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const words = ["healthcare", "technology", "mental wellness", "education", "design"];
+const words = ["healthcare", "technology", "education", "culture", "design"];
 
 const AnimatedWords = () => {
   const [index, setIndex] = useState(0);
