@@ -8,7 +8,7 @@ const Features = () => {
         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <Sparkles className="w-6 h-6 text-accent" />
         </div>
-        <h3 className="text-xl font-semibold mb-2 font-general-sans">Real world problems</h3>
+        <h3 className="text-xl font-semibold mb-2 font-general-sans">Real-world problems</h3>
         <p className="text-muted-foreground">
           Develop innovative solutions for carefully curated real-world problems
         </p>
@@ -26,9 +26,9 @@ const Features = () => {
         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <Users className="w-6 h-6 text-accent" />
         </div>
-        <h3 className="text-xl font-semibold mb-2 font-general-sans">Learn AI tools with industry experts</h3>
+        <h3 className="text-xl font-semibold mb-2 font-general-sans">Learn with AI tools with experts</h3>
         <p className="text-muted-foreground">
-          Experiment with a range of AI tools from research to prototyping as you innovate
+          Experiment with different AI tools as you innovate
         </p>
       </div>
     </section>
