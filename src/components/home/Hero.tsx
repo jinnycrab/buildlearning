@@ -3,11 +3,11 @@ const Hero = () => {
   return (
     <section className="text-center max-w-3xl mx-auto mb-16 px-4">
       <h1 className="text-4xl md:text-5xl font-bold mb-6 font-general-sans leading-tight">
-        Come build a better future for{" "}
-        <span className="inline-block">
-          <AnimatedWords />
-        </span>
+        Come build a better future for
       </h1>
+      <div className="text-4xl md:text-5xl font-bold font-general-sans leading-tight">
+        <AnimatedWords />
+      </div>
       <div className="flex justify-center">
         <p className="text-base md:text-xl text-muted-foreground mb-8 px-4 md:px-0">
           At Build, we solve real-world problems, build portfolios, and prepare
@@ -24,10 +24,6 @@ const Hero = () => {
       </div>
     </section>
   );
-};
-
-const AnimatedWords = () => {
-  return <span className="text-4xl md:text-5xl">AI and Innovation</span>;
 };
 
 export default Hero;
