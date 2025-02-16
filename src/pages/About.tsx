@@ -26,7 +26,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
               <img
-                src="/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png"
+                src="https://github.com/jinnycrab/holiday-learn-fun/blob/b61584634832e962ed553de67ac71e7d696c8f76/photo_2025-02-16%2011.53.14.jpeg"
                 alt="Students learning"
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
               />
