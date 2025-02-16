@@ -52,44 +52,40 @@ const About = () => {
           </div>
         </motion.section>
         
-       {/* Our Vision Section */}
-<motion.section
-  className="container py-20 bg-white"
-  initial="initial"
-  animate="animate"
-  variants={fadeInUp}
->
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    <div className="space-y-6">
-      <div>
-        <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-          Our Vision
-        </span>
-      </div>
-      <h2 className="text-3xl font-bold font-general-sans">
-        Reimagining Education Today for Tomorrow's Leaders
-      </h2>
-      <p className="text-lg text-muted-foreground">
-        Imagine a world where students are defined not by grades, but by their
-        creative output and innovative solutions. Where learning is
-        self-initiated from passion-fueled projects, not rote memorization.
-        Where education equips students with future-proof skills, from AI
-        proficiency to customer-centricity and empathy.{" "}
-        <span className="vision-emphasis">
-          Therefore, at Build, we're building that future, one project at a
-          time.
-        </span>
-      </p>
-    </div>
-    <div className="relative h-[400px] overflow-hidden rounded-2xl">
-      <img
-        src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/studentlearning.jpg"
-        alt="Students collaborating"
-        className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
-      />
-    </div>
-  </div>
-</motion.section>
+     {/* Our Vision Section */}
+        <motion.section
+          className="container py-20 bg-white"
+          initial="initial"
+          animate="animate"
+          variants={fadeInUp}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div>
+                <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                  Our Vision
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold font-general-sans">
+                Reimagining Education Today for Tomorrow's Leaders
+              </h2>
+              <p className="text-lg text-muted-foreground">
+              Imagine a world where students are defined not by grades, but by their creative output and innovative solutions. Where learning are self-initiated from passion-fueled projects, not rote memorization. Where education equips students with future-proof skills, from AI proficiency to customer-centricity and empathy. 
+              </p>
+              <p className="text-lg text-muted-foreground">
+At Build, we're building that future, one project at a time.
+              </p>
+            </div>
+            <div className="relative h-[400px] overflow-hidden rounded-2xl">
+              <img
+                src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/studentlearning.jpg"
+                alt="Students collaborating"
+                className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </motion.section> 
+
 
         {/* Our Founders Section */}
         <motion.section
