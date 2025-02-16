@@ -34,10 +34,10 @@ const About = () => {
                 Reimagining Education Today for Tomorrow's Leaders
               </h2>
               <p className="text-lg text-muted-foreground">
-              Imagine a world where students are defined not by grades, but by their creative output and innovative solutions. Where learning are self-initiated from passion-fueled projects, not rote memorization. Where education equips students with future-proof skills, from AI proficiency to customer-centricity and empathy. 
+              Imagine a world where students are defined not by grades, but by their creative output and innovative solutions. Where students cultivate knowledge from self-initiated learning, not rote memorization. Where students are equipped with future-proof skills, from AI literacy to storytelling. 
               </p>
               <p className="text-lg text-muted-foreground">
-At Build, we're building that future, one project at a time.
+At Build, we are building that future, one project at a time.
               </p>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
@@ -65,15 +65,16 @@ At Build, we're building that future, one project at a time.
                 </span>
               </div>
               <h2 className="text-3xl font-bold font-general-sans">
-                Why We Started Build
+                Why We Built Build
               </h2>
+              <p className="text-lg text-muted-foreground"> 
+                As educators, we observed students are more disengaged and stressed with school. 
+                As industry professionals, we observed students are not equipped with future-proof skills.
+                As global citizens, we observed colleges and employers are shifting towards holistic assessments and paying more attention to other indicators of success. 
+                 </p>
               <p className="text-lg text-muted-foreground">
-                Build was founded with a vision to transform how students
-                approach innovation and problem-solving. We believe in hands-on
-                learning experiences that bridge the gap between theoretical
-                knowledge and real-world application. Our program integrates
-                design thinking, technology, and entrepreneurship to prepare
-                students for the challenges of tomorrow.
+So we decided, there is no better time to reimagine education.
+              </p>
               </p>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
@@ -99,12 +100,11 @@ At Build, we're building that future, one project at a time.
                 Our Founders
               </span>
               <h2 className="text-3xl font-bold mt-4 mb-6 font-general-sans">
-                An Industry-Education Marriage
+                A Merger of Two Worlds
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Meet the founders behind Build who are passionate about
-                transforming education and bridging the academic-industry
-                divide.
+                reimagining education with their experience in innovation and Silicon Valley. 
               </p>
             </div>
 
