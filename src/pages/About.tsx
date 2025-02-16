@@ -67,14 +67,10 @@ const About = () => {
                 </span>
               </div>
               <h2 className="text-3xl font-bold font-general-sans">
-                Joyful Learning by Innovating
+                Reimagining Education Today for Tomorrow's Leaders
               </h2>
               <p className="text-lg text-muted-foreground">
-              Imagine a world where students are not defined by academic grades, but by their creative output and innovative solutions.
-                Imagine a culture where students learn and understand not by rote learning and memorizing factsheets, but by their self-initiated research as they work on passion projects.
-Imagine an education where students are equipped with in-demand hard skills like leveraging AI tools to timeless character attributes such as empathy and resilience. 
-
-                At Build, we owe it to ourselves to build a better future for our children. 
+              Imagine a world where students are defined not by grades, but by their creative output and innovative solutions. Where learning are self-initiated from passion-fueled projects, not rote memorization. Where education equips students with future-proof skills, from AI proficiency to customer-centricity and empathy. At Build, we're building that future, one project at a time.
               </p>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
@@ -103,7 +99,7 @@ Imagine an education where students are equipped with in-demand hard skills like
                 An Industry-Education Marriage
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Meet the founders of behind Build who are passionate about
+                Meet the founders behind Build who are passionate about
                 transforming education and bridging the academic-industry
                 divide.
               </p>
