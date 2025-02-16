@@ -33,14 +33,6 @@ const About = () => {
               <h2 className="text-3xl font-bold font-general-sans">
                 Why We Started Build
               </h2>
-              <p className="text-lg text-muted-foreground">
-                Build was founded with a vision to transform how students
-                approach innovation and problem-solving. We believe in hands-on
-                learning experiences that bridge the gap between theoretical
-                knowledge and real-world application. Our program integrates
-                design thinking, technology, and entrepreneurship to prepare
-                students for the challenges of tomorrow.
-              </p>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
               <img
@@ -49,6 +41,14 @@ const About = () => {
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
               />
             </div>
+                 <p className="text-lg text-muted-foreground">
+                Build was founded with a vision to transform how students
+                approach innovation and problem-solving. We believe in hands-on
+                learning experiences that bridge the gap between theoretical
+                knowledge and real-world application. Our program integrates
+                design thinking, technology, and entrepreneurship to prepare
+                students for the challenges of tomorrow.
+              </p>
           </div>
         </motion.section>
         
