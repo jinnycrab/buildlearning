@@ -26,9 +26,9 @@ const Features = () => {
         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <Users className="w-6 h-6 text-accent" />
         </div>
-        <h3 className="text-xl font-semibold mb-2 font-general-sans">Learn with AI tools with experts</h3>
+        <h3 className="text-xl font-semibold mb-2 font-general-sans">Innovate using AI tools</h3>
         <p className="text-muted-foreground">
-          Experiment with different AI tools as you innovate
+          Our industry experts guide you as you use different AI tools to research and prototype
         </p>
       </div>
     </section>
