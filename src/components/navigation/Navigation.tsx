@@ -10,7 +10,7 @@ const Navigation = () => {
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center">
           <img 
-            src="/buildlogo.svg" 
+            src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/1.png" 
             alt="Build Learning Logo" 
             className="h-8 md:h-10 w-auto object-contain [image-rendering:crisp-edges]"
             loading="eager"
