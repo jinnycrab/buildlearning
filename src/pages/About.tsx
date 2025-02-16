@@ -70,12 +70,10 @@ const About = () => {
                 Joyful Learning by Innovating
               </h2>
               <p className="text-lg text-muted-foreground">
-                At Build, we envision a future where every student has the
-                opportunity to develop innovative solutions for real-world
-                challenges. We aim to cultivate a mindset of continuous
-                learning, creativity, and resilience. Through our unique
-                program methodology, we empower students to become confident
-                problem-solvers and future leaders in their chosen fields.
+              Imagine a world where students are not defined by academic grades, but by their creative output and innovative solutions. 
+Imagine a culture where students learn and understand not by rote learning and memorizing factsheets, but by their self-initiated research as they work on passion projects.
+Imagine an education where students are equipped with in-demand hard skills like leveraging AI tools to timeless character attributes such as empathy and resilience. 
+At Build, we owe it to ourselves to build a better future for our children. 
               </p>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
