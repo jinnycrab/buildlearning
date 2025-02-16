@@ -120,7 +120,7 @@ const About = () => {
                 <div className="relative group">
                   <div className="relative h-[300px] overflow-hidden rounded-2xl">
                     <img
-                      src="/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png"
+                      src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/jy.jpeg"
                       alt="Founder 1"
                       className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                     />
@@ -157,7 +157,7 @@ const About = () => {
                 <div className="relative group">
                   <div className="relative h-[300px] overflow-hidden rounded-2xl">
                     <img
-                      src="/lovable-uploads/b235711a-f628-48e4-8700-52914ec41fd1.png"
+                      src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/ash.jpeg"
                       alt="Founder 2"
                       className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                     />
