@@ -75,7 +75,6 @@ At Build, we are building that future, one project at a time.
               <p className="text-lg text-muted-foreground">
 So we decided, there is no better time to reimagine education.
               </p>
-              </p>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
               <img
