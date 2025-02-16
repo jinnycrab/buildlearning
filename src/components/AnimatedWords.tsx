@@ -16,7 +16,7 @@ const AnimatedWords = () => {
   }, []);
 
   return (
-    <div className="h-[80px] flex items-center justify-center relative overflow-hidden inline-flex mx-auto w-full">
+    <span className="inline-block w-full">
       <AnimatePresence mode="wait">
         <motion.span
           key={words[index]}
@@ -24,12 +24,12 @@ const AnimatedWords = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -40, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-accent whitespace-nowrap absolute left-1/2 -translate-x-1/2 text-2xl md:text-4xl"
+          className="block text-accent font-general-sans text-4xl md:text-5xl font-bold"
         >
           {words[index]}
         </motion.span>
       </AnimatePresence>
-    </div>
+    </span>
   );
 };
 

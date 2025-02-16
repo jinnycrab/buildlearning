@@ -5,7 +5,8 @@ const Hero = () => {
   return (
     <section className="text-center max-w-3xl mx-auto mb-16 px-4">
       <h1 className="text-4xl md:text-5xl font-bold mb-6 font-general-sans leading-tight">
-        Come build a better future for <AnimatedWords />
+        Come build a better future for
+        <AnimatedWords />
       </h1>
       <p className="text-base md:text-xl text-muted-foreground mb-8 px-4 md:px-0">
         At Build, we solve real-world problems, build portfolios, and prepare for a future in AI and innovation.
