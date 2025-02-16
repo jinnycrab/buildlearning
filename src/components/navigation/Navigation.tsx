@@ -17,7 +17,7 @@ const Navigation = () => {
             loading="eager"
             style={{ 
               imageRendering: 'auto',
-              WebkitImageRendering: 'crisp-edges'
+              webkitImageRendering: 'crisp-edges'
             }}
           />
         </Link>
