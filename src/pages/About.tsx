@@ -88,7 +88,7 @@ const About = () => {
               </span>
               <h2 className="text-3xl font-bold mt-4 mb-6 font-general-sans">An Industry-Education Marriage</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A marriage of industry and education - meet the founders of behind Build who are passionate about transforming education and bridging the academic-industry divide.
+                Meet the founders of behind Build who are passionate about transforming education and bridging the academic-industry divide.
               </p>
             </div>
             
