@@ -1,9 +1,12 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
 import Features from "../components/home/Features";
 import RecentArticles from "../components/home/RecentArticles";
 import CampList from "../components/camps/CampList";
+import BuildPortfolio from "../components/home/BuildPortfolio";
+
 const Index = () => {
   const camps = [{
     id: 1,
@@ -30,22 +33,29 @@ const Index = () => {
     price: "1,500",
     category: "Marketing"
   }];
+
   const handleCategoryFilter = (category: string) => {
     // Handle category filtering logic here
     console.log("Filtering by category:", category);
   };
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       <Navigation />
+      <Hero />
       <div className="container mx-auto px-4">
-        <Hero />
         <Features />
+      </div>
+      <BuildPortfolio />
+      <div className="container mx-auto px-4">
         <RecentArticles />
         <div className="mb-8">
-          
           <CampList camps={camps} />
         </div>
       </div>
       <Footer onCategoryFilter={handleCategoryFilter} />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
