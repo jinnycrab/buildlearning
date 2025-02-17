@@ -26,7 +26,7 @@ const Process = () => {
         "Explore the multi-faceted nature of the problem",
         "Define project scope, objectives and expectations"
       ],
-      image: "/placeholder.svg"
+      image: "https://seerdata.ai/wp-content/uploads/All-goals-banner-square.png"
     },
     {
       letter: "U",
@@ -37,7 +37,7 @@ const Process = () => {
         "Create user personas and develop empathy",
         "Analyze limitations and opportunities from existing solutions"
       ],
-      image: "/placeholder.svg"
+      image: "https://jnj-content-lab2.brightspotcdn.com/dims4/default/30ca596/2147483647/strip/false/crop/5097x2867+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fjnj-content-lab.brightspotcdn.com%2F20%2F7c%2F79af88a4474d8536bce688017114%2Fgettyimages-1144750331.jpg"
     },
     {
       letter: "I",
