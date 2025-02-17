@@ -1,11 +1,45 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
 import { CheckCircle2, Lightbulb, PenTool, Wrench } from "lucide-react";
 import { Link } from "react-scroll";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
+
+const DotButton = ({ selected, onClick }: { selected: boolean; onClick: () => void }) => (
+  <button
+    className={`w-2 h-2 rounded-full mx-1 transition-colors ${
+      selected ? "bg-accent" : "bg-accent/30"
+    }`}
+    onClick={onClick}
+  />
+);
 
 const Process = () => {
+  const isMobile = useIsMobile();
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: false,
+    dragFree: false,
+  });
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
@@ -26,7 +60,7 @@ const Process = () => {
         "Explore the multi-faceted nature of the problem",
         "Define project scope, objectives and expectations"
       ],
-      image: "https://seerdata.ai/wp-content/uploads/All-goals-banner-square.png"
+      image: "/placeholder.svg"
     },
     {
       letter: "U",
@@ -73,6 +107,108 @@ const Process = () => {
       image: "/placeholder.svg"
     }
   ];
+
+  const renderProcessCards = () => {
+    if (isMobile) {
+      return (
+        <div className="relative">
+          <Carousel ref={emblaRef} className="w-full">
+            <CarouselContent className="-ml-4">
+              {processCards.map((card, index) => (
+                <CarouselItem key={card.letter} className="pl-4 basis-[85%] min-w-0">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-200px)] overflow-y-auto"
+                  >
+                    <div className="flex flex-col h-full">
+                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
+                        {card.letter}
+                      </div>
+                      <h2 className="text-2xl font-bold mb-3">{card.title}</h2>
+                      <p className="text-lg text-muted-foreground mb-4">
+                        {card.description}
+                      </p>
+                      <div className="aspect-video w-full overflow-hidden rounded-xl mb-4">
+                        <img 
+                          src={card.image}
+                          alt={`${card.title} Process`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <ul className="space-y-3">
+                        {card.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <div className="flex justify-center mt-4">
+            {processCards.map((_, index) => (
+              <DotButton
+                key={index}
+                selected={index === selectedIndex}
+                onClick={() => emblaApi?.scrollTo(index)}
+              />
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="space-y-8">
+        {processCards.map((card, index) => (
+          <motion.div
+            key={card.letter}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-2xl shadow-lg"
+          >
+            <div className="grid md:grid-cols-2 gap-8 items-center min-h-[500px]">
+              <div className="flex flex-col justify-center h-full">
+                <div>
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
+                    {card.letter}
+                  </div>
+                  <h2 className="text-4xl font-bold mb-4">{card.title}</h2>
+                  <p className="text-xl text-muted-foreground mb-8">
+                    {card.description}
+                  </p>
+                  <ul className="space-y-4">
+                    {card.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="aspect-square w-full overflow-hidden rounded-2xl">
+                <img 
+                  src={card.image}
+                  alt={`${card.title} Process`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -122,52 +258,11 @@ const Process = () => {
       {/* The Build Process Section */}
       <section id="build-process" className="py-24 bg-muted">
         <motion.div 
-          className="container mx-auto px-8"
+          className="container mx-auto px-4 md:px-8"
           {...fadeInUp}
         >
           <h2 className="text-4xl font-bold mb-12 text-center">The Build Process™</h2>
-          
-          <div className="space-y-8">
-            {processCards.map((card, index) => (
-              <motion.div
-                key={card.letter}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-lg"
-              >
-                <div className="grid md:grid-cols-2 gap-8 items-center min-h-[500px]">
-                  <div className="flex flex-col justify-center h-full">
-                    <div>
-                      <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
-                        {card.letter}
-                      </div>
-                      <h2 className="text-4xl font-bold mb-4">{card.title}</h2>
-                      <p className="text-xl text-muted-foreground mb-8">
-                        {card.description}
-                      </p>
-                      <ul className="space-y-4">
-                        {card.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="aspect-square w-full overflow-hidden rounded-2xl">
-                    <img 
-                      src={card.image}
-                      alt={`${card.title} Process`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {renderProcessCards()}
         </motion.div>
       </section>
 
