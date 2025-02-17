@@ -1,11 +1,9 @@
-
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation, PanInfo } from 'framer-motion';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
-
 interface Article {
   id: number;
   title: string;
@@ -13,38 +11,31 @@ interface Article {
   imageUrl: string;
   link: string;
 }
-
-const articles: Article[] = [
-  {
-    id: 1,
-    title: "AI is Transforming How We Learn and Teach",
-    source: "Harvard Business Review • By Sarah Chen",
-    imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-    link: "https://techcrunch.com"
-  },
-  {
-    id: 2,
-    title: "The Rise of Project-Based Learning in Schools",
-    source: "Education Weekly • By Michael Roberts",
-    imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    link: "https://wired.com"
-  },
-  {
-    id: 3,
-    title: "How Gen Z is Reshaping Education Technology",
-    source: "MIT Technology Review • By Emma Davis",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    link: "https://education.com"
-  }
-];
-
+const articles: Article[] = [{
+  id: 1,
+  title: "AI is Transforming How We Learn and Teach",
+  source: "Harvard Business Review • By Sarah Chen",
+  imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+  link: "https://techcrunch.com"
+}, {
+  id: 2,
+  title: "The Rise of Project-Based Learning in Schools",
+  source: "Education Weekly • By Michael Roberts",
+  imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+  link: "https://wired.com"
+}, {
+  id: 3,
+  title: "How Gen Z is Reshaping Education Technology",
+  source: "MIT Technology Review • By Emma Davis",
+  imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+  link: "https://education.com"
+}];
 const RecentArticles = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
   const isMobile = useIsMobile();
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [isMounted, setIsMounted] = React.useState(false);
-
   const scrollSpeed = 20;
   const itemWidth = isMobile ? 280 : 300;
   const totalWidth = itemWidth * articles.length;
@@ -54,11 +45,9 @@ const RecentArticles = () => {
     setIsMounted(true);
     return () => setIsMounted(false);
   }, []);
-
   useEffect(() => {
     if (!isMobile && isMounted) {
       let isAnimating = true;
-
       const animate = async () => {
         while (isAnimating) {
           await controls.start({
@@ -66,25 +55,23 @@ const RecentArticles = () => {
             transition: {
               duration: scrollSpeed,
               ease: "linear",
-              repeat: 0,
-            },
+              repeat: 0
+            }
           });
-          
           if (isAnimating) {
-            await controls.set({ x: 0 });
+            await controls.set({
+              x: 0
+            });
           }
         }
       };
-
       animate();
-
       return () => {
         isAnimating = false;
         controls.stop();
       };
     }
   }, [controls, totalWidth, scrollSpeed, isMobile, isMounted]);
-
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (isMobile) {
       const swipeThreshold = 30; // Reduced threshold for more responsive swipes
@@ -97,9 +84,7 @@ const RecentArticles = () => {
       }
     }
   };
-
-  return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+  return <section className="py-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden bg-sky-200 hover:bg-sky-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
@@ -112,51 +97,38 @@ const RecentArticles = () => {
 
         <div className="relative overflow-hidden">
           {/* Visual cue for mobile swipe */}
-          {isMobile && currentIndex < articles.length - 1 && (
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12">
+          {isMobile && currentIndex < articles.length - 1 && <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12">
               <ArrowRight className="w-6 h-6 text-gray-400 animate-pulse" />
-            </div>
-          )}
+            </div>}
           
-          <motion.div
-            ref={containerRef}
-            className="flex gap-6"
-            animate={isMobile ? {
-              x: -currentIndex * (itemWidth + 24)
-            } : controls}
-            drag={isMobile ? "x" : false}
-            dragConstraints={isMobile ? { left: -((articles.length - 1) * (itemWidth + 24)), right: 0 } : undefined}
-            onDragEnd={handleDragEnd}
-            dragElastic={0.1} // Reduced elasticity for snappier feel
-            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }} // Adjusted for more responsive drag
-            style={{ 
-              width: isMobile ? `${(itemWidth + 24) * articles.length}px` : `${totalWidth * 2}px`,
-              cursor: isMobile ? 'grab' : 'default'
-            }}
-            transition={isMobile ? {
-              type: "spring",
-              damping: 30, // Increased damping for faster settling
-              stiffness: 300, // Increased stiffness for snappier movement
-              mass: 0.5 // Reduced mass for lighter feel
-            } : undefined}
-          >
+          <motion.div ref={containerRef} className="flex gap-6" animate={isMobile ? {
+          x: -currentIndex * (itemWidth + 24)
+        } : controls} drag={isMobile ? "x" : false} dragConstraints={isMobile ? {
+          left: -((articles.length - 1) * (itemWidth + 24)),
+          right: 0
+        } : undefined} onDragEnd={handleDragEnd} dragElastic={0.1} // Reduced elasticity for snappier feel
+        dragTransition={{
+          bounceStiffness: 600,
+          bounceDamping: 20
+        }} // Adjusted for more responsive drag
+        style={{
+          width: isMobile ? `${(itemWidth + 24) * articles.length}px` : `${totalWidth * 2}px`,
+          cursor: isMobile ? 'grab' : 'default'
+        }} transition={isMobile ? {
+          type: "spring",
+          damping: 30,
+          // Increased damping for faster settling
+          stiffness: 300,
+          // Increased stiffness for snappier movement
+          mass: 0.5 // Reduced mass for lighter feel
+        } : undefined}>
             {/* First set of articles */}
-            {articles.map((article, index) => (
-              <a
-                key={article.id}
-                href={article.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-none relative"
-                style={{ width: `${itemWidth}px` }}
-              >
+            {articles.map((article, index) => <a key={article.id} href={article.link} target="_blank" rel="noopener noreferrer" className="flex-none relative" style={{
+            width: `${itemWidth}px`
+          }}>
                 <div className="bg-white rounded-xl shadow-sm overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                   <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={article.imageUrl}
-                      alt={article.title}
-                      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
-                    />
+                    <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
@@ -171,37 +143,17 @@ const RecentArticles = () => {
                   </div>
                 </div>
                 {/* Mobile swipe indicator dots */}
-                {isMobile && (
-                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
-                    {articles.map((_, i) => (
-                      <div
-                        key={i}
-                        className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                          i === currentIndex ? 'bg-gray-800 w-4' : 'bg-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                )}
-              </a>
-            ))}
+                {isMobile && <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    {articles.map((_, i) => <div key={i} className={`h-2 w-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-gray-800 w-4' : 'bg-gray-300'}`} />)}
+                  </div>}
+              </a>)}
             {/* Duplicate set for desktop infinite loop */}
-            {!isMobile && articles.map((article) => (
-              <a
-                key={`${article.id}-duplicate`}
-                href={article.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-none"
-                style={{ width: `${itemWidth}px` }}
-              >
+            {!isMobile && articles.map(article => <a key={`${article.id}-duplicate`} href={article.link} target="_blank" rel="noopener noreferrer" className="flex-none" style={{
+            width: `${itemWidth}px`
+          }}>
                 <div className="bg-white rounded-xl shadow-sm overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                   <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={article.imageUrl}
-                      alt={article.title}
-                      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
-                    />
+                    <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
@@ -215,8 +167,7 @@ const RecentArticles = () => {
                     </p>
                   </div>
                 </div>
-              </a>
-            ))}
+              </a>)}
           </motion.div>
         </div>
         
@@ -229,8 +180,6 @@ const RecentArticles = () => {
           </Link>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default RecentArticles;
