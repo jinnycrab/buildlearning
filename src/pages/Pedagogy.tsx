@@ -111,7 +111,7 @@ const Process = () => {
   const renderProcessCards = () => {
     if (isMobile) {
       return (
-        <div className="relative">
+        <div className="relative pb-8">
           <Carousel ref={emblaRef} className="w-full">
             <CarouselContent className="-ml-4">
               {processCards.map((card, index) => (
@@ -121,7 +121,7 @@ const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-200px)] overflow-y-auto"
+                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-280px)] overflow-y-auto"
                   >
                     <div className="flex flex-col h-full">
                       <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
@@ -152,7 +152,7 @@ const Process = () => {
               ))}
             </CarouselContent>
           </Carousel>
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-6">
             {processCards.map((_, index) => (
               <DotButton
                 key={index}
