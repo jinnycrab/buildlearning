@@ -121,7 +121,7 @@ const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-280px)] overflow-y-auto"
+                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto mb-8"
                   >
                     <div className="flex flex-col h-full">
                       <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
