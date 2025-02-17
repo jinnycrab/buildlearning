@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const BuildPortfolio = () => {
   return (
@@ -37,8 +37,42 @@ const BuildPortfolio = () => {
             <img
               src="/placeholder.svg"
               alt="Build a Poster Example"
-              className="w-full h-48 object-cover rounded-lg"
+              className="w-full h-48 object-cover rounded-lg mb-8"
             />
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-semibold mb-3 font-general-sans">The Process</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Identify and analyze real-world problem statements</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Conduct thorough research and document findings</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Develop and articulate innovative solutions</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Design visual representations of your solution</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Problem Analysis</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Research Methods</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Visual Design</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Critical Thinking</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -55,8 +89,42 @@ const BuildPortfolio = () => {
             <img
               src="/placeholder.svg"
               alt="Build a Demo Example"
-              className="w-full h-48 object-cover rounded-lg"
+              className="w-full h-48 object-cover rounded-lg mb-8"
             />
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-semibold mb-3 font-general-sans">The Process</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Create engaging presentation narratives</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Design interactive prototypes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Develop clear and concise explanations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Practice and refine presentation delivery</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Public Speaking</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Storytelling</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Prototyping</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Communication</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
 
