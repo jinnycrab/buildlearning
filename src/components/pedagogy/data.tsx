@@ -1,8 +1,8 @@
 
-import { ReactNode } from "react";
 import { Wrench, Lightbulb } from "lucide-react";
+import { ProcessCard, AiTool } from "./types";
 
-export const processCards = [
+export const processCards: ProcessCard[] = [
   {
     letter: "B",
     title: "Brief",
@@ -59,13 +59,6 @@ export const processCards = [
     image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
-
-interface AiTool {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  link: string;
-}
 
 export const aiTools: AiTool[] = [
   {
