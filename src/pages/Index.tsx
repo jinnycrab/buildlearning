@@ -45,6 +45,9 @@ const Index = () => {
       <Hero />
       <section className="py-24 bg-primary-foreground">
         <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center font-general-sans">
+            Why Build?
+          </h2>
           <Features />
         </div>
       </section>
