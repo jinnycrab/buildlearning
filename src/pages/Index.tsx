@@ -1,4 +1,6 @@
 
+import Navigation from "../components/navigation/Navigation";
+import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
 import Features from "../components/home/Features";
 import RecentArticles from "../components/home/RecentArticles";
@@ -35,12 +37,19 @@ const Index = () => {
     }
   ];
 
+  const handleCategoryFilter = (category: string) => {
+    // Handle category filtering logic here
+    console.log("Filtering by category:", category);
+  };
+
   return (
     <div className="min-h-screen">
+      <Navigation />
       <Hero />
       <Features />
       <RecentArticles />
       <CampList camps={camps} />
+      <Footer onCategoryFilter={handleCategoryFilter} />
     </div>
   );
 };

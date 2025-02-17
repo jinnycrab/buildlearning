@@ -1,7 +1,13 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 
 const Resources = () => {
+  const handleCategoryFilter = (category: string) => {
+    // Handle category filtering logic here
+    console.log("Filtering by category:", category);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
@@ -16,7 +22,7 @@ const Resources = () => {
         </div>
         {/* Existing Resources content */}
       </main>
-      <Footer />
+      <Footer onCategoryFilter={handleCategoryFilter} />
     </div>
   );
 };

@@ -30,6 +30,10 @@ const articles = [
 ];
 
 const Blog = () => {
+  const handleCategoryFilter = (category: string) => {
+    console.log("Filtering by category:", category);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
@@ -79,7 +83,7 @@ const Blog = () => {
           ))}
         </div>
       </main>
-      <Footer />
+      <Footer onCategoryFilter={handleCategoryFilter} />
     </div>
   );
 };
