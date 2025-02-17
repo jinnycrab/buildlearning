@@ -136,41 +136,40 @@ const Process = () => {
             </div>
           </div>
 
-          {/* Innovate Section */}
-<div className="grid md:grid-cols-2 gap-12 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
-  <div>
-    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
-      I
-    </div>
-    <h2 className="text-4xl font-bold mb-6">Innovate</h2>
-    <p className="text-xl text-muted-foreground mb-8">
-      Generate creative solutions through group-based ideation workshops.
-    </p>
-    <ul className="space-y-4">
-      <li className="flex items-start gap-3">
-        <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-        <span>Share your opportunity and research</span>
-      </li>
-      <li className="flex items-start gap-3">
-        <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-        <span>Brainstorm solutions and approaches</span>
-      </li>
-      <li className="flex items-start gap-3">
-        <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-        <span>Sketch preliminary ideas</span>
-      </li>
-    </ul>
-  </div>
-  <div>
-    <div className="aspect-w-1 aspect-h-1 relative rounded-2xl shadow-lg overflow-hidden">
-      <img
-        src="https://images.unsplash.com/photo-1526378787940-576a539ba69d?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Innovation Process"
-        className="object-cover w-full h-full"
-      />
-    </div>
-  </div>
-</div>
+         {/* Innovate Section */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
+            <div>
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
+                I
+              </div>
+              <h2 className="text-4xl font-bold mb-6">Innovate</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Generate creative solutions through group-based ideation workshops.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <span>Share your opportunity and research</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <span>Brainstorm solutions and approaches</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <span>Sketch preliminary ideas</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1526378787940-576a539ba69d?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Innovation Process"
+                className="rounded-2xl shadow-lg w-full"
+              />
+            </div>
+          </div>
+
 
 
           {/* Lead Section */}
