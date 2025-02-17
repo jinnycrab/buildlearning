@@ -137,8 +137,8 @@ const Process = () => {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-2xl shadow-lg"
               >
-                <div className="grid md:grid-cols-2 gap-8 items-center h-full">
-                  <div className="flex flex-col justify-between h-full">
+                <div className="grid md:grid-cols-2 gap-8 items-center min-h-[500px]">
+                  <div className="flex flex-col justify-center h-full">
                     <div>
                       <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
                         {card.letter}
