@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, PanInfo } from 'framer-motion';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
 import { Link } from 'react-router-dom';
@@ -42,33 +42,48 @@ const RecentArticles = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
   const isMobile = useIsMobile();
+  const [currentIndex, setCurrentIndex] = React.useState(0);
 
-  const scrollSpeed = isMobile ? 25 : 20;
+  const scrollSpeed = 20;
   const itemWidth = isMobile ? 280 : 300;
   const totalWidth = itemWidth * articles.length;
 
   useEffect(() => {
-    const animate = async () => {
-      while (true) {
-        await controls.start({
-          x: [0, -totalWidth],
-          transition: {
-            duration: scrollSpeed,
-            ease: "linear",
-            repeat: 0,
-          },
-        });
-        // Reset position instantly
-        await controls.set({ x: 0 });
+    if (!isMobile) {
+      const animate = async () => {
+        while (true) {
+          await controls.start({
+            x: [0, -totalWidth],
+            transition: {
+              duration: scrollSpeed,
+              ease: "linear",
+              repeat: 0,
+            },
+          });
+          await controls.set({ x: 0 });
+        }
+      };
+
+      animate();
+
+      return () => {
+        controls.stop();
+      };
+    }
+  }, [controls, totalWidth, scrollSpeed, isMobile]);
+
+  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    if (isMobile) {
+      const swipeThreshold = 50;
+      if (Math.abs(info.offset.x) > swipeThreshold) {
+        if (info.offset.x > 0 && currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1);
+        } else if (info.offset.x < 0 && currentIndex < articles.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+        }
       }
-    };
-
-    animate();
-
-    return () => {
-      controls.stop();
-    };
-  }, [controls, totalWidth, scrollSpeed]);
+    }
+  };
 
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
@@ -86,8 +101,21 @@ const RecentArticles = () => {
           <motion.div
             ref={containerRef}
             className="flex gap-6"
-            animate={controls}
-            style={{ width: `${totalWidth * 2}px` }}
+            animate={isMobile ? {
+              x: -currentIndex * (itemWidth + 24) // 24px is the gap
+            } : controls}
+            drag={isMobile ? "x" : false}
+            dragConstraints={isMobile ? { left: -((articles.length - 1) * (itemWidth + 24)), right: 0 } : undefined}
+            onDragEnd={handleDragEnd}
+            style={{ 
+              width: isMobile ? `${(itemWidth + 24) * articles.length}px` : `${totalWidth * 2}px`,
+              cursor: isMobile ? 'grab' : 'default'
+            }}
+            transition={isMobile ? {
+              type: "spring",
+              damping: 20,
+              stiffness: 100
+            } : undefined}
           >
             {/* First set of articles */}
             {articles.map((article) => (
@@ -121,8 +149,8 @@ const RecentArticles = () => {
                 </div>
               </a>
             ))}
-            {/* Duplicate set for seamless loop */}
-            {articles.map((article) => (
+            {/* Duplicate set for desktop infinite loop */}
+            {!isMobile && articles.map((article) => (
               <a
                 key={`${article.id}-duplicate`}
                 href={article.link}
