@@ -1,10 +1,7 @@
-
 import AnimatedWords from "../AnimatedWords";
-
 const Hero = () => {
-  return (
-    <section className="text-center max-w-3xl mx-auto mb-16 px-4">
-      <h1 className="text-4xl md:text-5xl font-bold mb-6 font-general-sans leading-tight">
+  return <section className="text-center max-w-3xl mx-auto mb-16 px-4">
+      <h1 className="text-4xl font-bold mb-6 font-general-sans leading-tight px-0 my-0 py-[35px] md:text-5xl">
         Come build a better future for
         <AnimatedWords />
       </h1>
@@ -19,8 +16,6 @@ const Hero = () => {
           View Student Projects
         </button>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
