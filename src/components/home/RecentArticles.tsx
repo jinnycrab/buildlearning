@@ -4,6 +4,7 @@ import { ExternalLink, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
+
 interface Article {
   id: number;
   title: string;
@@ -11,6 +12,7 @@ interface Article {
   imageUrl: string;
   link: string;
 }
+
 const articles: Article[] = [{
   id: 1,
   title: "AI is Transforming How We Learn and Teach",
@@ -30,6 +32,7 @@ const articles: Article[] = [{
   imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
   link: "https://education.com"
 }];
+
 const RecentArticles = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
@@ -40,11 +43,11 @@ const RecentArticles = () => {
   const itemWidth = isMobile ? 280 : 300;
   const totalWidth = itemWidth * articles.length;
 
-  // Handle mounting state
   useEffect(() => {
     setIsMounted(true);
     return () => setIsMounted(false);
   }, []);
+
   useEffect(() => {
     if (!isMobile && isMounted) {
       let isAnimating = true;
@@ -72,9 +75,10 @@ const RecentArticles = () => {
       };
     }
   }, [controls, totalWidth, scrollSpeed, isMobile, isMounted]);
+
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (isMobile) {
-      const swipeThreshold = 30; // Reduced threshold for more responsive swipes
+      const swipeThreshold = 30;
       if (Math.abs(info.offset.x) > swipeThreshold) {
         if (info.offset.x > 0 && currentIndex > 0) {
           setCurrentIndex(currentIndex - 1);
@@ -84,45 +88,41 @@ const RecentArticles = () => {
       }
     }
   };
-  return <section className="py-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden bg-sky-200 hover:bg-sky-100">
+
+  return (
+    <section className="py-24 bg-accent/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-general-sans mb-4">
             See What Experts Say
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Latest insights and developments in education, locally and globally
           </p>
         </div>
 
         <div className="relative overflow-hidden">
-          {/* Visual cue for mobile swipe */}
           {isMobile && currentIndex < articles.length - 1 && <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12">
               <ArrowRight className="w-6 h-6 text-gray-400 animate-pulse" />
             </div>}
-          
+
           <motion.div ref={containerRef} className="flex gap-6" animate={isMobile ? {
           x: -currentIndex * (itemWidth + 24)
         } : controls} drag={isMobile ? "x" : false} dragConstraints={isMobile ? {
           left: -((articles.length - 1) * (itemWidth + 24)),
           right: 0
-        } : undefined} onDragEnd={handleDragEnd} dragElastic={0.1} // Reduced elasticity for snappier feel
-        dragTransition={{
+        } : undefined} onDragEnd={handleDragEnd} dragElastic={0.1} dragTransition={{
           bounceStiffness: 600,
           bounceDamping: 20
-        }} // Adjusted for more responsive drag
-        style={{
+        }} style={{
           width: isMobile ? `${(itemWidth + 24) * articles.length}px` : `${totalWidth * 2}px`,
           cursor: isMobile ? 'grab' : 'default'
         }} transition={isMobile ? {
           type: "spring",
           damping: 30,
-          // Increased damping for faster settling
           stiffness: 300,
-          // Increased stiffness for snappier movement
-          mass: 0.5 // Reduced mass for lighter feel
+          mass: 0.5
         } : undefined}>
-            {/* First set of articles */}
             {articles.map((article, index) => <a key={article.id} href={article.link} target="_blank" rel="noopener noreferrer" className="flex-none relative" style={{
             width: `${itemWidth}px`
           }}>
@@ -142,12 +142,10 @@ const RecentArticles = () => {
                     </p>
                   </div>
                 </div>
-                {/* Mobile swipe indicator dots */}
                 {isMobile && <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
                     {articles.map((_, i) => <div key={i} className={`h-2 w-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-gray-800 w-4' : 'bg-gray-300'}`} />)}
                   </div>}
               </a>)}
-            {/* Duplicate set for desktop infinite loop */}
             {!isMobile && articles.map(article => <a key={`${article.id}-duplicate`} href={article.link} target="_blank" rel="noopener noreferrer" className="flex-none" style={{
             width: `${itemWidth}px`
           }}>
@@ -170,7 +168,7 @@ const RecentArticles = () => {
               </a>)}
           </motion.div>
         </div>
-        
+
         <div className="flex justify-center mt-16">
           <Link to="/blog">
             <Button variant="outline" className="group">
@@ -180,6 +178,8 @@ const RecentArticles = () => {
           </Link>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default RecentArticles;

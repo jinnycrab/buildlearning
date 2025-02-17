@@ -43,16 +43,21 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <div className="container mx-auto px-4">
-        <Features />
-      </div>
+      <section className="py-24 bg-primary-foreground">
+        <div className="container mx-auto px-4">
+          <Features />
+        </div>
+      </section>
       <BuildPortfolio />
-      <div className="container mx-auto px-4">
-        <RecentArticles />
-        <div className="mb-8">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center font-general-sans">
+            Our 2025 Camps
+          </h2>
           <CampList camps={camps} />
         </div>
-      </div>
+      </section>
+      <RecentArticles />
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>
   );
