@@ -11,7 +11,6 @@ import Payment from "./pages/Payment";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Process from "./pages/Process";
-import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
 
 const queryClient = new QueryClient();
@@ -29,7 +28,7 @@ const App = () => (
           <Route path="/payment" element={<Payment />} />
           <Route path="/about" element={<About />} />
           <Route path="/process" element={<Process />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<Resources />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
