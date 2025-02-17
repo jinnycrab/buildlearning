@@ -1,5 +1,3 @@
-
-import { Wrench, Lightbulb } from "lucide-react";
 import { ProcessCard, AiTool } from "./types";
 
 export const processCards: ProcessCard[] = [
@@ -62,19 +60,19 @@ export const processCards: ProcessCard[] = [
 
 export const aiTools: AiTool[] = [
   {
-    icon: <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />,
+    logo: "/lovable-uploads/lovable-logo.png",
     title: "Lovable",
     description: "AI-powered development environment that helps students build web applications through natural language conversations.",
     link: "https://www.lovable.dev"
   },
   {
-    icon: <Lightbulb className="w-12 h-12 text-accent mx-auto mb-4" />,
+    logo: "/lovable-uploads/chatgpt-logo.png",
     title: "ChatGPT",
     description: "Advanced language model that assists with research, ideation, and problem-solving throughout the development process.",
     link: "https://chat.openai.com"
   },
   {
-    icon: <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />,
+    logo: "/lovable-uploads/copilot-logo.png",
     title: "GitHub Copilot",
     description: "AI pair programmer that helps students write better code faster through intelligent code suggestions.",
     link: "https://github.com/features/copilot"

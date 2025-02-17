@@ -10,7 +10,7 @@ export interface ProcessCard {
 }
 
 export interface AiTool {
-  icon: ReactNode;
+  logo: string;
   title: string;
   description: string;
   link: string;
