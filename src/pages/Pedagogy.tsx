@@ -19,26 +19,48 @@ const DotButton = ({ selected, onClick }: { selected: boolean; onClick: () => vo
 
 const Process = () => {
   const isMobile = useIsMobile();
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [emblaRef, emblaApi] = useEmblaCarousel({
+  const [buildProcessIndex, setBuildProcessIndex] = useState(0);
+  const [aiToolsIndex, setAiToolsIndex] = useState(0);
+  
+  const [buildProcessRef, buildProcessApi] = useEmblaCarousel({
     align: "start",
     loop: false,
     dragFree: false,
   });
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+  const [aiToolsRef, aiToolsApi] = useEmblaCarousel({
+    align: "start",
+    loop: false,
+    dragFree: false,
+  });
+
+  const onBuildProcessSelect = useCallback(() => {
+    if (!buildProcessApi) return;
+    setBuildProcessIndex(buildProcessApi.selectedScrollSnap());
+  }, [buildProcessApi]);
+
+  const onAiToolsSelect = useCallback(() => {
+    if (!aiToolsApi) return;
+    setAiToolsIndex(aiToolsApi.selectedScrollSnap());
+  }, [aiToolsApi]);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
+    if (!buildProcessApi) return;
+    onBuildProcessSelect();
+    buildProcessApi.on("select", onBuildProcessSelect);
     return () => {
-      emblaApi.off("select", onSelect);
+      buildProcessApi.off("select", onBuildProcessSelect);
     };
-  }, [emblaApi, onSelect]);
+  }, [buildProcessApi, onBuildProcessSelect]);
+
+  useEffect(() => {
+    if (!aiToolsApi) return;
+    onAiToolsSelect();
+    aiToolsApi.on("select", onAiToolsSelect);
+    return () => {
+      aiToolsApi.off("select", onAiToolsSelect);
+    };
+  }, [aiToolsApi, onAiToolsSelect]);
 
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
@@ -108,11 +130,32 @@ const Process = () => {
     }
   ];
 
+  const aiTools = [
+    {
+      icon: <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />,
+      title: "Lovable",
+      description: "AI-powered development environment that helps students build web applications through natural language conversations.",
+      link: "https://www.lovable.dev"
+    },
+    {
+      icon: <Lightbulb className="w-12 h-12 text-accent mx-auto mb-4" />,
+      title: "ChatGPT",
+      description: "Advanced language model that assists with research, ideation, and problem-solving throughout the development process.",
+      link: "https://chat.openai.com"
+    },
+    {
+      icon: <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />,
+      title: "GitHub Copilot",
+      description: "AI pair programmer that helps students write better code faster through intelligent code suggestions.",
+      link: "https://github.com/features/copilot"
+    }
+  ];
+
   const renderProcessCards = () => {
     if (isMobile) {
       return (
         <div className="relative pb-8">
-          <Carousel ref={emblaRef} className="w-full">
+          <Carousel ref={buildProcessRef} className="w-full">
             <CarouselContent className="-ml-4">
               {processCards.map((card, index) => (
                 <CarouselItem key={card.letter} className="pl-4 basis-[85%] min-w-0">
@@ -156,8 +199,8 @@ const Process = () => {
             {processCards.map((_, index) => (
               <DotButton
                 key={index}
-                selected={index === selectedIndex}
-                onClick={() => emblaApi?.scrollTo(index)}
+                selected={index === buildProcessIndex}
+                onClick={() => buildProcessApi?.scrollTo(index)}
               />
             ))}
           </div>
@@ -205,6 +248,76 @@ const Process = () => {
               </div>
             </div>
           </motion.div>
+        ))}
+      </div>
+    );
+  };
+
+  const renderAiTools = () => {
+    if (isMobile) {
+      return (
+        <div className="relative pb-8">
+          <Carousel ref={aiToolsRef} className="w-full">
+            <CarouselContent className="-ml-4">
+              {aiTools.map((tool, index) => (
+                <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow h-[300px] mb-8"
+                  >
+                    {tool.icon}
+                    <h4 className="text-xl font-semibold mb-3">{tool.title}</h4>
+                    <p className="text-muted-foreground mb-4">
+                      {tool.description}
+                    </p>
+                    <a
+                      href={tool.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent/80 text-sm font-medium inline-block"
+                    >
+                      Learn More →
+                    </a>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <div className="flex justify-center mt-6">
+            {aiTools.map((_, index) => (
+              <DotButton
+                key={index}
+                selected={index === aiToolsIndex}
+                onClick={() => aiToolsApi?.scrollTo(index)}
+              />
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {aiTools.map((tool) => (
+          <a 
+            key={tool.title}
+            href={tool.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
+          >
+            {tool.icon}
+            <h4 className="text-xl font-semibold mb-3">{tool.title}</h4>
+            <p className="text-muted-foreground mb-4">
+              {tool.description}
+            </p>
+            <span className="text-accent hover:text-accent/80 text-sm font-medium">
+              Learn More →
+            </span>
+          </a>
         ))}
       </div>
     );
@@ -261,7 +374,10 @@ const Process = () => {
           className="container mx-auto px-4 md:px-8"
           {...fadeInUp}
         >
-          <h2 className="text-4xl font-bold mb-12 text-center">The Build Process™</h2>
+          <h2 className="text-4xl font-bold mb-4 text-center">The Build Process™</h2>
+          <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            Our proven methodology that guides students through the journey of creating innovative solutions to real-world problems
+          </p>
           {renderProcessCards()}
         </motion.div>
       </section>
@@ -269,59 +385,14 @@ const Process = () => {
       {/* AI Tools Section */}
       <section id="ai-tools" className="py-24">
         <motion.div 
-          className="container mx-auto px-8"
+          className="container mx-auto px-4 md:px-8"
           {...fadeInUp}
         >
-          <h2 className="text-4xl font-bold mb-12 text-center">AI Tools We Use</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <a 
-              href="https://www.lovable.dev" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
-            >
-              <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h4 className="text-xl font-semibold mb-3">Lovable</h4>
-              <p className="text-muted-foreground mb-4">
-                AI-powered development environment that helps students build web applications through natural language conversations.
-              </p>
-              <span className="text-accent hover:text-accent/80 text-sm font-medium">
-                Learn More →
-              </span>
-            </a>
-
-            <a 
-              href="https://chat.openai.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
-            >
-              <Lightbulb className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h4 className="text-xl font-semibold mb-3">ChatGPT</h4>
-              <p className="text-muted-foreground mb-4">
-                Advanced language model that assists with research, ideation, and problem-solving throughout the development process.
-              </p>
-              <span className="text-accent hover:text-accent/80 text-sm font-medium">
-                Learn More →
-              </span>
-            </a>
-
-            <a 
-              href="https://github.com/features/copilot" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
-            >
-              <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h4 className="text-xl font-semibold mb-3">GitHub Copilot</h4>
-              <p className="text-muted-foreground mb-4">
-                AI pair programmer that helps students write better code faster through intelligent code suggestions.
-              </p>
-              <span className="text-accent hover:text-accent/80 text-sm font-medium">
-                Learn More →
-              </span>
-            </a>
-          </div>
+          <h2 className="text-4xl font-bold mb-4 text-center">AI Tools We Use</h2>
+          <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
+          </p>
+          {renderAiTools()}
         </motion.div>
       </section>
 
