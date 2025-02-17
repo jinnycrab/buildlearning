@@ -75,20 +75,20 @@ const Process = () => {
               </div>
               <h2 className="text-4xl font-bold mb-6">Brief</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Understanding the real-world problem through comprehensive analysis and research.
+                Learn more about a real-world problem. 
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Analyze problem statements and identify key challenges</span>
+                  <span>Learn the problem's significance</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Conduct stakeholder interviews and gather requirements</span>
+                  <span>Explore the multi-faceted nature of the problem</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Define project scope and objectives</span>
+                  <span>Define project scope, objectives and expectations</span>
                 </li>
               </ul>
               
@@ -138,20 +138,20 @@ const Process = () => {
               </div>
               <h2 className="text-4xl font-bold mb-6">Understand</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Deep dive into research and analysis to fully grasp the challenge.
+                Deep dive into the problem, target audience and existing solutions by conducting research. 
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Conduct extensive market and user research</span>
+                  <span>Create an interview questionnaire</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Analyze existing solutions and their limitations</span>
+                  <span>Create user personas and develop empathy</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Create user personas and journey maps</span>
+                  <span>Analyze limitations and opportunities from existing solutions</span>
                 </li>
               </ul>
             </div>
@@ -172,20 +172,20 @@ const Process = () => {
               </div>
               <h2 className="text-4xl font-bold mb-6">Innovate</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Generate creative solutions through ideation and innovative thinking.
+                Generate creative solutions through group-based ideation workshops.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Brainstorm multiple solution approaches</span>
+                  <span>Share your opportunity and research</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Evaluate and prioritize ideas</span>
+                  <span>Brainstorm solutions and approaches</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Develop concept prototypes</span>
+                  <span>Sketch preliminary ideas</span>
                 </li>
               </ul>
             </div>
@@ -220,20 +220,20 @@ const Process = () => {
               </div>
               <h2 className="text-4xl font-bold mb-6">Lead</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Take ownership of your solution and guide it through iterations.
+                Take ownership of your solution and prototype it with AI.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Lead the development of your solution</span>
+                  <span>Refine & iterate preliminary ideas into MVP</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Gather and incorporate feedback</span>
+                  <span>Consider positioning and marketing</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Iterate and improve based on testing results</span>
+                  <span>Create Build-a-Poster(TM) and Build-a-Demo(TM) content</span>
                 </li>
               </ul>
             </div>
@@ -254,7 +254,7 @@ const Process = () => {
               </div>
               <h2 className="text-4xl font-bold mb-6">Design</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Bring your ideas to life using cutting-edge design tools and methodologies.
+                Our in-house designers will polish your visual concepts and bring them to life 
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
@@ -267,7 +267,7 @@ const Process = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Test and validate design solutions</span>
+                  <span>Prepare for sharing and wrap-up</span>
                 </li>
               </ul>
             </div>
