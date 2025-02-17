@@ -21,7 +21,7 @@ const Navigation = () => {
             About
           </Link>
           <Link to="/process" className="text-muted-foreground hover:text-accent flex items-center gap-2">
-            Our Pedagogy
+            Pedagogy
           </Link>
           <Link to="/blog" className="text-muted-foreground hover:text-accent flex items-center gap-2">
             Resources
