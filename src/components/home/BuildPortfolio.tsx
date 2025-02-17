@@ -46,15 +46,15 @@ const BuildPortfolio = () => {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>User & Competitor Research</span>
+                    <span>User & competitor research</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Opportunity Identification</span>
+                    <span>Opportunity identification</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>High-quality visual renders of solution</span>
+                    <span>Hero prototype/concept image</span>
                   </li>
                 </ul>
               </div>
@@ -102,7 +102,7 @@ const BuildPortfolio = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Practice and refine presentation</span>
+                    <span>Practice & refine presentation</span>
                   </li>
                 </ul>
               </div>
