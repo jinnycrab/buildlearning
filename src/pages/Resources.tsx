@@ -65,7 +65,6 @@ const Resources = () => {
               offset={-100}
               className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium"
             >
-              <BookOpen className="w-5 h-5" />
               Latest Articles
             </Link>
             <Link
@@ -75,7 +74,6 @@ const Resources = () => {
               offset={-100}
               className="inline-flex items-center gap-2 px-8 py-4 bg-accent/10 text-accent rounded-full cursor-pointer hover:bg-accent hover:text-white transition-colors text-lg font-medium"
             >
-              <PenTool className="w-5 h-5" />
               Free Ideation Tools
             </Link>
           </div>
@@ -93,7 +91,7 @@ const Resources = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold font-general-sans mb-4 text-center">Latest Articles</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-12">
-            Stay tuned to developments in the education sector
+            Latest insights and developments in education, locally and globally
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article) => (
@@ -134,7 +132,7 @@ const Resources = () => {
       </section>
 
       {/* Free Ideation Tools Section */}
-      <section id="ideation-tools" className="py-24 bg-[#E5DEFF]">
+      <section id="ideation-tools" className="py-24 bg-[#F4B400]">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
