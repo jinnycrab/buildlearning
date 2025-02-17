@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <nav className="border-b bg-white sticky top-0 z-50">
@@ -23,10 +24,10 @@ const Navigation = () => {
           <Link to="/process" className="text-muted-foreground hover:text-accent flex items-center gap-2">
             Pedagogy
           </Link>
-          <Link to="/blog" className="text-muted-foreground hover:text-accent flex items-center gap-2">
+          <Link to="/resources" className="text-muted-foreground hover:text-accent flex items-center gap-2">
             Resources
           </Link>
-          <Link to="/resources" className="text-muted-foreground hover:text-accent flex items-center gap-2">
+          <Link to="/camps" className="text-muted-foreground hover:text-accent flex items-center gap-2">
             Upcoming Camps
           </Link>
         </div>
@@ -40,10 +41,10 @@ const Navigation = () => {
               <Link to="/process" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
                 Pedagogy
               </Link>
-              <Link to="/blog" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/resources" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
                 Resources
               </Link>
-              <Link to="/resources" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/camps" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
                 Upcoming Camps
               </Link>
             </div>
