@@ -1,4 +1,3 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
@@ -160,7 +159,7 @@ const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white p-6 rounded-xl shadow-md text-center h-[420px] flex flex-col mb-8"
+                    className="bg-white p-6 rounded-xl shadow-md h-[420px]"
                   >
                     <AiTool {...tool} />
                   </motion.div>
@@ -184,7 +183,16 @@ const Process = () => {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {aiTools.map((tool) => (
-          <AiTool key={tool.title} {...tool} />
+          <motion.div
+            key={tool.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+          >
+            <AiTool {...tool} />
+          </motion.div>
         ))}
       </div>
     );
@@ -216,9 +224,7 @@ const Process = () => {
               smooth={true}
               duration={500}
               offset={-100}
-              className="inline-flex items-center justify-center gap-2 px
-
--8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium w-full"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium w-full"
             >
               <PenTool className="w-5 h-5" />
               The Build Process™

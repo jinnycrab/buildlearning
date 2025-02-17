@@ -12,7 +12,7 @@ export const AiTool = ({ logo, title, description, link }: AiToolProps) => {
       href={link} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="group bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all flex flex-col items-center"
+      className="h-full flex flex-col items-center"
     >
       <div className="w-24 h-24 mb-6 flex items-center justify-center">
         <img 
