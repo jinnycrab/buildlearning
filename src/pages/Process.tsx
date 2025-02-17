@@ -1,7 +1,8 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
-import { CheckCircle2, Lightbulb, PenTool, Wrench, Rocket, Library, Search, Share, PresentationScreen } from "lucide-react";
+import { CheckCircle2, Lightbulb, PenTool, Wrench, Rocket, Library, Search, Share, Presentation } from "lucide-react";
 import { Link } from "react-scroll";
 
 const Process = () => {
