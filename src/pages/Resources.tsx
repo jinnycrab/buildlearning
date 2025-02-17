@@ -83,7 +83,7 @@ const Resources = () => {
       </section>
 
       {/* Latest Articles Section */}
-      <section id="latest-articles" className="py-24 bg-[#F2FCE2]">
+      <section id="latest-articles" className="py-24 bg-muted">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ const Resources = () => {
       </section>
 
       {/* Free Ideation Tools Section */}
-      <section id="ideation-tools" className="py-24 bg-[#9b87f5]/10">
+      <section id="ideation-tools" className="py-24 bg-[#E5DEFF]">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
