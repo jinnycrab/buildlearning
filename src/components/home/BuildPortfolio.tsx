@@ -32,7 +32,7 @@ const BuildPortfolio = () => {
           >
             <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Poster™</h3>
             <p className="text-muted-foreground mb-6">
-              Create visually compelling posters that showcases not only a high-render concept, but also their research-to-innovation process
+              Create visually compelling posters that showcase your high-render concept and your research-to-innovation process
             </p>
             <img
               src="/placeholder.svg"
@@ -111,7 +111,7 @@ const BuildPortfolio = () => {
                 <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Public Speaking</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Marketing Communications</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Marketing</span>
                   <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prompt Engineering</span>
                   <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Elevator Pitch</span>
                 </div>
