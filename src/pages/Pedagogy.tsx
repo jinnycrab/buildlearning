@@ -54,9 +54,9 @@ const Process = () => {
     {
       letter: "B",
       title: "Brief",
-      description: "Learn more about a real-world problem.",
+      description: "Be introduced to a real-world problem",
       features: [
-        "Learn the problem's significance",
+        "Learn about the problem's significance",
         "Explore the multi-faceted nature of the problem",
         "Define project scope, objectives and expectations"
       ],
@@ -65,46 +65,46 @@ const Process = () => {
     {
       letter: "U",
       title: "Understand",
-      description: "Deep dive into the problem, target audience and existing solutions by conducting research.",
+      description: "Conduct research to deep dive into the problem",
       features: [
-        "Create an interview questionnaire",
-        "Create user personas and develop empathy",
-        "Analyze limitations and opportunities from existing solutions"
+        "Create target audience and user personas",
+        "Analyze existing solutions and their limitations",
+        "Connect pain points with opportunity spaces"
       ],
       image: "https://jnj-content-lab2.brightspotcdn.com/dims4/default/30ca596/2147483647/strip/false/crop/5097x2867+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fjnj-content-lab.brightspotcdn.com%2F20%2F7c%2F79af88a4474d8536bce688017114%2Fgettyimages-1144750331.jpg"
     },
     {
       letter: "I",
       title: "Innovate",
-      description: "Generate creative solutions through group-based ideation workshops.",
+      description: "Brainstorm solutions in ideations workshops",
       features: [
-        "Share your opportunity and research",
-        "Brainstorm solutions and approaches",
-        "Sketch preliminary ideas"
+        "Share your opportunity and research findings",
+        "Define how-might-we statements to trigger ideation",
+        "Sketch and propose preliminary solutions"
       ],
-      image: "https://images.unsplash.com/photo-1526378787940-576a539ba69d?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      image: "https://images.unsplash.com/photo-1552664688-cf412ec27db2?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       letter: "L",
       title: "Lead",
-      description: "Take ownership of your solution and prototype it with AI.",
+      description: "Refine your solution and prototype with AI",
       features: [
-        "Refine & iterate preliminary ideas into MVP",
-        "Consider positioning and marketing",
+        "Refine and iterate preliminary ideas into MVP",
+        "Consider product positioning and marketing",
         "Create Build-a-Poster™ and Build-a-Demo™ content"
       ],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       letter: "D",
       title: "Design",
-      description: "Our in-house designers will polish your visual concepts and bring them to life.",
+      description: "Our in-house designers bring them to life",
       features: [
-        "Create high-fidelity prototypes",
-        "Develop user interfaces and experiences",
-        "Prepare for sharing and wrap-up"
+        "Designers polish your high-fidelity prototypes",
+        "Trainers consult on poster and demo video content",
+        "Students prepare for sharing and project wrap-up"
       ],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 
