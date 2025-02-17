@@ -16,7 +16,7 @@ export const AiTool = ({ logo, title, description, link }: AiToolProps) => {
     >
       <div className="aspect-video w-full mb-4 flex items-center justify-center bg-muted/10 rounded-lg">
         <img 
-          src={logo} 
+          src={https://lovable.dev/icon.svg?3d7ac3d2bb57ecbe} 
           alt={`${title} logo`}
           className="w-3/4 h-3/4 object-contain"
         />
