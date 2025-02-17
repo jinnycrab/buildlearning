@@ -32,7 +32,7 @@ const BuildPortfolio = () => {
           >
             <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Poster™</h3>
             <p className="text-muted-foreground mb-6">
-              Transform your ideas into visually compelling posters that showcase your thought process and problem-solving abilities.
+              Create visually compelling posters that showcases not only a high-render concept, but also their research-to-innovation process
             </p>
             <img
               src="/placeholder.svg"
@@ -42,23 +42,19 @@ const BuildPortfolio = () => {
             
             <div className="space-y-6">
               <div>
-                <h4 className="text-lg font-semibold mb-3 font-general-sans">The Process</h4>
+                <h4 className="text-lg font-semibold mb-3 font-general-sans">Key Features</h4>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Identify and analyze real-world problem statements</span>
+                    <span>User & Competitor Research</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Conduct thorough research and document findings</span>
+                    <span>Opportunity Identification</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Develop and articulate innovative solutions</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Design visual representations of your solution</span>
+                    <span>High-quality visual renders of solution</span>
                   </li>
                 </ul>
               </div>
@@ -66,10 +62,10 @@ const BuildPortfolio = () => {
               <div>
                 <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Problem Analysis</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Research Methods</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Visual Design</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Critical Thinking</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Research</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prompt Engineering</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prototyping Tools</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Creative Innovation</span>
                 </div>
               </div>
             </div>
@@ -84,7 +80,7 @@ const BuildPortfolio = () => {
           >
             <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Demo™</h3>
             <p className="text-muted-foreground mb-6">
-              Develop your presentation skills and learn to effectively communicate your ideas to any audience.
+              Create a 2-min demo video or pitch that showcases your storytelling and public speaking skills
             </p>
             <img
               src="/placeholder.svg"
@@ -94,19 +90,15 @@ const BuildPortfolio = () => {
             
             <div className="space-y-6">
               <div>
-                <h4 className="text-lg font-semibold mb-3 font-general-sans">The Process</h4>
+                <h4 className="text-lg font-semibold mb-3 font-general-sans">Key Features</h4>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Create engaging presentation narratives</span>
+                    <span>Designing interactive prototypes</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Design interactive prototypes</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Develop clear and concise explanations</span>
+                    <span>Develop marketing & positioning</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
@@ -119,9 +111,9 @@ const BuildPortfolio = () => {
                 <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Public Speaking</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Storytelling</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Prototyping</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Communication</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Marketing Communications</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prompt Engineering</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Elevator Pitch</span>
                 </div>
               </div>
             </div>
