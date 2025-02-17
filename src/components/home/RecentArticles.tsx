@@ -41,20 +41,24 @@ const RecentArticles = () => {
   const controls = useAnimation();
   const isMobile = useIsMobile();
 
-  const scrollSpeed = isMobile ? 25 : 20; // Slower speed on mobile
-  const itemWidth = isMobile ? 280 : 300; // Slightly smaller cards on mobile
+  const scrollSpeed = isMobile ? 25 : 20;
+  const itemWidth = isMobile ? 280 : 300;
   const totalWidth = itemWidth * articles.length;
 
   useEffect(() => {
     const animate = async () => {
-      await controls.start({
-        x: [-totalWidth],
-        transition: {
-          duration: scrollSpeed,
-          ease: "linear",
-          repeat: Infinity,
-        },
-      });
+      while (true) {
+        await controls.start({
+          x: [0, -totalWidth],
+          transition: {
+            duration: scrollSpeed,
+            ease: "linear",
+            repeat: 0,
+          },
+        });
+        // Reset position instantly
+        await controls.set({ x: 0 });
+      }
     };
 
     animate();
@@ -81,7 +85,7 @@ const RecentArticles = () => {
             ref={containerRef}
             className="flex gap-6"
             animate={controls}
-            style={{ width: `${totalWidth * 2}px` }} // Double width for seamless loop
+            style={{ width: `${totalWidth * 2}px` }}
           >
             {/* First set of articles */}
             {articles.map((article) => (
