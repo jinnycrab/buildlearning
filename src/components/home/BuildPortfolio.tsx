@@ -1,7 +1,14 @@
 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const BuildPortfolio = () => {
   return (
@@ -34,41 +41,58 @@ const BuildPortfolio = () => {
             <p className="text-muted-foreground mb-6">
               Create visually compelling posters that showcase your high-render concept and your research-to-innovation process
             </p>
-            <img
-              src="/placeholder.svg"
-              alt="Build a Poster Example"
-              className="w-full h-48 object-cover rounded-lg mb-8"
-            />
             
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-lg font-semibold mb-3 font-general-sans">Key Features</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>User & competitor research</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Opportunity identification</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Hero prototype/concept image</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Research</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prompt Engineering</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prototyping Tools</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Creative Innovation</span>
-                </div>
-              </div>
-            </div>
+            <Carousel className="w-full mb-8">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 font-general-sans">Key Features</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                          <span>User & competitor research</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                          <span>Opportunity identification</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                          <span>Hero prototype/concept image</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Research</span>
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prompt Engineering</span>
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prototyping Tools</span>
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Creative Innovation</span>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <img
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                    alt="Design Process"
+                    className="w-full h-[400px] object-cover rounded-lg"
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <img
+                    src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+                    alt="Final Result"
+                    className="w-full h-[400px] object-cover rounded-lg"
+                  />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 top-1/2" />
+              <CarouselNext className="absolute right-4 top-1/2" />
+            </Carousel>
           </motion.div>
 
           <motion.div
@@ -82,41 +106,58 @@ const BuildPortfolio = () => {
             <p className="text-muted-foreground mb-6">
               Create a 2-min demo video or pitch that showcases your storytelling and public speaking skills
             </p>
-            <img
-              src="/placeholder.svg"
-              alt="Build a Demo Example"
-              className="w-full h-48 object-cover rounded-lg mb-8"
-            />
             
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-lg font-semibold mb-3 font-general-sans">Key Features</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Designing interactive prototypes</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Develop marketing & positioning</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Practice & refine presentation</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Public Speaking</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Marketing</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prompt Engineering</span>
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Elevator Pitch</span>
-                </div>
-              </div>
-            </div>
+            <Carousel className="w-full mb-8">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 font-general-sans">Key Features</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                          <span>Designing interactive prototypes</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                          <span>Develop marketing & positioning</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                          <span>Practice & refine presentation</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 font-general-sans">Core Skills</h4>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Public Speaking</span>
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Marketing</span>
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">AI Prompt Engineering</span>
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Elevator Pitch</span>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                    alt="Demo Process"
+                    className="w-full h-[400px] object-cover rounded-lg"
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <img
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                    alt="Final Demo"
+                    className="w-full h-[400px] object-cover rounded-lg"
+                  />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 top-1/2" />
+              <CarouselNext className="absolute right-4 top-1/2" />
+            </Carousel>
           </motion.div>
         </div>
 
