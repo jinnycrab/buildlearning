@@ -1,7 +1,8 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
-import { CheckCircle2, Lightbulb, PenTool, Wrench, Rocket, Library, Search, Share, Presentation } from "lucide-react";
+import { CheckCircle2, Lightbulb, PenTool, Wrench } from "lucide-react";
 import { Link } from "react-scroll";
 
 const Process = () => {
@@ -14,6 +15,64 @@ const Process = () => {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
+
+  const processCards = [
+    {
+      letter: "B",
+      title: "Brief",
+      description: "Learn more about a real-world problem.",
+      features: [
+        "Learn the problem's significance",
+        "Explore the multi-faceted nature of the problem",
+        "Define project scope, objectives and expectations"
+      ],
+      image: "/placeholder.svg"
+    },
+    {
+      letter: "U",
+      title: "Understand",
+      description: "Deep dive into the problem, target audience and existing solutions by conducting research.",
+      features: [
+        "Create an interview questionnaire",
+        "Create user personas and develop empathy",
+        "Analyze limitations and opportunities from existing solutions"
+      ],
+      image: "/placeholder.svg"
+    },
+    {
+      letter: "I",
+      title: "Innovate",
+      description: "Generate creative solutions through group-based ideation workshops.",
+      features: [
+        "Share your opportunity and research",
+        "Brainstorm solutions and approaches",
+        "Sketch preliminary ideas"
+      ],
+      image: "https://images.unsplash.com/photo-1526378787940-576a539ba69d?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      letter: "L",
+      title: "Lead",
+      description: "Take ownership of your solution and prototype it with AI.",
+      features: [
+        "Refine & iterate preliminary ideas into MVP",
+        "Consider positioning and marketing",
+        "Create Build-a-Poster™ and Build-a-Demo™ content"
+      ],
+      image: "/placeholder.svg"
+    },
+    {
+      letter: "D",
+      title: "Design",
+      description: "Our in-house designers will polish your visual concepts and bring them to life.",
+      features: [
+        "Create high-fidelity prototypes",
+        "Develop user interfaces and experiences",
+        "Prepare for sharing and wrap-up"
+      ],
+      image: "/placeholder.svg"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -68,176 +127,46 @@ const Process = () => {
         >
           <h2 className="text-4xl font-bold mb-12 text-center">The Build Process™</h2>
           
-          {/* Brief Section */}
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
-            <div>
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
-                B
-              </div>
-              <h2 className="text-4xl font-bold mb-6">Brief</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Learn more about a real-world problem. 
-              </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Learn the problem's significance</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Explore the multi-faceted nature of the problem</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Define project scope, objectives and expectations</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <img 
-                src="/placeholder.svg"
-                alt="Brief Process"
-                className="rounded-2xl shadow-lg w-full"
-              />
-            </div>
-          </div>
-
-          {/* Understand Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
-            <div className="order-2 md:order-1">
-              <img 
-                src="/placeholder.svg"
-                alt="Research Process"
-                className="rounded-2xl shadow-lg w-full"
-              />
-            </div>
-            <div className="order-1 md:order-2">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
-                U
-              </div>
-              <h2 className="text-4xl font-bold mb-6">Understand</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Deep dive into the problem, target audience and existing solutions by conducting research. 
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Create an interview questionnaire</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Create user personas and develop empathy</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Analyze limitations and opportunities from existing solutions</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-         {/* Innovate Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
-            <div>
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
-                I
-              </div>
-              <h2 className="text-4xl font-bold mb-6">Innovate</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Generate creative solutions through group-based ideation workshops.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Share your opportunity and research</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Brainstorm solutions and approaches</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Sketch preliminary ideas</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1526378787940-576a539ba69d?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Innovation Process"
-                className="rounded-2xl shadow-lg w-full"
-              />
-            </div>
-          </div>
-
-
-
-          {/* Lead Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
-            <div className="order-2 md:order-1">
-              <img 
-                src="/placeholder.svg"
-                alt="Leadership Process"
-                className="rounded-2xl shadow-lg w-full"
-              />
-            </div>
-            <div className="order-1 md:order-2">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
-                L
-              </div>
-              <h2 className="text-4xl font-bold mb-6">Lead</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Take ownership of your solution and prototype it with AI.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Refine & iterate preliminary ideas into MVP</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Consider positioning and marketing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Create Build-a-Poster™ and Build-a-Demo™ content</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Design Section */}
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-16 bg-white p-12 rounded-2xl shadow-lg">
-            <div>
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
-                D
-              </div>
-              <h2 className="text-4xl font-bold mb-6">Design</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Our in-house designers will polish your visual concepts and bring them to life 
-              </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Create high-fidelity prototypes</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Develop user interfaces and experiences</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Prepare for sharing and wrap-up</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <img 
-                src="/placeholder.svg"
-                alt="Design Process"
-                className="rounded-2xl shadow-lg w-full"
-              />
-            </div>
+          <div className="space-y-8">
+            {processCards.map((card, index) => (
+              <motion.div
+                key={card.letter}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-2xl shadow-lg"
+              >
+                <div className="grid md:grid-cols-2 gap-8 items-center h-full">
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
+                        {card.letter}
+                      </div>
+                      <h2 className="text-4xl font-bold mb-4">{card.title}</h2>
+                      <p className="text-xl text-muted-foreground mb-8">
+                        {card.description}
+                      </p>
+                      <ul className="space-y-4">
+                        {card.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="aspect-square w-full overflow-hidden rounded-2xl">
+                    <img 
+                      src={card.image}
+                      alt={`${card.title} Process`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </section>
@@ -288,7 +217,7 @@ const Process = () => {
               rel="noopener noreferrer"
               className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
             >
-              <Rocket className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />
               <h4 className="text-xl font-semibold mb-3">GitHub Copilot</h4>
               <p className="text-muted-foreground mb-4">
                 AI pair programmer that helps students write better code faster through intelligent code suggestions.
