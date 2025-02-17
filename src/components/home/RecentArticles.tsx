@@ -87,7 +87,7 @@ const RecentArticles = () => {
 
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (isMobile) {
-      const swipeThreshold = 50;
+      const swipeThreshold = 30; // Reduced threshold for more responsive swipes
       if (Math.abs(info.offset.x) > swipeThreshold) {
         if (info.offset.x > 0 && currentIndex > 0) {
           setCurrentIndex(currentIndex - 1);
@@ -111,33 +111,43 @@ const RecentArticles = () => {
         </div>
 
         <div className="relative overflow-hidden">
+          {/* Visual cue for mobile swipe */}
+          {isMobile && currentIndex < articles.length - 1 && (
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12">
+              <ArrowRight className="w-6 h-6 text-gray-400 animate-pulse" />
+            </div>
+          )}
+          
           <motion.div
             ref={containerRef}
             className="flex gap-6"
             animate={isMobile ? {
-              x: -currentIndex * (itemWidth + 24) // 24px is the gap
+              x: -currentIndex * (itemWidth + 24)
             } : controls}
             drag={isMobile ? "x" : false}
             dragConstraints={isMobile ? { left: -((articles.length - 1) * (itemWidth + 24)), right: 0 } : undefined}
             onDragEnd={handleDragEnd}
+            dragElastic={0.1} // Reduced elasticity for snappier feel
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }} // Adjusted for more responsive drag
             style={{ 
               width: isMobile ? `${(itemWidth + 24) * articles.length}px` : `${totalWidth * 2}px`,
               cursor: isMobile ? 'grab' : 'default'
             }}
             transition={isMobile ? {
               type: "spring",
-              damping: 20,
-              stiffness: 100
+              damping: 30, // Increased damping for faster settling
+              stiffness: 300, // Increased stiffness for snappier movement
+              mass: 0.5 // Reduced mass for lighter feel
             } : undefined}
           >
             {/* First set of articles */}
-            {articles.map((article) => (
+            {articles.map((article, index) => (
               <a
                 key={article.id}
                 href={article.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-none"
+                className="flex-none relative"
                 style={{ width: `${itemWidth}px` }}
               >
                 <div className="bg-white rounded-xl shadow-sm overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
@@ -160,6 +170,19 @@ const RecentArticles = () => {
                     </p>
                   </div>
                 </div>
+                {/* Mobile swipe indicator dots */}
+                {isMobile && (
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    {articles.map((_, i) => (
+                      <div
+                        key={i}
+                        className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                          i === currentIndex ? 'bg-gray-800 w-4' : 'bg-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
               </a>
             ))}
             {/* Duplicate set for desktop infinite loop */}
@@ -197,7 +220,7 @@ const RecentArticles = () => {
           </motion.div>
         </div>
         
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-16">
           <Link to="/blog">
             <Button variant="outline" className="group">
               See more articles
