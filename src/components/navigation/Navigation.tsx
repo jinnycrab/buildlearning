@@ -38,13 +38,13 @@ const Navigation = () => {
                 About
               </Link>
               <Link to="/process" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
-                Our Pedagogy
+                Pedagogy
               </Link>
               <Link to="/blog" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
-                Blog
+                Resources
               </Link>
               <Link to="/resources" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
-                Resources
+                Upcoming Camps
               </Link>
             </div>
           </div>}

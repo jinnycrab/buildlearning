@@ -21,7 +21,7 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-sm text-muted-foreground hover:text-accent">
-                  About Us
+                  About
                 </Link>
               </li>
               <li>
@@ -31,12 +31,12 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
               </li>
               <li>
                 <Link to="/blog" className="text-sm text-muted-foreground hover:text-accent">
-                  Blog
+                  Resources
                 </Link>
               </li>
               <li>
                 <Link to="/resources" className="text-sm text-muted-foreground hover:text-accent">
-                  Resources
+                  Upcoming Camps
                 </Link>
               </li>
             </ul>
