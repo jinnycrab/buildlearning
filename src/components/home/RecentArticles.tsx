@@ -1,8 +1,10 @@
 
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
+import { Link } from 'react-router-dom';
+import { Button } from '../ui/button';
 
 interface Article {
   id: number;
@@ -152,6 +154,15 @@ const RecentArticles = () => {
               </a>
             ))}
           </motion.div>
+        </div>
+        
+        <div className="flex justify-center mt-12">
+          <Link to="/blog">
+            <Button variant="outline" className="group">
+              See more articles
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
