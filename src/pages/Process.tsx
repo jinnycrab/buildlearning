@@ -1,4 +1,3 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
@@ -16,14 +15,6 @@ const Process = () => {
     transition: { duration: 0.6 }
   };
 
-  const processSteps = [
-    { name: "Brief", icon: Library },
-    { name: "Understand", icon: Search },
-    { name: "Innovate", icon: Lightbulb },
-    { name: "Lead", icon: Share },
-    { name: "Design", icon: PenTool }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -37,37 +28,47 @@ const Process = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            The Build Process™
+            Our Pedagogy
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
             Our systematic approach to guide students in developing solutions for real-world problems
           </p>
           
-          {/* Process Step Tags */}
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
-            {processSteps.map((step) => (
-              <Link
-                key={step.name}
-                to={step.name.toLowerCase()}
-                smooth={true}
-                duration={500}
-                offset={-100}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent rounded-full cursor-pointer hover:bg-accent hover:text-white transition-colors"
-              >
-                <step.icon className="w-5 h-5" />
-                {step.name}
-              </Link>
-            ))}
+          {/* Navigation Buttons */}
+          <div className="flex flex-wrap justify-center gap-6 mt-8">
+            <Link
+              to="build-process"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium"
+            >
+              <PenTool className="w-5 h-5" />
+              The Build Process™
+            </Link>
+            <Link
+              to="ai-tools"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent/10 text-accent rounded-full cursor-pointer hover:bg-accent hover:text-white transition-colors text-lg font-medium"
+            >
+              <Wrench className="w-5 h-5" />
+              AI Tools We Use
+            </Link>
           </div>
         </motion.div>
       </section>
 
-      {/* Brief Section */}
-      <section id="brief" className="py-24 bg-muted">
+      {/* The Build Process Section */}
+      <section id="build-process" className="py-24 bg-muted">
         <motion.div 
           className="container mx-auto px-8"
           {...fadeInUp}
         >
+          <h2 className="text-4xl font-bold mb-12 text-center">The Build Process™</h2>
+          
+          {/* Brief Section */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
@@ -115,15 +116,8 @@ const Process = () => {
               />
             </div>
           </div>
-        </motion.div>
-      </section>
 
-      {/* Understand Section */}
-      <section id="understand" className="py-24">
-        <motion.div 
-          className="container mx-auto px-4"
-          {...fadeInUp}
-        >
+          {/* Understand Section */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img 
@@ -156,15 +150,8 @@ const Process = () => {
               </ul>
             </div>
           </div>
-        </motion.div>
-      </section>
 
-      {/* Innovate Section */}
-      <section id="innovate" className="py-24 bg-muted">
-        <motion.div 
-          className="container mx-auto px-4"
-          {...fadeInUp}
-        >
+          {/* Innovate Section */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
@@ -197,15 +184,8 @@ const Process = () => {
               />
             </div>
           </div>
-        </motion.div>
-      </section>
 
-      {/* Lead Section */}
-      <section id="lead" className="py-24">
-        <motion.div 
-          className="container mx-auto px-4"
-          {...fadeInUp}
-        >
+          {/* Lead Section */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img 
@@ -238,15 +218,8 @@ const Process = () => {
               </ul>
             </div>
           </div>
-        </motion.div>
-      </section>
 
-      {/* Design Section */}
-      <section id="design" className="py-24 bg-muted">
-        <motion.div 
-          className="container mx-auto px-8"
-          {...fadeInUp}
-        >
+          {/* Design Section */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
             <div>
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
@@ -279,52 +252,64 @@ const Process = () => {
               />
             </div>
           </div>
+        </motion.div>
+      </section>
 
-          {/* Design Tools Section */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Design Tools We Use</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <a 
-                href="https://www.figma.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
-              >
-                <PenTool className="w-10 h-10 text-accent mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Figma</h4>
-                <p className="text-sm text-muted-foreground">UI/UX Design</p>
-              </a>
-              <a 
-                href="https://www.lovable.dev" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
-              >
-                <Wrench className="w-10 h-10 text-accent mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Lovable</h4>
-                <p className="text-sm text-muted-foreground">AI-Powered Development</p>
-              </a>
-              <a 
-                href="https://miro.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
-              >
-                <Lightbulb className="w-10 h-10 text-accent mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Miro</h4>
-                <p className="text-sm text-muted-foreground">Collaborative Ideation</p>
-              </a>
-              <a 
-                href="https://webflow.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
-              >
-                <Rocket className="w-10 h-10 text-accent mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Webflow</h4>
-                <p className="text-sm text-muted-foreground">No-Code Development</p>
-              </a>
-            </div>
+      {/* AI Tools Section */}
+      <section id="ai-tools" className="py-24">
+        <motion.div 
+          className="container mx-auto px-8"
+          {...fadeInUp}
+        >
+          <h2 className="text-4xl font-bold mb-12 text-center">AI Tools We Use</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <a 
+              href="https://www.lovable.dev" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
+            >
+              <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-3">Lovable</h4>
+              <p className="text-muted-foreground mb-4">
+                AI-powered development environment that helps students build web applications through natural language conversations.
+              </p>
+              <span className="text-accent hover:text-accent/80 text-sm font-medium">
+                Learn More →
+              </span>
+            </a>
+
+            <a 
+              href="https://chat.openai.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
+            >
+              <Lightbulb className="w-12 h-12 text-accent mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-3">ChatGPT</h4>
+              <p className="text-muted-foreground mb-4">
+                Advanced language model that assists with research, ideation, and problem-solving throughout the development process.
+              </p>
+              <span className="text-accent hover:text-accent/80 text-sm font-medium">
+                Learn More →
+              </span>
+            </a>
+
+            <a 
+              href="https://github.com/features/copilot" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
+            >
+              <Rocket className="w-12 h-12 text-accent mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-3">GitHub Copilot</h4>
+              <p className="text-muted-foreground mb-4">
+                AI pair programmer that helps students write better code faster through intelligent code suggestions.
+              </p>
+              <span className="text-accent hover:text-accent/80 text-sm font-medium">
+                Learn More →
+              </span>
+            </a>
           </div>
         </motion.div>
       </section>
