@@ -131,7 +131,7 @@ const BuildPortfolio = () => {
             to="/process"
             className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors"
           >
-            Our Methodology
+            Our Pedagogy
             <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>

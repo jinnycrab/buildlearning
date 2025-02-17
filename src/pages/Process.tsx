@@ -69,7 +69,7 @@ const Process = () => {
           <h2 className="text-4xl font-bold mb-12 text-center">The Build Process™</h2>
           
           {/* Brief Section */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
             <div>
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
                 B
@@ -92,21 +92,6 @@ const Process = () => {
                   <span>Define project scope, objectives and expectations</span>
                 </li>
               </ul>
-              
-              {/* Tool Section */}
-              <div className="bg-white p-6 rounded-xl shadow-md text-center inline-block">
-                <Library className="w-10 h-10 text-accent mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Notion</h4>
-                <p className="text-sm text-muted-foreground mb-4">Project Documentation</p>
-                <a 
-                  href="https://www.notion.so" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-accent hover:text-accent/80 text-sm font-medium"
-                >
-                  Learn More →
-                </a>
-              </div>
             </div>
             <div>
               <img 
@@ -118,7 +103,7 @@ const Process = () => {
           </div>
 
           {/* Understand Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
             <div className="order-2 md:order-1">
               <img 
                 src="/placeholder.svg"
@@ -152,7 +137,7 @@ const Process = () => {
           </div>
 
           {/* Innovate Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
             <div>
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
                 I
@@ -186,7 +171,7 @@ const Process = () => {
           </div>
 
           {/* Lead Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-24 bg-white p-12 rounded-2xl shadow-lg">
             <div className="order-2 md:order-1">
               <img 
                 src="/placeholder.svg"
@@ -220,7 +205,7 @@ const Process = () => {
           </div>
 
           {/* Design Section */}
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-16 bg-white p-12 rounded-2xl shadow-lg">
             <div>
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6">
                 D

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -20,7 +21,7 @@ const Navigation = () => {
             About
           </Link>
           <Link to="/process" className="text-muted-foreground hover:text-accent flex items-center gap-2">
-            The Build Process™
+            Our Pedagogy
           </Link>
           <Link to="/blog" className="text-muted-foreground hover:text-accent flex items-center gap-2">
             Resources
@@ -37,7 +38,7 @@ const Navigation = () => {
                 About
               </Link>
               <Link to="/process" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
-                The Build Process™
+                Our Pedagogy
               </Link>
               <Link to="/blog" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
                 Blog
