@@ -14,7 +14,7 @@ const Index = () => {
     description: "Learn about artificial intelligence and machine learning",
     duration: "2 weeks",
     capacity: "20 students",
-    price: "2,500",
+    price: "", // Removed price as requested
     category: "Technology"
   }, {
     id: 2,
@@ -22,7 +22,7 @@ const Index = () => {
     description: "Master modern web development technologies",
     duration: "4 weeks",
     capacity: "15 students",
-    price: "3,800",
+    price: "", // Removed price as requested
     category: "Programming"
   }, {
     id: 3,
@@ -30,12 +30,11 @@ const Index = () => {
     description: "Learn digital marketing strategies and tools",
     duration: "1 week",
     capacity: "25 students",
-    price: "1,500",
+    price: "", // Removed price as requested
     category: "Marketing"
   }];
 
   const handleCategoryFilter = (category: string) => {
-    // Handle category filtering logic here
     console.log("Filtering by category:", category);
   };
 
