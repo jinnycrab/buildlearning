@@ -198,7 +198,7 @@ const Process = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <span>Create Build-a-Poster(TM) and Build-a-Demo(TM) content</span>
+                  <span>Create Build-a-Poster™ and Build-a-Demo™ content</span>
                 </li>
               </ul>
             </div>
