@@ -1,7 +1,8 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
-import { PenTool, Wrench } from "lucide-react";
+import { PenTool, Wrench, CheckCircle2 } from "lucide-react";
 import { Link } from "react-scroll";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
