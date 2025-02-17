@@ -18,7 +18,7 @@ const BuildPortfolio = () => {
             Build-a-Portfolio™
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our comprehensive approach to help students showcase their journey and achievements
+            Stand out from the crowd with your creative output and innovative solutions, while showcasing your thought process and personality.
           </p>
         </motion.div>
 
