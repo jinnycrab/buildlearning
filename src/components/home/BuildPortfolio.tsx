@@ -102,7 +102,7 @@ const BuildPortfolio = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Practice and refine presentation delivery</span>
+                    <span>Practice and refine presentation</span>
                   </li>
                 </ul>
               </div>
