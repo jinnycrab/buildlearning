@@ -1,6 +1,5 @@
-
-import { Navigation } from "../components/navigation/Navigation";
-import { Footer } from "../components/layout/Footer";
+import Navigation from "../components/navigation/Navigation";
+import Footer from "../components/layout/Footer";
 import { ExternalLink } from "lucide-react";
 
 const articles = [
