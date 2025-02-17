@@ -45,10 +45,15 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <Features />
-      <RecentArticles />
-      <CampList camps={camps} />
+      <div className="container mx-auto px-4">
+        <Hero />
+        <Features />
+        <RecentArticles />
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold mb-8 font-general-sans">Our 2025 Camps</h2>
+          <CampList camps={camps} />
+        </div>
+      </div>
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>
   );
