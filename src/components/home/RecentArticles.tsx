@@ -43,34 +43,47 @@ const RecentArticles = () => {
   const controls = useAnimation();
   const isMobile = useIsMobile();
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [isMounted, setIsMounted] = React.useState(false);
 
   const scrollSpeed = 20;
   const itemWidth = isMobile ? 280 : 300;
   const totalWidth = itemWidth * articles.length;
 
+  // Handle mounting state
   useEffect(() => {
-    if (!isMobile) {
+    setIsMounted(true);
+    return () => setIsMounted(false);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile && isMounted) {
+      let isAnimating = true;
+
       const animate = async () => {
-        while (true) {
+        while (isAnimating) {
           await controls.start({
-            x: [0, -totalWidth],
+            x: -totalWidth,
             transition: {
               duration: scrollSpeed,
               ease: "linear",
               repeat: 0,
             },
           });
-          await controls.set({ x: 0 });
+          
+          if (isAnimating) {
+            await controls.set({ x: 0 });
+          }
         }
       };
 
       animate();
 
       return () => {
+        isAnimating = false;
         controls.stop();
       };
     }
-  }, [controls, totalWidth, scrollSpeed, isMobile]);
+  }, [controls, totalWidth, scrollSpeed, isMobile, isMounted]);
 
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (isMobile) {
