@@ -43,7 +43,7 @@ const Process = () => {
               offset={-100}
               className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium"
             >
-              <PenTool className="w-5 h-5" />
+              
               The Build Process™
             </Link>
             <Link
@@ -53,7 +53,7 @@ const Process = () => {
               offset={-100}
               className="inline-flex items-center gap-2 px-8 py-4 bg-accent/10 text-accent rounded-full cursor-pointer hover:bg-accent hover:text-white transition-colors text-lg font-medium"
             >
-              <Wrench className="w-5 h-5" />
+      
               AI Tools We Use
             </Link>
           </div>
