@@ -1,4 +1,5 @@
 
+import { ReactNode } from "react";
 import { Wrench, Lightbulb } from "lucide-react";
 
 export const processCards = [
@@ -59,7 +60,14 @@ export const processCards = [
   }
 ];
 
-export const aiTools = [
+interface AiTool {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export const aiTools: AiTool[] = [
   {
     icon: <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />,
     title: "Lovable",
