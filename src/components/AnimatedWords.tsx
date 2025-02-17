@@ -23,7 +23,7 @@ const AnimatedWords = () => {
       }} transition={{
         duration: 0.5,
         ease: "easeOut"
-      }} className="block text-accent font-general-sans text-4xl md:text-5xl font-bold">
+      }} className="block text-accent font-general-sans md:text-5xl font-bold text-base">
           {words[index]}
         </motion.span>
       </AnimatePresence>
