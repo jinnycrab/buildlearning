@@ -172,7 +172,7 @@ const RecentArticles = () => {
         <div className="flex justify-center mt-16">
           <Link to="/blog">
             <Button variant="outline" className="group">
-              See more articles
+              Read more
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
