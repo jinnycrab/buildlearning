@@ -23,10 +23,10 @@ const Navigation = () => {
             The Build Process™
           </Link>
           <Link to="/blog" className="text-muted-foreground hover:text-accent flex items-center gap-2">
-            Blog
+            Resources
           </Link>
           <Link to="/resources" className="text-muted-foreground hover:text-accent flex items-center gap-2">
-            Resources
+            Upcoming Camps
           </Link>
         </div>
 
