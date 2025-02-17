@@ -160,7 +160,7 @@ const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow h-[300px] mb-8"
+                    className="bg-white p-6 rounded-xl shadow-md text-center h-[420px] flex flex-col mb-8"
                   >
                     <AiTool {...tool} />
                   </motion.div>
