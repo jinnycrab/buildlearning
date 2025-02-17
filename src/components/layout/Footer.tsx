@@ -26,7 +26,7 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
               </li>
               <li>
                 <Link to="/process" className="text-sm text-muted-foreground hover:text-accent">
-                  The Build Process™
+                  Pedagogy
                 </Link>
               </li>
               <li>
