@@ -142,9 +142,9 @@ const Index = () => {
       </section>
       
       {/* What Experts Say - White */}
-      <div className="bg-white">
+      <section className="py-24 bg-white">
         <RecentArticles />
-      </div>
+      </section>
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>
   );
