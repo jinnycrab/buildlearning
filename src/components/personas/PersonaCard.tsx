@@ -16,16 +16,16 @@ export const PersonaCard = ({ title, description, problems, image }: UserPersona
       </div>
       
       {/* Content */}
-      <div className="absolute inset-0 p-4 sm:p-6 flex flex-col text-white">
-        <h3 className="text-xl sm:text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-white/90 text-sm sm:text-base mb-4 sm:mb-6">
+      <div className="absolute inset-0 p-6 flex flex-col text-white">
+        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        <p className="text-white/90 text-base mb-6">
           {description}
         </p>
-        <ul className="space-y-2 sm:space-y-3 mt-auto">
+        <ul className="space-y-3 mt-auto">
           {problems.map((problem, idx) => (
             <li key={idx} className="flex items-start gap-2">
-              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-1" />
-              <span className="text-xs sm:text-sm">{problem}</span>
+              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <span className="text-sm">{problem}</span>
             </li>
           ))}
         </ul>
