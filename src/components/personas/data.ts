@@ -30,6 +30,6 @@ export const userPersonas: UserPersona[] = [
       "Get hands-on experience with in-demand skills like AI literacy and creative innovation",
       "Upload your portfolio as supporting documents during application"
     ],
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2940&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1607529379169-5804750c1f9a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
