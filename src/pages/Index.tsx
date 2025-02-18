@@ -78,7 +78,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Discover how Build helps different students achieve their innovation goals
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4 max-w-[1200px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-8 lg:gap-6 max-w-[1200px] mx-auto lg:auto-rows-fr">
               {userPersonas.map((persona, index) => <motion.div key={persona.title} initial={{
               opacity: 0,
               y: 20
@@ -90,7 +90,7 @@ const Index = () => {
               delay: index * 0.1
             }} viewport={{
               once: true
-            }} className="min-w-0">
+            }} className="min-w-0 w-full">
                   <PersonaCard {...persona} />
                 </motion.div>)}
             </div>
@@ -121,7 +121,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4 max-w-[1200px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-8 lg:gap-6 max-w-[1200px] mx-auto lg:auto-rows-fr">
               {aiTools.map(tool => <motion.div key={tool.title} initial={{
               opacity: 0,
               y: 20
@@ -132,7 +132,7 @@ const Index = () => {
               duration: 0.6
             }} viewport={{
               once: true
-            }} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow min-w-0">
+            }} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow min-w-0 w-full">
                   <AiTool {...tool} />
                 </motion.div>)}
             </div>
