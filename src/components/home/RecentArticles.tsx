@@ -4,7 +4,6 @@ import { ExternalLink, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
-
 interface Article {
   id: number;
   title: string;
@@ -12,7 +11,6 @@ interface Article {
   imageUrl: string;
   link: string;
 }
-
 const articles: Article[] = [{
   id: 1,
   title: "AI is Transforming How We Learn and Teach",
@@ -32,7 +30,6 @@ const articles: Article[] = [{
   imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
   link: "https://education.com"
 }];
-
 const RecentArticles = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
@@ -42,12 +39,10 @@ const RecentArticles = () => {
   const scrollSpeed = 20;
   const itemWidth = isMobile ? 280 : 300;
   const totalWidth = itemWidth * articles.length;
-
   useEffect(() => {
     setIsMounted(true);
     return () => setIsMounted(false);
   }, []);
-
   useEffect(() => {
     if (!isMobile && isMounted) {
       let isAnimating = true;
@@ -75,7 +70,6 @@ const RecentArticles = () => {
       };
     }
   }, [controls, totalWidth, scrollSpeed, isMobile, isMounted]);
-
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (isMobile) {
       const swipeThreshold = 30;
@@ -88,9 +82,7 @@ const RecentArticles = () => {
       }
     }
   };
-
-  return (
-    <section className="py-24 bg-accent/5">
+  return <section className="py-24 bg-secondary-DEFAULT">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold font-general-sans mb-4">
@@ -170,16 +162,11 @@ const RecentArticles = () => {
         </div>
 
         <div className="flex justify-center mt-16">
-          <Link 
-            to="/blog" 
-            className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center"
-          >
+          <Link to="/blog" className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center">
             Read more
           </Link>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default RecentArticles;
