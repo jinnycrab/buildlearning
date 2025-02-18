@@ -50,9 +50,13 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
+      {/* Hero - White */}
+      <div className="bg-white">
+        <Hero />
+      </div>
       
-      <section className="py-24 bg-white">
+      {/* What We Do - Hero color */}
+      <section className="py-24 bg-accent/5">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center font-general-sans">
             What We Do
@@ -61,7 +65,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-muted">
+      {/* Who is Build for - White */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -90,9 +95,13 @@ const Index = () => {
         </div>
       </section>
 
-      <BuildPortfolio />
+      {/* Build-a-Portfolio - Muted color */}
+      <section className="py-24 bg-muted">
+        <BuildPortfolio />
+      </section>
       
-      <section className="py-24 bg-muted/50">
+      {/* AI Tools - White */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -122,7 +131,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      {/* 2025 Camps - Muted color */}
+      <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center font-general-sans">
             Our 2025 Camps
@@ -131,7 +141,10 @@ const Index = () => {
         </div>
       </section>
       
-      <RecentArticles />
+      {/* What Experts Say - White */}
+      <div className="bg-white">
+        <RecentArticles />
+      </div>
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>
   );
