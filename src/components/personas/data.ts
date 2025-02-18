@@ -16,7 +16,7 @@ export const userPersonas: UserPersona[] = [
     title: "The Future Entrepreneur",
     description: "Turn your ideas into working prototypes, launching your entrepreneurship journey",
     problems: [
-      "Overcome your inertia and knowledge gaps with guided prototyping; we know starting from 0 is overwhelming",
+      "Overcome your inertia and knowledge gaps with guided prototyping; so you don't start from 0",
       "Learn how design thinking and research can help you create desirable products and services",
       "Join a community of innovators and builders harnessing latest tools like AI to keep operations lean"
     ],
