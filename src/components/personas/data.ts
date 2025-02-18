@@ -10,7 +10,7 @@ export const userPersonas: UserPersona[] = [
       "Leverage projects as talking points during interviews, sharing your thought process and growth",
       "Stand out from the crowd with tangible pieces of work, which you can upload during applications"
     ],
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2832&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1633061273472-7c62356c7329?q=80&w=3051&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "The Future Entrepreneur",
@@ -20,7 +20,7 @@ export const userPersonas: UserPersona[] = [
       "Learn how design thinking and research can help you create desirable products and services",
       "Join a community of innovators and builders harnessing tools like AI to keep operations lean"
     ],
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2940&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "Aptitude-Based Applicant",
