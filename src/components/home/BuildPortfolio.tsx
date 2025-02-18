@@ -30,7 +30,7 @@ const BuildPortfolio = () => {
         >
           <div className="relative aspect-square w-full mb-8 overflow-hidden rounded-xl">
             <img
-              src="https://images.unsplash.com/photo-1562466002-f32b44d97a2e?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Build a Poster Example"
               className="w-full h-full object-cover"
             />
@@ -83,7 +83,7 @@ const BuildPortfolio = () => {
         >
           <div className="relative aspect-square w-full mb-8 overflow-hidden rounded-xl">
             <img
-              src="/placeholder.svg"
+              src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Build a Demo Example"
               className="w-full h-full object-cover"
             />
