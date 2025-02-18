@@ -14,7 +14,7 @@ export const AiTool = ({ logo, title, description, link }: AiToolProps) => {
       rel="noopener noreferrer"
       className="h-full flex flex-col items-center"
     >
-      <div className="aspect-video w-full mb-4 flex items-center justify-center bg-muted/10 rounded-lg">
+      <div className="aspect-video w-full mb-3 flex items-center justify-center bg-muted/10 rounded-lg">
         <img 
           src={logo}
           alt={`${title} logo`}
@@ -22,10 +22,10 @@ export const AiTool = ({ logo, title, description, link }: AiToolProps) => {
         />
       </div>
       <h4 className="text-xl font-semibold mb-2">{title}</h4>
-      <p className="text-muted-foreground text-center flex-grow">
+      <p className="text-muted-foreground text-center text-sm mb-3">
         {description}
       </p>
-      <span className="mt-4 inline-flex items-center text-accent group-hover:text-accent/80 font-medium transition-colors">
+      <span className="inline-flex items-center text-accent group-hover:text-accent/80 font-medium transition-colors">
         Learn More 
         <svg 
           className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" 
