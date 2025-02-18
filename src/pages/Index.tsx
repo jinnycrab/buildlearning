@@ -77,19 +77,21 @@ const Index = () => {
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Discover how Build helps different students achieve their innovation goals
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto lg:gap-4">
-              {userPersonas.map((persona, index) => (
-                <motion.div
-                  key={persona.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="lg:w-[calc(100%-1px)] min-w-0"
-                >
-                  <PersonaCard {...persona} />
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4 max-w-[1200px] mx-auto">
+              <div className="lg:flex lg:space-x-4 lg:w-full">
+                {userPersonas.map((persona, index) => (
+                  <motion.div
+                    key={persona.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex-1 mb-8 lg:mb-0 min-w-0"
+                  >
+                    <PersonaCard {...persona} />
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
@@ -118,19 +120,23 @@ const Index = () => {
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto lg:gap-4">
-              {aiTools.map(tool => (
-                <motion.div
-                  key={tool.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow lg:w-[calc(100%-1px)] min-w-0"
-                >
-                  <AiTool {...tool} />
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4 max-w-[1200px] mx-auto">
+              <div className="lg:flex lg:space-x-4 lg:w-full">
+                {aiTools.map(tool => (
+                  <motion.div
+                    key={tool.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="flex-1 mb-8 lg:mb-0 min-w-0"
+                  >
+                    <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full">
+                      <AiTool {...tool} />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
