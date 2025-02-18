@@ -32,4 +32,14 @@ export const userPersonas: UserPersona[] = [
     ],
     image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2940&auto=format&fit=crop"
   }
+   {
+    title: "Secondary School Students",
+    description: "Students aged 13-16 looking to explore technology and innovation",
+    problems: [
+      "Discover their interests in technology and innovation",
+      "Build meaningful projects for their portfolio",
+      "Learn practical skills beyond the classroom"
+    ],
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2832&auto=format&fit=crop"
+  },
 ];
