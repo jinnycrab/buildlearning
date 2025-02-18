@@ -73,7 +73,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Discover how Build helps different students achieve their innovation goals
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
               {userPersonas.map((persona, index) => (
                 <motion.div
                   key={persona.title}
@@ -81,6 +81,7 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  className="min-w-0"
                 >
                   <PersonaCard {...persona} />
                 </motion.div>
@@ -90,7 +91,9 @@ const Index = () => {
         </div>
       </section>
 
-      <BuildPortfolio />
+      <section className="py-24 bg-white">
+        <BuildPortfolio />
+      </section>
       
       <section className="py-24 bg-muted/50">
         <div className="container mx-auto px-4 md:px-8">
@@ -104,7 +107,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto">
               {aiTools.map(tool => (
                 <motion.div
                   key={tool.title}
@@ -112,7 +115,7 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow min-w-0"
                 >
                   <AiTool {...tool} />
                 </motion.div>
