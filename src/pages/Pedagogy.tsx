@@ -213,7 +213,7 @@ const Process = () => {
               smooth={true}
               duration={500}
               offset={-100}
-              className="w-full sm:w-auto px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors"
+              className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center"
             >
               The Build Process™
             </Link>
@@ -222,7 +222,7 @@ const Process = () => {
               smooth={true}
               duration={500}
               offset={-100}
-              className="w-full sm:w-auto px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors"
+              className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors text-center"
             >
               AI Tools We Use
             </Link>
