@@ -13,7 +13,35 @@ import { PersonaCard } from "../components/personas/PersonaCard";
 import { userPersonas } from "../components/personas/data";
 
 const Index = () => {
-  const camps = [// ... keep existing code (camps array)];
+  const camps = [
+    {
+      id: 1,
+      title: "AI Innovation Camp",
+      description: "Learn about artificial intelligence and machine learning",
+      duration: "2 weeks",
+      capacity: "20 students",
+      price: "",
+      category: "Technology"
+    },
+    {
+      id: 2,
+      title: "Web Development Bootcamp",
+      description: "Master modern web development technologies",
+      duration: "4 weeks",
+      capacity: "15 students",
+      price: "",
+      category: "Programming"
+    },
+    {
+      id: 3,
+      title: "Digital Marketing Workshop",
+      description: "Learn digital marketing strategies and tools",
+      duration: "1 week",
+      capacity: "25 students",
+      price: "",
+      category: "Marketing"
+    }
+  ];
 
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
