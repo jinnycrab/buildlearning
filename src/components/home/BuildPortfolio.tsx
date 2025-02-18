@@ -30,15 +30,20 @@ const BuildPortfolio = () => {
             viewport={{ once: true }}
             className="bg-background rounded-2xl p-8 shadow-lg"
           >
-            <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Poster™</h3>
-            <p className="text-muted-foreground mb-6">
-              Create visually compelling posters that showcase your high-render concept and your research-to-innovation process
-            </p>
-            <img
-              src="/placeholder.svg"
-              alt="Build a Poster Example"
-              className="w-full h-48 object-cover rounded-lg mb-8"
-            />
+            <div className="relative aspect-square w-full mb-8 overflow-hidden rounded-xl">
+              <img
+                src="/placeholder.svg"
+                alt="Build a Poster Example"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-center text-white">
+                <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Poster™</h3>
+                <p className="text-white/90">
+                  Create visually compelling posters that showcase your high-render concept and your research-to-innovation process
+                </p>
+              </div>
+            </div>
             
             <div className="space-y-6">
               <div>
@@ -78,15 +83,20 @@ const BuildPortfolio = () => {
             viewport={{ once: true }}
             className="bg-background rounded-2xl p-8 shadow-lg"
           >
-            <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Demo™</h3>
-            <p className="text-muted-foreground mb-6">
-              Create a 2-min demo video or pitch that showcases your storytelling and public speaking skills
-            </p>
-            <img
-              src="/placeholder.svg"
-              alt="Build a Demo Example"
-              className="w-full h-48 object-cover rounded-lg mb-8"
-            />
+            <div className="relative aspect-square w-full mb-8 overflow-hidden rounded-xl">
+              <img
+                src="/placeholder.svg"
+                alt="Build a Demo Example"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-center text-white">
+                <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Demo™</h3>
+                <p className="text-white/90">
+                  Create a 2-min demo video or pitch that showcases your storytelling and public speaking skills
+                </p>
+              </div>
+            </div>
             
             <div className="space-y-6">
               <div>
