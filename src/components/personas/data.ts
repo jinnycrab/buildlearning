@@ -6,9 +6,9 @@ export const userPersonas: UserPersona[] = [
     title: "The All-Rounded Scholar",
     description: "Ace scholarships and selective college applications through meaningful extracurricular projects",
     problems: [
-      "Demonstrate your passion for your choice of field",
-      "Leverage projects as talking points during interviews",
-      "Stand out from the crowd with tangible solutions & projects"
+      "Demonstrate your passion and dedication for your choice of field with a real prototype",
+      "Leverage projects as talking points during interviews, sharing your thought process and growth",
+      "Stand out from the crowd with tangible pieces of work, which you can upload during applications"
     ],
     image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2832&auto=format&fit=crop"
   },
@@ -16,9 +16,9 @@ export const userPersonas: UserPersona[] = [
     title: "The Future Entrepreneur",
     description: "Turn your ideas into working prototypes, launching your entrepreneurship journey",
     problems: [
-      "Overcome your inertia and knowledge gaps with expert guidance",
-      "Refine your ideas based on research and create working prototypes",
-      "Join a community of innovators and builders harnessing AI"
+      "Overcome your inertia and knowledge gaps with guided prototyping; we know starting from 0 is overwhelming",
+      "Learn how design thinking and research can help you create desirable products and services",
+      "Join a community of innovators and builders harnessing latest tools like AI to keep operations lean"
     ],
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2940&auto=format&fit=crop"
   },
@@ -26,9 +26,9 @@ export const userPersonas: UserPersona[] = [
     title: "Aptitude-Based Applicant",
     description: "Students who are planning to apply to programs via the Aptitude-Based scheme",
     problems: [
-      "Showcase your potential in a credible and tangible way",
-      "Get hands-on experience with AI and technology",
-      "Upload portfolio as supporting documents during application"
+      "Showcase your potential and non-academic productivity in a credible and tangible way",
+      "Get hands-on experience with in-demand skills like AI literacy and creative innovation",
+      "Upload your portfolio as supporting documents during application"
     ],
     image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2940&auto=format&fit=crop"
   }
