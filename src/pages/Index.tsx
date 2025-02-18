@@ -1,3 +1,4 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
@@ -10,6 +11,7 @@ import { AiTool } from "../components/pedagogy/AiTool";
 import { aiTools } from "../components/pedagogy/data";
 import { PersonaCard } from "../components/personas/PersonaCard";
 import { userPersonas } from "../components/personas/data";
+
 const Index = () => {
   const camps = [{
     id: 1,
@@ -36,9 +38,11 @@ const Index = () => {
     price: "",
     category: "Marketing"
   }];
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
+
   return <div className="min-h-screen">
       <Navigation />
       {/* Hero - White */}
@@ -74,7 +78,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Discover how Build helps different students achieve their innovation goals
             </p>
-            <div className="grid grid-cols-3 gap-4 max-w-[1200px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4 max-w-[1200px] mx-auto">
               {userPersonas.map((persona, index) => <motion.div key={persona.title} initial={{
               opacity: 0,
               y: 20
@@ -117,7 +121,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
             </p>
-            <div className="grid grid-cols-3 gap-4 max-w-[1200px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4 max-w-[1200px] mx-auto">
               {aiTools.map(tool => <motion.div key={tool.title} initial={{
               opacity: 0,
               y: 20
@@ -153,4 +157,5 @@ const Index = () => {
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
+
 export default Index;
