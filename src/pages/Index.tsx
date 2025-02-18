@@ -6,6 +6,9 @@ import Features from "../components/home/Features";
 import RecentArticles from "../components/home/RecentArticles";
 import CampList from "../components/camps/CampList";
 import BuildPortfolio from "../components/home/BuildPortfolio";
+import { motion } from "framer-motion";
+import { AiTool } from "../components/pedagogy/AiTool";
+import { aiTools } from "../components/pedagogy/data";
 
 const Index = () => {
   const camps = [{
@@ -51,6 +54,38 @@ const Index = () => {
         </div>
       </section>
       <BuildPortfolio />
+      
+      {/* AI Tools Section */}
+      <section className="py-24 bg-muted">
+        <div className="container mx-auto px-4 md:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-4 text-center">AI Tools We Use</h2>
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+              Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {aiTools.map(tool => (
+                <motion.div
+                  key={tool.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <AiTool {...tool} />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center font-general-sans">
