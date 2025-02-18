@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -130,30 +131,33 @@ const BuildPortfolio = () => {
         </div>
 
         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.6 }}
-  viewport={{ once: true }}
-  className="text-center space-y-4"
->
-  <Link
-    to="/projects"
-    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent/10 text-accent rounded-full cursor-pointer hover:bg-accent/20 transition-colors text-lg font-medium w-full max-w-md mx-auto"
-  >
-    View Student Projects
-    <ArrowRight className="w-5 h-5" />
-  </Link>
-  
-  <div>
-    <Link
-      to="/process"
-      className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium w-full max-w-md mx-auto"
-    >
-      Our Pedagogy
-      <ArrowRight className="w-5 h-5" />
-    </Link>
-  </div>
-</motion.div>
-
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center space-y-4"
+        >
+          <Link
+            to="/projects"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent/10 text-accent rounded-full cursor-pointer hover:bg-accent/20 transition-colors text-lg font-medium w-full max-w-md mx-auto"
+          >
+            View Student Projects
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+          
+          <div>
+            <Link
+              to="/process"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium w-full max-w-md mx-auto"
+            >
+              Our Pedagogy
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 export default BuildPortfolio;
