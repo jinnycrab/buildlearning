@@ -11,6 +11,7 @@ import { ProcessCard } from "@/components/pedagogy/ProcessCard";
 import { AiTool } from "@/components/pedagogy/AiTool";
 import { DotIndicator } from "@/components/pedagogy/DotIndicator";
 import { processCards, aiTools } from "@/components/pedagogy/data";
+
 const Process = () => {
   const isMobile = useIsMobile();
   const [buildProcessIndex, setBuildProcessIndex] = useState(0);
@@ -25,14 +26,17 @@ const Process = () => {
     loop: false,
     dragFree: false
   });
+
   const onBuildProcessSelect = useCallback(() => {
     if (!buildProcessApi) return;
     setBuildProcessIndex(buildProcessApi.selectedScrollSnap());
   }, [buildProcessApi]);
+
   const onAiToolsSelect = useCallback(() => {
     if (!aiToolsApi) return;
     setAiToolsIndex(aiToolsApi.selectedScrollSnap());
   }, [aiToolsApi]);
+
   useEffect(() => {
     if (!buildProcessApi) return;
     onBuildProcessSelect();
@@ -41,6 +45,7 @@ const Process = () => {
       buildProcessApi.off("select", onBuildProcessSelect);
     };
   }, [buildProcessApi, onBuildProcessSelect]);
+
   useEffect(() => {
     if (!aiToolsApi) return;
     onAiToolsSelect();
@@ -49,9 +54,11 @@ const Process = () => {
       aiToolsApi.off("select", onAiToolsSelect);
     };
   }, [aiToolsApi, onAiToolsSelect]);
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
+
   const fadeInUp = {
     initial: {
       opacity: 0,
@@ -65,6 +72,7 @@ const Process = () => {
       duration: 0.6
     }
   };
+
   const renderProcessCards = () => {
     if (isMobile) {
       return <div className="relative pb-8">
@@ -131,6 +139,7 @@ const Process = () => {
           </motion.div>)}
       </div>;
   };
+
   const renderAiTools = () => {
     if (isMobile) {
       return <div className="relative pb-8">
@@ -175,6 +184,7 @@ const Process = () => {
           </motion.div>)}
       </div>;
   };
+
   return <div className="min-h-screen bg-background">
       <Navigation />
       
@@ -197,13 +207,23 @@ const Process = () => {
           </p>
           
           {/* Navigation Buttons */}
-          <div className="flex flex-col items-center gap-4 mt-8 w-full max-w-md mx-auto">
-            <Link to="build-process" smooth={true} duration={500} offset={-100} className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium w-full">
-              <PenTool className="w-5 h-5" />
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-8 w-full max-w-md mx-auto">
+            <Link
+              to="build-process"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              className="w-full sm:w-auto px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors"
+            >
               The Build Process™
             </Link>
-            <Link to="ai-tools" smooth={true} duration={500} offset={-100} className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent/10 text-accent rounded-full cursor-pointer hover:bg-accent hover:text-white transition-colors text-lg font-medium w-full">
-              <Wrench className="w-5 h-5" />
+            <Link
+              to="ai-tools"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              className="w-full sm:w-auto px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors"
+            >
               AI Tools We Use
             </Link>
           </div>
@@ -235,4 +255,5 @@ const Process = () => {
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
+
 export default Process;

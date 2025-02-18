@@ -56,15 +56,14 @@ const Resources = () => {
           </p>
           
           {/* Navigation Buttons */}
-          <div className="flex flex-col items-center gap-4 mt-8 w-full max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-8 w-full max-w-md mx-auto">
             <Link
               to="latest-articles"
               smooth={true}
               duration={500}
               offset={-100}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white rounded-full cursor-pointer hover:bg-accent/90 transition-colors text-lg font-medium w-full"
+              className="w-full sm:w-auto px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors"
             >
-              <BookOpen className="w-5 h-5" />
               Latest Articles
             </Link>
             <Link
@@ -72,9 +71,8 @@ const Resources = () => {
               smooth={true}
               duration={500}
               offset={-100}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent/10 text-accent rounded-full cursor-pointer hover:bg-accent hover:text-white transition-colors text-lg font-medium w-full"
+              className="w-full sm:w-auto px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors"
             >
-              <PenTool className="w-5 h-5" />
               Free Ideation Tools
             </Link>
           </div>

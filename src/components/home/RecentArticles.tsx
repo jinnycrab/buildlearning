@@ -170,11 +170,11 @@ const RecentArticles = () => {
         </div>
 
         <div className="flex justify-center mt-16">
-          <Link to="/blog">
-            <Button variant="outline" className="group">
-              Read more
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
+          <Link 
+            to="/blog" 
+            className="w-full sm:w-auto px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors"
+          >
+            Read more
           </Link>
         </div>
       </div>
