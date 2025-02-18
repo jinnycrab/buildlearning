@@ -3,32 +3,32 @@ import { UserPersona } from "./types";
 
 export const userPersonas: UserPersona[] = [
   {
-    title: "Secondary School Students",
-    description: "Students aged 13-16 looking to explore technology and innovation",
+    title: "The All-Rounded Scholar",
+    description: "Ace scholarships and selective college applications through meaningful extracurricular projects",
     problems: [
-      "Discover their interests in technology and innovation",
-      "Build meaningful projects for their portfolio",
-      "Learn practical skills beyond the classroom"
+      "Demonstrate your passion for your choice of field",
+      "Leverage projects as talking points during interviews",
+      "Stand out from the crowd with tangible solutions & projects"
     ],
     image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2832&auto=format&fit=crop"
   },
   {
-    title: "Junior College Students",
-    description: "Students aged 17-18 preparing for university applications",
+    title: "The Future Entrepreneur",
+    description: "Turn your ideas into working prototypes, launching your entrepreneurship journey",
     problems: [
-      "Stand out in university applications",
-      "Gain hands-on experience with AI and technology",
-      "Develop innovative solutions to real problems"
+      "Overcome your inertia and knowledge gaps with expert guidance",
+      "Refine your ideas based on research and create working prototypes",
+      "Join a community of innovators and builders harnessing AI"
     ],
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2940&auto=format&fit=crop"
   },
   {
-    title: "International Students",
-    description: "Students from abroad looking to experience innovation education",
+    title: "Aptitude-Based Applicant",
+    description: "Students who are planning to apply to programs via the Aptitude-Based scheme",
     problems: [
-      "Experience Singapore's education system",
-      "Build cross-cultural connections",
-      "Create impactful solutions with global perspectives"
+      "Showcase your potential in a credible and tangible way",
+      "Get hands-on experience with AI and technology",
+      "Upload portfolio as supporting documents during application"
     ],
     image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2940&auto=format&fit=crop"
   }
