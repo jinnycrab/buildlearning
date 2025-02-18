@@ -27,6 +27,9 @@ const Navigation = () => {
           <Link to="/resources" className="text-muted-foreground hover:text-accent flex items-center gap-2">
             Resources
           </Link>
+          <Link to="/projects" className="text-muted-foreground hover:text-accent flex items-center gap-2">
+            Student Projects
+          </Link>
           <Link to="/camps" className="text-muted-foreground hover:text-accent flex items-center gap-2">
             Upcoming Camps
           </Link>
@@ -43,6 +46,9 @@ const Navigation = () => {
               </Link>
               <Link to="/resources" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
                 Resources
+              </Link>
+              <Link to="/projects" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
+                Student Projects
               </Link>
               <Link to="/camps" className="text-muted-foreground hover:text-accent px-4 py-2" onClick={() => setIsMenuOpen(false)}>
                 Upcoming Camps

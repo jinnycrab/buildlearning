@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -135,15 +134,24 @@ const BuildPortfolio = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center space-y-4"
         >
           <Link
-            to="/process"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors"
+            to="/projects"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors"
           >
-            Our Pedagogy
+            View Student Projects
             <ArrowRight className="w-4 h-4" />
           </Link>
+          <div>
+            <Link
+              to="/process"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors"
+            >
+              Our Pedagogy
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

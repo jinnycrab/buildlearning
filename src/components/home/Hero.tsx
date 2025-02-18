@@ -1,4 +1,6 @@
+
 import AnimatedWords from "../AnimatedWords";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -7,17 +9,17 @@ const Hero = () => {
         Come build a better future for
         <AnimatedWords />
       </h1>
-      <p className="text-base md:text-xl text-muted-foreground mb-6 px-4 md:px-0"> {/*  Changed mb-8 to mb-6 */}
+      <p className="text-base md:text-xl text-muted-foreground mb-6 px-4 md:px-0">
         At Build, we solve real-world problems, build portfolios, and prepare
         for a future in AI and innovation.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <button className="w-full sm:w-auto px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors">
+        <Link to="/camps" className="w-full sm:w-auto px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors">
           Explore Holiday Camps
-        </button>
-        <button className="w-full sm:w-auto px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors">
+        </Link>
+        <Link to="/projects" className="w-full sm:w-auto px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors">
           View Student Projects
-        </button>
+        </Link>
       </div>
     </section>
   );
