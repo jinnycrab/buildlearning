@@ -10,6 +10,7 @@ import { AiTool } from "../components/pedagogy/AiTool";
 import { aiTools } from "../components/pedagogy/data";
 import { PersonaCard } from "../components/personas/PersonaCard";
 import { userPersonas } from "../components/personas/data";
+
 const Index = () => {
   const camps = [{
     id: 1,
@@ -36,10 +37,13 @@ const Index = () => {
     price: "",
     category: "Marketing"
   }];
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       <Navigation />
       {/* Hero - White */}
       <div className="bg-white">
@@ -59,36 +63,29 @@ const Index = () => {
       {/* Who is Build for - White */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} viewport={{
-          once: true
-        }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl font-bold mb-4 text-center">Who is Build for?</h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Discover how Build helps different students achieve their innovation goals
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {userPersonas.map((persona, index) => <motion.div key={persona.title} initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6,
-              delay: index * 0.1
-            }} viewport={{
-              once: true
-            }}>
+            <div className="grid grid-cols-3 gap-4 max-w-[1200px] mx-auto">
+              {userPersonas.map((persona, index) => (
+                <motion.div
+                  key={persona.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="min-w-0"
+                >
                   <PersonaCard {...persona} />
-                </motion.div>)}
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -102,35 +99,29 @@ const Index = () => {
       {/* AI Tools - White */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} viewport={{
-          once: true
-        }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl font-bold mb-4 text-center">AI Tools We Use</h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
               Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {aiTools.map(tool => <motion.div key={tool.title} initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6
-            }} viewport={{
-              once: true
-            }} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="grid grid-cols-3 gap-4 max-w-[1200px] mx-auto">
+              {aiTools.map(tool => (
+                <motion.div
+                  key={tool.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow min-w-0"
+                >
                   <AiTool {...tool} />
-                </motion.div>)}
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -147,10 +138,12 @@ const Index = () => {
       </section>
       
       {/* What Experts Say - White */}
-      <section className="bg-white py-0">
+      <section className="py-24 bg-white">
         <RecentArticles />
       </section>
       <Footer onCategoryFilter={handleCategoryFilter} />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
