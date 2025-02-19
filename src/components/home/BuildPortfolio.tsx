@@ -15,7 +15,7 @@ const BuildPortfolio = () => {
       once: true
     }} className="text-center mb-12">
         <h2 className="md:text-5xl font-bold mb-6 font-general-sans text-4xl">What You Get</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-base">Every project portfolio will culminate in a poster of your creative output and a video of you presenting your idea</p>
+        <p className="text-muted-foreground max-w-2xl mx-auto text-lg">Every project portfolio will culminate in a poster of your creative output and a video of you presenting your idea</p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-12">
