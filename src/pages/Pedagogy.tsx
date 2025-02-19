@@ -250,10 +250,10 @@ const Process = () => {
       }} transition={{
         duration: 0.6
       }}>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Our Pedagogy
           </h1>
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
             Our systematic approach to guide students in developing solutions for real-world problems
           </p>
           
@@ -284,8 +284,8 @@ const Process = () => {
       {/* The Build Process Section */}
       <section id="build-process" className="py-24 bg-muted">
         <motion.div className="container mx-auto px-4 md:px-8" {...fadeInUp}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">The Build Process™</h2>
-          <p className="text-base md:text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-4xl font-bold mb-4 text-center">The Build Process™</h2>
+          <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
             Our proven methodology that guides students through the journey of creating innovative solutions to real-world problems
           </p>
           {renderProcessCards()}
@@ -295,8 +295,8 @@ const Process = () => {
       {/* AI Tools Section */}
       <section id="ai-tools" className="py-24">
         <motion.div className="container mx-auto px-4 md:px-8" {...fadeInUp}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">AI Tools We Use</h2>
-          <p className="text-base md:text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-4xl font-bold mb-4 text-center">AI Tools We Use</h2>
+          <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
             Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
           </p>
           {renderAiTools()}
