@@ -1,4 +1,3 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
@@ -70,7 +69,7 @@ const Process = () => {
   const renderProcessCards = () => {
     if (isMobile) {
       return (
-        <div className="relative pb-8">
+        <div className="relative pb-12">
           <Carousel ref={buildProcessRef} className="w-full">
             <CarouselContent className="-ml-4">
               {processCards.map((card, index) => (
@@ -80,7 +79,7 @@ const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto mb-8"
+                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto"
                   >
                     <ProcessCard {...card} />
                   </motion.div>
@@ -88,24 +87,24 @@ const Process = () => {
               ))}
             </CarouselContent>
           </Carousel>
-          <div className="flex justify-end gap-2 mt-4 px-4">
+          <div className="flex justify-end gap-3 mt-6 px-4 absolute bottom-0 right-0">
             <Button
               variant="outline"
               size="icon"
               onClick={() => buildProcessApi?.scrollPrev()}
               disabled={buildProcessIndex === 0}
-              className="h-8 w-8 rounded-full"
+              className="h-10 w-10 rounded-full border-2 touch-manipulation"
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-5 w-5" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               onClick={() => buildProcessApi?.scrollNext()}
               disabled={buildProcessIndex === processCards.length - 1}
-              className="h-8 w-8 rounded-full"
+              className="h-10 w-10 rounded-full border-2 touch-manipulation"
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-5 w-5" />
             </Button>
           </div>
         </div>
@@ -166,7 +165,7 @@ const Process = () => {
   const renderAiTools = () => {
     if (isMobile) {
       return (
-        <div className="relative pb-8">
+        <div className="relative pb-12">
           <Carousel ref={aiToolsRef} className="w-full">
             <CarouselContent className="-ml-4">
               {aiTools.map((tool, index) => (
@@ -176,7 +175,7 @@ const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto mb-8"
+                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto"
                   >
                     <AiTool {...tool} />
                   </motion.div>
@@ -184,24 +183,24 @@ const Process = () => {
               ))}
             </CarouselContent>
           </Carousel>
-          <div className="flex justify-end gap-2 mt-4 px-4">
+          <div className="flex justify-end gap-3 mt-6 px-4 absolute bottom-0 right-0">
             <Button
               variant="outline"
               size="icon"
               onClick={() => aiToolsApi?.scrollPrev()}
               disabled={aiToolsIndex === 0}
-              className="h-8 w-8 rounded-full"
+              className="h-10 w-10 rounded-full border-2 touch-manipulation"
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-5 w-5" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               onClick={() => aiToolsApi?.scrollNext()}
               disabled={aiToolsIndex === aiTools.length - 1}
-              className="h-8 w-8 rounded-full"
+              className="h-10 w-10 rounded-full border-2 touch-manipulation"
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-5 w-5" />
             </Button>
           </div>
         </div>
