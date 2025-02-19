@@ -1,3 +1,4 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
@@ -11,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ProcessCard } from "@/components/pedagogy/ProcessCard";
 import { AiTool } from "@/components/pedagogy/AiTool";
-import { DotIndicator } from "@/components/pedagogy/DotIndicator";
 import { processCards, aiTools } from "@/components/pedagogy/data";
 
 const Process = () => {
