@@ -62,19 +62,19 @@ export const aiTools: AiTool[] = [
   {
     logo: "https://lovable.dev/icon.svg?3d7ac3d2bb57ecbe",
     title: "Lovable",
-    description: "AI-powered development environment that helps students build web applications through natural language conversations.",
+    description: "No-code solution for building apps, websites and other digital products",
     link: "https://www.lovable.dev"
   },
   {
-    logo: "/lovable-uploads/chatgpt-logo.png",
-    title: "ChatGPT",
-    description: "Advanced language model that assists with research, ideation, and problem-solving throughout the development process.",
-    link: "https://chat.openai.com"
+    logo: "https://cdn.prod.website-files.com/628e6648a47e6727d5c69a2a/62d856b5e550362034ed205f_miro%20logo.png",
+    title: "Miro",
+    description: "AI assistant that assists with research, ideation, and problem-solving",
+    link: "https://miro.com/ai/?gclsrc=aw.ds&&utm_source=google&utm_medium=cpc&utm_campaign=S%7CGOO%7CBRN%7CSG%7CEN-EN%7CBrand%7CExact&utm_adgroup=&adgroupid=153804404069&utm_custom=18259414706&utm_content=675843190684&utm_term=miro%20ai&matchtype=e&device=c&location=9062546&gad_source=1&gbraid=0AAAAACtKBml8Cf9ZyJ8BKKx3ZFBIqtou4&gclid=CjwKCAiAn9a9BhBtEiwAbKg6fp2puOa1BtSRwqE-sYGMzJMZi-O667JOvlUwesn4py6LvWJ7sYvffBoC8XcQAvD_BwE"
   },
   {
-    logo: "/lovable-uploads/copilot-logo.png",
-    title: "GitHub Copilot",
-    description: "AI pair programmer that helps students write better code faster through intelligent code suggestions.",
-    link: "https://github.com/features/copilot"
+    logo: "https://mma.prnewswire.com/media/2374001/Vector.jpg?p=facebook",
+    title: "Vizcom AI",
+    description: "AI tool to transform hand-sketches into renders and 3D models",
+    link: "https://www.vizcom.ai/overview"
   }
 ];
