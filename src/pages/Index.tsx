@@ -145,8 +145,8 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <h2 className="font-bold mb-4 text-center text-5xl">Who Is Build For?</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">A platform to build meaningful projects and portfolios, for all students</p>
+            <h2 className="font-bold mb-4 text-center text-4xl">Who Is Build For?</h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base">A platform to build meaningful projects and portfolios, for all students</p>
             {renderPersonaCards()}
           </motion.div>
         </div>
@@ -172,7 +172,7 @@ const Index = () => {
           once: true
         }}>
             <h2 className="text-4xl font-bold mb-4 text-center">AI Tools We Use</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">Use no-code AI tools to bring your digital and physical products to life</p>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base">Use no-code AI tools to bring your digital and physical products to life</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {aiTools.map(tool => <motion.div key={tool.title} initial={{
               opacity: 0,
