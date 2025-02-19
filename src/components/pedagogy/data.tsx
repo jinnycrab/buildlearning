@@ -60,7 +60,7 @@ export const processCards: ProcessCard[] = [
 
 export const aiTools: AiTool[] = [
   {
-    logo: "/lovable-uploads/lovable-logo.png",
+    logo: "https://lovable.dev/icon.svg?3d7ac3d2bb57ecbe",
     title: "Lovable",
     description: "AI-powered development environment that helps students build web applications through natural language conversations.",
     link: "https://www.lovable.dev"
