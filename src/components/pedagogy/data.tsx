@@ -68,7 +68,7 @@ export const aiTools: AiTool[] = [
   {
     logo: "https://cdn.prod.website-files.com/628e6648a47e6727d5c69a2a/62d856b5e550362034ed205f_miro%20logo.png",
     title: "Miro",
-    description: "AI assistant that assists with research, ideation, and problem-solving",
+    description: "AI assistant for research, ideation, and collaboration",
     link: "https://miro.com/ai/?gclsrc=aw.ds&&utm_source=google&utm_medium=cpc&utm_campaign=S%7CGOO%7CBRN%7CSG%7CEN-EN%7CBrand%7CExact&utm_adgroup=&adgroupid=153804404069&utm_custom=18259414706&utm_content=675843190684&utm_term=miro%20ai&matchtype=e&device=c&location=9062546&gad_source=1&gbraid=0AAAAACtKBml8Cf9ZyJ8BKKx3ZFBIqtou4&gclid=CjwKCAiAn9a9BhBtEiwAbKg6fp2puOa1BtSRwqE-sYGMzJMZi-O667JOvlUwesn4py6LvWJ7sYvffBoC8XcQAvD_BwE"
   },
   {
