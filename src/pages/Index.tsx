@@ -1,4 +1,3 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
@@ -17,7 +16,6 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState, useCallback, useEffect } from "react";
-
 const Index = () => {
   const isMobile = useIsMobile();
   const [personaIndex, setPersonaIndex] = useState(0);
@@ -26,12 +24,10 @@ const Index = () => {
     loop: false,
     dragFree: false
   });
-
   const onPersonaSelect = useCallback(() => {
     if (!personaApi) return;
     setPersonaIndex(personaApi.selectedScrollSnap());
   }, [personaApi]);
-
   useEffect(() => {
     if (!personaApi) return;
     onPersonaSelect();
@@ -40,7 +36,6 @@ const Index = () => {
       personaApi.off("select", onPersonaSelect);
     };
   }, [personaApi, onPersonaSelect]);
-
   const camps = [{
     id: 1,
     title: "AI Innovation Camp",
@@ -66,74 +61,59 @@ const Index = () => {
     price: "",
     category: "Marketing"
   }];
-
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
-
   const renderPersonaCards = () => {
     if (isMobile) {
-      return (
-        <div className="relative pb-12">
+      return <div className="relative pb-12">
           <Carousel ref={personaRef} className="w-full">
             <CarouselContent className="-ml-4">
-              {userPersonas.map((persona, index) => (
-                <CarouselItem key={persona.title} className="pl-4 basis-[85%] min-w-0">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="w-full"
-                  >
+              {userPersonas.map((persona, index) => <CarouselItem key={persona.title} className="pl-4 basis-[85%] min-w-0">
+                  <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6,
+                delay: index * 0.1
+              }} viewport={{
+                once: true
+              }} className="w-full">
                     <PersonaCard {...persona} />
                   </motion.div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
             </CarouselContent>
           </Carousel>
           <div className="flex justify-end gap-3 mt-6 px-4 absolute bottom-0 right-0">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => personaApi?.scrollPrev()}
-              disabled={personaIndex === 0}
-              className="h-10 w-10 rounded-full border-2 touch-manipulation"
-            >
+            <Button variant="outline" size="icon" onClick={() => personaApi?.scrollPrev()} disabled={personaIndex === 0} className="h-10 w-10 rounded-full border-2 touch-manipulation">
               <ChevronLeft className="h-5 w-5" />
             </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => personaApi?.scrollNext()}
-              disabled={personaIndex === userPersonas.length - 1}
-              className="h-10 w-10 rounded-full border-2 touch-manipulation"
-            >
+            <Button variant="outline" size="icon" onClick={() => personaApi?.scrollNext()} disabled={personaIndex === userPersonas.length - 1} className="h-10 w-10 rounded-full border-2 touch-manipulation">
               <ChevronRight className="h-5 w-5" />
             </Button>
           </div>
-        </div>
-      );
+        </div>;
     }
-
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {userPersonas.map((persona, index) => (
-          <motion.div
-            key={persona.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="w-full"
-          >
+    return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {userPersonas.map((persona, index) => <motion.div key={persona.title} initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6,
+        delay: index * 0.1
+      }} viewport={{
+        once: true
+      }} className="w-full">
             <PersonaCard {...persona} />
-          </motion.div>
-        ))}
-      </div>
-    );
+          </motion.div>)}
+      </div>;
   };
-
   return <div className="min-h-screen">
       <Navigation />
       {/* Hero - White */}
@@ -198,18 +178,19 @@ const Index = () => {
               Cutting-edge AI tools that empower our students to learn, create, and innovate more effectively
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {aiTools.map(tool => (
-                <motion.div
-                  key={tool.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow w-full"
-                >
+              {aiTools.map(tool => <motion.div key={tool.title} initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6
+            }} viewport={{
+              once: true
+            }} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow w-full">
                   <AiTool {...tool} />
-                </motion.div>
-              ))}
+                </motion.div>)}
             </div>
           </motion.div>
         </div>
@@ -226,11 +207,8 @@ const Index = () => {
       </section>
       
       {/* What Experts Say - White */}
-      <section className="py-24 bg-white">
-        <RecentArticles />
-      </section>
+      
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
-
 export default Index;
