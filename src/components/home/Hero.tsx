@@ -6,11 +6,11 @@ const Hero = () => {
   return (
     <section className="text-center max-w-3xl mx-auto mb-16 px-4">
       <h1 className="text-4xl font-bold mb-6 font-general-sans leading-tight px-0 my-0 py-[35px] md:text-5xl">
-        Come build a better future for
+        Come build your student portfolio for
         <AnimatedWords />
       </h1>
       <p className="text-base md:text-xl text-muted-foreground mb-6 px-4 md:px-0">
-        At Build, we solve real-world problems, build portfolios, and prepare
+        At Build, students build portfolios solving real-world problems, and prepare
         for a future in AI and innovation.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
