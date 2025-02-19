@@ -6,7 +6,7 @@ const Navigation = () => {
   return <nav className="border-b bg-white sticky top-0 z-50">
       <div className="container flex items-center justify-between py-0">
         <Link to="/" className="flex items-center gap-3 pl-4 md:pl-8">
-          <img alt="Build Learning Logo" loading="eager" className="h-16 md:h-20 w-auto [image-rendering:crisp-edges] object-cover" src="/lovable-uploads/f39f0696-78d0-4656-9b47-2a241406965a.png" />
+          <img alt="Build Learning Logo" loading="eager" className="h-16 md:h-20 w-auto [image-rendering:crisp-edges] object-cover" src="/lovable-uploads/8aa9c99b-a7c2-4b4a-8af6-19c47e335365.png" />
           <span className="text-xl font-semibold hidden md:block">Build Learning Group</span>
         </Link>
         
