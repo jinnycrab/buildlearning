@@ -45,8 +45,8 @@ const BuildPortfolio = () => {
             </AspectRatio>
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-semibold mb-2 font-general-sans">Project Poster</h3>
-            <p className="text-muted-foreground">A visual representation of your project, highlighting key features and outcomes.</p>
+            <h3 className="text-xl md:text-2xl font-semibold mb-2 font-general-sans">Project Poster</h3>
+            <p className="text-base md:text-lg text-muted-foreground">A visual representation of your project, highlighting key features and outcomes.</p>
           </div>
         </motion.div>
 
@@ -72,8 +72,8 @@ const BuildPortfolio = () => {
             </AspectRatio>
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-semibold mb-2 font-general-sans">Project Video</h3>
-            <p className="text-muted-foreground">A dynamic presentation of your project, showcasing your process and results.</p>
+            <h3 className="text-xl md:text-2xl font-semibold mb-2 font-general-sans">Project Video</h3>
+            <p className="text-base md:text-lg text-muted-foreground">A dynamic presentation of your project, showcasing your process and results.</p>
           </div>
         </motion.div>
 
@@ -99,8 +99,8 @@ const BuildPortfolio = () => {
             </AspectRatio>
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-semibold mb-2 font-general-sans">Project Portfolio</h3>
-            <p className="text-muted-foreground">A comprehensive collection of your projects, demonstrating your skills and experience.</p>
+            <h3 className="text-xl md:text-2xl font-semibold mb-2 font-general-sans">Project Portfolio</h3>
+            <p className="text-base md:text-lg text-muted-foreground">A comprehensive collection of your projects, demonstrating your skills and experience.</p>
           </div>
         </motion.div>
       </div>
