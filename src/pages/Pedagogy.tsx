@@ -297,7 +297,7 @@ const Process = () => {
         <motion.div className="container mx-auto px-4 md:px-8" {...fadeInUp}>
           <h2 className="text-4xl font-bold mb-4 text-center">AI Tools We Use</h2>
           <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-            Use no-code AI tools to bring your digital and physical products to life
+            Thrive in the age of AI with exposure to latest AI tools
           </p>
           {renderAiTools()}
         </motion.div>
