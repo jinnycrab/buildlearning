@@ -4,7 +4,7 @@ import { UserPersona } from "./types";
 
 export const PersonaCard = ({ title, description, problems, image }: UserPersona) => {
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl">
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow">
       {/* Image with overlay gradient */}
       <div className="absolute inset-0">
         <img 
@@ -16,7 +16,7 @@ export const PersonaCard = ({ title, description, problems, image }: UserPersona
       </div>
       
       {/* Content */}
-      <div className="absolute inset-0 p-4 flex flex-col text-white">
+      <div className="absolute inset-0 p-6 flex flex-col text-white">
         <h3 className="text-lg xl:text-2xl font-bold mb-2">{title}</h3>
         <p className="text-white/90 text-xs xl:text-sm mb-4">
           {description}

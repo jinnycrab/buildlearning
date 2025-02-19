@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState, useCallback, useEffect } from "react";
+
 const Index = () => {
   const isMobile = useIsMobile();
   const [personaIndex, setPersonaIndex] = useState(0);
@@ -24,10 +25,12 @@ const Index = () => {
     loop: false,
     dragFree: false
   });
+
   const onPersonaSelect = useCallback(() => {
     if (!personaApi) return;
     setPersonaIndex(personaApi.selectedScrollSnap());
   }, [personaApi]);
+
   useEffect(() => {
     if (!personaApi) return;
     onPersonaSelect();
@@ -36,6 +39,7 @@ const Index = () => {
       personaApi.off("select", onPersonaSelect);
     };
   }, [personaApi, onPersonaSelect]);
+
   const camps = [{
     id: 1,
     title: "AI Innovation Camp",
@@ -61,9 +65,11 @@ const Index = () => {
     price: "",
     category: "Marketing"
   }];
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
+
   const renderPersonaCards = () => {
     if (isMobile) {
       return <div className="relative pb-12">
@@ -97,7 +103,7 @@ const Index = () => {
           </div>
         </div>;
     }
-    return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-8">
         {userPersonas.map((persona, index) => <motion.div key={persona.title} initial={{
         opacity: 0,
         y: 20
@@ -114,6 +120,7 @@ const Index = () => {
           </motion.div>)}
       </div>;
   };
+
   return <div className="min-h-screen">
       <Navigation />
       {/* Hero - White */}
@@ -207,4 +214,5 @@ const Index = () => {
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
+
 export default Index;
