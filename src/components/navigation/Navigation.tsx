@@ -1,14 +1,12 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <nav className="border-b bg-white sticky top-0 z-50">
       <div className="container flex items-center justify-between py-0">
         <Link to="/" className="flex items-center">
-          <img src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/1.png" alt="Build Learning Logo" className="h-16 md:h-20 w-auto object-contain [image-rendering:crisp-edges]" loading="eager" />
+          <img alt="Build Learning Logo" loading="eager" src="/lovable-uploads/ac43c070-a8b0-408b-a913-c71a744097fe.png" className="h-16 md:h-20 w-auto [image-rendering:crisp-edges] object-cover" />
         </Link>
         
         {/* Mobile Menu Button */}
