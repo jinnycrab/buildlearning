@@ -20,7 +20,15 @@ import { useState, useCallback, useEffect } from "react";
 const Index = () => {
   const isMobile = useIsMobile();
   const [personaIndex, setPersonaIndex] = useState(0);
+  const [aiToolIndex, setAiToolIndex] = useState(0);
+  
   const [personaRef, personaApi] = useEmblaCarousel({
+    align: "start",
+    loop: false,
+    dragFree: false
+  });
+  
+  const [aiToolRef, aiToolApi] = useEmblaCarousel({
     align: "start",
     loop: false,
     dragFree: false
@@ -31,6 +39,11 @@ const Index = () => {
     setPersonaIndex(personaApi.selectedScrollSnap());
   }, [personaApi]);
 
+  const onAiToolSelect = useCallback(() => {
+    if (!aiToolApi) return;
+    setAiToolIndex(aiToolApi.selectedScrollSnap());
+  }, [aiToolApi]);
+
   useEffect(() => {
     if (!personaApi) return;
     onPersonaSelect();
@@ -39,6 +52,15 @@ const Index = () => {
       personaApi.off("select", onPersonaSelect);
     };
   }, [personaApi, onPersonaSelect]);
+
+  useEffect(() => {
+    if (!aiToolApi) return;
+    onAiToolSelect();
+    aiToolApi.on("select", onAiToolSelect);
+    return () => {
+      aiToolApi.off("select", onAiToolSelect);
+    };
+  }, [aiToolApi, onAiToolSelect]);
 
   const camps = [{
     id: 1,
@@ -121,6 +143,68 @@ const Index = () => {
       </div>;
   };
 
+  const renderAiTools = () => {
+    if (isMobile) {
+      return (
+        <div className="relative pb-12">
+          <Carousel ref={aiToolRef} className="w-full">
+            <CarouselContent className="-ml-4">
+              {aiTools.map((tool, index) => (
+                <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0 py-[16px]">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow w-full"
+                  >
+                    <AiTool {...tool} />
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <div className="flex justify-end gap-3 mt-6 px-4 absolute bottom-0 right-0">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => aiToolApi?.scrollPrev()}
+              disabled={aiToolIndex === 0}
+              className="h-10 w-10 rounded-full border-2 touch-manipulation"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => aiToolApi?.scrollNext()}
+              disabled={aiToolIndex === aiTools.length - 1}
+              className="h-10 w-10 rounded-full border-2 touch-manipulation"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {aiTools.map(tool => (
+          <motion.div
+            key={tool.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow w-full"
+          >
+            <AiTool {...tool} />
+          </motion.div>
+        ))}
+      </div>
+    );
+  };
+
   return <div className="min-h-screen">
       <Navigation />
       {/* Hero - White */}
@@ -180,21 +264,7 @@ const Index = () => {
         }}>
             <h2 className="font-bold mb-4 text-center text-4xl">AI Tools We Use</h2>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base">Use no-code AI tools to bring your digital and physical products to life</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {aiTools.map(tool => <motion.div key={tool.title} initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6
-            }} viewport={{
-              once: true
-            }} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow w-full">
-                  <AiTool {...tool} />
-                </motion.div>)}
-            </div>
+            {renderAiTools()}
           </motion.div>
         </div>
       </section>
@@ -208,8 +278,6 @@ const Index = () => {
           <CampList camps={camps} />
         </div>
       </section>
-      
-      {/* What Experts Say - White */}
       
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
