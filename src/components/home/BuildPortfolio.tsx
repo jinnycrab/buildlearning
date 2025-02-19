@@ -1,39 +1,38 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-
 const BuildPortfolio = () => {
-  return (
-    <div className="container mx-auto px-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center mb-12"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-general-sans">
-          Build-a-Portfolio™
-        </h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Stand out from the crowd with your creative output and innovative solutions, while showcasing your thought process and personality.
-        </p>
+  return <div className="container mx-auto px-4">
+      <motion.div initial={{
+      opacity: 0,
+      y: 20
+    }} whileInView={{
+      opacity: 1,
+      y: 0
+    }} transition={{
+      duration: 0.6
+    }} viewport={{
+      once: true
+    }} className="text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-general-sans">What Students Work On</h2>
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Every project portfolio will culminate in a poster of your creative output and a video of you presenting your idea</p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-12">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="bg-background rounded-2xl p-8 shadow-lg"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        x: -20
+      }} whileInView={{
+        opacity: 1,
+        x: 0
+      }} transition={{
+        duration: 0.6,
+        delay: 0.2
+      }} viewport={{
+        once: true
+      }} className="bg-background rounded-2xl p-8 shadow-lg">
           <div className="relative aspect-square w-full mb-8 overflow-hidden rounded-xl">
-            <img
-              src="https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Build a Poster Example"
-              className="w-full h-full object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Build a Poster Example" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
             <div className="absolute inset-0 p-6 flex flex-col justify-center text-white">
               <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Poster™</h3>
@@ -74,19 +73,20 @@ const BuildPortfolio = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="bg-background rounded-2xl p-8 shadow-lg"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        x: 20
+      }} whileInView={{
+        opacity: 1,
+        x: 0
+      }} transition={{
+        duration: 0.6,
+        delay: 0.4
+      }} viewport={{
+        once: true
+      }} className="bg-background rounded-2xl p-8 shadow-lg">
           <div className="relative aspect-square w-full mb-8 overflow-hidden rounded-xl">
-            <img
-              src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Build a Demo Example"
-              className="w-full h-full object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Build a Demo Example" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
             <div className="absolute inset-0 p-6 flex flex-col justify-center text-white">
               <h3 className="text-2xl font-bold mb-4 font-general-sans">Build-a-Demo™</h3>
@@ -128,30 +128,27 @@ const BuildPortfolio = () => {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center"
-      >
+      <motion.div initial={{
+      opacity: 0,
+      y: 20
+    }} whileInView={{
+      opacity: 1,
+      y: 0
+    }} transition={{
+      duration: 0.6,
+      delay: 0.6
+    }} viewport={{
+      once: true
+    }} className="text-center">
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            to="/projects"
-            className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors text-center"
-          >
+          <Link to="/projects" className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors text-center">
             View Student Projects
           </Link>
-          <Link
-            to="/process"
-            className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center"
-          >
+          <Link to="/process" className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center">
             Our Pedagogy
           </Link>
         </div>
       </motion.div>
-    </div>
-  );
+    </div>;
 };
-
 export default BuildPortfolio;
