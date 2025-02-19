@@ -7,6 +7,8 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ProcessCard } from "@/components/pedagogy/ProcessCard";
 import { AiTool } from "@/components/pedagogy/AiTool";
 import { DotIndicator } from "@/components/pedagogy/DotIndicator";
@@ -60,60 +62,77 @@ const Process = () => {
   };
 
   const fadeInUp = {
-    initial: {
-      opacity: 0,
-      y: 20
-    },
-    animate: {
-      opacity: 1,
-      y: 0
-    },
-    transition: {
-      duration: 0.6
-    }
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
   };
 
   const renderProcessCards = () => {
     if (isMobile) {
-      return <div className="relative pb-8">
+      return (
+        <div className="relative pb-8">
           <Carousel ref={buildProcessRef} className="w-full">
             <CarouselContent className="-ml-4">
-              {processCards.map((card, index) => <CarouselItem key={card.letter} className="pl-4 basis-[85%] min-w-0">
-                  <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: index * 0.1
-              }} viewport={{
-                once: true
-              }} className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto mb-8">
+              {processCards.map((card, index) => (
+                <CarouselItem key={card.letter} className="pl-4 basis-[85%] min-w-0">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto mb-8"
+                  >
                     <ProcessCard {...card} />
                   </motion.div>
-                </CarouselItem>)}
+                </CarouselItem>
+              ))}
             </CarouselContent>
           </Carousel>
-          <div className="flex justify-center mt-6">
-            {processCards.map((_, index) => <DotIndicator key={index} selected={index === buildProcessIndex} onClick={() => buildProcessApi?.scrollTo(index)} />)}
+          <div className="flex justify-end gap-2 mt-4 px-4">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => buildProcessApi?.scrollPrev()}
+              disabled={buildProcessIndex === 0}
+              className="h-8 w-8 rounded-full"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => buildProcessApi?.scrollNext()}
+              disabled={buildProcessIndex === processCards.length - 1}
+              className="h-8 w-8 rounded-full"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
           </div>
-        </div>;
+        </div>
+      );
     }
-    return <div className="grid grid-cols-1 gap-8">
-        {processCards.map((card, index) => <motion.div key={card.letter} initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6,
-        delay: index * 0.1
-      }} viewport={{
-        once: true
-      }} className="bg-white p-8 rounded-2xl shadow-lg">
+    return (
+      <div className="grid grid-cols-1 gap-8">
+        {processCards.map((card, index) => (
+          <motion.div
+            key={card.letter}
+            initial={{
+              opacity: 0,
+              y: 20
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.1
+            }}
+            viewport={{
+              once: true
+            }}
+            className="bg-white p-8 rounded-2xl shadow-lg"
+          >
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="order-2 md:order-1">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
@@ -124,10 +143,12 @@ const Process = () => {
                   {card.description}
                 </p>
                 <ul className="space-y-3">
-                  {card.features.map((feature, idx) => <li key={idx} className="flex items-start gap-2">
+                  {card.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                       <span className="text-sm">{feature}</span>
-                    </li>)}
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="order-1 md:order-2">
@@ -136,56 +157,86 @@ const Process = () => {
                 </div>
               </div>
             </div>
-          </motion.div>)}
-      </div>;
+          </motion.div>
+        ))}
+      </div>
+    );
   };
 
   const renderAiTools = () => {
     if (isMobile) {
-      return <div className="relative pb-8">
+      return (
+        <div className="relative pb-8">
           <Carousel ref={aiToolsRef} className="w-full">
             <CarouselContent className="-ml-4">
-              {aiTools.map((tool, index) => <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0">
-                  <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: index * 0.1
-              }} viewport={{
-                once: true
-              }} className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto mb-8">
+              {aiTools.map((tool, index) => (
+                <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white p-6 rounded-2xl shadow-lg h-[calc(100vh-320px)] overflow-y-auto mb-8"
+                  >
                     <AiTool {...tool} />
                   </motion.div>
-                </CarouselItem>)}
+                </CarouselItem>
+              ))}
             </CarouselContent>
           </Carousel>
-          <div className="flex justify-center mt-6">
-            {aiTools.map((_, index) => <DotIndicator key={index} selected={index === aiToolsIndex} onClick={() => aiToolsApi?.scrollTo(index)} />)}
+          <div className="flex justify-end gap-2 mt-4 px-4">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => aiToolsApi?.scrollPrev()}
+              disabled={aiToolsIndex === 0}
+              className="h-8 w-8 rounded-full"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => aiToolsApi?.scrollNext()}
+              disabled={aiToolsIndex === aiTools.length - 1}
+              className="h-8 w-8 rounded-full"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
           </div>
-        </div>;
+        </div>
+      );
     }
-    return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {aiTools.map(tool => <motion.div key={tool.title} initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6
-      }} viewport={{
-        once: true
-      }} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {aiTools.map(tool => (
+          <motion.div
+            key={tool.title}
+            initial={{
+              opacity: 0,
+              y: 20
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
+            transition={{
+              duration: 0.6
+            }}
+            viewport={{
+              once: true
+            }}
+            className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+          >
             <AiTool {...tool} />
-          </motion.div>)}
-      </div>;
+          </motion.div>
+        ))}
+      </div>
+    );
   };
 
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -253,7 +304,8 @@ const Process = () => {
       </section>
 
       <Footer onCategoryFilter={handleCategoryFilter} />
-    </div>;
+    </div>
+  );
 };
 
 export default Process;
