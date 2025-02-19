@@ -1,10 +1,10 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
-import Features from "../components/home/Features";
-import RecentArticles from "../components/home/RecentArticles";
+import WhatWeDo from "../components/home/WhatWeDo";
 import CampList from "../components/camps/CampList";
-import BuildPortfolio from "../components/home/BuildPortfolio";
+import WhatYouGet from "../components/home/WhatYouGet";
 import { motion } from "framer-motion";
 import { AiTool } from "../components/pedagogy/AiTool";
 import { aiTools } from "../components/pedagogy/data";
@@ -207,22 +207,19 @@ const Index = () => {
 
   return <div className="min-h-screen">
       <Navigation />
-      {/* Hero - White */}
       <div className="bg-white py-[96px]">
         <Hero />
       </div>
       
-      {/* What We Do - Hero color */}
       <section className="py-24 bg-accent/5">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center font-general-sans md:text-4xl">
             What We Do
           </h2>
-          <Features />
+          <WhatWeDo />
         </div>
       </section>
 
-      {/* Who is Build for - White */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <motion.div initial={{
@@ -243,12 +240,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Build-a-Portfolio - Muted color */}
       <section className="py-24 bg-muted">
-        <BuildPortfolio />
+        <WhatYouGet />
       </section>
       
-      {/* AI Tools - White */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <motion.div initial={{
@@ -269,7 +264,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 2025 Camps - Muted color */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center font-general-sans md:text-4xl">

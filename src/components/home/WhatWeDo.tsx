@@ -1,7 +1,7 @@
 
 import { Sparkles, Code, Users } from "lucide-react";
 
-const Features = () => {
+const WhatWeDo = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div className="bg-white rounded-2xl p-6 text-center shadow-lg">
@@ -35,4 +35,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default WhatWeDo;
