@@ -1,5 +1,6 @@
+
 import { motion } from "framer-motion";
-import Image from '../utils/Image';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const BuildPortfolio = () => {
   return (
@@ -35,7 +36,13 @@ const BuildPortfolio = () => {
           once: true
         }} className="bg-white rounded-xl shadow-md overflow-hidden">
           <div className="relative h-64">
-            <Image src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/poster.png" alt="Project Poster" className="object-cover w-full h-full" />
+            <AspectRatio ratio={16 / 9} className="h-full">
+              <img
+                src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/poster.png"
+                alt="Project Poster"
+                className="object-cover w-full h-full"
+              />
+            </AspectRatio>
           </div>
           <div className="p-6">
             <h3 className="text-xl font-semibold mb-2 font-general-sans">Project Poster</h3>
@@ -56,7 +63,13 @@ const BuildPortfolio = () => {
           once: true
         }} className="bg-white rounded-xl shadow-md overflow-hidden">
           <div className="relative h-64">
-            <Image src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/video.png" alt="Project Video" className="object-cover w-full h-full" />
+            <AspectRatio ratio={16 / 9} className="h-full">
+              <img
+                src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/video.png"
+                alt="Project Video"
+                className="object-cover w-full h-full"
+              />
+            </AspectRatio>
           </div>
           <div className="p-6">
             <h3 className="text-xl font-semibold mb-2 font-general-sans">Project Video</h3>
@@ -77,7 +90,13 @@ const BuildPortfolio = () => {
           once: true
         }} className="bg-white rounded-xl shadow-md overflow-hidden">
           <div className="relative h-64">
-            <Image src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/portfolio.png" alt="Project Portfolio" className="object-cover w-full h-full" />
+            <AspectRatio ratio={16 / 9} className="h-full">
+              <img
+                src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/portfolio.png"
+                alt="Project Portfolio"
+                className="object-cover w-full h-full"
+              />
+            </AspectRatio>
           </div>
           <div className="p-6">
             <h3 className="text-xl font-semibold mb-2 font-general-sans">Project Portfolio</h3>
