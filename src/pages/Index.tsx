@@ -69,7 +69,7 @@ const Index = () => {
       return <div className="relative pb-12">
           <Carousel ref={personaRef} className="w-full">
             <CarouselContent className="-ml-4">
-              {userPersonas.map((persona, index) => <CarouselItem key={persona.title} className="pl-4 basis-[85%] min-w-0">
+              {userPersonas.map((persona, index) => <CarouselItem key={persona.title} className="pl-4 basis-[85%] min-w-0 py-[16px]">
                   <motion.div initial={{
                 opacity: 0,
                 y: 20
