@@ -124,7 +124,7 @@ const Index = () => {
       {/* What We Do - Hero color */}
       <section className="py-24 bg-accent/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center font-general-sans">
+          <h2 className="text-4xl font-bold mb-12 text-center font-general-sans md:text-4xl">
             What We Do
           </h2>
           <Features />
@@ -145,8 +145,8 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <h2 className="font-bold mb-4 text-center text-5xl">Who Is Build For?</h2>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-lg">A platform to build meaningful projects and portfolios, for all students</p>
+            <h2 className="font-bold mb-4 text-center text-4xl">Who Is Build For?</h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base">A platform to build meaningful projects and portfolios, for all students</p>
             {renderPersonaCards()}
           </motion.div>
         </div>
@@ -171,8 +171,8 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <h2 className="font-bold mb-4 text-center text-5xl">AI Tools We Use</h2>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-lg">Use no-code AI tools to bring your digital and physical products to life</p>
+            <h2 className="font-bold mb-4 text-center text-4xl">AI Tools We Use</h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base">Use no-code AI tools to bring your digital and physical products to life</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {aiTools.map(tool => <motion.div key={tool.title} initial={{
               opacity: 0,
@@ -195,7 +195,7 @@ const Index = () => {
       {/* 2025 Camps - Muted color */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center font-general-sans">
+          <h2 className="text-4xl font-bold mb-12 text-center font-general-sans md:text-4xl">
             Our 2025 Camps
           </h2>
           <CampList camps={camps} />
