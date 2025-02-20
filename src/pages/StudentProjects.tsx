@@ -13,10 +13,10 @@ const StudentProjects = () => {
   const projects: StudentProject[] = [
     {
       id: 1,
-      title: "Project Tai",
+      title: "Project Tai: Designing AI for Education",
       posterImage: "https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun-09/refs/heads/main/images/How%20to%20make%20a%20research%20poster%20A%20guide%20for%20students.jpg?token=GHSAT0AAAAAAC6ZUQEP3BVLCVLDYIVNIBBOZ5XBLMQ", // Replace with actual image path
-      problemStatement: "Example problem statement for Project Edge",
-      proposedSolution: "Example proposed solution for Project Edge",
+      problemStatement: "Teachers are burnt out from marking scripts, and this can create gaps in students learning. How can we leverage AI to reduce teacher fatigue from marking?",
+      proposedSolution: "AI assistant with in-built student dashboard and personalized feedback generator",
       demoLink: "https://example.com/demo",
     },
     // Add more projects here
