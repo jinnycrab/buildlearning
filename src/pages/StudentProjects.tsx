@@ -9,7 +9,6 @@ import { StudentProject } from "@/types/project";
 const StudentProjects = () => {
   const [selectedProject, setSelectedProject] = useState<StudentProject | null>(null);
 
-  // This is a placeholder array - replace with actual project data once available
   const projects: StudentProject[] = [
     {
       id: 1,
