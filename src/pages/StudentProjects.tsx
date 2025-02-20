@@ -4,15 +4,7 @@ import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { ProjectCard } from "../components/projects/ProjectCard";
 import { ProjectModal } from "../components/projects/ProjectModal";
-
-interface StudentProject {
-  id: number;
-  title: string;
-  posterImage: string;
-  problemStatement: string;
-  proposedSolution: string;
-  demoLink?: string;
-}
+import { StudentProject } from "@/types/project";
 
 const StudentProjects = () => {
   const [selectedProject, setSelectedProject] = useState<StudentProject | null>(null);

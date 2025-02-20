@@ -1,4 +1,6 @@
 
+import { StudentProject } from "@/types/project";
+
 interface ProjectCardProps {
   project: StudentProject;
   onClick: () => void;

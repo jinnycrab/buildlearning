@@ -1,4 +1,5 @@
 
+import { StudentProject } from "@/types/project";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 interface ProjectModalProps {
