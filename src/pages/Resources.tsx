@@ -3,76 +3,59 @@ import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
 import { ExternalLink, BookOpen, PenTool } from "lucide-react";
 import { Link } from "react-scroll";
-
 const Resources = () => {
-  const articles = [
-    {
-      id: 1,
-      title: "The Future of Technology Education",
-      description: "Exploring innovative approaches to teaching tech skills in 2024",
-      imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-      link: "https://techcrunch.com",
-      date: "Mar 15, 2024"
-    },
-    {
-      id: 2,
-      title: "Programming Languages in 2024",
-      description: "Which languages are dominating the industry?",
-      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      link: "https://wired.com",
-      date: "Mar 10, 2024"
-    },
-    {
-      id: 3,
-      title: "AI in Education",
-      description: "How artificial intelligence is transforming learning",
-      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      link: "https://education.com",
-      date: "Mar 5, 2024"
-    }
-  ];
-
+  const articles = [{
+    id: 1,
+    title: "The Future of Technology Education",
+    description: "Exploring innovative approaches to teaching tech skills in 2024",
+    imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+    link: "https://techcrunch.com",
+    date: "Mar 15, 2024"
+  }, {
+    id: 2,
+    title: "Programming Languages in 2024",
+    description: "Which languages are dominating the industry?",
+    imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    link: "https://wired.com",
+    date: "Mar 10, 2024"
+  }, {
+    id: 3,
+    title: "AI in Education",
+    description: "How artificial intelligence is transforming learning",
+    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    link: "https://education.com",
+    date: "Mar 5, 2024"
+  }];
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        <motion.div 
-          className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <motion.div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center" initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }}>
+          <h1 className="md:text-6xl font-bold mb-6 text-5xl">
             Resources
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
+          <p className="md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
             Stay informed about the latest in education and technology
           </p>
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-8 w-full max-w-md mx-auto">
-            <Link
-              to="latest-articles"
-              smooth={true}
-              duration={500}
-              offset={-100}
-              className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center"
-            >
+            <Link to="latest-articles" smooth={true} duration={500} offset={-100} className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center">
               Latest Articles
             </Link>
-            <Link
-              to="ideation-tools"
-              smooth={true}
-              duration={500}
-              offset={-100}
-              className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors text-center"
-            >
+            <Link to="ideation-tools" smooth={true} duration={500} offset={-100} className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors text-center">
               Free Ideation Tools
             </Link>
           </div>
@@ -81,33 +64,26 @@ const Resources = () => {
 
       {/* Latest Articles Section */}
       <section id="latest-articles" className="py-24 bg-muted">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="container mx-auto"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold font-general-sans mb-4 text-center">Latest Articles</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-12">
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} viewport={{
+        once: true
+      }} className="container mx-auto">
+          <h2 className="text-4xl font-bold font-general-sans mb-4 text-center md:text-4xl">Latest Articles</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-center mb-12 text-base">
             Latest insights and developments in education, locally and globally
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((article) => (
-              <a
-                key={article.id}
-                href={article.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
+            {articles.map(article => <a key={article.id} href={article.link} target="_blank" rel="noopener noreferrer" className="group">
                 <div className="bg-white rounded-xl shadow-sm overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                   <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={article.imageUrl}
-                      alt={article.title}
-                      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
-                    />
+                    <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
@@ -124,30 +100,31 @@ const Resources = () => {
                     </p>
                   </div>
                 </div>
-              </a>
-            ))}
+              </a>)}
           </div>
         </motion.div>
       </section>
 
       {/* Free Ideation Tools Section */}
       <section id="ideation-tools" className="py-24 bg-[#F4B400]">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="container mx-auto text-center"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold font-general-sans mb-4">Free Ideation Tools</h2>
-          <p className="text-lg text-muted-foreground">
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} viewport={{
+        once: true
+      }} className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold font-general-sans mb-4 md:text-4xl">Free Ideation Tools</h2>
+          <p className="text-muted-foreground text-base">
             Coming soon
           </p>
         </motion.div>
       </section>
       <Footer onCategoryFilter={handleCategoryFilter} />
-    </div>
-  );
+    </div>;
 };
-
 export default Resources;
