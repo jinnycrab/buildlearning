@@ -200,10 +200,10 @@ const Process = () => {
       }} transition={{
         duration: 0.6
       }}>
-          <h1 className="text-5xl font-bold mb-6 md:text-5xl">
+          <h1 className="font-bold mb-6 md:text-5xl text-4xl">
             Our Pedagogy
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 md:text-xl">
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 md:text-xl text-lg">
             Our systematic approach to guide students in developing solutions for real-world problems
           </p>
           
