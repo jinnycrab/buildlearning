@@ -17,9 +17,16 @@ const StudentProjects = () => {
       posterImage: "https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun-09/refs/heads/main/images/How%20to%20make%20a%20research%20poster%20A%20guide%20for%20students.jpg?token=GHSAT0AAAAAAC6ZUQEP3BVLCVLDYIVNIBBOZ5XBLMQ", // Replace with actual image path
       problemStatement: "Teachers are burnt out from marking scripts, and this can create gaps in students learning. How can we leverage AI to reduce teacher fatigue from marking?",
       proposedSolution: "AI assistant with in-built student dashboard and personalized feedback generator",
-      demoLink: "https://example.com/demo",
+      demoLink: "Link provided upon request to protect student privacy",
     },
-    // Add more projects here
+    {
+      id: 2,
+      title: "Project Tai: Designing AI for Education",
+      posterImage: "https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun-09/refs/heads/main/images/How%20to%20make%20a%20research%20poster%20A%20guide%20for%20students.jpg?token=GHSAT0AAAAAAC6ZUQEP3BVLCVLDYIVNIBBOZ5XBLMQ", // Replace with actual image path
+      problemStatement: "Teachers are burnt out from marking scripts, and this can create gaps in students learning. How can we leverage AI to reduce teacher fatigue from marking?",
+      proposedSolution: "AI assistant with in-built student dashboard and personalized feedback generator",
+      demoLink: "Link provided upon request to protect student privacy",
+    },
   ];
 
   return (
