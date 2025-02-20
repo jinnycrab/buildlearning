@@ -13,7 +13,7 @@ const StudentProjects = () => {
     {
       id: 1,
       title: "Project Tai: Designing AI for Education",
-      posterImage: "/lovable-uploads/8aa9c99b-a7c2-4b4a-8af6-19c47e335365.png", 
+      posterImage: "/lovable-uploads/taiposter.png", 
       problemStatement: "Teachers are burnt out from marking scripts, and this can create gaps in students learning. How can we leverage AI to reduce teacher fatigue from marking?",
       proposedSolution: "AI assistant with in-built student dashboard and personalized feedback generator",
       demoLink: "Link provided upon request to protect student privacy",
