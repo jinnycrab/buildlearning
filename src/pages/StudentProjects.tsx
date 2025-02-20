@@ -13,7 +13,7 @@ const StudentProjects = () => {
     {
       id: 1,
       title: "Project Tai: Designing AI for Education",
-      posterImage: "/lovable-uploads/taiposter.png", 
+      posterImage: "/lovable-uploads/taiposter.png",
       problemStatement: "Teachers are burnt out from marking scripts, and this can create gaps in students learning. How can we leverage AI to reduce teacher fatigue from marking?",
       proposedSolution: "AI assistant with in-built student dashboard and personalized feedback generator",
       demoLink: "Link provided upon request to protect student privacy",
@@ -27,6 +27,8 @@ const StudentProjects = () => {
       demoLink: "Link provided upon request to protect student privacy",
     },
   ];
+
+  console.log("Rendering projects with images:", projects.map(p => p.posterImage));
 
   return (
     <div className="min-h-screen">
