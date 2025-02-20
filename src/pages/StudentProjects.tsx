@@ -12,7 +12,7 @@ const StudentProjects = () => {
   const projects: StudentProject[] = [
     {
       id: 1,
-      title: "Project Tai: Designing AI for Education",
+      title: "Project Tai: AI for Education",
       posterImage: "/lovable-uploads/taiposter.png",
       problemStatement: "Teachers are burnt out from marking scripts, and this can create gaps in students learning. How can we leverage AI to reduce teacher fatigue from marking?",
       proposedSolution: "AI assistant with in-built student dashboard and personalized feedback generator",
@@ -20,10 +20,10 @@ const StudentProjects = () => {
     },
     {
       id: 2,
-      title: "Project Tai: Designing AI for Education",
-      posterImage: "/lovable-uploads/taiposter.png",
-      problemStatement: "Teachers are burnt out from marking scripts, and this can create gaps in students learning. How can we leverage AI to reduce teacher fatigue from marking?",
-      proposedSolution: "AI assistant with in-built student dashboard and personalized feedback generator",
+      title: "Project ToyJoy: Tech for Mental Wellness",
+      posterImage: "/lovable-uploads/Limiting-2.png",
+      problemStatement: "Youths these days have excessive screen time, and this can lead to feelings of isolation and impacts on cognitive development.",
+      proposedSolution: "Phygital companion (mobile widget and keychain w digital screen) to nudge students for better screen time habits",
       demoLink: "Link provided upon request to protect student privacy",
     },
   ];
