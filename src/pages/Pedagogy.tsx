@@ -203,7 +203,7 @@ const Process = () => {
           <h1 className="font-bold mb-6 md:text-4xl text-4xl">
             Our Pedagogy
           </h1>
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 md:text-xl text-lg">
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 md:text-xl text-base">
             Our systematic approach to guide students in developing solutions for real-world problems
           </p>
           
