@@ -43,7 +43,7 @@ const Resources = () => {
       }} transition={{
         duration: 0.6
       }}>
-          <h1 className="md:text-6xl font-bold mb-6 text-5xl">
+          <h1 className="font-bold mb-6 text-5xl md:text-5xl">
             Resources
           </h1>
           <p className="md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
