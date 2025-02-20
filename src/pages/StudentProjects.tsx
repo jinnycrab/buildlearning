@@ -13,7 +13,7 @@ const StudentProjects = () => {
   const projects: StudentProject[] = [
     {
       id: 1,
-      title: "Project Edge",
+      title: "Project Tai",
       posterImage: "https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun-09/refs/heads/main/images/How%20to%20make%20a%20research%20poster%20A%20guide%20for%20students.jpg?token=GHSAT0AAAAAAC6ZUQEOHDKSXFUUBOBSV4YUZ5XA7VA", 
       problemStatement: "How can we use technology to teacher burnout?",
       proposedSolution: "AI tool to reduce marking fatigue",
