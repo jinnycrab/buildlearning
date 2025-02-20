@@ -13,8 +13,8 @@ const StudentProjects = () => {
   const projects: StudentProject[] = [
     {
       id: 1,
-      title: "Project Edge",
-      posterImage: "/path-to-poster-1.jpg", // Replace with actual image path
+      title: "Project Tai",
+      posterImage: "https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun-09/refs/heads/main/images/How%20to%20make%20a%20research%20poster%20A%20guide%20for%20students.jpg?token=GHSAT0AAAAAAC6ZUQEP3BVLCVLDYIVNIBBOZ5XBLMQ", // Replace with actual image path
       problemStatement: "Example problem statement for Project Edge",
       proposedSolution: "Example proposed solution for Project Edge",
       demoLink: "https://example.com/demo",
