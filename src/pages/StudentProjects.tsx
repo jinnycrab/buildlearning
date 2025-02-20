@@ -28,7 +28,13 @@ const StudentProjects = () => {
     },
   ];
 
-  console.log("Rendering projects with images:", projects.map(p => p.posterImage));
+  // Add more detailed console logging for debugging
+  console.log("Current window location:", window.location.href);
+  console.log("Rendering projects with images:", projects.map(p => ({
+    title: p.title,
+    image: p.posterImage,
+    fullPath: new URL(p.posterImage, window.location.origin).href
+  })));
 
   return (
     <div className="min-h-screen">
@@ -46,7 +52,10 @@ const StudentProjects = () => {
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
-                project={project}
+                project={{
+                  ...project,
+                  posterImage: new URL(project.posterImage, window.location.origin).href
+                }}
                 onClick={() => setSelectedProject(project)}
               />
             ))}
