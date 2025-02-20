@@ -46,7 +46,7 @@ const Resources = () => {
           <h1 className="font-bold mb-6 text-5xl md:text-5xl">
             Resources
           </h1>
-          <p className="md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 text-lg md:text-xl">
             Stay informed about the latest in education and technology
           </p>
           
