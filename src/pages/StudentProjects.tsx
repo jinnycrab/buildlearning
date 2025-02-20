@@ -8,7 +8,7 @@ const StudentProjects = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center font-general-sans">
             Student Projects
           </h1>
-          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-xl">
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-lg">
             Explore our students' innovative posters and engaging demo pitches
           </p>
           {/* Content will be added once Supabase integration is set up */}
