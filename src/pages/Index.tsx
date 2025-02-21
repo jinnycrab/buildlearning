@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState, useCallback, useEffect } from "react";
+
 const Index = () => {
   const isMobile = useIsMobile();
   const [personaIndex, setPersonaIndex] = useState(0);
@@ -29,14 +30,17 @@ const Index = () => {
     loop: false,
     dragFree: false
   });
+
   const onPersonaSelect = useCallback(() => {
     if (!personaApi) return;
     setPersonaIndex(personaApi.selectedScrollSnap());
   }, [personaApi]);
+
   const onAiToolSelect = useCallback(() => {
     if (!aiToolApi) return;
     setAiToolIndex(aiToolApi.selectedScrollSnap());
   }, [aiToolApi]);
+
   useEffect(() => {
     if (!personaApi) return;
     onPersonaSelect();
@@ -45,6 +49,7 @@ const Index = () => {
       personaApi.off("select", onPersonaSelect);
     };
   }, [personaApi, onPersonaSelect]);
+
   useEffect(() => {
     if (!aiToolApi) return;
     onAiToolSelect();
@@ -53,34 +58,37 @@ const Index = () => {
       aiToolApi.off("select", onAiToolSelect);
     };
   }, [aiToolApi, onAiToolSelect]);
+
   const camps = [{
     id: 1,
     title: "AI Innovation Camp",
     description: "Learn about artificial intelligence and machine learning",
     duration: "2 weeks",
     capacity: "20 students",
-    price: "",
-    category: "Technology"
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80",
+    formLink: "https://forms.gle/your-form-link-1"
   }, {
     id: 2,
     title: "Web Development Bootcamp",
     description: "Master modern web development technologies",
     duration: "4 weeks",
     capacity: "15 students",
-    price: "",
-    category: "Programming"
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80",
+    formLink: "https://forms.gle/your-form-link-2"
   }, {
     id: 3,
     title: "Digital Marketing Workshop",
     description: "Learn digital marketing strategies and tools",
     duration: "1 week",
     capacity: "25 students",
-    price: "",
-    category: "Marketing"
+    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80",
+    formLink: "https://forms.gle/your-form-link-3"
   }];
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
+
   const renderPersonaCards = () => {
     if (isMobile) {
       return <div className="relative pb-12">
@@ -131,6 +139,7 @@ const Index = () => {
           </motion.div>)}
       </div>;
   };
+
   const renderAiTools = () => {
     if (isMobile) {
       return <div className="relative pb-12">
@@ -180,6 +189,7 @@ const Index = () => {
           </motion.div>)}
       </div>;
   };
+
   return <div className="min-h-screen">
       <Navigation />
       <div className="bg-white py-[96px]">
@@ -251,4 +261,5 @@ const Index = () => {
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
+
 export default Index;

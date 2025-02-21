@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 interface FooterProps {
-  onCategoryFilter: (category: string) => void;
+  onCategoryFilter?: (category: string) => void;
 }
 
 const Footer = ({ onCategoryFilter }: FooterProps) => {
