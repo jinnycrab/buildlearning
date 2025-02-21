@@ -41,7 +41,7 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
               </li>
               <li>
                 <Link to="/camps" className="text-sm text-muted-foreground hover:text-accent">
-                  Upcoming Camps
+                  Camps
                 </Link>
               </li>
             </ul>
