@@ -4,28 +4,37 @@ import CampList from "../components/camps/CampList";
 const CampDetails = () => {
   const camps = [{
     id: 1,
-    title: "AI Innovation Camp",
-    description: "Learn about artificial intelligence and machine learning",
-    duration: "2 weeks",
-    capacity: "20 students",
+    title: "Building for Health & Wellbeing",
+    description: "Innovate around mental wellbeing, healthcare accessibility & efficiency, patient and caregiver support and many more",
+    duration: "6 weeks",
+    capacity: "8 students / class",
     price: "",
     // Removed price as requested
     category: "Technology"
   }, {
     id: 2,
-    title: "Web Development Bootcamp",
-    description: "Master modern web development technologies",
-    duration: "4 weeks",
-    capacity: "15 students",
+    title: "Building for Sustainability",
+    description: "Innovate solutions to improve environmental sustainability and social responsibility",
+    duration: "6 weeks",
+    capacity: "8 students / class",
     price: "",
     // Removed price as requested
     category: "Programming"
   }, {
     id: 3,
-    title: "Digital Marketing Workshop",
-    description: "Learn digital marketing strategies and tools",
-    duration: "1 week",
-    capacity: "25 students",
+    title: "Building for Youth & Education",
+    description: "Innovate for education accessibility, improving student engagement, personalized learning, financial literacy and many more",
+    duration: "6 weeks",
+    capacity: "8 students / class",
+    price: "",
+    // Removed price as requested
+    category: "Marketing"
+  }, {
+    id: 4,
+    title: "Building for Culture & Entertainment",
+    description: "Innovate for cultural exchange, diversity, games, and other entertainment-related ventures",
+    duration: "6 weeks",
+    capacity: "8 students / class",
     price: "",
     // Removed price as requested
     category: "Marketing"
