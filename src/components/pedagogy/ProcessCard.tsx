@@ -15,8 +15,8 @@ export const ProcessCard = ({ letter, title, description, features, image }: Pro
 
   if (isMobile) {
     return (
-      <div className="flex flex-col h-full">
-        <div className="relative aspect-[1.414/1] w-full mb-4 overflow-hidden rounded-xl">
+      <div className="flex flex-col h-full justify-between">
+        <div className="relative aspect-square w-full mb-4 overflow-hidden rounded-xl">
           {/* Image with overlay gradient */}
           <div className="absolute inset-0">
             <img 
@@ -33,21 +33,23 @@ export const ProcessCard = ({ letter, title, description, features, image }: Pro
               {letter}
             </div>
             <h2 className="text-xl font-bold mb-2">{title}</h2>
-            <p className="text-white/90 text-sm line-clamp-3">
+            <p className="text-white/90 text-sm">
               {description}
             </p>
           </div>
         </div>
 
-        {/* Features list */}
-        <ul className="space-y-2.5">
-          {features.map((feature, idx) => (
-            <li key={idx} className="flex items-start gap-2">
-              <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-              <span className="text-sm">{feature}</span>
-            </li>
-          ))}
-        </ul>
+        {/* Features list - centered in remaining space */}
+        <div className="flex-grow flex items-center">
+          <ul className="space-y-2.5 w-full">
+            {features.map((feature, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                <span className="text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
