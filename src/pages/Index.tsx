@@ -15,7 +15,6 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState, useCallback, useEffect } from "react";
-
 const Index = () => {
   const isMobile = useIsMobile();
   const [personaIndex, setPersonaIndex] = useState(0);
@@ -30,17 +29,14 @@ const Index = () => {
     loop: false,
     dragFree: false
   });
-
   const onPersonaSelect = useCallback(() => {
     if (!personaApi) return;
     setPersonaIndex(personaApi.selectedScrollSnap());
   }, [personaApi]);
-
   const onAiToolSelect = useCallback(() => {
     if (!aiToolApi) return;
     setAiToolIndex(aiToolApi.selectedScrollSnap());
   }, [aiToolApi]);
-
   useEffect(() => {
     if (!personaApi) return;
     onPersonaSelect();
@@ -49,7 +45,6 @@ const Index = () => {
       personaApi.off("select", onPersonaSelect);
     };
   }, [personaApi, onPersonaSelect]);
-
   useEffect(() => {
     if (!aiToolApi) return;
     onAiToolSelect();
@@ -58,7 +53,6 @@ const Index = () => {
       aiToolApi.off("select", onAiToolSelect);
     };
   }, [aiToolApi, onAiToolSelect]);
-
   const camps = [{
     id: 1,
     title: "AI Innovation Camp",
@@ -84,11 +78,9 @@ const Index = () => {
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-3"
   }];
-
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
-
   const renderPersonaCards = () => {
     if (isMobile) {
       return <div className="relative pb-12">
@@ -139,10 +131,9 @@ const Index = () => {
           </motion.div>)}
       </div>;
   };
-
   const renderAiTools = () => {
     if (isMobile) {
-      return <div className="relative pb-12">
+      return <div className="relative pb-12 py-0">
           <Carousel ref={aiToolRef} className="w-full">
             <CarouselContent className="-ml-4">
               {aiTools.map((tool, index) => <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0">
@@ -189,7 +180,6 @@ const Index = () => {
           </motion.div>)}
       </div>;
   };
-
   return <div className="min-h-screen">
       <Navigation />
       <div className="bg-white py-[96px]">
@@ -261,5 +251,4 @@ const Index = () => {
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
-
 export default Index;
