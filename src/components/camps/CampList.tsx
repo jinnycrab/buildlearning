@@ -1,6 +1,5 @@
 
 import { Link } from "react-router-dom";
-import { Button } from "../ui/button";
 
 export interface Camp {
   id: number;
@@ -41,22 +40,15 @@ const CampList = ({ camps }: CampListProps) => {
             </div>
           </div>
 
-          {/* Camp details and sign up button */}
+          {/* Camp details */}
           <div className="p-4">
-            <div className="flex justify-between items-center">
-              <div className="space-y-1">
-                <p className="text-sm text-muted-foreground">
-                  Duration: {camp.duration}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {camp.capacity}
-                </p>
-              </div>
-              <a href={camp.formLink} target="_blank" rel="noopener noreferrer">
-                <Button className="bg-accent hover:bg-accent/90 text-white">
-                  Sign Up
-                </Button>
-              </a>
+            <div className="space-y-1">
+              <p className="text-sm text-muted-foreground">
+                Duration: {camp.duration}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {camp.capacity}
+              </p>
             </div>
           </div>
         </div>
