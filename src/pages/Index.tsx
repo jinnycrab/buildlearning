@@ -256,12 +256,12 @@ const Index = () => {
             Our 2025 Camps
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Join our innovative camps where young minds collaborate to build impactful solutions. Each camp focuses on a specific domain, enabling students to make a real difference while learning valuable skills.
+            Our 2025 theme is "Social Innovation", and we have curated 4 themes around Health, Sustainability, Education and Culture. Join us to build something meaningful today.
           </p>
           <CampList camps={camps} />
           <div className="flex justify-center mt-12">
             <Link to="/camps">
-              <Button variant="default" className="bg-accent hover:bg-accent/90 text-white">
+              <Button variant="default" className="bg-accent hover:bg-accent/90 text-white w-[200px]">
                 See More Camps
               </Button>
             </Link>
