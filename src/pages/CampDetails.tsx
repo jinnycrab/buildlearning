@@ -6,7 +6,7 @@ const CampDetails = () => {
     id: 1,
     title: "Building for Health & Wellbeing",
     description: "Innovate around mental wellbeing, healthcare accessibility & efficiency, patient and caregiver support and many more",
-    duration: "6 weeks",
+    duration: "6 classes",
     capacity: "8 students / class",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-1"
@@ -14,7 +14,7 @@ const CampDetails = () => {
     id: 2,
     title: "Building for Sustainability",
     description: "Innovate solutions to improve environmental sustainability and social responsibility",
-    duration: "6 weeks",
+    duration: "6 classes",
     capacity: "8 students / class",
     image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-2"
@@ -22,7 +22,7 @@ const CampDetails = () => {
     id: 3,
     title: "Building for Youth & Education",
     description: "Innovate for education accessibility, improving student engagement, personalized learning, financial literacy and many more",
-    duration: "6 weeks",
+    duration: "6 classes",
     capacity: "8 students / class",
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-3"
@@ -30,7 +30,7 @@ const CampDetails = () => {
     id: 4,
     title: "Building for Culture & Entertainment",
     description: "Innovate for cultural exchange, diversity, games, and other entertainment-related ventures",
-    duration: "6 weeks",
+    duration: "6 classes",
     capacity: "8 students / class",
     image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-4"
