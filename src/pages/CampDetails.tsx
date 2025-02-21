@@ -1,8 +1,8 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import CampList from "../components/camps/CampList";
 import { Button } from "../components/ui/button";
+import CampRegistrationForm from "../components/camps/CampRegistrationForm";
 
 const CampDetails = () => {
   const camps = [{
@@ -57,21 +57,10 @@ const CampDetails = () => {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center font-general-sans">
-            Sign Up for Camps
+            Register for Camps
           </h2>
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-muted-foreground mb-8">
-              Ready to join our innovative camps? Click the button below to register through our simple sign-up form.
-            </p>
-            <a 
-              href="https://forms.gle/nwgu3ZVwRkK1CCQ97" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button className="bg-accent hover:bg-accent/90 text-white w-[200px]">
-                Register Now
-              </Button>
-            </a>
+          <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-sm">
+            <CampRegistrationForm />
           </div>
         </div>
       </section>
