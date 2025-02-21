@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -17,7 +16,7 @@ export const ProcessCard = ({ letter, title, description, features, image }: Pro
   if (isMobile) {
     return (
       <div className="flex flex-col h-full">
-        <div className="relative aspect-square w-full mb-4 overflow-hidden rounded-xl">
+        <div className="relative aspect-[1.414/1] w-full mb-4 overflow-hidden rounded-xl">
           {/* Image with overlay gradient */}
           <div className="absolute inset-0">
             <img 
@@ -30,21 +29,21 @@ export const ProcessCard = ({ letter, title, description, features, image }: Pro
           
           {/* Superimposed content */}
           <div className="absolute inset-0 p-6 flex flex-col text-white">
-            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
+            <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-lg mb-3">
               {letter}
             </div>
-            <h2 className="text-2xl font-bold mb-2">{title}</h2>
-            <p className="text-white/90 text-base">
+            <h2 className="text-xl font-bold mb-2">{title}</h2>
+            <p className="text-white/90 text-sm line-clamp-3">
               {description}
             </p>
           </div>
         </div>
 
         {/* Features list */}
-        <ul className="space-y-3">
+        <ul className="space-y-2.5">
           {features.map((feature, idx) => (
             <li key={idx} className="flex items-start gap-2">
-              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
               <span className="text-sm">{feature}</span>
             </li>
           ))}
