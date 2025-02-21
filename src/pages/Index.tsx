@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState, useCallback, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -251,10 +252,20 @@ const Index = () => {
 
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center font-general-sans md:text-4xl">
+          <h2 className="text-4xl font-bold mb-4 text-center font-general-sans md:text-4xl">
             Our 2025 Camps
           </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Join our innovative camps where young minds collaborate to build impactful solutions. Each camp focuses on a specific domain, enabling students to make a real difference while learning valuable skills.
+          </p>
           <CampList camps={camps} />
+          <div className="flex justify-center mt-12">
+            <Link to="/camps">
+              <Button variant="default" className="bg-accent hover:bg-accent/90 text-white">
+                See More Camps
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
       
