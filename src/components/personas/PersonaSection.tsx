@@ -42,7 +42,7 @@ export const PersonaSection = ({ personas }: PersonaSectionProps) => {
         <Carousel ref={personaRef} className="w-full">
           <CarouselContent className="-ml-4">
             {personas.map((persona, index) => (
-              <CarouselItem key={persona.title} className="pl-4 basis-[85%] min-w-0 py-[16px]">
+              <CarouselItem key={persona.title} className="pl-4 basis-[85%] min-w-0">
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -81,8 +81,8 @@ export const PersonaSection = ({ personas }: PersonaSectionProps) => {
   }
 
   return (
-    <div className="container mx-auto px-4 md:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div className="container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1400px] mx-auto px-4 md:px-8">
         {personas.map((persona, index) => (
           <motion.div
             key={persona.title}
