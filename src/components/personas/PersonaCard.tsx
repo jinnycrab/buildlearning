@@ -4,34 +4,31 @@ import { UserPersona } from "./types";
 
 export const PersonaCard = ({ title, description, problems, image }: UserPersona) => {
   return (
-    <div className="relative h-[500px] w-full overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow group">
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow">
       {/* Image with overlay gradient */}
       <div className="absolute inset-0">
         <img 
           src={image}
           alt={`${title}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90" />
       </div>
       
       {/* Content */}
       <div className="absolute inset-0 p-6 flex flex-col text-white">
-        <h3 className="text-xl font-bold mb-2 font-general-sans">{title}</h3>
-        <p className="text-white/80 text-sm mb-4">
+        <h3 className="text-lg xl:text-2xl font-bold mb-2">{title}</h3>
+        <p className="text-white/90 text-xs xl:text-sm mb-4">
           {description}
         </p>
-        <div className="mt-auto">
-          <h4 className="text-base font-semibold mb-2 font-general-sans">Key Pain Points</h4>
-          <ul className="space-y-2">
-            {problems.map((problem, idx) => (
-              <li key={idx} className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-white/80">{problem}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="space-y-2 mt-auto">
+          {problems.map((problem, idx) => (
+            <li key={idx} className="flex items-start gap-2">
+              <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+              <span className="text-xs xl:text-sm">{problem}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
