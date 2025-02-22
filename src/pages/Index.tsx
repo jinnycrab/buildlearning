@@ -107,7 +107,7 @@ const Index = () => {
                 delay: index * 0.1
               }} viewport={{
                 once: true
-              }} className="w-full">
+              }} className="h-[calc(100vh-320px)]">
                     <PersonaCard {...persona} />
                   </motion.div>
                 </CarouselItem>)}
@@ -123,27 +123,29 @@ const Index = () => {
           </div>
         </div>;
     }
-    return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-8">
-        {userPersonas.map((persona, index) => <motion.div key={persona.title} initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6,
-        delay: index * 0.1
-      }} viewport={{
-        once: true
-      }} className="w-full">
-            <PersonaCard {...persona} />
-          </motion.div>)}
+    return <div className="container mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {userPersonas.map((persona, index) => <motion.div key={persona.title} initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: index * 0.1
+        }} viewport={{
+          once: true
+        }}>
+              <PersonaCard {...persona} />
+            </motion.div>)}
+        </div>
       </div>;
   };
 
   const renderAiTools = () => {
     if (isMobile) {
-      return <div className="relative pb-12 py-0">
+      return <div className="relative pb-12">
           <Carousel ref={aiToolRef} className="w-full">
             <CarouselContent className="-ml-4">
               {aiTools.map((tool, index) => <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0">
@@ -158,7 +160,7 @@ const Index = () => {
                 delay: index * 0.1
               }} viewport={{
                 once: true
-              }} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow h-[calc(100vh-320px)] overflow-y-auto mb-8">
+              }} className="h-[calc(100vh-320px)]">
                     <AiTool {...tool} />
                   </motion.div>
                 </CarouselItem>)}
@@ -174,20 +176,23 @@ const Index = () => {
           </div>
         </div>;
     }
-    return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {aiTools.map(tool => <motion.div key={tool.title} initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6
-      }} viewport={{
-        once: true
-      }} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-            <AiTool {...tool} />
-          </motion.div>)}
+    return <div className="container mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {aiTools.map((tool, index) => <motion.div key={tool.title} initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: index * 0.1
+        }} viewport={{
+          once: true
+        }}>
+              <AiTool {...tool} />
+            </motion.div>)}
+        </div>
       </div>;
   };
 
