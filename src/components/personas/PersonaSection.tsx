@@ -48,7 +48,6 @@ export const PersonaSection = ({ personas }: PersonaSectionProps) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="h-[calc(100vh-320px)]"
                 >
                   <PersonaCard {...persona} />
                 </motion.div>
