@@ -3,7 +3,6 @@ import Footer from "../components/layout/Footer";
 import CampList from "../components/camps/CampList";
 import { Button } from "../components/ui/button";
 import CampRegistrationForm from "../components/camps/CampRegistrationForm";
-
 const CampDetails = () => {
   const camps = [{
     id: 1,
@@ -38,9 +37,7 @@ const CampDetails = () => {
     image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-4"
   }];
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       <section className="py-24">
         <div className="container mx-auto px-4">
@@ -54,18 +51,9 @@ const CampDetails = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center font-general-sans">
-            Register for Camps
-          </h2>
-          <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-sm">
-            <CampRegistrationForm />
-          </div>
-        </div>
-      </section>
+      
 
-      <section className="py-16">
+      <section className="py-16 bg-zinc-200">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center font-general-sans">
             Important Camp Details
@@ -112,8 +100,6 @@ const CampDetails = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default CampDetails;
