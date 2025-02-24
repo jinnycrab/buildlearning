@@ -25,7 +25,7 @@ export const PersonaCard = ({ title, description, problems, image }: UserPersona
         </div>
 
         <div className="mt-auto">
-          <h4 className="text-base font-semibold mb-2 font-general-sans">Key Pain Points</h4>
+          <h4 className="text-base font-semibold mb-2 font-general-sans">Benefits</h4>
           <ul className="space-y-2">
             {problems.map((problem, idx) => (
               <li key={idx} className="flex items-start gap-2">
