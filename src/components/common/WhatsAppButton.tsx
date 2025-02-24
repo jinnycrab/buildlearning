@@ -3,7 +3,14 @@ import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const handleClick = () => {
-    window.open('https://wa.me/6500000000', '_blank'); // Replace with your actual WhatsApp number
+    const message = encodeURIComponent(
+      "Kindly fill in the following information:\n\n" +
+      "Name of Parent:\n" +
+      "Camp Interested in:\n" +
+      "No. of Student Pax:\n" +
+      "Age of Student:"
+    );
+    window.open(`https://wa.me/6582232551?text=${message}`, '_blank');
   };
 
   return (
