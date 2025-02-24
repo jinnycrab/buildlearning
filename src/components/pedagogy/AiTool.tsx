@@ -20,8 +20,8 @@ export const AiTool = ({
       className="relative h-full rounded-xl overflow-hidden group block bg-white shadow-lg hover:shadow-xl transition-shadow"
     >
       <div className="absolute inset-0">
-        <div className="w-full h-[160px] flex items-center justify-center bg-muted/10">
-          <div className="w-[160px] h-[80px] flex items-center justify-center">
+        <div className="w-full h-[120px] flex items-center justify-center bg-muted/10">
+          <div className="w-[140px] h-[70px] flex items-center justify-center">
             <img 
               src={logo} 
               alt={`${title} logo`} 
@@ -31,9 +31,9 @@ export const AiTool = ({
         </div>
       </div>
       
-      <div className="absolute inset-0 p-6 flex flex-col items-center text-center">
-        <div className="mt-[120px]">
-          <h4 className="text-xl font-bold mb-3 font-general-sans">
+      <div className="absolute inset-0 p-4 flex flex-col items-center justify-center text-center">
+        <div className="mt-[80px]">
+          <h4 className="text-lg font-bold mb-2 font-general-sans">
             {title}
           </h4>
           <p className="text-muted-foreground text-sm">
@@ -41,7 +41,7 @@ export const AiTool = ({
           </p>
         </div>
         
-        <div className="mt-auto">
+        <div className="mt-4">
           <div className="inline-flex items-center text-accent group-hover:text-accent/80 transition-colors text-sm">
             Learn More 
             <svg 

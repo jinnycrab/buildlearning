@@ -48,7 +48,7 @@ export const AiToolsSection = ({
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="h-[300px]"
+                  className="h-[250px]"
                 >
                   <AiTool {...tool} />
                 </motion.div>
@@ -70,7 +70,7 @@ export const AiToolsSection = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="h-[350px]"
+            className="h-[280px]"
           >
             <AiTool {...tool} />
           </motion.div>
