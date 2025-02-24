@@ -33,7 +33,7 @@ export const AiToolsSection = ({
     };
   }, [aiToolApi, onAiToolSelect]);
   if (isMobile) {
-    return <div className="relative pb-12">
+    return <div className="relative pb-12 py-0">
         <Carousel ref={aiToolRef} className="w-full">
           <CarouselContent className="-ml-4">
             {tools.map((tool, index) => <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0 my-[9px]">
@@ -54,14 +54,7 @@ export const AiToolsSection = ({
               </CarouselItem>)}
           </CarouselContent>
         </Carousel>
-        <div className="flex justify-end gap-2 mt-4 px-4">
-          <Button variant="outline" size="icon" onClick={() => aiToolApi?.scrollPrev()} disabled={aiToolIndex === 0} className="h-8 w-8 rounded-full">
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-          <Button variant="outline" size="icon" onClick={() => aiToolApi?.scrollNext()} disabled={aiToolIndex === tools.length - 1} className="h-8 w-8 rounded-full">
-            <ChevronRight className="h-4 w-4" />
-          </Button>
-        </div>
+        
       </div>;
   }
   return <div className="container mx-auto">
