@@ -6,8 +6,8 @@ import { Link } from "react-scroll";
 const Resources = () => {
   const articles = [{
     id: 1,
-    title: "Lynette Ang, Director of Admissions, SUTD",
-    description: "Portfolios are a good way to demonstrate how they have spent their time and energies outside the classroom.",
+    title: "Lynette Ang",
+    description: "Director of Admissions, SUTD. For The Straits Times",
     imageUrl: "https://i0.wp.com/postgrad.com.sg/wp-content/uploads/2019/10/SUTD-School-Cover-Image_SUTD.png?fit=1600%2C1046&ssl=1",
     link: "https://www.straitstimes.com/singapore/from-poly-to-uni-what-you-need-to-know#",
     date: "Jan 12, 2025"
