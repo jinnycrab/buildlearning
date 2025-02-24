@@ -71,23 +71,23 @@ const BuildPortfolio = () => {
       </motion.div>;
   };
   const cards = [{
-    title: "Build-a-Solution™",
-    description: "Design innovative solutions to real-world problems using design thinking and AI-powered tools",
+    title: "Build-a-Concept™",
+    description: "Develop innovation concepts / prototypes using design thinking and AI-powered tools",
     image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=2000&auto=format&fit=crop",
-    features: ["Problem identification", "Design thinking process", "Prototype development"],
-    skills: ["Problem Solving", "Design Thinking", "Innovation", "Critical Thinking"]
+    features: ["Problem identification", "Proposition building", "Prototype development with AI"],
+    skills: ["AI Prototyping Tools", "Creative Innovation", "Design Thinking", "Empathy and User-Centricity"]
   }, {
     title: "Build-a-Demo™",
-    description: "Create a 2-min demo video or pitch that showcases your storytelling and public speaking skills",
+    description: "Create a 2-min demo video or pitch that showcases your concept and storytelling skills",
     image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     features: ["Designing interactive prototypes", "Develop marketing & positioning", "Practice & refine presentation"],
-    skills: ["Public Speaking", "Marketing", "AI Prompt Engineering", "Elevator Pitch"]
+    skills: ["Storytelling", "Marketing", "Public Speaking", "Elevator Pitch"]
   }, {
     title: "Build-a-Poster™",
     description: "Create visually compelling posters that showcase your high-render concept and your research-to-innovation process",
     image: "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     features: ["User & competitor research", "Opportunity identification", "Hero prototype/concept image"],
-    skills: ["Research", "AI Prompt Engineering", "AI Prototyping Tools", "Creative Innovation"]
+    skills: ["Research", "Writing", "Elevator Pitch", "Poster Design"]
   }];
   return <div className="container mx-auto px-4">
       <motion.div initial={{
