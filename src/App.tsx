@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Pedagogy from "./pages/Pedagogy";
 import Resources from "./pages/Resources";
 import StudentProjects from "./pages/StudentProjects";
+import WhatsAppButton from "./components/common/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/projects" element={<StudentProjects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <WhatsAppButton />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
