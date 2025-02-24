@@ -31,7 +31,7 @@ export const AiTool = ({
         </div>
       </div>
       
-      <div className="absolute inset-0 p-6 flex flex-col">
+      <div className="absolute inset-0 p-6 flex flex-col items-center text-center">
         <div className="mt-[120px]">
           <h4 className="text-xl font-bold mb-3 font-general-sans">
             {title}
