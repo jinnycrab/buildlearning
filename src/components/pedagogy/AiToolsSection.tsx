@@ -38,7 +38,7 @@ export const AiToolsSection = ({
 
   if (isMobile) {
     return (
-      <div className="relative">
+      <div className="relative px-4">
         <Carousel ref={aiToolRef} className="w-full">
           <CarouselContent className="-ml-4">
             {tools.map((tool, index) => (
@@ -48,7 +48,7 @@ export const AiToolsSection = ({
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="h-[250px]"
+                  className="h-[250px] px-2"
                 >
                   <AiTool {...tool} />
                 </motion.div>
