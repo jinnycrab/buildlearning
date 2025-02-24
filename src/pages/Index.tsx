@@ -79,7 +79,7 @@ const Index = () => {
         <WhatYouGet />
       </section>
       
-      <section className="py-24 bg-white my-0 px-0">
+      <section className="bg-white my-0 px-0 py-[96px]">
         <div className="container mx-auto px-4 md:px-8">
           <motion.div initial={{
           opacity: 0,
