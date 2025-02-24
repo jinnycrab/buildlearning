@@ -17,7 +17,7 @@ export const AiTool = ({
       href={link} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="relative h-[500px] rounded-xl overflow-hidden group block bg-white hover:shadow-lg transition-shadow"
+      className="relative h-full rounded-xl overflow-hidden group block bg-white shadow-lg hover:shadow-xl transition-shadow"
     >
       <div className="absolute inset-0">
         <div className="w-full h-[160px] flex items-center justify-center bg-muted/10">
@@ -42,7 +42,7 @@ export const AiTool = ({
         </div>
         
         <div className="mt-auto">
-          <span className="inline-flex items-center text-accent group-hover:text-accent/80 transition-colors text-sm">
+          <div className="inline-flex items-center text-accent group-hover:text-accent/80 transition-colors text-sm">
             Learn More 
             <svg 
               className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" 
@@ -57,7 +57,7 @@ export const AiTool = ({
                 d="M14 5l7 7m0 0l-7 7m7-7H3" 
               />
             </svg>
-          </span>
+          </div>
         </div>
       </div>
     </a>
