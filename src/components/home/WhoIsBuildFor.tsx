@@ -18,15 +18,15 @@ const WhoIsBuildFor = () => {
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/90" />
-        <div className="relative h-full p-6 flex flex-col justify-between">
-          <div>
+        <div className="relative h-full p-6 flex flex-col">
+          <div className="h-[120px]">
             <h3 className="text-xl font-bold mb-2 font-general-sans text-white">{title}</h3>
-            <p className="text-white/80 text-sm">
+            <p className="text-white/80 text-sm line-clamp-3">
               {description}
             </p>
           </div>
 
-          <div>
+          <div className="mt-6">
             <h4 className="text-base font-semibold mb-2 font-general-sans text-white">Benefits</h4>
             <ul className="space-y-2">
               {features.map((feature, idx) => (
