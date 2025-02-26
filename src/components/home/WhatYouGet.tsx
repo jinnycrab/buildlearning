@@ -1,8 +1,8 @@
 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { CheckCircle2 } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const BuildPortfolio = () => {
@@ -13,8 +13,8 @@ const BuildPortfolio = () => {
       <div className="relative h-full rounded-xl overflow-hidden group">
         <img src={image} alt={`${title} Example`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/90" />
-        <div className="relative h-full p-6 flex flex-col justify-between px-[18px] py-[20px]">
-          <div className="h-[120px]">
+        <div className="relative h-full p-6 flex flex-col justify-between">
+          <div>
             <h3 className="text-xl font-bold mb-2 font-general-sans text-white">{title}</h3>
             <p className="text-white/80 text-sm">
               {description}
@@ -57,7 +57,7 @@ const BuildPortfolio = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="h-[calc(100vh-320px)]"
+            className="h-[70%] min-h-[600px]"
           >
             {content}
           </motion.div>
