@@ -19,14 +19,14 @@ const WhoIsBuildFor = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/90" />
         <div className="relative h-full p-6 flex flex-col">
-          <div className="h-[120px]">
+          <div className="h-[160px]">
             <h3 className="text-xl font-bold mb-2 font-general-sans text-white">{title}</h3>
-            <p className="text-white/80 text-sm line-clamp-3">
+            <p className="text-white/80 text-sm line-clamp-4">
               {description}
             </p>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-12">
             <h4 className="text-base font-semibold mb-2 font-general-sans text-white">Benefits</h4>
             <ul className="space-y-2">
               {features.map((feature, idx) => (
