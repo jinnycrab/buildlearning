@@ -1,3 +1,4 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
@@ -10,6 +11,8 @@ import { PersonaSection } from "@/components/personas/PersonaSection";
 import { AiToolsSection } from "@/components/pedagogy/AiToolsSection";
 import { CampsSection } from "@/components/home/CampsSection";
 import AiPowerSection from "@/components/home/AiPowerSection";
+import BuildPortfolio from "@/components/home/WhoIsBuildFor";
+
 const Index = () => {
   const camps = [{
     id: 1,
@@ -36,10 +39,13 @@ const Index = () => {
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-3"
   }];
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       <Navigation />
       <div className="bg-white py-[30px]">
         <Hero />
@@ -60,17 +66,12 @@ const Index = () => {
 
       <section className="py-24 bg-zinc-100">
         <div className="container mx-auto px-4 md:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} viewport={{
-          once: true
-        }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="font-bold mb-4 text-center text-4xl">Who Is Build For?</h2>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base">
               A platform to build meaningful projects and portfolios, for all students aged 15+
@@ -81,12 +82,18 @@ const Index = () => {
       </section>
 
       <section className="py-24 bg-white">
+        <BuildPortfolio />
+      </section>
+
+      <section className="py-24 bg-white">
         <WhatYouGet />
       </section>
       
       <CampsSection camps={camps} />
       
       <Footer onCategoryFilter={handleCategoryFilter} />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
