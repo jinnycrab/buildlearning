@@ -53,7 +53,7 @@ const CampDetails = () => {
 
       
 
-      <section className="py-16 bg-zinc-200">
+      <section className="py-16 bg-primary-foreground">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center font-general-sans">
             Important Camp Details
