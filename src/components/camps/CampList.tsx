@@ -34,18 +34,22 @@ const CampList = ({ camps }: CampListProps) => {
                 <h3 className="text-lg font-semibold mb-3 text-white">
                   {camp.title}
                 </h3>
-                <p className="text-white/90 text-sm mb-4">
+                <p className="text-white/90 text-sm">
                   {camp.description}
                 </p>
               </div>
-              <div className="mt-auto space-y-1">
-                <p className="text-sm text-white/80">
-                  Duration: {camp.duration}
-                </p>
-                <p className="text-sm text-white/80">
-                  {camp.capacity}
-                </p>
-              </div>
+            </div>
+          </div>
+
+          {/* Camp details on white background */}
+          <div className="p-4 bg-white">
+            <div className="space-y-1">
+              <p className="text-sm text-muted-foreground">
+                Duration: {camp.duration}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {camp.capacity}
+              </p>
             </div>
           </div>
         </div>
