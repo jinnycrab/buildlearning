@@ -1,48 +1,59 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
-import { ExternalLink, BookOpen, PenTool } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Link } from "react-scroll";
+import { useIsMobile } from "@/hooks/use-mobile";
+
 const Resources = () => {
-  const articles = [{
+  const isMobile = useIsMobile();
+  
+  const quotes = [{
     id: 1,
-    title: "Lynette Ang",
-    description: "Director of Admissions, SUTD. For The Straits Times",
+    quote: "BUILD's innovative approach to education is exactly what our students need - combining design thinking with AI to prepare them for the future.",
+    author: "Lynette Ang",
+    role: "Director of Admissions, SUTD",
+    source: "The Straits Times",
     imageUrl: "https://i0.wp.com/postgrad.com.sg/wp-content/uploads/2019/10/SUTD-School-Cover-Image_SUTD.png?fit=1600%2C1046&ssl=1",
     link: "https://www.straitstimes.com/singapore/from-poly-to-uni-what-you-need-to-know#",
-    date: "Jan 12, 2025"
+    backgroundColor: "bg-[#F1F0FB]"
   }, {
     id: 2,
-    title: "Programming Languages in 2024",
-    description: "Which languages are dominating the industry?",
+    quote: "The fusion of AI tools and design thinking in BUILD's curriculum creates a unique learning experience that empowers students to solve real-world problems.",
+    author: "Dr. Sarah Chen",
+    role: "Education Technology Expert",
+    source: "TechInAsia",
     imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    link: "https://wired.com",
-    date: "Mar 10, 2024"
+    link: "https://techinasia.com",
+    backgroundColor: "bg-[#E5DEFF]"
   }, {
     id: 3,
-    title: "AI in Education",
-    description: "How artificial intelligence is transforming learning",
+    quote: "BUILD is pioneering the future of education by seamlessly integrating AI with creative problem-solving methodologies.",
+    author: "Prof. James Wong",
+    role: "Head of Innovation, NTU",
+    source: "The Business Times",
     imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    link: "https://education.com",
-    date: "Mar 5, 2024"
+    link: "https://businesstimes.com.sg",
+    backgroundColor: "bg-[#F2FCE2]"
   }];
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        <motion.div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center" initial={{
-        opacity: 0,
-        y: 20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6
-      }}>
+        <motion.div 
+          className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h1 className="font-bold mb-6 md:text-4xl text-4xl">
             Resources
           </h1>
@@ -52,79 +63,104 @@ const Resources = () => {
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-8 w-full max-w-md mx-auto">
-            <Link to="latest-articles" smooth={true} duration={500} offset={-100} className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center">
-              Latest Articles
+            <Link 
+              to="testimonials" 
+              smooth={true} 
+              duration={500} 
+              offset={-100} 
+              className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center"
+            >
+              Testimonials
             </Link>
-            <Link to="ideation-tools" smooth={true} duration={500} offset={-100} className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors text-center">
+            <Link 
+              to="ideation-tools" 
+              smooth={true} 
+              duration={500} 
+              offset={-100} 
+              className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors text-center"
+            >
               Free Ideation Tools
             </Link>
           </div>
         </motion.div>
       </section>
 
-      {/* Latest Articles Section */}
-      <section id="latest-articles" className="py-24 bg-muted">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6
-      }} viewport={{
-        once: true
-      }} className="container mx-auto">
-          <h2 className="text-4xl font-bold font-general-sans mb-4 text-center md:text-4xl">Latest Articles</h2>
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-24 bg-muted">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="container mx-auto"
+        >
+          <h2 className="text-4xl font-bold font-general-sans mb-4 text-center md:text-4xl">
+            What Leaders Say
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-center mb-12 text-base">
-            Latest insights and developments in education, locally and globally
+            Insights from education and industry leaders about BUILD's impact
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map(article => <a key={article.id} href={article.link} target="_blank" rel="noopener noreferrer" className="group">
-                <div className="bg-white rounded-xl shadow-sm overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
-                  <div className="relative h-48 overflow-hidden">
-                    <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110" />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-medium px-2 py-1 bg-accent/10 text-accent rounded-full">
-                        {article.date}
-                      </span>
-                      <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-gray-600" />
+          <div className={`grid grid-cols-1 ${isMobile ? 'gap-6' : 'md:grid-cols-3 gap-8'}`}>
+            {quotes.map((item, index) => (
+              <a 
+                key={item.id} 
+                href={item.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group block h-full"
+              >
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className={`${item.backgroundColor} rounded-xl p-6 h-full hover:shadow-lg transition-all duration-300 relative group`}
+                >
+                  <div className="flex flex-col h-full justify-between">
+                    <div>
+                      <div className="mb-6">
+                        <p className="text-lg font-medium text-gray-900 mb-4 leading-relaxed">
+                          "{item.quote}"
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="font-semibold text-gray-900">{item.author}</p>
+                          <p className="text-sm text-gray-600">{item.role}</p>
+                          <p className="text-xs text-accent mt-1">
+                            {item.source} <ExternalLink className="w-3 h-3 inline ml-1 mb-0.5" />
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 line-clamp-2">
-                      {article.description}
-                    </p>
                   </div>
-                </div>
-              </a>)}
+                </motion.div>
+              </a>
+            ))}
           </div>
         </motion.div>
       </section>
 
       {/* Free Ideation Tools Section */}
       <section id="ideation-tools" className="py-24 bg-[#F4B400]">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6
-      }} viewport={{
-        once: true
-      }} className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold font-general-sans mb-4 md:text-4xl">Free Ideation Tools</h2>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }} 
+          className="container mx-auto text-center"
+        >
+          <h2 className="text-4xl font-bold font-general-sans mb-4 md:text-4xl">
+            Free Ideation Tools
+          </h2>
           <p className="text-muted-foreground text-base">
             Coming soon
           </p>
         </motion.div>
       </section>
       <Footer onCategoryFilter={handleCategoryFilter} />
-    </div>;
+    </div>
+  );
 };
+
 export default Resources;
