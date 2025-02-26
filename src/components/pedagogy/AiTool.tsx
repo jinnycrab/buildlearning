@@ -18,7 +18,7 @@ export const AiTool = ({
           </div>
         </div>
         
-        <div className="p-4 flex flex-col items-center justify-center text-center py-[17px] px-[15px] my-[6px] mx-[13px]">
+        <div className="p-4 flex flex-col items-center justify-center text-center my-[6px] mx-[13px] py-[16px] px-[5px]">
           <h4 className="text-lg font-bold mb-2 font-general-sans">
             {title}
           </h4>
