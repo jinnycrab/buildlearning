@@ -47,7 +47,7 @@ export const PersonaSection = ({ personas }: PersonaSectionProps) => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="h-[400px]">
+                  <div className="h-[70vh]">
                     <PersonaCard {...persona} />
                   </div>
                 </motion.div>
