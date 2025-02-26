@@ -11,7 +11,6 @@ import { PersonaSection } from "@/components/personas/PersonaSection";
 import { AiToolsSection } from "@/components/pedagogy/AiToolsSection";
 import { CampsSection } from "@/components/home/CampsSection";
 import AiPowerSection from "@/components/home/AiPowerSection";
-import BuildPortfolio from "@/components/home/WhoIsBuildFor";
 
 const Index = () => {
   const camps = [{
@@ -79,10 +78,6 @@ const Index = () => {
             <PersonaSection personas={userPersonas} />
           </motion.div>
         </div>
-      </section>
-
-      <section className="py-24 bg-white">
-        <BuildPortfolio />
       </section>
 
       <section className="py-24 bg-white">
