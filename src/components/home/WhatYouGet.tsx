@@ -84,7 +84,7 @@ const BuildPortfolio = () => {
     description: "Develop innovation concepts / prototypes using design thinking and AI-powered tools",
     image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=2000&auto=format&fit=crop",
     features: ["Problem identification", "Proposition building", "Prototype development with AI"],
-    skills: ["AI Prototyping Tools", "Creative Innovation", "Design Thinking", "Empathy and User-Centricity"]
+    skills: ["AI Prototyping", "Innovation", "Design Thinking", "User Empathy"]
   }, {
     title: "Build-a-Demo™",
     description: "Create a 2-min demo video or pitch that showcases your concept and storytelling skills",
