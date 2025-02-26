@@ -22,7 +22,7 @@ export const CampsSection = ({
         <h2 className="text-4xl font-bold mb-4 text-center font-general-sans md:text-4xl">
           Our 2025 Camps
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-base">
           Our 2025 theme is "Social Innovation", and we have curated 4 themes around Health, Sustainability, Education and Culture. Join us to build something meaningful today.
         </p>
         <CampList camps={camps} />
