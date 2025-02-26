@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -6,11 +5,9 @@ import { AiTool } from "./AiTool";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { AiTool as AiToolType } from "./types";
-
 interface AiToolsSectionProps {
   tools: AiToolType[];
 }
-
 export const AiToolsSection = ({
   tools
 }: AiToolsSectionProps) => {
@@ -21,12 +18,10 @@ export const AiToolsSection = ({
     loop: false,
     dragFree: false
   });
-
   const onAiToolSelect = useCallback(() => {
     if (!aiToolApi) return;
     setAiToolIndex(aiToolApi.selectedScrollSnap());
   }, [aiToolApi]);
-
   useEffect(() => {
     if (!aiToolApi) return;
     onAiToolSelect();
@@ -35,45 +30,46 @@ export const AiToolsSection = ({
       aiToolApi.off("select", onAiToolSelect);
     };
   }, [aiToolApi, onAiToolSelect]);
-
   if (isMobile) {
-    return (
-      <div className="relative pb-8">
+    return <div className="relative pb-8">
         <Carousel ref={aiToolRef} className="w-full">
           <CarouselContent className="-ml-4">
-            {tools.map((tool, index) => (
-              <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
+            {tools.map((tool, index) => <CarouselItem key={tool.title} className="pl-4 basis-[85%] min-w-0 py-[17px]">
+                <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: index * 0.1
+            }} viewport={{
+              once: true
+            }}>
                   <AiTool {...tool} />
                 </motion.div>
-              </CarouselItem>
-            ))}
+              </CarouselItem>)}
           </CarouselContent>
         </Carousel>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="container mx-auto">
+  return <div className="container mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {tools.map((tool, index) => (
-          <motion.div
-            key={tool.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-          >
+        {tools.map((tool, index) => <motion.div key={tool.title} initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6,
+        delay: index * 0.1
+      }} viewport={{
+        once: true
+      }}>
             <AiTool {...tool} />
-          </motion.div>
-        ))}
+          </motion.div>)}
       </div>
-    </div>
-  );
+    </div>;
 };
