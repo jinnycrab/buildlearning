@@ -1,3 +1,4 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
@@ -9,6 +10,8 @@ import { userPersonas } from "../components/personas/data";
 import { PersonaSection } from "@/components/personas/PersonaSection";
 import { AiToolsSection } from "@/components/pedagogy/AiToolsSection";
 import { CampsSection } from "@/components/home/CampsSection";
+import AiPowerSection from "@/components/home/AiPowerSection";
+
 const Index = () => {
   const camps = [{
     id: 1,
@@ -35,9 +38,11 @@ const Index = () => {
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-3"
   }];
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
+
   return <div className="min-h-screen">
       <Navigation />
       <div className="bg-white py-[30px]">
@@ -51,6 +56,10 @@ const Index = () => {
           </h2>
           <WhatWeDo />
         </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <AiPowerSection />
       </section>
 
       <section className="py-24 bg-white">
@@ -79,11 +88,10 @@ const Index = () => {
         <WhatYouGet />
       </section>
       
-      
-
       <CampsSection camps={camps} />
       
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
+
 export default Index;
