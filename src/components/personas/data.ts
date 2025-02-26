@@ -18,7 +18,7 @@ export const userPersonas: UserPersona[] = [
     problems: [
       "Overcome your inertia and knowledge gaps with guided prototyping",
       "Learn how design thinking and research can help you with your ventures",
-      "Join a community of innovators and builders harnessing AI tools"
+      "Join a community of innovators and builders harnessing AI tools for productivity"
     ],
     image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
