@@ -45,7 +45,7 @@ const Index = () => {
         <Hero />
       </div>
       
-      <section className="py-24 bg-slate-100">
+      <section className="py-24 bg-zinc-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center font-general-sans md:text-4xl">
             What We Do
@@ -58,7 +58,7 @@ const Index = () => {
         <AiPowerSection />
       </section>
 
-      <section className="py-24 bg-slate-100">
+      <section className="py-24 bg-zinc-100">
         <div className="container mx-auto px-4 md:px-8">
           <motion.div initial={{
           opacity: 0,
