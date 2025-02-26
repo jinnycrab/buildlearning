@@ -33,7 +33,7 @@ export const ProcessSection = () => {
   const renderProcessCards = () => {
     if (isMobile) {
       return (
-        <div className="relative pb-8">
+        <div className="relative">
           <Carousel ref={buildProcessRef} className="w-full">
             <CarouselContent className="-ml-4">
               {processCards.map((card, index) => (
@@ -43,7 +43,7 @@ export const ProcessSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="h-[70vh]"
+                    className="h-[calc(100vh-320px)]"
                   >
                     <ProcessCard {...card} />
                   </motion.div>
@@ -74,10 +74,10 @@ export const ProcessSection = () => {
   };
 
   return (
-    <section id="build-process" className="py-24 bg-muted">
+    <section id="build-process" className="py-12 md:py-24 bg-muted">
       <motion.div className="container mx-auto px-4 md:px-8">
         <h2 className="text-4xl font-bold mb-4 text-center">The Build Process™</h2>
-        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base">
+        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8 md:mb-12 text-base">
           Our proven methodology that guides students through the journey of creating innovative solutions to real-world problems
         </p>
         {renderProcessCards()}
