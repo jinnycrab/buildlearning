@@ -21,17 +21,17 @@ export const PersonaCard = ({
       </div>
       
       {/* Content */}
-      <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
-        <div>
-          <h3 className="text-2xl font-bold mb-3 font-general-sans">{title}</h3>
+      <div className="absolute inset-0 p-6 flex flex-col text-white">
+        <div className="mb-4">
+          <h3 className="text-2xl font-bold mb-2 font-general-sans">{title}</h3>
           <p className="text-white/80 text-base leading-relaxed">
             {description}
           </p>
         </div>
 
         <div>
-          <h4 className="text-lg font-semibold mb-3 font-general-sans">Benefits</h4>
-          <ul className="space-y-2.5">
+          <h4 className="text-lg font-semibold mb-2 font-general-sans">Benefits</h4>
+          <ul className="space-y-2">
             {problems.map((problem, idx) => (
               <li key={idx} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
