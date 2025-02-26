@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-const BuildPortfolio = () => {
+const WhatYouGet = () => {
   const isMobile = useIsMobile();
 
   const renderCard = (title: string, description: string, features: string[], skills: string[], image: string, index: number) => {
@@ -154,4 +154,4 @@ const BuildPortfolio = () => {
   );
 };
 
-export default BuildPortfolio;
+export default WhatYouGet;
