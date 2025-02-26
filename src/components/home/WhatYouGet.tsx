@@ -57,7 +57,7 @@ const BuildPortfolio = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="h-[70%] min-h-[600px]"
+            className="h-[70vh]"
           >
             {content}
           </motion.div>
