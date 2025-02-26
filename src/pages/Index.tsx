@@ -40,7 +40,7 @@ const Index = () => {
   };
   return <div className="min-h-screen">
       <Navigation />
-      <div className="bg-white py-[96px]">
+      <div className="bg-white py-[30px]">
         <Hero />
       </div>
       
