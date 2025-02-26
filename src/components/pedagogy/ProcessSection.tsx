@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -5,7 +6,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ProcessCard } from "./ProcessCard";
 import { processCards } from "./data";
 import { useCallback, useEffect, useState } from "react";
-import { CheckCircle2 } from "lucide-react";
 
 export const ProcessSection = () => {
   const isMobile = useIsMobile();
@@ -55,7 +55,7 @@ export const ProcessSection = () => {
     }
 
     return (
-      <div className="grid grid-cols-1 gap-8">
+      <div className="grid grid-cols-5 gap-6">
         {processCards.map((card, index) => (
           <motion.div
             key={card.letter}
@@ -63,32 +63,8 @@ export const ProcessSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-white p-8 rounded-2xl shadow-lg"
           >
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                  {card.letter}
-                </div>
-                <h2 className="text-2xl font-bold mb-3">{card.title}</h2>
-                <p className="text-lg text-muted-foreground mb-4">
-                  {card.description}
-                </p>
-                <ul className="space-y-3">
-                  {card.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="order-1 md:order-2">
-                <div className="aspect-video w-full overflow-hidden rounded-xl">
-                  <img src={card.image} alt={`${card.title} Process`} className="w-full h-full object-cover" />
-                </div>
-              </div>
-            </div>
+            <ProcessCard {...card} />
           </motion.div>
         ))}
       </div>
