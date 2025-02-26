@@ -29,7 +29,7 @@ const Resources = () => {
     backgroundColor: "bg-[#E5DEFF]"
   }, {
     id: 3,
-    quote: "Portfolios are a good way to demonstrate how they have spent their time and energies outside the classroom.",
+    quote: "What activities they engage in tells us a lot about them as a person. Portfolios are a good way to demonstrate how they have spent their time and energies outside the classroom. We encourage applicants to show us what they have done...",
     author: "Lynette Ang",
     role: "Director of Admissions, SUTD",
     source: "The Straits Times",
