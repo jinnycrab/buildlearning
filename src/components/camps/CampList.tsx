@@ -23,32 +23,29 @@ const CampList = ({ camps }: CampListProps) => {
           key={camp.id}
           className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
         >
-          {/* Image and overlaid text */}
           <div className="relative aspect-[4/3]">
             <img
               src={camp.image}
               alt={camp.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 p-4 flex flex-col justify-end">
-              <h3 className="text-lg font-semibold mb-2 text-white">
-                {camp.title}
-              </h3>
-              <p className="text-white/90 text-sm line-clamp-2">
-                {camp.description}
-              </p>
-            </div>
-          </div>
-
-          {/* Camp details */}
-          <div className="p-4">
-            <div className="space-y-1">
-              <p className="text-sm text-muted-foreground">
-                Duration: {camp.duration}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                {camp.capacity}
-              </p>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90 p-6 flex flex-col">
+              <div>
+                <h3 className="text-lg font-semibold mb-3 text-white">
+                  {camp.title}
+                </h3>
+                <p className="text-white/90 text-sm mb-4">
+                  {camp.description}
+                </p>
+              </div>
+              <div className="mt-auto space-y-1">
+                <p className="text-sm text-white/80">
+                  Duration: {camp.duration}
+                </p>
+                <p className="text-sm text-white/80">
+                  {camp.capacity}
+                </p>
+              </div>
             </div>
           </div>
         </div>
