@@ -1,4 +1,3 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
@@ -11,7 +10,6 @@ import { PersonaSection } from "@/components/personas/PersonaSection";
 import { AiToolsSection } from "@/components/pedagogy/AiToolsSection";
 import { CampsSection } from "@/components/home/CampsSection";
 import AiPowerSection from "@/components/home/AiPowerSection";
-
 const Index = () => {
   const camps = [{
     id: 1,
@@ -38,18 +36,16 @@ const Index = () => {
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-3"
   }];
-
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
-
   return <div className="min-h-screen">
       <Navigation />
       <div className="bg-white py-[30px]">
         <Hero />
       </div>
       
-      <section className="py-24 bg-accent/5">
+      <section className="py-24 bg-slate-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center font-general-sans md:text-4xl">
             What We Do
@@ -62,7 +58,7 @@ const Index = () => {
         <AiPowerSection />
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-slate-100">
         <div className="container mx-auto px-4 md:px-8">
           <motion.div initial={{
           opacity: 0,
@@ -84,7 +80,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-muted">
+      <section className="py-24 bg-white">
         <WhatYouGet />
       </section>
       
@@ -93,5 +89,4 @@ const Index = () => {
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
-
 export default Index;
