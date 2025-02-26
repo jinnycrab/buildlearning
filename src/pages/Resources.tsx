@@ -11,7 +11,7 @@ const Resources = () => {
   
   const quotes = [{
     id: 1,
-    quote: "BUILD's innovative approach to education is exactly what our students need - combining design thinking with AI to prepare them for the future.",
+    quote: "Portfolios are a good way to demonstrate how they have spent their time and energies outside the classroom.",
     author: "Lynette Ang",
     role: "Director of Admissions, SUTD",
     source: "The Straits Times",
@@ -20,21 +20,21 @@ const Resources = () => {
     backgroundColor: "bg-[#F1F0FB]"
   }, {
     id: 2,
-    quote: "The fusion of AI tools and design thinking in BUILD's curriculum creates a unique learning experience that empowers students to solve real-world problems.",
-    author: "Dr. Sarah Chen",
-    role: "Education Technology Expert",
-    source: "TechInAsia",
+    quote: "As Singapore journeys towards becoming an innovation-driven nation, empowering our next generation with design thinking as a national skillset will be instrumental in securing our future success",
+    author: "Dawn Lim",
+    role: "Executive Director, DesignSingapore Council",
+    source: "Design Singapore Council",
     imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    link: "https://techinasia.com",
+    link: "https://designsingapore.org/news/national-design-education-committee-unveils-blueprint-for-future-design-school-to-prepare-students-and-workforce-for-changing-economy/",
     backgroundColor: "bg-[#E5DEFF]"
   }, {
     id: 3,
-    quote: "BUILD is pioneering the future of education by seamlessly integrating AI with creative problem-solving methodologies.",
-    author: "Prof. James Wong",
-    role: "Head of Innovation, NTU",
-    source: "The Business Times",
+    quote: "Academic grades can only tell you so much about a student. Through the interviews, portfolios and aptitude tests that NUS uses, the university can assess their interests and aptitude for a particular field.",
+    author: "Prof. Goh Say Song",
+    role: "Dean of Admissions, NUS",
+    source: "The Straits Times",
     imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    link: "https://businesstimes.com.sg",
+    link: "https://www.straitstimes.com/singapore/nus-and-ntu-cast-wider-net-for-students-through-aptitude-based-admissions",
     backgroundColor: "bg-[#F2FCE2]"
   }];
 
