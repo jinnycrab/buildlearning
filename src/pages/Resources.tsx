@@ -11,16 +11,16 @@ const Resources = () => {
   
   const quotes = [{
     id: 1,
-    quote: "Portfolios are a good way to demonstrate how they have spent their time and energies outside the classroom.",
-    author: "Lynette Ang",
-    role: "Director of Admissions, SUTD",
+    quote: "Academic grades can only tell you so much about a student. Through the interviews, portfolios and aptitude tests that NUS uses, the university can assess their interests and aptitude for a particular field.",
+    author: "Prof. Goh Say Song",
+    role: "Dean of Admissions, NUS",
     source: "The Straits Times",
     imageUrl: "https://i0.wp.com/postgrad.com.sg/wp-content/uploads/2019/10/SUTD-School-Cover-Image_SUTD.png?fit=1600%2C1046&ssl=1",
-    link: "https://www.straitstimes.com/singapore/from-poly-to-uni-what-you-need-to-know#",
+    link: "https://www.straitstimes.com/singapore/nus-and-ntu-cast-wider-net-for-students-through-aptitude-based-admissions",
     backgroundColor: "bg-[#F1F0FB]"
   }, {
     id: 2,
-    quote: "As Singapore journeys towards becoming an innovation-driven nation, empowering our next generation with design thinking as a national skillset will be instrumental in securing our future success",
+    quote: "As Singapore journeys towards becoming an innovation-driven nation, empowering our next generation with design thinking as a national skillset will be instrumental in securing our future success.",
     author: "Dawn Lim",
     role: "Executive Director, DesignSingapore Council",
     source: "Design Singapore Council",
@@ -29,12 +29,12 @@ const Resources = () => {
     backgroundColor: "bg-[#E5DEFF]"
   }, {
     id: 3,
-    quote: "Academic grades can only tell you so much about a student. Through the interviews, portfolios and aptitude tests that NUS uses, the university can assess their interests and aptitude for a particular field.",
-    author: "Prof. Goh Say Song",
-    role: "Dean of Admissions, NUS",
+    quote: "Portfolios are a good way to demonstrate how they have spent their time and energies outside the classroom.",
+    author: "Lynette Ang",
+    role: "Director of Admissions, SUTD",
     source: "The Straits Times",
     imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    link: "https://www.straitstimes.com/singapore/nus-and-ntu-cast-wider-net-for-students-through-aptitude-based-admissions",
+    link: "https://www.straitstimes.com/singapore/from-poly-to-uni-what-you-need-to-know#",
     backgroundColor: "bg-[#F2FCE2]"
   }];
 
@@ -98,7 +98,7 @@ const Resources = () => {
             What Leaders Say
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-center mb-12 text-base">
-            Insights from education and industry leaders about BUILD's impact
+            Insights from education and industry leaders
           </p>
           <div className={`grid grid-cols-1 ${isMobile ? 'gap-6' : 'md:grid-cols-3 gap-8'}`}>
             {quotes.map((item, index) => (
