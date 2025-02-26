@@ -1,3 +1,4 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
@@ -11,6 +12,8 @@ import { AiToolsSection } from "@/components/pedagogy/AiToolsSection";
 import { CampsSection } from "@/components/home/CampsSection";
 import AiPowerSection from "@/components/home/AiPowerSection";
 import BuildPortfolio from "@/components/home/WhoIsBuildFor";
+import { Link } from "react-router-dom";
+
 const Index = () => {
   const camps = [{
     id: 1,
@@ -37,9 +40,11 @@ const Index = () => {
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80",
     formLink: "https://forms.gle/your-form-link-3"
   }];
+
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
+
   return <div className="min-h-screen">
       <Navigation />
       <div className="bg-white py-[30px]">
@@ -59,10 +64,16 @@ const Index = () => {
         <AiPowerSection />
       </section>
 
-      
-
       <section className="py-24 bg-zinc-100">
         <BuildPortfolio />
+        <div className="flex justify-center mt-12">
+          <Link 
+            to="/resources#testimonials"
+            className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center"
+          >
+            Why Build Portfolio?
+          </Link>
+        </div>
       </section>
 
       <section className="py-24 bg-white">
@@ -74,4 +85,5 @@ const Index = () => {
       <Footer onCategoryFilter={handleCategoryFilter} />
     </div>;
 };
+
 export default Index;
