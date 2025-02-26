@@ -66,10 +66,10 @@ const Index = () => {
 
       <section className="py-24 bg-zinc-100">
         <BuildPortfolio />
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-8 md:mt-12 px-4">
           <Link 
             to="/resources#testimonials"
-            className="w-full sm:w-auto min-w-[200px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center"
+            className="w-full max-w-[335px] px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors text-center"
           >
             Why Build Portfolio?
           </Link>

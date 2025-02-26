@@ -1,7 +1,9 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CampList from "../camps/CampList";
+
 interface Camp {
   id: number;
   title: string;
@@ -11,9 +13,11 @@ interface Camp {
   image: string;
   formLink: string;
 }
+
 interface CampsSectionProps {
   camps: Camp[];
 }
+
 export const CampsSection = ({
   camps
 }: CampsSectionProps) => {
@@ -26,9 +30,11 @@ export const CampsSection = ({
           Our 2025 theme is "Social Innovation", and we have curated 4 themes around Health, Sustainability, Education and Culture. Join us to build something meaningful today.
         </p>
         <CampList camps={camps} />
-        <div className="flex justify-center mt-12">
-          <Link to="/camps">
-            <Button variant="default" className="bg-accent hover:bg-accent/90 text-white w-[200px]">See All Camps</Button>
+        <div className="flex justify-center mt-8 md:mt-12">
+          <Link to="/camps" className="w-full max-w-[335px] px-4">
+            <Button variant="default" className="w-full bg-accent hover:bg-accent/90 text-white py-3 rounded-full">
+              See All Camps
+            </Button>
           </Link>
         </div>
       </div>
