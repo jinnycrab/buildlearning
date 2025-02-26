@@ -79,27 +79,7 @@ const Index = () => {
         <WhatYouGet />
       </section>
       
-      <section className="bg-white my-0 px-0 py-[96px]">
-        <div className="container mx-auto px-4 md:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} viewport={{
-          once: true
-        }}>
-            <h2 className="font-bold mb-4 text-center text-4xl">AI Tools We Use</h2>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base">
-              Thrive in the age of AI with exposure to latest AI tools
-            </p>
-            <AiToolsSection tools={aiTools} />
-          </motion.div>
-        </div>
-      </section>
+      
 
       <CampsSection camps={camps} />
       

@@ -17,7 +17,7 @@ interface CampsSectionProps {
 export const CampsSection = ({
   camps
 }: CampsSectionProps) => {
-  return <section className="py-24 bg-muted">
+  return <section className="py-24 bg-primary-foreground">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-4 text-center font-general-sans md:text-4xl">
           Our 2025 Camps
