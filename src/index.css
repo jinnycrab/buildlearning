@@ -54,6 +54,24 @@ body:not(:hover)::-webkit-scrollbar-thumb {
   background: transparent;
 }
 
+/* Custom Scrollbar for Process Cards */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.scrollbar-thin:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .font-general-sans {
   font-family: 'General Sans', sans-serif;
 }
