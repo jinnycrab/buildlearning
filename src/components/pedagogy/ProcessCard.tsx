@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -45,7 +46,7 @@ export const ProcessCard = ({
           </div>
 
           <div className="mt-auto">
-            <h4 className="text-base font-semibold mb-2 text-white font-general-sans">Key Features</h4>
+            <h4 className="text-base font-semibold mb-2 text-white font-general-sans">What Students Do</h4>
             <ul className="space-y-2">
               {features.map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-2">
