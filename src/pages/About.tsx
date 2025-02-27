@@ -99,7 +99,7 @@ const About = () => {
                 duration: 0.2
               }}>
                   <h3 className="font-semibold mb-2 text-lg">Disengaged and Stressed Students</h3>
-                  <p className="text-muted-foreground">Imagine this - you're preparing for a single examination that is said to "determine your entire life outcome". There's nothing else to fall back on, because like you, everyone else also goes for volunteering, various extracurricular activities. And so you turn to cramming and memorising information that's "good for you". </p>
+                  <p className="text-muted-foreground">As educators, we know that many students recognise the stakes on making to their desired University course. To some extent, what you study can somewhat influence your starting point in your adult life. Yet, under the stress of preparing for these one-off major examinations, many have lost the joy and engagement of learning. </p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl" whileHover={{
@@ -107,7 +107,7 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">Frustrated and Conflicted Parents</h3>
+                  <h3 className="font-semibold mb-2 text-lg">Anxious and Conflicted Parents</h3>
                   <p className="text-muted-foreground">In our conversations with parents, we observed that many feel conflicted about their children's education. On one hand, they know what is at stakes for college admission, and feel pressured to keep up with other parents. On the other hand, they too, want their children to enjoy learning and their teenage years. </p>
                 </motion.div>
 
@@ -117,7 +117,7 @@ const About = () => {
                 duration: 0.2
               }}>
                   <h3 className="font-semibold mb-2 text-lg">Frustrated Employers & Industry</h3>
-                  <p className="text-muted-foreground">Universities and employers are shifting towards holistic assessments, looking beyond academic achievements.</p>
+                  <p className="text-muted-foreground">In our conversations with hiring managers and industry experts, we note that many feel students have skills that are 'out-of-touch' with the working world. </p>
                 </motion.div>
               </div>
             </div>
