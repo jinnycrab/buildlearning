@@ -2,7 +2,6 @@ import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
 import { Linkedin, Lightbulb, Target, Rocket } from "lucide-react";
-
 const About = () => {
   const fadeInUp = {
     initial: {
@@ -17,7 +16,6 @@ const About = () => {
       duration: 0.5
     }
   };
-
   return <div className="min-h-screen bg-secondary flex flex-col">
       <Navigation />
 
@@ -34,45 +32,45 @@ const About = () => {
               <h2 className="text-3xl font-bold font-general-sans">Reimagining Education Today for Tomorrow's Leaders</h2>
               
               <div className="grid gap-6">
-                <motion.div 
-                  className="flex items-start space-x-4"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div className="flex items-start space-x-4" whileHover={{
+                x: 5
+              }} transition={{
+                duration: 0.2
+              }}>
                   <div className="bg-accent/10 p-3 rounded-full">
                     <Target className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Beyond Grades</h3>
-                    <p className="text-muted-foreground">Students defined by creative output and innovative solutions, not just grades.</p>
+                    <h3 className="font-semibold mb-1">A Life Beyond Grades</h3>
+                    <p className="text-muted-foreground">We envision a world students are defined not by grades, but by their contributions to the world. </p>
                   </div>
                 </motion.div>
 
-                <motion.div 
-                  className="flex items-start space-x-4"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div className="flex items-start space-x-4" whileHover={{
+                x: 5
+              }} transition={{
+                duration: 0.2
+              }}>
                   <div className="bg-accent/10 p-3 rounded-full">
                     <Lightbulb className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Self-Initiated Learning</h3>
-                    <p className="text-muted-foreground">Knowledge cultivated through curiosity and exploration, not memorization.</p>
+                    <p className="text-muted-foreground">We envision a world students learn because they find meaning in the subject, not because they were forced to memorise. </p>
                   </div>
                 </motion.div>
 
-                <motion.div 
-                  className="flex items-start space-x-4"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div className="flex items-start space-x-4" whileHover={{
+                x: 5
+              }} transition={{
+                duration: 0.2
+              }}>
                   <div className="bg-accent/10 p-3 rounded-full">
                     <Rocket className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Future-Ready Skills</h3>
-                    <p className="text-muted-foreground">Equipped with AI literacy, design thinking, and storytelling capabilities.</p>
+                    <p className="text-muted-foreground">We envision a world students thrive in volatility and disruption, equipped with relevant hard and soft skills.</p>
                   </div>
                 </motion.div>
               </div>
@@ -97,29 +95,29 @@ const About = () => {
               </h2>
               
               <div className="space-y-6">
-                <motion.div 
-                  className="bg-accent/5 p-6 rounded-xl"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div className="bg-accent/5 p-6 rounded-xl" whileHover={{
+                scale: 1.02
+              }} transition={{
+                duration: 0.2
+              }}>
                   <h3 className="font-semibold mb-2 text-lg">From the Classroom</h3>
                   <p className="text-muted-foreground">We observed students becoming increasingly disengaged and stressed with traditional education.</p>
                 </motion.div>
 
-                <motion.div 
-                  className="bg-accent/5 p-6 rounded-xl"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div className="bg-accent/5 p-6 rounded-xl" whileHover={{
+                scale: 1.02
+              }} transition={{
+                duration: 0.2
+              }}>
                   <h3 className="font-semibold mb-2 text-lg">From the Industry</h3>
                   <p className="text-muted-foreground">We noticed a growing gap between academic skills and future-ready capabilities needed in the workforce.</p>
                 </motion.div>
 
-                <motion.div 
-                  className="bg-accent/5 p-6 rounded-xl"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div className="bg-accent/5 p-6 rounded-xl" whileHover={{
+                scale: 1.02
+              }} transition={{
+                duration: 0.2
+              }}>
                   <h3 className="font-semibold mb-2 text-lg">From the World</h3>
                   <p className="text-muted-foreground">Universities and employers are shifting towards holistic assessments, looking beyond academic achievements.</p>
                 </motion.div>
