@@ -90,9 +90,7 @@ const About = () => {
                   Our Story
                 </span>
               </div>
-              <h2 className="text-3xl font-bold font-general-sans">
-                Why We Built Build
-              </h2>
+              <h2 className="text-3xl font-bold font-general-sans">Why We Built Singapore's 1st Student Incubator</h2>
               
               <div className="space-y-6">
                 <motion.div className="bg-accent/5 p-6 rounded-xl" whileHover={{
