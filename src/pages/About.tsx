@@ -98,8 +98,8 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">Disengaged, Stressed and Passive Learning</h3>
-                  <p className="text-muted-foreground">As teachers, we witnessed how students were becoming disengaged and passive - cramming current affairs and facts, memorising information and writing templates. All for a single, major examination that creates stress. And we wanted to change that, because we felt that learning </p>
+                  <h3 className="font-semibold mb-2 text-lg">Disengaged and Stressed Students</h3>
+                  <p className="text-muted-foreground">Imagine this - you're preparing for a single examination that is said to "determine your entire life outcome". There's nothing else to fall back on, because like you, everyone else also goes for volunteering, various extracurricular activities. And so you turn to cramming and memorising information that's "good for you". </p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl" whileHover={{
@@ -107,8 +107,8 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">Parents Caught In The Middle</h3>
-                  <p className="text-muted-foreground">We noticed a growing gap between academic skills and future-ready capabilities needed in the workforce.</p>
+                  <h3 className="font-semibold mb-2 text-lg">Frustrated and Conflicted Parents</h3>
+                  <p className="text-muted-foreground">In our conversations with parents, we observed that many feel conflicted about their children's education. On one hand, they know what is at stakes for college admission, and feel pressured to keep up with other parents. On the other hand, they too, want their children to enjoy learning and their teenage years. </p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl" whileHover={{
