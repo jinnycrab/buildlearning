@@ -2,7 +2,6 @@ import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
 import { Linkedin, Lightbulb, Target, Rocket } from "lucide-react";
-
 const About = () => {
   const fadeInUp = {
     initial: {
@@ -33,10 +32,10 @@ const About = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
                 <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
                   <Target className="w-5 h-5 text-accent" />
                 </div>
@@ -45,10 +44,10 @@ const About = () => {
               </motion.div>
 
               <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
                 <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
                   <Lightbulb className="w-5 h-5 text-accent" />
                 </div>
@@ -57,10 +56,10 @@ const About = () => {
               </motion.div>
 
               <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
                 <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
                   <Rocket className="w-5 h-5 text-accent" />
                 </div>
@@ -87,28 +86,28 @@ const About = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
                 <h3 className="font-semibold mb-2 text-lg">Disengaged and Stressed Students</h3>
                 <p className="text-muted-foreground">As educators, we know that many students recognise the stakes on making to their desired University course. Yet, under the stress of preparing for these one-off major examinations, many have lost the joy and engagement of learning.</p>
               </motion.div>
 
               <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
                 <h3 className="font-semibold mb-2 text-lg">Anxious and Conflicted Parents</h3>
                 <p className="text-muted-foreground">In our conversations with parents, we observed that many feel conflicted about their children's education. They know what is at stakes for college admission, yet want their children to enjoy learning and their teenage years.</p>
               </motion.div>
 
               <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
                 <h3 className="font-semibold mb-2 text-lg">Frustrated Employers and Industry</h3>
                 <p className="text-muted-foreground">For too many times, we heard employers say students are too "book smart" and "unprepared" for the working world. The World Economic Forum classified reading, writing and mathematics as "out-of-focus" skills compared to AI, technological literacy and creative problem solving.</p>
               </motion.div>
@@ -124,29 +123,29 @@ const About = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                  scale: 1.02
-                }} transition={{
-                  duration: 0.2
-                }}>
-                  <h3 className="font-semibold mb-2 text-lg">Inspiring Student Innovation</h3>
-                  <p className="text-muted-foreground">We believe students can be innovative problem-solvers when given the right environment, tools, and mentorship to explore their ideas.</p>
+                scale: 1.02
+              }} transition={{
+                duration: 0.2
+              }}>
+                  <h3 className="font-semibold mb-2 text-lg">Rise of Holistic Assessments</h3>
+                  <p className="text-muted-foreground">Today, 95% of US colleges use holistic reviews and up to 50% of all Singapore college admissions will be based on aptitude than grades / test scores.</p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                  scale: 1.02
-                }} transition={{
-                  duration: 0.2
-                }}>
-                  <h3 className="font-semibold mb-2 text-lg">Building Real-World Skills</h3>
-                  <p className="text-muted-foreground">Through hands-on projects and industry exposure, students develop practical skills that universities and employers value.</p>
+                scale: 1.02
+              }} transition={{
+                duration: 0.2
+              }}>
+                  <h3 className="font-semibold mb-2 text-lg">Building Employable Skills</h3>
+                  <p className="text-muted-foreground">Our student incubator </p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                  scale: 1.02
-                }} transition={{
-                  duration: 0.2
-                }}>
-                  <h3 className="font-semibold mb-2 text-lg">Creating Meaningful Portfolios</h3>
+                scale: 1.02
+              }} transition={{
+                duration: 0.2
+              }}>
+                  <h3 className="font-semibold mb-2 text-lg">Portfolio to Diversify Odds</h3>
                   <p className="text-muted-foreground">Students graduate with tangible evidence of their capabilities, creativity, and problem-solving skills through real projects.</p>
                 </motion.div>
               </div>
