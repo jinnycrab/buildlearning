@@ -1,13 +1,10 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 const Resources = () => {
   const isMobile = useIsMobile();
-  
   const quotes = [{
     id: 1,
     quote: "Academic grades can only tell you so much about a student. Through the interviews, portfolios and aptitude tests that NUS uses, the university can assess their interests and aptitude for a particular field.",
@@ -36,46 +33,43 @@ const Resources = () => {
     link: "https://www.straitstimes.com/singapore/from-poly-to-uni-what-you-need-to-know#",
     backgroundColor: "bg-[#F2FCE2]"
   }];
-
   const handleCategoryFilter = (category: string) => {
     console.log("Filtering by category:", category);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Testimonials Section */}
       <section className="py-24 bg-muted">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="container mx-auto"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} viewport={{
+        once: true
+      }} className="container mx-auto">
           <h2 className="text-4xl font-bold font-general-sans mb-4 text-center md:text-4xl">
             What Leaders Say
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-center mb-12 text-base">
-            Insights from education and industry leaders
-          </p>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-center mb-12 text-base">Latest insights and developments on the future of education in Singapore</p>
           <div className={`grid grid-cols-1 ${isMobile ? 'gap-6' : 'md:grid-cols-3 gap-8'}`}>
-            {quotes.map((item, index) => (
-              <a 
-                key={item.id} 
-                href={item.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="group block h-full"
-              >
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className={`${item.backgroundColor} rounded-xl p-6 h-full hover:shadow-lg transition-all duration-300 relative group`}
-                >
+            {quotes.map((item, index) => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className="group block h-full">
+                <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: index * 0.2
+            }} viewport={{
+              once: true
+            }} className={`${item.backgroundColor} rounded-xl p-6 h-full hover:shadow-lg transition-all duration-300 relative group`}>
                   <div className="flex flex-col h-full justify-between">
                     <div>
                       <div className="mb-6">
@@ -95,21 +89,24 @@ const Resources = () => {
                     </div>
                   </div>
                 </motion.div>
-              </a>
-            ))}
+              </a>)}
           </div>
         </motion.div>
       </section>
 
       {/* Free Ideation Tools Section */}
       <section id="ideation-tools" className="py-24 bg-[#F4B400]">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }} 
-          className="container mx-auto text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} viewport={{
+        once: true
+      }} className="container mx-auto text-center">
           <h2 className="text-4xl font-bold font-general-sans mb-4 md:text-4xl">
             Free Ideation Tools
           </h2>
@@ -119,8 +116,6 @@ const Resources = () => {
         </motion.div>
       </section>
       <Footer onCategoryFilter={handleCategoryFilter} />
-    </div>
-  );
+    </div>;
 };
-
 export default Resources;
