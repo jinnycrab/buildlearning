@@ -56,7 +56,7 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Self-Initiated Learning</h3>
-                    <p className="text-muted-foreground">We envision a world students learn because they find meaning in the subject, not because they were forced to memorise. </p>
+                    <p className="text-muted-foreground">We envision a world students conduct self-directed learning because they find meaning in the subject.</p>
                   </div>
                 </motion.div>
 
@@ -98,8 +98,8 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">From the Classroom</h3>
-                  <p className="text-muted-foreground">We observed students becoming increasingly disengaged and stressed with traditional education.</p>
+                  <h3 className="font-semibold mb-2 text-lg">Disengaged, Stressed and Passive Learning</h3>
+                  <p className="text-muted-foreground">As teachers, we witnessed how students were becoming disengaged and passive - cramming current affairs and facts, memorising information and writing templates. All for a single, major examination that creates stress. And we wanted to change that, because we felt that learning </p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl" whileHover={{
@@ -107,7 +107,7 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">From the Industry</h3>
+                  <h3 className="font-semibold mb-2 text-lg">Parents Caught In The Middle</h3>
                   <p className="text-muted-foreground">We noticed a growing gap between academic skills and future-ready capabilities needed in the workforce.</p>
                 </motion.div>
 
@@ -116,7 +116,7 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">From the World</h3>
+                  <h3 className="font-semibold mb-2 text-lg">Frustrated Employers & Industry</h3>
                   <p className="text-muted-foreground">Universities and employers are shifting towards holistic assessments, looking beyond academic achievements.</p>
                 </motion.div>
               </div>
