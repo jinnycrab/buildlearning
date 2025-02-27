@@ -1,7 +1,8 @@
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Lightbulb, Target, Rocket } from "lucide-react";
+
 const About = () => {
   const fadeInUp = {
     initial: {
@@ -16,26 +17,65 @@ const About = () => {
       duration: 0.5
     }
   };
+
   return <div className="min-h-screen bg-secondary flex flex-col">
       <Navigation />
 
       <main className="flex-grow">        
-     {/* Our Vision Section */}
+        {/* Our Vision Section */}
         <motion.section className="container py-20 bg-white" initial="initial" animate="animate" variants={fadeInUp}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
                 <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
                   Our Vision
                 </span>
               </div>
               <h2 className="text-3xl font-bold font-general-sans">Reimagining Education Today for Tomorrow's Leaders</h2>
-              <p className="text-lg text-muted-foreground">
-              Imagine a world where students are defined not by grades, but by their creative output and innovative solutions. Where students cultivate knowledge from self-initiated learning, not rote memorization. Where students are equipped with future-proof skills, from AI literacy to storytelling. 
-              </p>
-              <p className="text-lg text-muted-foreground">
-At Build, we are building that future, one project at a time.
-              </p>
+              
+              <div className="grid gap-6">
+                <motion.div 
+                  className="flex items-start space-x-4"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="bg-accent/10 p-3 rounded-full">
+                    <Target className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Beyond Grades</h3>
+                    <p className="text-muted-foreground">Students defined by creative output and innovative solutions, not just grades.</p>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  className="flex items-start space-x-4"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="bg-accent/10 p-3 rounded-full">
+                    <Lightbulb className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Self-Initiated Learning</h3>
+                    <p className="text-muted-foreground">Knowledge cultivated through curiosity and exploration, not memorization.</p>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  className="flex items-start space-x-4"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="bg-accent/10 p-3 rounded-full">
+                    <Rocket className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Future-Ready Skills</h3>
+                    <p className="text-muted-foreground">Equipped with AI literacy, design thinking, and storytelling capabilities.</p>
+                  </div>
+                </motion.div>
+              </div>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
               <img src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/studentlearning.jpg" alt="Students collaborating" className="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
@@ -43,10 +83,10 @@ At Build, we are building that future, one project at a time.
           </div>
         </motion.section> 
 
- {/* Why We Started Build Section */}
+        {/* Why We Started Build Section */}
         <motion.section className="container py-20" initial="initial" animate="animate" variants={fadeInUp}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
                 <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
                   Our Story
@@ -55,14 +95,35 @@ At Build, we are building that future, one project at a time.
               <h2 className="text-3xl font-bold font-general-sans">
                 Why We Built Build
               </h2>
-              <p className="text-lg text-muted-foreground"> 
-                As educators, we observed students are more disengaged and stressed with school. 
-                As industry professionals, we observed students are not equipped with future-proof skills.
-                As global citizens, we observed colleges and employers are shifting towards holistic assessments and paying more attention to other indicators of success. 
-                 </p>
-              <p className="text-lg text-muted-foreground">
-So we decided, there is no better time to reimagine education.
-              </p>
+              
+              <div className="space-y-6">
+                <motion.div 
+                  className="bg-accent/5 p-6 rounded-xl"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <h3 className="font-semibold mb-2 text-lg">From the Classroom</h3>
+                  <p className="text-muted-foreground">We observed students becoming increasingly disengaged and stressed with traditional education.</p>
+                </motion.div>
+
+                <motion.div 
+                  className="bg-accent/5 p-6 rounded-xl"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <h3 className="font-semibold mb-2 text-lg">From the Industry</h3>
+                  <p className="text-muted-foreground">We noticed a growing gap between academic skills and future-ready capabilities needed in the workforce.</p>
+                </motion.div>
+
+                <motion.div 
+                  className="bg-accent/5 p-6 rounded-xl"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <h3 className="font-semibold mb-2 text-lg">From the World</h3>
+                  <p className="text-muted-foreground">Universities and employers are shifting towards holistic assessments, looking beyond academic achievements.</p>
+                </motion.div>
+              </div>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
               <img src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/stanford%20ideation.jpeg" alt="Brainstorm at Stanford" className="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
