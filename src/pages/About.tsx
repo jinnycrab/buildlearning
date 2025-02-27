@@ -2,11 +2,7 @@ import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
 import { Linkedin, Lightbulb, Target, Rocket } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-
 const About = () => {
-  const isMobile = useIsMobile();
-  
   const fadeInUp = {
     initial: {
       opacity: 0,
@@ -20,72 +16,67 @@ const About = () => {
       duration: 0.5
     }
   };
-
   return <div className="min-h-screen bg-secondary flex flex-col">
       <Navigation />
 
       <main className="flex-grow">        
         {/* Our Vision Section */}
-        <motion.section 
-          className={`${isMobile ? '' : 'container'} py-20 bg-white`} 
-          initial="initial" 
-          animate="animate" 
-          variants={fadeInUp}
-        >
-          <div className={`${isMobile ? 'space-y-8' : 'container space-y-12'}`}>
-            <div className={`${isMobile ? 'px-6' : ''}`}>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                Our Vision
-              </span>
-              <h2 className="text-3xl font-bold font-general-sans mt-8">Reimagining Education Today for Tomorrow's Leaders</h2>
+        <motion.section className="container py-20 bg-white" initial="initial" animate="animate" variants={fadeInUp}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div>
+                <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                  Our Vision
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold font-general-sans">Reimagining Education Today for Tomorrow's Leaders</h2>
+              
+              <div className="grid gap-6">
+                <motion.div className="flex items-start space-x-4" whileHover={{
+                x: 5
+              }} transition={{
+                duration: 0.2
+              }}>
+                  <div className="bg-accent/10 p-3 rounded-full">
+                    <Target className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">A Life Beyond Grades</h3>
+                    <p className="text-muted-foreground">We envision a world students are defined not by grades, but by their contributions to the world. </p>
+                  </div>
+                </motion.div>
+
+                <motion.div className="flex items-start space-x-4" whileHover={{
+                x: 5
+              }} transition={{
+                duration: 0.2
+              }}>
+                  <div className="bg-accent/10 p-3 rounded-full">
+                    <Lightbulb className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Self-Initiated Learning</h3>
+                    <p className="text-muted-foreground">We envision a world students learn because they find meaning in the subject, not because they were forced to memorise. </p>
+                  </div>
+                </motion.div>
+
+                <motion.div className="flex items-start space-x-4" whileHover={{
+                x: 5
+              }} transition={{
+                duration: 0.2
+              }}>
+                  <div className="bg-accent/10 p-3 rounded-full">
+                    <Rocket className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Future-Ready Skills</h3>
+                    <p className="text-muted-foreground">We envision a world students thrive in volatility and disruption, equipped with relevant hard and soft skills.</p>
+                  </div>
+                </motion.div>
+              </div>
             </div>
-            
-            {/* Vision Cards Container */}
-            <div className={`${isMobile ? 'px-6 space-y-6' : 'grid grid-cols-3 gap-6'}`}>
-              <motion.div 
-                className="bg-accent/5 p-6 rounded-xl h-full flex flex-col"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
-                  <Target className="w-5 h-5 text-accent" />
-                </div>
-                <h3 className="font-semibold mb-3 text-lg">Beyond Grades</h3>
-                <p className="text-muted-foreground flex-grow">Students defined by creative output and innovative solutions, not just grades.</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-accent/5 p-6 rounded-xl h-full flex flex-col"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
-                  <Lightbulb className="w-5 h-5 text-accent" />
-                </div>
-                <h3 className="font-semibold mb-3 text-lg">Self-Initiated Learning</h3>
-                <p className="text-muted-foreground flex-grow">Knowledge cultivated through curiosity and exploration, not memorization.</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-accent/5 p-6 rounded-xl h-full flex flex-col"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
-                  <Rocket className="w-5 h-5 text-accent" />
-                </div>
-                <h3 className="font-semibold mb-3 text-lg">Future-Ready Skills</h3>
-                <p className="text-muted-foreground flex-grow">Equipped with AI literacy, design thinking, and storytelling capabilities.</p>
-              </motion.div>
-            </div>
-
-            {/* Image Section */}
-            <div className={`${isMobile ? '-mx-6' : 'rounded-2xl overflow-hidden'} relative h-[400px]`}>
-              <img 
-                src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/studentlearning.jpg" 
-                alt="Students collaborating" 
-                className="object-cover w-full h-full hover:scale-105 transition-transform duration-500" 
-              />
+            <div className="relative h-[400px] overflow-hidden rounded-2xl">
+              <img src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/studentlearning.jpg" alt="Students collaborating" className="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
             </div>
           </div>
         </motion.section> 
