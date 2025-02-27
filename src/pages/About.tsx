@@ -116,7 +116,7 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">Frustrated Employers & Industry</h3>
+                  <h3 className="font-semibold mb-2 text-lg">Frustrated Employers and Industry</h3>
                   <p className="text-muted-foreground">For too many times, we heard employers and hiring managers say students are too "book smart" and "unprepared" for the working world. In fact, according to the World Economic Forum, employers have classified reading, writing and mathematics as "out-of-focus" skills compared to AI and big data, technological literacy and creative problem solving. </p>
                 </motion.div>
               </div>
