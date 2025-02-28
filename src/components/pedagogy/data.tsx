@@ -62,7 +62,7 @@ export const aiTools: AiTool[] = [
   {
     logo: "https://lovable.dev/icon.svg?3d7ac3d2bb57ecbe",
     title: "Lovable",
-    description: "No-code solution for building apps and other digital products",
+    description: "No-code solution for building apps, websites and other digital products",
     link: "https://www.lovable.dev"
   },
   {
