@@ -222,10 +222,8 @@ const About = () => {
         <motion.section className="container py-20 bg-white" initial="initial" animate="animate" variants={fadeInUp}>
           <div className="space-y-12">
             <div>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                Our Solution
-              </span>
-              <h2 className="text-3xl font-bold font-general-sans mt-4">A Peace of Mind with Singapore's 1st Student Incubator</h2>
+              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">Our Proposition</span>
+              <h2 className="font-bold font-general-sans mt-4 text-4xl">Together, We Ride These Emerging Shifts</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -252,7 +250,7 @@ const About = () => {
             }} transition={{
               duration: 0.2
             }}>
-                <h3 className="font-semibold mb-2 text-lg">Joyful Learning of Employable Skills</h3>
+                <h3 className="font-semibold mb-2 text-lg">WEF's Future of Skills and Jobs 2030</h3>
                 <p className="text-muted-foreground">Our pedagogy was designed thoughtfully around the World Economic Forum's "Core Skills of 2030". More than 2000 hours were spent thinking how we can nurture skills like AI, technological literacy, creative innovation in a fun and meaningful way.</p>
               </motion.div>
             </div>
@@ -276,10 +274,8 @@ const About = () => {
         <motion.section className="container py-20 bg-secondary" initial="initial" animate="animate" variants={fadeInUp}>
           <div className="space-y-12">
             <div>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                Our Vision
-              </span>
-              <h2 className="text-3xl font-bold font-general-sans mt-4">Reimagine Education for Tomorrow's Leaders Today</h2>
+              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">Our Invitation</span>
+              <h2 className="font-bold font-general-sans mt-4 text-4xl">Let's Reimagine Education for Tomorrow's Leaders Today</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
