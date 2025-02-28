@@ -109,7 +109,7 @@ const About = () => {
               duration: 0.2
             }}>
                 <h3 className="font-semibold mb-2 text-lg">Frustrated Employers and Industry</h3>
-                <p className="text-muted-foreground">For too many times, we heard employers say students are too "book smart" and "unprepared" for the working world. The World Economic Forum classified reading, writing and mathematics as "out-of-focus" skills compared to AI, technological literacy and creative problem solving.</p>
+                <p className="text-muted-foreground">In boardrooms, we often hear how employers find students "book smart" and "unprepared" for the working world. In fact, the World Economic Forum classified reading, writing and mathematics as "out-of-focus" skills compared to AI, technological literacy and creative problem solving.</p>
               </motion.div>
             </div>
 
@@ -119,7 +119,7 @@ const About = () => {
 
             {/* New Subsection */}
             <div className="mt-20">
-              <h2 className="text-3xl font-bold font-general-sans mb-8">Why We Created Singapore's 1st Student Incubator</h2>
+              <h2 className="text-3xl font-bold font-general-sans mb-8">Why We Built Singapore's 1st Student Incubator</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
@@ -128,7 +128,7 @@ const About = () => {
                 duration: 0.2
               }}>
                   <h3 className="font-semibold mb-2 text-lg">Rise of Holistic Assessments</h3>
-                  <p className="text-muted-foreground">Today, 95% of US colleges use holistic reviews and up to 50% of all Singapore college admissions will be based on aptitude than grades / test scores.</p>
+                  <p className="text-muted-foreground">A portfolio is useful, especially in the emerging shift towards holistic assessments. Did you know? 95% of US colleges use holistic reviews and up to 50% of all Singapore college admissions will be based on aptitude than grades / test scores. </p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
@@ -137,7 +137,7 @@ const About = () => {
                 duration: 0.2
               }}>
                   <h3 className="font-semibold mb-2 text-lg">Building Employable Skills</h3>
-                  <p className="text-muted-foreground">Our student incubator </p>
+                  <p className="text-muted-foreground">Our student incubator prioritises the top 5 skills listed</p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
@@ -145,8 +145,8 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">Portfolio to Diversify Odds</h3>
-                  <p className="text-muted-foreground">Students graduate with tangible evidence of their capabilities, creativity, and problem-solving skills through real projects.</p>
+                  <h3 className="font-semibold mb-2 text-lg">Portfolio as Psychological Back-Up Weapon</h3>
+                  <p className="text-muted-foreground">When students build their portfolios, they Students graduate with tangible evidence of their capabilities, creativity, and problem-solving skills through real projects.</p>
                 </motion.div>
               </div>
             </div>
