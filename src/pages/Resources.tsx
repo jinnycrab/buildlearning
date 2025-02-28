@@ -40,7 +40,7 @@ const Resources = () => {
       <Navigation />
       
       {/* Testimonials Section */}
-      <section className="py-24 bg-muted">
+      <section className="py-24 bg-white">
         <motion.div initial={{
         opacity: 0,
         y: 20
