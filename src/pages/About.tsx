@@ -225,7 +225,7 @@ const About = () => {
               <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
                 Our Solution
               </span>
-              <h2 className="font-bold font-general-sans mt-4 text-4xl">Introducing Singapore's 1st Student Incubator</h2>
+              <h2 className="text-3xl font-bold font-general-sans mt-4">A Peace of Mind with Singapore's 1st Student Incubator</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -234,7 +234,7 @@ const About = () => {
             }} transition={{
               duration: 0.2
             }}>
-                <h3 className="font-semibold mb-2 text-lg">Rise of Holistic Assessments</h3>
+                <h3 className="font-semibold mb-2 text-lg">Portfolios for Holistic Assessments</h3>
                 <p className="text-muted-foreground">Did you know there's a global shift towards holistic assessments - where colleges look beyond grades? Today, 95% of US colleges use holistic reviews and up to 50% of all Singapore college admissions will be based on aptitude than grades / test scores. </p>
               </motion.div>
 
@@ -243,8 +243,8 @@ const About = () => {
             }} transition={{
               duration: 0.2
             }}>
-                <h3 className="font-semibold mb-2 text-lg">Relieving Stress for Parents and Students</h3>
-                <p className="text-muted-foreground">Because of the global shift towards holistic assessments, portfolios and passion projects are no longer a 'waste of time'. In fact, they can really elevate your chances at that scholarship or your dream program - resolving student stress and parents' conflict.</p>
+                <h3 className="font-semibold mb-2 text-lg">Referencing Singapore's Design Education 2050</h3>
+                <p className="text-muted-foreground">Today, the Singapore Government is slowly rolling out their "Design Education 2050" vision and roadmap. But we don't want to wait till 2050. We can't wait to start empowering our next generation with skillsets like design thinking and innovation.</p>
               </motion.div>
 
               <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
