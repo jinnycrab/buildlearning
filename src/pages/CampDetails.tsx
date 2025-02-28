@@ -44,7 +44,7 @@ const CampDetails = () => {
           <h2 className="text-4xl md:text-4xl font-bold mb-4 text-center font-general-sans">
             Camps
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 md:text-xl text-base text-center">
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 text-base text-center md:text-lg">
             Our 2025 theme is "Social Innovation", and we have curated 4 themes around Health, Sustainability, Education and Culture. Join us to build something meaningful today.
           </p>
           <CampList camps={camps} />
