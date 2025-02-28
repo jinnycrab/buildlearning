@@ -169,7 +169,8 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/80"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
                     <h3 className="font-semibold mb-2 text-lg text-white">Disengaged and Stressed Students</h3>
-                    <p className="text-white/90 text-sm">As educators, we know that many students recognise the stakes on making to their desired University course. Yet, under the stress of preparing for these one-off major examinations, many have lost the joy and engagement of learning.</p>
+                    <p className="text-white/90 text-sm">As educators, we know that many students understand the stakes for national exams and entering University. But this has often led to stress and disengaged learning.
+                </p>
                   </div>
                 </motion.div>
 
