@@ -225,7 +225,7 @@ const About = () => {
               <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
                 Our Solution
               </span>
-              <h2 className="text-3xl font-bold font-general-sans mt-4">Why We Built Singapore's 1st Student Incubator</h2>
+              <h2 className="font-bold font-general-sans mt-4 text-4xl">Why We Built Singapore's 1st Student Incubator</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
