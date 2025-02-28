@@ -168,7 +168,7 @@ const About = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80" 
+                    src="https://www.suss.edu.sg/images/default-source/blog/suss-blog_mental-health-752x368px.tmb-752_368.jpg?Culture=en&sfvrsn=9fea80cd_3auto=format&fit=crop&q=80" 
                     alt="Students studying" 
                     className="absolute inset-0 w-full h-full object-cover"
                   />
