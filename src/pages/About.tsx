@@ -128,7 +128,7 @@ const About = () => {
                 duration: 0.2
               }}>
                   <h3 className="font-semibold mb-2 text-lg">Rise of Holistic Assessments</h3>
-                  <p className="text-muted-foreground">A portfolio is useful, especially in the emerging shift towards holistic assessments. Did you know? 95% of US colleges use holistic reviews and up to 50% of all Singapore college admissions will be based on aptitude than grades / test scores. </p>
+                  <p className="text-muted-foreground">Did you know there's a global shift towards holistic assessments - where colleges look beyond grades? Today, 95% of US colleges use holistic reviews and up to 50% of all Singapore college admissions will be based on aptitude than grades / test scores. </p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
@@ -136,8 +136,8 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">Building Employable Skills</h3>
-                  <p className="text-muted-foreground">Our student incubator designed our pedagogy around the "Core Skills of 2030", such as AI, technological literacy, creative problem solving, as listed out in the World Economic Forum's Jobs Report. </p>
+                  <h3 className="font-semibold mb-2 text-lg">Relieving Stress for Parents and Students</h3>
+                  <p className="text-muted-foreground">Because of the global shift towards holistic assessments, portfolios and passion projects are no longer a 'waste of time'. In fact, they can really elevate your chances at that scholarship or your dream program - resolving student stress and parents' conflict.</p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
@@ -145,8 +145,9 @@ const About = () => {
               }} transition={{
                 duration: 0.2
               }}>
-                  <h3 className="font-semibold mb-2 text-lg">Portfolio as Psychological Back-Up Weapon</h3>
-                  <p className="text-muted-foreground">When students build their portfolios, they Students graduate with tangible evidence of their capabilities, creativity, and problem-solving skills through real projects.</p>
+                  <h3 className="font-semibold mb-2 text-lg">Joyful Learning of Employable Skills</h3>
+                  <p className="text-muted-foreground">Our pedagogy was designed thoughtfully around the World Economic Forum's "Core Skills of 2030". More than 200 hours was spent thinking how we can nurture skills like AI, technological literacy, creative problem solving in a fun, engaging and meaningful way.
+                </p>
                 </motion.div>
               </div>
             </div>
