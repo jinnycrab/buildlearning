@@ -184,7 +184,8 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/80"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
                     <h3 className="font-semibold mb-2 text-lg text-white">Anxious and Conflicted Parents</h3>
-                    <p className="text-white/90 text-sm">In our conversations with parents, we observed that many feel conflicted about their children's education. They know what is at stakes for college admission, yet want their children to enjoy learning and their teenage years.</p>
+                    <p className="text-white/90 text-sm">We know all parents want the best for their child. While they want their child to enjoy learning, many worry about exams and feel conflicted about how much they should do.
+                </p>
                   </div>
                 </motion.div>
 
