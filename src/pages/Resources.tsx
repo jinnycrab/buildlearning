@@ -40,7 +40,7 @@ const Resources = () => {
       <Navigation />
       
       {/* Testimonials Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-muted">
         <motion.div initial={{
         opacity: 0,
         y: 20
@@ -53,7 +53,7 @@ const Resources = () => {
         once: true
       }} className="container mx-auto">
           <h2 className="text-4xl font-bold font-general-sans mb-4 text-center md:text-4xl">News Spotlight</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-center mb-12 text-lg">See what our national leaders are saying about the future of education</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-center mb-12 text-base">See what our national leaders are saying about the future of education</p>
           <div className={`grid grid-cols-1 ${isMobile ? 'gap-6' : 'md:grid-cols-3 gap-8'}`}>
             {quotes.map((item, index) => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className="group block h-full">
                 <motion.div initial={{
