@@ -199,7 +199,8 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/80"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
                     <h3 className="font-semibold mb-2 text-lg text-white">Frustrated Employers and Industry</h3>
-                    <p className="text-white/90 text-sm">In boardrooms, we often hear how employers find students "book smart" and "unprepared" for the working world. In fact, the World Economic Forum classified reading, writing and mathematics as "out-of-focus" skills compared to AI, technological literacy and creative problem solving.</p>
+                    <p className="text-white/90 text-sm">In boardrooms, we have heard countless times how students today are "book smart" but lack the necessary skills to navigate today's disruptive corporate world.
+                </p>
                   </div>
                 </motion.div>
               </div>}
