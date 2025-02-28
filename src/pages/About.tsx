@@ -1,11 +1,9 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
 import { Linkedin, Lightbulb, Target, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
-
 const About = () => {
   const fadeInUp = {
     initial: {
@@ -28,7 +26,7 @@ const About = () => {
         <motion.section className="py-20 bg-accent/10" initial="initial" animate="animate" variants={fadeInUp}>
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mt-4 mb-6 font-general-sans">
+              <h2 className="font-bold mt-4 mb-6 font-general-sans text-4xl">
                 A Merger of Two Worlds
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
