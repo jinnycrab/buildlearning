@@ -137,7 +137,7 @@ const About = () => {
                 duration: 0.2
               }}>
                   <h3 className="font-semibold mb-2 text-lg">Building Employable Skills</h3>
-                  <p className="text-muted-foreground">Our student incubator prioritises the top 5 skills listed</p>
+                  <p className="text-muted-foreground">Our student incubator designed our pedagogy around the "Core Skills of 2030", such as AI, technological literacy, creative problem solving, as listed out in the World Economic Forum's Jobs Report. </p>
                 </motion.div>
 
                 <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
