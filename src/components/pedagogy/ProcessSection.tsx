@@ -67,7 +67,7 @@ export const ProcessSection = () => {
           </motion.div>)}
       </div>;
   };
-  return <section id="build-process" className="md:py-24 bg-muted py-[96px]">
+  return <section id="build-process" className="md:py-24 py-[96px] bg-white">
       <motion.div className="container mx-auto px-4 md:px-8">
         <h2 className="text-4xl font-bold mb-4 text-center">The Build Process™</h2>
         <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8 md:mb-12 text-base">
