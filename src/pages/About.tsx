@@ -1,4 +1,3 @@
-
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
@@ -27,13 +26,8 @@ const About = () => {
         <motion.section className="py-20 bg-accent/10" initial="initial" animate="animate" variants={fadeInUp}>
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="font-bold mt-4 mb-6 font-general-sans text-4xl">
-                A Merger of Two Worlds
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Meet the founders behind Build who are passionate about
-                reimagining education with their experience in innovation and Silicon Valley. 
-              </p>
+              <h2 className="font-bold mt-4 mb-6 font-general-sans text-4xl">Our Trainers</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Our trainers are passionate about reimagining education with their experience in innovation, strategy, and Silicon Valley.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
