@@ -1,3 +1,4 @@
+
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import { motion } from "framer-motion";
@@ -93,61 +94,7 @@ const About = () => {
           </div>
         </motion.section>
         
-        {/* Our Vision Section */}
-        <motion.section className="container py-20 bg-white" initial="initial" animate="animate" variants={fadeInUp}>
-          <div className="space-y-12">
-            <div>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                Our Vision
-              </span>
-              <h2 className="text-3xl font-bold font-general-sans mt-4">Reimagining Education Today for Tomorrow's Leaders</h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
-              scale: 1.02
-            }} transition={{
-              duration: 0.2
-            }}>
-                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
-                  <Target className="w-5 h-5 text-accent" />
-                </div>
-                <h3 className="font-semibold mb-3 text-lg">A Life Beyond Grades</h3>
-                <p className="text-muted-foreground flex-grow">We envision a world students are defined not by grades, but by their contributions to the world.</p>
-              </motion.div>
-
-              <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
-              scale: 1.02
-            }} transition={{
-              duration: 0.2
-            }}>
-                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
-                  <Lightbulb className="w-5 h-5 text-accent" />
-                </div>
-                <h3 className="font-semibold mb-3 text-lg">Self-Initiated Learning</h3>
-                <p className="text-muted-foreground flex-grow">We envision a world students conduct self-directed learning because they find meaning in the subject.</p>
-              </motion.div>
-
-              <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
-              scale: 1.02
-            }} transition={{
-              duration: 0.2
-            }}>
-                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
-                  <Rocket className="w-5 h-5 text-accent" />
-                </div>
-                <h3 className="font-semibold mb-3 text-lg">Future-Ready Skills</h3>
-                <p className="text-muted-foreground flex-grow">We envision a world students thrive in volatility and disruption, equipped with relevant hard and soft skills.</p>
-              </motion.div>
-            </div>
-
-            <div className="relative h-[400px] overflow-hidden rounded-2xl">
-              <img src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/studentlearning.jpg" alt="Students collaborating" className="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
-            </div>
-          </div>
-        </motion.section> 
-
-        {/* Our Story Section */}
+        {/* Our Story Section - Moved after founders */}
         <motion.section className="container py-20" initial="initial" animate="animate" variants={fadeInUp}>
           <div className="space-y-12">
             <div>
@@ -269,47 +216,55 @@ const About = () => {
                   </CarouselItem>
                 </CarouselContent>
               </Carousel>}
+          </div>
+        </motion.section>
 
+        {/* Why We Built Section */}
+        <motion.section className="container py-20 bg-white" initial="initial" animate="animate" variants={fadeInUp}>
+          <div className="space-y-12">
+            <div>
+              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                Our Solution
+              </span>
+              <h2 className="text-3xl font-bold font-general-sans mt-4">Why We Built Singapore's 1st Student Incubator</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
+                <h3 className="font-semibold mb-2 text-lg">Rise of Holistic Assessments</h3>
+                <p className="text-muted-foreground">Did you know there's a global shift towards holistic assessments - where colleges look beyond grades? Today, 95% of US colleges use holistic reviews and up to 50% of all Singapore college admissions will be based on aptitude than grades / test scores. </p>
+              </motion.div>
+
+              <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
+                <h3 className="font-semibold mb-2 text-lg">Relieving Stress for Parents and Students</h3>
+                <p className="text-muted-foreground">Because of the global shift towards holistic assessments, portfolios and passion projects are no longer a 'waste of time'. In fact, they can really elevate your chances at that scholarship or your dream program - resolving student stress and parents' conflict.</p>
+              </motion.div>
+
+              <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
+                <h3 className="font-semibold mb-2 text-lg">Joyful Learning of Employable Skills</h3>
+                <p className="text-muted-foreground">Our pedagogy was designed thoughtfully around the World Economic Forum's "Core Skills of 2030". More than 200 hours was spent thinking how we can nurture skills like AI, technological literacy, creative problem solving in a fun, engaging and meaningful way.
+              </p>
+              </motion.div>
+            </div>
+
+            {/* Image from Stanford moved to this section */}
             <div className="relative h-[400px] overflow-hidden rounded-2xl">
               <img src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/main/images/stanford%20ideation.jpeg" alt="Brainstorm at Stanford" className="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
             </div>
 
-            {/* New Subsection */}
-            <div className="mt-20">
-              <h2 className="text-3xl font-bold font-general-sans mb-8">Why We Built Singapore's 1st Student Incubator</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
-                  <h3 className="font-semibold mb-2 text-lg">Rise of Holistic Assessments</h3>
-                  <p className="text-muted-foreground">Did you know there's a global shift towards holistic assessments - where colleges look beyond grades? Today, 95% of US colleges use holistic reviews and up to 50% of all Singapore college admissions will be based on aptitude than grades / test scores. </p>
-                </motion.div>
-
-                <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
-                  <h3 className="font-semibold mb-2 text-lg">Relieving Stress for Parents and Students</h3>
-                  <p className="text-muted-foreground">Because of the global shift towards holistic assessments, portfolios and passion projects are no longer a 'waste of time'. In fact, they can really elevate your chances at that scholarship or your dream program - resolving student stress and parents' conflict.</p>
-                </motion.div>
-
-                <motion.div className="bg-accent/5 p-6 rounded-xl h-full" whileHover={{
-                scale: 1.02
-              }} transition={{
-                duration: 0.2
-              }}>
-                  <h3 className="font-semibold mb-2 text-lg">Joyful Learning of Employable Skills</h3>
-                  <p className="text-muted-foreground">Our pedagogy was designed thoughtfully around the World Economic Forum's "Core Skills of 2030". More than 200 hours was spent thinking how we can nurture skills like AI, technological literacy, creative problem solving in a fun, engaging and meaningful way.
-                </p>
-                </motion.div>
-              </div>
-            </div>
-
-            <div className="flex justify-center mt-12">
+            <div className="flex justify-center mt-8">
               <Link to="/resources#ideation-tools">
                 <Button variant="default" className="text-white font-medium px-6 py-2">
                   Read More
@@ -318,6 +273,60 @@ const About = () => {
             </div>
           </div>
         </motion.section>
+        
+        {/* Our Vision Section - Moved to last */}
+        <motion.section className="container py-20 bg-secondary" initial="initial" animate="animate" variants={fadeInUp}>
+          <div className="space-y-12">
+            <div>
+              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                Our Vision
+              </span>
+              <h2 className="text-3xl font-bold font-general-sans mt-4">Reimagining Education Today for Tomorrow's Leaders</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
+                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
+                  <Target className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="font-semibold mb-3 text-lg">A Life Beyond Grades</h3>
+                <p className="text-muted-foreground flex-grow">We envision a world students are defined not by grades, but by their contributions to the world.</p>
+              </motion.div>
+
+              <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
+                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
+                  <Lightbulb className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="font-semibold mb-3 text-lg">Self-Initiated Learning</h3>
+                <p className="text-muted-foreground flex-grow">We envision a world students conduct self-directed learning because they find meaning in the subject.</p>
+              </motion.div>
+
+              <motion.div className="bg-accent/5 p-6 rounded-xl h-full flex flex-col" whileHover={{
+              scale: 1.02
+            }} transition={{
+              duration: 0.2
+            }}>
+                <div className="bg-accent/10 p-3 rounded-full w-fit mb-4">
+                  <Rocket className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="font-semibold mb-3 text-lg">Future-Ready Skills</h3>
+                <p className="text-muted-foreground flex-grow">We envision a world students thrive in volatility and disruption, equipped with relevant hard and soft skills.</p>
+              </motion.div>
+            </div>
+
+            <div className="relative h-[400px] overflow-hidden rounded-2xl">
+              <img src="https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/studentlearning.jpg" alt="Students collaborating" className="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+        </motion.section> 
       </main>
 
       <Footer onCategoryFilter={() => {}} />
