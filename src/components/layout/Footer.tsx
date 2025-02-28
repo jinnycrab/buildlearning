@@ -11,7 +11,7 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
       <div className="container py-12">
         <div className="flex flex-wrap justify-between gap-8">
           <div className="w-full md:w-1/4">
-            <h3 className="font-bold text-lg mb-4 font-general-sans">Build Learning Group</h3>
+            <h3 className="font-bold text-lg mb-4 font-general-sans">Build Learning Company</h3>
             <p className="text-sm text-muted-foreground">
               We are Singapore's first student incubator for tomorrow's innovators and leaders.
             </p>
@@ -56,7 +56,7 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
         </div>
         <div className="border-t mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © Build Learning Group 2025. Program developed in Stanford University, USA. All rights reserved.
+            © Build Learning Company 2025. Program developed in Stanford University, USA. All rights reserved.
           </p>
         </div>
       </div>

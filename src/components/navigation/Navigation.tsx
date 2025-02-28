@@ -2,17 +2,34 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { useIsMobile } from "../../hooks/use-mobile";
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
+  
   return <nav className="border-b bg-white sticky top-0 z-50">
       <div className="container flex items-center justify-between py-0">
-        <Link to="/" className="flex items-center gap-3 pl-4 md:pl-8">
-          <img alt="Build Learning Logo" loading="eager" className="h-16 md:h-20 w-auto [image-rendering:crisp-edges] object-cover" src="/lovable-uploads/8aa9c99b-a7c2-4b4a-8af6-19c47e335365.png" />
-          <span className="text-xl font-semibold hidden md:block">Build Learning Group</span>
+        <Link to="/" className={`flex items-center gap-3 ${isMobile ? 'pl-4' : 'pl-8'}`}>
+          {!isMobile && (
+            <img 
+              alt="Build Learning Logo" 
+              loading="eager" 
+              className="h-16 md:h-20 w-auto [image-rendering:crisp-edges] object-cover" 
+              src="/lovable-uploads/8aa9c99b-a7c2-4b4a-8af6-19c47e335365.png" 
+            />
+          )}
+          <span className="text-xl font-semibold">
+            {isMobile ? "Build Learning Co." : "Build Learning Company"}
+          </span>
         </Link>
         
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2 mr-4" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button 
+          className="md:hidden p-2 mr-4" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          style={{ marginRight: "1rem" }}
+        >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
