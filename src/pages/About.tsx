@@ -253,7 +253,7 @@ const About = () => {
               duration: 0.2
             }}>
                 <h3 className="font-semibold mb-2 text-lg">Joyful Learning of Employable Skills</h3>
-                <p className="text-muted-foreground">Our pedagogy was designed thoughtfully around the World Economic Forum's "Core Skills of 2030". More than 2000 hours were spent thinking how we can nurture skills like AI, technological literacy, creative problem solving in a fun and meaningful way.</p>
+                <p className="text-muted-foreground">Our pedagogy was designed thoughtfully around the World Economic Forum's "Core Skills of 2030". More than 2000 hours were spent thinking how we can nurture skills like AI, technological literacy, creative innovation in a fun and meaningful way.</p>
               </motion.div>
             </div>
 
