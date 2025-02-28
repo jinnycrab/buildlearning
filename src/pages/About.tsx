@@ -100,7 +100,7 @@ const About = () => {
               <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium text-center">
                 Our Story
               </span>
-              <h2 className="text-3xl font-bold font-general-sans mt-4 text-left">We Heard All of You</h2>
+              <h2 className="font-bold font-general-sans mt-4 text-left text-4xl">We Heard All of You</h2>
             </div>
             
             {/* Card section with image backgrounds - desktop version */}
