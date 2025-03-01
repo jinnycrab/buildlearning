@@ -28,11 +28,11 @@ const Navigation = () => {
         <button 
           className="md:hidden p-2" 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          style={{ marginRight: "1rem" }}
+          style={{ position: 'absolute', right: '1rem', top: '1rem' }} // Adjust 'top' as needed
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-
+        
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6 pr-8">
           <Link to="/about" className="text-muted-foreground hover:text-accent flex items-center gap-2">
