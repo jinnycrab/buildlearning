@@ -1,11 +1,14 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useIsMobile } from "../../hooks/use-mobile";
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-   return <nav className="border-b bg-white sticky top-0 z-50">
+  
+  return <nav className="border-b bg-white sticky top-0 z-50">
       <div className="container flex items-center justify-between py-0">
         <Link to="/" className={`flex items-center gap-3 ${isMobile ? 'pl-4' : 'pl-8'}`}>
           {!isMobile && (
@@ -22,12 +25,11 @@ const Navigation = () => {
         </Link>
         
         {/* Mobile Menu Button - Updated positioning */}
-        <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} style={{
-        position: 'absolute',
-        right: '1rem',
-        top: '1rem'
-      }} // Adjust 'top' as needed
-      >
+        <button 
+          className="md:hidden p-2" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          style={{ position: 'absolute', right: '1rem', top: '1rem' }} // Adjust 'top' as needed
+        >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         
