@@ -24,9 +24,9 @@ const Navigation = () => {
           </span>
         </Link>
         
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Updated positioning */}
         <button 
-          className="md:hidden p-2 mr-4" 
+          className="md:hidden p-2" 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           style={{ marginRight: "1rem" }}
         >
