@@ -44,14 +44,26 @@ const FacilitatorsSection = () => {
   const facilitators = [
     {
       name: "Jin Yi Chua",
-      title: "Co-founder",
-      description: "Jin Yi is an Innovation Consultant and Student Engagement Lead for SUTD, focusing on academic innovation and digital design thinking. She has conducted workshops for the Stanford Design School in Asia and led corporate design thinking sessions.",
-      imageUrl: "/lovable-uploads/JY.jpeg"
+      title: "Lead Trainer",
+      description: "Jin Yi has worked at the intersection of innovation and
+                  strategy since he graduated Valedictorian and Gold Medalist at
+                  Nanyang Technological University. He leads research and
+                  innovation projects at Samsung's regional incubator, and
+                  previously consulted for Fortune 500 companies like Google,
+                  ByteDance, Unilever. He has also taught at LASALLE School of
+                  the Arts and Macau University.",
+      imageUrl: "https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/Jynew.jpeg"
     },
     {
       name: "Ash Ang",
       title: "Co-founder",
-      description: "Ash is a CS & Design hybrid who loves education. She received both her B.S. and M.S. in Computer Science at Stanford, where she focused on machine learning and human-computer interaction, and is a published AI researcher.",
+      description: "Ash is an education specialist in EdTech innovation. He
+                  graduated from Stanford University Graduate School of
+                  Business' Ignite Executive Program and with a MS in Learning
+                  Design and Technology from the Graduate School of Education.
+                  Formerly a Singaporean educator, government scholar, and an
+                  AI Mentor at Stanford Accelerator for Learning, Ash brings
+                  his experience in instructional design to Build.",
       imageUrl: "/lovable-uploads/Ashnew.jpeg"
     }
   ];
