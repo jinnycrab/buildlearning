@@ -1,60 +1,179 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Cpu } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 const HeroSection = () => {
-  return <section className="relative pt-24 md:pt-32 pb-16 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Shapes and abstract elements */}
-        <div className="absolute top-24 right-1/4 w-20 h-20 border border-[#4D88C4] rounded-full opacity-30"></div>
-        <div className="absolute top-36 right-1/3 w-8 h-8 bg-[#F4D365] rounded-sm rotate-12"></div>
-        <div className="absolute bottom-24 left-1/4 w-32 h-32 border border-[#8CC084] rounded-full opacity-40"></div>
-        <div className="absolute top-72 left-16 w-12 h-12 bg-[#E86642] opacity-20 rounded-md rotate-45"></div>
-        <div className="absolute bottom-20 right-20 w-16 h-16 bg-[#8CC084] opacity-20 rounded-md"></div>
-        <div className="absolute bottom-40 right-1/3 w-10 h-10 bg-[#4D88C4] opacity-20 rounded-sm rotate-12"></div>
+  return (
+    <section className="relative pt-24 md:pt-32 pb-20 overflow-hidden bg-gradient-to-br from-white via-[#f9f7f4] to-[#faf0e6]">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute h-full w-full">
+          {[...Array(15)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-gradient-to-r"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                width: `${Math.random() * 50 + 20}px`,
+                height: `${Math.random() * 50 + 20}px`,
+                background: i % 3 === 0 
+                  ? 'linear-gradient(90deg, rgba(232,102,66,0.1) 0%, rgba(232,102,66,0.2) 100%)' 
+                  : i % 3 === 1 
+                    ? 'linear-gradient(90deg, rgba(140,192,132,0.1) 0%, rgba(140,192,132,0.2) 100%)'
+                    : 'linear-gradient(90deg, rgba(77,136,196,0.1) 0%, rgba(77,136,196,0.2) 100%)',
+                boxShadow: 'inset 0 0 20px rgba(255,255,255,0.6)',
+                backdropFilter: 'blur(2px)'
+              }}
+              initial={{ 
+                scale: 0.5, 
+                opacity: 0,
+              }}
+              animate={{ 
+                scale: [0.5, 1.2, 0.8],
+                opacity: [0, 0.5, 0.2],
+                y: [0, -10, 0],
+              }}
+              transition={{ 
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 5 + i,
+                delay: i * 0.3
+              }}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="md:flex items-center justify-between">
-          <div className="md:w-1/2 mb-12 md:mb-0">
-            <div className="inline-block px-3 py-1 mb-4 border border-[#E86642] rounded-full text-sm text-[#E86642] font-medium">Build Something Today!</div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" style={{
-            fontFamily: 'Codec Pro, sans-serif'
-          }}>
-              Build an AI Digital Product in 2 Hours
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg" style={{
-            fontFamily: 'Biome Light, sans-serif'
-          }}>Experience AI-powered design thinking and innovation in our 2-hour bootcamp, and build a real prototype.</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild className="bg-[#E86642] hover:bg-[#E86642]/90 text-white rounded-full py-6 px-8 flex items-center gap-2 text-base">
+      <div className="container mx-auto px-4 relative">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-4xl mx-auto mb-16"
+        >
+          <motion.div 
+            className="inline-block px-4 py-2 mb-6 rounded-full text-sm font-medium backdrop-blur-sm"
+            style={{ background: 'linear-gradient(90deg, rgba(232,102,66,0.1) 0%, rgba(232,102,66,0.3) 100%)' }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-[#E86642]" />
+              <span className="text-[#E86642]">Build Something Today!</span>
+              <Sparkles className="h-4 w-4 text-[#E86642]" />
+            </div>
+          </motion.div>
+          
+          <motion.h1 
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
+            style={{ fontFamily: 'Codec Pro, sans-serif' }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#E86642] via-[#E86642] to-[#FF8E71]">
+              Build an AI Digital Product
+            </span>
+            <br />
+            <span className="text-gray-800">in just 2 Hours</span>
+          </motion.h1>
+          
+          <motion.p 
+            className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto" 
+            style={{ fontFamily: 'Biome Light, sans-serif' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Experience AI-powered design thinking and innovation 
+            <span className="relative inline-block mx-2">
+              <span className="relative z-10">in our 2-hour bootcamp</span>
+              <motion.span 
+                className="absolute bottom-1 left-0 right-0 h-3 bg-[#F4D365]/30 -z-0" 
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              />
+            </span>
+            and build a real prototype that solves real problems.
+          </motion.p>
+          
+          <motion.div 
+            className="flex flex-col sm:flex-row justify-center gap-5"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button asChild className="bg-[#E86642] hover:bg-[#E86642]/90 text-white rounded-full py-7 px-8 text-lg flex items-center gap-2 shadow-lg shadow-[#E86642]/20">
                 <Link to="/camps">
                   Join our next bootcamp!
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="border-[#4D88C4] text-[#4D88C4] rounded-full py-6 px-8 hover:bg-[#4D88C4]/10">
-                
-              </Button>
-            </div>
-          </div>
-
-          <div className="md:w-1/2 relative">
-            <div className="relative rounded-lg border border-gray-200 p-4 bg-white/70 backdrop-blur-sm shadow-sm">
-              <img src="/public/lovable-uploads/6e721774-e49f-4400-8700-e260c1398aca.png" alt="Students collaborating on digital products" className="rounded w-full object-cover" />
-              <div className="absolute -bottom-5 -right-5 bg-[#F4D365] rounded-lg py-3 px-5 shadow-sm">
-                <p className="text-black text-sm font-medium" style={{
-                fontFamily: 'Biome Light, sans-serif'
-              }}>What will you build?</p>
-              </div>
-            </div>
+            </motion.div>
             
-            {/* Decorative frame */}
-            <div className="absolute -top-4 -left-4 right-12 bottom-12 border border-[#8CC084] rounded-lg -z-10"></div>
-          </div>
-        </div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button asChild variant="outline" className="border-[#4D88C4] text-[#4D88C4] rounded-full py-7 px-8 hover:bg-[#4D88C4]/10 text-lg flex items-center gap-2">
+                <Link to="#contact">
+                  Contact us
+                  <Zap className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        
+        {/* Feature Icons */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          {[
+            { 
+              icon: <Cpu className="h-8 w-8 text-[#E86642]" />, 
+              title: "AI-Powered", 
+              description: "Learn to harness AI for innovation" 
+            },
+            { 
+              icon: <Zap className="h-8 w-8 text-[#4D88C4]" />, 
+              title: "Just 2 Hours", 
+              description: "Condense months of learning into hours" 
+            },
+            { 
+              icon: <Sparkles className="h-8 w-8 text-[#8CC084]" />, 
+              title: "Build Real Products", 
+              description: "Create solutions for real problems" 
+            }
+          ].map((feature, index) => (
+            <motion.div 
+              key={index}
+              className="bg-white/70 backdrop-filter backdrop-blur-sm border border-gray-100 rounded-xl p-6 shadow-sm"
+              whileHover={{ 
+                y: -10,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+              }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-4 p-3 rounded-full bg-gray-50">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-2 font-codec">{feature.title}</h3>
+                <p className="text-gray-600 font-biome">{feature.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
