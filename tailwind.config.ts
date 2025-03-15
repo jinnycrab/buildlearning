@@ -25,6 +25,12 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Brand colors based on provided image
+        "brand-orange": "#E86642", // Dominant brand color (orange/rust)
+        "brand-green": "#8CC084", // Brand color (mint green)
+        "brand-yellow": "#F4D365", // Brand color (yellow)
+        "brand-blue": "#4D88C4", // Dominant brand color (blue)
+        "brand-cream": "#F9F3E3", // Brand color (cream)
         primary: {
           DEFAULT: "#2A2B2E",
           foreground: "#F5F3F0",

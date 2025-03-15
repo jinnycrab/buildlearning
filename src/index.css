@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,21 +17,39 @@
     @apply bg-background text-foreground antialiased;
   }
 
+  /* Font imports */
+  @font-face {
+    font-family: 'Codec Pro';
+    src: url('https://fonts.cdnfonts.com/css/codec-pro') format('woff2');
+    font-weight: 400, 500, 600, 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Alternative if Codec Pro is not available */
+  .font-codec {
+    font-family: 'Codec Pro', 'General Sans', sans-serif;
+  }
+
+  .font-biome {
+    font-family: 'Biome Light', 'Inter', sans-serif;
+  }
+
   /* Mobile-first text scaling */
   h1 {
-    @apply text-2xl md:text-4xl;
+    @apply text-2xl md:text-4xl font-codec;
   }
 
   h2 {
-    @apply text-xl md:text-3xl;
+    @apply text-xl md:text-3xl font-codec;
   }
 
   h3 {
-    @apply text-lg md:text-2xl;
+    @apply text-lg md:text-2xl font-codec;
   }
 
   p {
-    @apply text-sm md:text-base;
+    @apply text-sm md:text-base font-biome;
   }
 }
 
