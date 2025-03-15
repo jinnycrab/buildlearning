@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/navigation/Navigation';
 import HeroSection from '@/components/home/HeroSection';
@@ -6,7 +5,6 @@ import BenefitsSection from '@/components/home/BenefitsSection';
 import SupervatorSection from '@/components/home/SupervatorSection';
 import FacilitatorsSection from '@/components/home/FacilitatorsSection';
 import WhoWeHelpSection from '@/components/home/WhoWeHelpSection';
-import GetInTouchSection from '@/components/home/GetInTouchSection';
 import TaglineSection from '@/components/home/TaglineSection';
 import { Helmet } from 'react-helmet-async';
 
@@ -26,7 +24,6 @@ const Index = () => {
         <SupervatorSection />
         <FacilitatorsSection />
         <WhoWeHelpSection />
-        <GetInTouchSection />
         <TaglineSection />
         {/* Other sections will go here */}
       </main>
