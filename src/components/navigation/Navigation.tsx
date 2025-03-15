@@ -10,7 +10,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <header className="w-full fixed top-0 z-50 px-4 py-4">
+    <header className="w-full px-4 py-4">
       <div className="max-w-7xl mx-auto">
         <div className="border border-gray-200 rounded-full bg-white/80 backdrop-blur-sm px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
