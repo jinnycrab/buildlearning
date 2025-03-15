@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,10 +28,6 @@
   /* Alternative if Codec Pro is not available */
   .font-codec {
     font-family: 'Codec Pro', 'General Sans', sans-serif;
-  }
-
-  .font-biome {
-    font-family: 'Biome Light', 'Inter', sans-serif;
   }
 
   /* Mobile-first text scaling */
