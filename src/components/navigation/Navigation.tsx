@@ -12,7 +12,7 @@ const Navigation = () => {
   return (
     <header className="w-full px-4 py-4">
       <div className="max-w-7xl mx-auto">
-        <div className="border border-gray-200 rounded-full bg-white/80 backdrop-blur-sm px-6 py-4 flex items-center justify-between">
+        <div className="rounded-full bg-white/80 backdrop-blur-sm px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-xl font-bold text-primary">Build Learning</span>
           </Link>

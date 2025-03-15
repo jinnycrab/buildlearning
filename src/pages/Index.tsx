@@ -6,8 +6,6 @@ import BenefitsSection from '@/components/home/BenefitsSection';
 import SupervatorSection from '@/components/home/SupervatorSection';
 import FacilitatorsSection from '@/components/home/FacilitatorsSection';
 import WhoWeHelpSection from '@/components/home/WhoWeHelpSection';
-import CtaSection from '@/components/home/CtaSection';
-import TaglineSection from '@/components/home/TaglineSection';
 import ContactSection from '@/components/home/ContactSection';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTop from '@/components/utils/ScrollToTop';
@@ -33,8 +31,6 @@ const Index = () => {
         <div id="contact">
           <ContactSection />
         </div>
-        <CtaSection />
-        <TaglineSection />
       </main>
       
       <Footer />
