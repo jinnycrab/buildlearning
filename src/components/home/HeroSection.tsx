@@ -23,7 +23,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="text-gray-800">
-              Build an AI Digital Product
+              Build a Digital Product
             </span>
             <br />
             <span className="text-gray-800">in just 2 Hours</span>
