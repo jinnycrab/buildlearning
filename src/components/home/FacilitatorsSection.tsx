@@ -57,9 +57,9 @@ const FacilitatorsSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white relative overflow-hidden">
+    <section ref={sectionRef} className="py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto border border-gray-200 rounded-3xl p-8 bg-white">
           <div className={`transform transition-all duration-1000 ease-out ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-general-sans">
               Our Facilitators
@@ -69,7 +69,7 @@ const FacilitatorsSection = () => {
               Our facilitators have conducted more than 20 over workshops in the United States and Singapore, and have worked in education, AI, research and innovation.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
               {facilitators.map((facilitator, index) => (
                 <div key={index} className={`transform transition-all duration-1000 ease-out delay-${index * 200} ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                   <Facilitator {...facilitator} />

@@ -10,17 +10,19 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <header className="w-full bg-white/80 backdrop-blur-sm fixed top-0 z-50 border-b border-gray-100">
-      <div className={`container flex items-center justify-between ${isMobile ? 'py-[22px]' : 'py-[0px]'}`}>
-        <Link to="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold text-primary">Build Learning</span>
-        </Link>
+    <header className="w-full fixed top-0 z-50 px-4 py-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="border border-gray-200 rounded-full bg-white/80 backdrop-blur-sm px-6 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center space-x-2">
+            <span className="text-xl font-bold text-primary">Build Learning</span>
+          </Link>
 
-        {!isMobile && (
-          <Button className="bg-[#E86642] hover:bg-[#E86642]/90 text-white rounded-full">
-            Let's Chat
-          </Button>
-        )}
+          {!isMobile && (
+            <Button className="bg-[#E86642] hover:bg-[#E86642]/90 text-white rounded-full">
+              Let's Chat
+            </Button>
+          )}
+        </div>
       </div>
     </header>
   );

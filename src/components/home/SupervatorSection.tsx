@@ -12,9 +12,9 @@ const SupervatorSection = () => {
   });
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white relative overflow-hidden">
+    <section ref={sectionRef} className="py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto border border-gray-200 rounded-3xl p-8 bg-white">
           <div className={`transform transition-all duration-1000 ease-out ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-6" style={{
               fontFamily: 'Codec Pro, sans-serif'
@@ -27,7 +27,7 @@ const SupervatorSection = () => {
               making it accessible to both beginners and industry innovators.
             </p>
 
-            <div className="mb-14">
+            <div className="mb-8">
               <Card className="overflow-hidden border-0 shadow-lg relative bg-gray-900 aspect-video max-w-4xl mx-auto">
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 group cursor-pointer">
                   <div className="transform transition-all duration-300 group-hover:scale-110">
