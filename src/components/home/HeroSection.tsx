@@ -8,9 +8,9 @@ import BorderedSection from '../layout/BorderedSection';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-24 md:pt-32 pb-20 overflow-hidden bg-white">
+    <section className="relative pt-24 md:pt-32 pb-20 overflow-hidden bg-[#ffffff]">
       <div className="container mx-auto px-4 relative">
-        <BorderedSection className="border-black border-2">
+        <BorderedSection className="border-black border-2" backgroundColor="#f8eec4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
