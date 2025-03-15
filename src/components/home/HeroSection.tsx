@@ -35,9 +35,7 @@ const HeroSection = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" className="border-[#4D88C4] text-[#4D88C4] rounded-full py-6 px-8 hover:bg-[#4D88C4]/10">
-                <Link to="/process">
-                  Learn our process
-                </Link>
+                
               </Button>
             </div>
           </div>
