@@ -39,20 +39,20 @@ const AudienceCard: React.FC<AudienceCardProps> = ({
         </div>
         
         <div>
-          <h3 className="text-xl font-bold font-general-sans">{title}</h3>
-          <p className="text-muted-foreground mt-1">{subtitle}</p>
+          <h3 className="text-xl font-bold font-codec">{title}</h3>
+          <p className="text-muted-foreground mt-1 font-inter">{subtitle}</p>
         </div>
       </div>
 
       <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-full">
         <CollapsibleContent className="mt-2 text-muted-foreground">
-          <p>{fullText}</p>
+          <p className="font-inter">{fullText}</p>
         </CollapsibleContent>
         
         <CollapsibleTrigger asChild>
           <Button 
             variant="outline" 
-            className="mt-2 px-6 border-gray-300"
+            className="mt-2 px-6 border-gray-300 font-inter"
           >
             {isOpen ? (
               <>
@@ -111,7 +111,7 @@ const WhoWeHelpSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold font-general-sans">
+          <h2 className="text-3xl md:text-4xl font-bold font-codec">
             Who We Help?
           </h2>
         </motion.div>

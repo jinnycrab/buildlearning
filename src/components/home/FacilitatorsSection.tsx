@@ -21,9 +21,9 @@ const Facilitator: React.FC<FacilitatorProps> = ({ name, title, description, ima
         </AvatarFallback>
       </Avatar>
       <div>
-        <h3 className="text-xl font-bold">{name}</h3>
-        <p className="text-sm text-accent mb-2">{title}</p>
-        <p className="text-sm text-muted-foreground">{description}</p>
+        <h3 className="text-xl font-bold font-codec">{name}</h3>
+        <p className="text-sm text-accent mb-2 font-inter">{title}</p>
+        <p className="text-sm text-muted-foreground font-inter">{description}</p>
       </div>
     </div>
   );
@@ -67,11 +67,11 @@ const FacilitatorsSection = () => {
               isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-general-sans">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-codec">
               Our Facilitators
             </h2>
             
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12 font-inter">
               Our facilitators have conducted more than 20 over workshops in the United States and Singapore, and have worked in education, AI, research and innovation.
             </p>
 
