@@ -1,19 +1,15 @@
-
 import React, { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { PlayCircle } from 'lucide-react';
-
 const SupervatorSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, {
     once: true,
     amount: 0.2
   });
-
-  return (
-    <section ref={sectionRef} className="py-20 bg-gray-50/60 relative overflow-hidden">
+  return <section ref={sectionRef} className="py-20 bg-gray-50/60 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-1/3 w-12 h-12 border-2 border-brand-blue rounded-full opacity-20"></div>
@@ -23,12 +19,10 @@ const SupervatorSection = () => {
 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div 
-            className={`transform transition-all duration-1000 ease-out ${
-              isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6" style={{ fontFamily: 'Codec Pro, sans-serif' }}>
+          <div className={`transform transition-all duration-1000 ease-out ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6" style={{
+            fontFamily: 'Codec Pro, sans-serif'
+          }}>
               Supervator.ai
             </h2>
             
@@ -53,18 +47,11 @@ const SupervatorSection = () => {
             </div>
 
             <div className="text-center">
-              <Button 
-                variant="default" 
-                className="bg-brand-blue hover:bg-brand-blue/90 text-white font-medium"
-              >
-                Learn more about Supervator.ai
-              </Button>
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SupervatorSection;
