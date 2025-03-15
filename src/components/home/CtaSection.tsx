@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Mail, SendIcon, ArrowRight } from 'lucide-react';
+import { SendIcon, ArrowRight } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
@@ -50,14 +50,7 @@ const CtaSection = () => {
   };
 
   return (
-    <section className="py-20 bg-brand-cream relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-1/4 w-12 h-12 border-2 border-primary/30 rounded-full opacity-20"></div>
-        <div className="absolute bottom-12 left-1/4 w-16 h-16 border border-brand-orange/50 rounded-full opacity-30"></div>
-        <div className="absolute top-1/2 left-10 w-8 h-8 bg-brand-yellow/10 rounded-full"></div>
-      </div>
-
+    <section className="py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

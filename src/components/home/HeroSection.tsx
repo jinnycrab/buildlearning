@@ -7,47 +7,7 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-24 md:pt-32 pb-20 overflow-hidden bg-gradient-to-br from-white via-[#f9f7f4] to-[#faf0e6]">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute h-full w-full">
-          {[...Array(15)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full bg-gradient-to-r"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                width: `${Math.random() * 50 + 20}px`,
-                height: `${Math.random() * 50 + 20}px`,
-                background: i % 3 === 0 
-                  ? 'linear-gradient(90deg, rgba(232,102,66,0.1) 0%, rgba(232,102,66,0.2) 100%)' 
-                  : i % 3 === 1 
-                    ? 'linear-gradient(90deg, rgba(140,192,132,0.1) 0%, rgba(140,192,132,0.2) 100%)'
-                    : 'linear-gradient(90deg, rgba(77,136,196,0.1) 0%, rgba(77,136,196,0.2) 100%)',
-                boxShadow: 'inset 0 0 20px rgba(255,255,255,0.6)',
-                backdropFilter: 'blur(2px)'
-              }}
-              initial={{ 
-                scale: 0.5, 
-                opacity: 0,
-              }}
-              animate={{ 
-                scale: [0.5, 1.2, 0.8],
-                opacity: [0, 0.5, 0.2],
-                y: [0, -10, 0],
-              }}
-              transition={{ 
-                repeat: Infinity,
-                repeatType: "reverse",
-                duration: 5 + i,
-                delay: i * 0.3
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
+    <section className="relative pt-24 md:pt-32 pb-20 overflow-hidden bg-white">
       <div className="container mx-auto px-4 relative">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -56,8 +16,7 @@ const HeroSection = () => {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <motion.div 
-            className="inline-block px-4 py-2 mb-6 rounded-full text-sm font-medium backdrop-blur-sm"
-            style={{ background: 'linear-gradient(90deg, rgba(232,102,66,0.1) 0%, rgba(232,102,66,0.3) 100%)' }}
+            className="inline-block px-4 py-2 mb-6 rounded-full text-sm font-medium"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
@@ -154,7 +113,7 @@ const HeroSection = () => {
           ].map((feature, index) => (
             <motion.div 
               key={index}
-              className="bg-white/70 backdrop-filter backdrop-blur-sm border border-gray-100 rounded-xl p-6 shadow-sm"
+              className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm"
               whileHover={{ 
                 y: -10,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"

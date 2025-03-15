@@ -96,13 +96,6 @@ const WhoWeHelpSection = () => {
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-1/4 w-12 h-12 border-2 border-primary/30 rounded-full opacity-20"></div>
-        <div className="absolute bottom-12 left-1/4 w-16 h-16 border border-accent/50 rounded-full opacity-30"></div>
-        <div className="absolute top-1/2 left-10 w-8 h-8 bg-brand-yellow/10 rounded-full"></div>
-      </div>
-
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

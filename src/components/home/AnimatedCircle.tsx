@@ -27,7 +27,7 @@ const AnimatedCircle = () => {
 
   return (
     <motion.svg
-      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%]"
+      className="w-full h-full"
       viewBox="0 0 300 100"
       initial="hidden"
       animate="visible"
@@ -42,17 +42,9 @@ const AnimatedCircle = () => {
         strokeLinecap="round"
         variants={circleVariants}
         style={{ 
-          filter: "url(#chalk-texture)",
           strokeDasharray: "0.5, 4"
         }}
       />
-      {/* Filter for chalk-like effect */}
-      <defs>
-        <filter id="chalk-texture" x="-20%" y="-20%" width="140%" height="140%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
-        </filter>
-      </defs>
     </motion.svg>
   );
 };
