@@ -4,6 +4,7 @@ import HeroSection from '@/components/home/HeroSection';
 import BenefitsSection from '@/components/home/BenefitsSection';
 import SupervatorSection from '@/components/home/SupervatorSection';
 import FacilitatorsSection from '@/components/home/FacilitatorsSection';
+import WhoWeHelpSection from '@/components/home/WhoWeHelpSection';
 import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
         <BenefitsSection />
         <SupervatorSection />
         <FacilitatorsSection />
+        <WhoWeHelpSection />
         {/* Other sections will go here */}
       </main>
     </div>
