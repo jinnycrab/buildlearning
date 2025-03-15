@@ -22,7 +22,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#E86642] via-[#E86642] to-[#FF8E71]">
+            <span className="text-gray-800">
               Build an AI Digital Product
             </span>
             <br />
@@ -40,13 +40,13 @@ const HeroSection = () => {
             <span className="relative inline-block mx-2">
               <span className="relative z-10">in our 2-hour bootcamp</span>
               <motion.span 
-                className="absolute bottom-1 left-0 right-0 h-3 bg-[#F4D365]/30 -z-0" 
+                className="absolute bottom-1 left-0 right-0 h-3 bg-[#f05127]/30 -z-0" 
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               />
             </span>
-            and build a real prototype that solves real problems.
+            and build something today.
           </motion.p>
           
           <motion.div 
@@ -58,7 +58,7 @@ const HeroSection = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button asChild className="bg-[#1f69ad] hover:bg-[#1f69ad]/90 text-white rounded-full py-7 px-8 text-lg flex items-center gap-2 shadow-lg shadow-[#1f69ad]/20">
                 <Link to="/camps">
-                  Join our next bootcamp!
+                  Build Something Today!
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
