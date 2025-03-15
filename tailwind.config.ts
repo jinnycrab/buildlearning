@@ -21,6 +21,7 @@ export default {
     extend: {
       fontFamily: {
         codec: ['Codec Pro', 'sans-serif'],
+        biome: ['Inter', 'sans-serif'], // Using Inter as a fallback for Biome
       },
       colors: {
         border: "hsl(var(--border))",

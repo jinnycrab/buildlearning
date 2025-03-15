@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -44,7 +45,7 @@
   }
 
   p {
-    @apply text-sm md:text-base font-biome;
+    @apply text-sm md:text-base font-inter;
   }
 }
 
