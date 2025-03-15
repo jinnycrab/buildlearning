@@ -45,26 +45,14 @@ const FacilitatorsSection = () => {
     {
       name: "Jin Yi Chua",
       title: "Lead Trainer",
-      description: "Jin Yi has worked at the intersection of innovation and
-                  strategy since he graduated Valedictorian and Gold Medalist at
-                  Nanyang Technological University. He leads research and
-                  innovation projects at Samsung's regional incubator, and
-                  previously consulted for Fortune 500 companies like Google,
-                  ByteDance, Unilever. He has also taught at LASALLE School of
-                  the Arts and Macau University.",
+      description: "Jin Yi has worked at the intersection of innovation and strategy since he graduated Valedictorian and Gold Medalist at Nanyang Technological University. He leads research and innovation projects at Samsung's regional incubator, and previously consulted for Fortune 500 companies like Google, ByteDance, Unilever. He has also taught at LASALLE School of the Arts and Macau University.",
       imageUrl: "https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/Jynew.jpeg"
     },
     {
       name: "Ash Ang",
-      title: "Co-founder",
-      description: "Ash is an education specialist in EdTech innovation. He
-                  graduated from Stanford University Graduate School of
-                  Business' Ignite Executive Program and with a MS in Learning
-                  Design and Technology from the Graduate School of Education.
-                  Formerly a Singaporean educator, government scholar, and an
-                  AI Mentor at Stanford Accelerator for Learning, Ash brings
-                  his experience in instructional design to Build.",
-      imageUrl: "/lovable-uploads/Ashnew.jpeg"
+      title: "Lead Trainer",
+      description: "Ash is an education specialist in EdTech innovation. He graduated from Stanford University Graduate School of Business' Ignite Executive Program and with a MS in Learning Design and Technology from the Graduate School of Education. Formerly a Singaporean educator, government scholar and an AI Mentor at the Stanford Accelerator for Learning, Ash brings his experience in instructional design to Build.",
+      imageUrl: "https://raw.githubusercontent.com/jinnycrab/holiday-learn-fun/refs/heads/main/images/Ashnew.jpeg"
     }
   ];
 
