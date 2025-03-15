@@ -50,14 +50,6 @@ const BenefitItem = ({ conventional, innovative, delay }: BenefitProps) => {
                   />
                 </svg>
                 
-                <style jsx>{`
-                  @keyframes chalk-dash {
-                    to {
-                      stroke-dashoffset: 0;
-                    }
-                  }
-                `}</style>
-                
                 <X className="text-brand-orange w-8 h-8 animate-fade-in opacity-70" 
                    style={{ filter: 'drop-shadow(0px 0px 1px rgba(232, 102, 66, 0.5))' }} />
               </span>
@@ -84,6 +76,29 @@ const BenefitItem = ({ conventional, innovative, delay }: BenefitProps) => {
 const BenefitsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+
+  // Add keyframes to document head
+  useEffect(() => {
+    // Create a style element
+    const styleEl = document.createElement('style');
+    
+    // Add the keyframes CSS
+    styleEl.innerHTML = `
+      @keyframes chalk-dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    `;
+    
+    // Append to the document head
+    document.head.appendChild(styleEl);
+    
+    // Clean up when component unmounts
+    return () => {
+      document.head.removeChild(styleEl);
+    };
+  }, []);
 
   return (
     <section className="py-20 relative overflow-hidden" ref={sectionRef}>
