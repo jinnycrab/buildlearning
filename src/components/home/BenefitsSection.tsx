@@ -100,7 +100,7 @@ const BenefitsSection = () => {
         <h2 className={`text-3xl md:text-4xl font-bold mb-12 text-center transform transition-all duration-700 ease-out
             ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{
         fontFamily: 'Codec Pro, sans-serif'
-      }}>Other providers teach theory, we put them into practice</h2>
+      }}>Others teach theory, we put them into practice</h2>
 
         <div className="max-w-3xl mx-auto">
           <BenefitItem conventional="Empathy is important" innovative="We teach you the craft of writing interview questions and recruiting respondents, so you can truly empathize with your users." delay={500} />
