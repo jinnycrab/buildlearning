@@ -8,7 +8,7 @@ interface BorderedSectionProps {
 
 const BorderedSection: React.FC<BorderedSectionProps> = ({ children, className = '' }) => {
   return (
-    <div className={`border border-gray-200 rounded-3xl p-8 bg-white ${className}`}>
+    <div className={`border border-[#ffffff] rounded-3xl p-8 bg-white ${className}`}>
       {children}
     </div>
   );
