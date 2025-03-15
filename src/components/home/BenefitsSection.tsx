@@ -34,8 +34,32 @@ const BenefitItem = ({ conventional, innovative, delay }: BenefitProps) => {
             {conventional}
             {revealed && (
               <span className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full border-t-2 border-brand-orange transform -rotate-6 absolute"></div>
-                <X className="text-brand-orange w-8 h-8 animate-fade-in" />
+                {/* Chalk-like crossing out effect */}
+                <svg className="absolute w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <path 
+                    d="M10,45 C20,50 30,40 40,50 C50,60 60,40 70,50 C80,60 90,45 95,55" 
+                    className="stroke-brand-orange animate-fade-in" 
+                    strokeWidth="4" 
+                    strokeLinecap="round"
+                    fill="none"
+                    style={{
+                      strokeDasharray: '120',
+                      strokeDashoffset: '120',
+                      animation: 'chalk-dash 1.5s ease forwards'
+                    }}
+                  />
+                </svg>
+                
+                <style jsx>{`
+                  @keyframes chalk-dash {
+                    to {
+                      stroke-dashoffset: 0;
+                    }
+                  }
+                `}</style>
+                
+                <X className="text-brand-orange w-8 h-8 animate-fade-in opacity-70" 
+                   style={{ filter: 'drop-shadow(0px 0px 1px rgba(232, 102, 66, 0.5))' }} />
               </span>
             )}
           </p>
