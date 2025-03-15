@@ -1,13 +1,11 @@
-
 import { Link } from "react-router-dom";
-
 interface FooterProps {
   onCategoryFilter?: (category: string) => void;
 }
-
-const Footer = ({ onCategoryFilter }: FooterProps) => {
-  return (
-    <footer className="border-t bg-white">
+const Footer = ({
+  onCategoryFilter
+}: FooterProps) => {
+  return <footer className="border-t bg-white">
       <div className="container py-12">
         <div className="flex flex-wrap justify-between gap-8">
           <div className="w-full md:w-1/4">
@@ -55,13 +53,9 @@ const Footer = ({ onCategoryFilter }: FooterProps) => {
           </div>
         </div>
         <div className="border-t mt-8 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © Build Learning Company 2025. Program developed in Stanford University, USA. All rights reserved.
-          </p>
+          <p className="text-sm text-muted-foreground">© Build Learning Pte Ltd 2025. Program developed in Stanford University, USA. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
