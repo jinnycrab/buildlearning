@@ -9,10 +9,8 @@ const Footer = ({
       <div className="container py-12">
         <div className="flex flex-wrap justify-between gap-8">
           <div className="w-full md:w-1/4">
-            <h3 className="font-bold text-lg mb-4 font-general-sans">Build Learning Company</h3>
-            <p className="text-sm text-muted-foreground">
-              We are Singapore's first student incubator for tomorrow's innovators and leaders.
-            </p>
+            <h3 className="font-bold text-lg mb-4 font-general-sans">Build Learning Pte Ltd</h3>
+            <p className="text-sm text-muted-foreground">Reimagining innovation and design thinking education for all, powered by good pedagogical design and relevance in the future of AI. </p>
           </div>
           <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg mb-4 font-general-sans">Quick Links</h3>
