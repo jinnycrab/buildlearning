@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
 const HeroSection = () => {
-  return (
-    <section className="relative pt-24 md:pt-32 pb-16 overflow-hidden">
+  return <section className="relative pt-24 md:pt-32 pb-16 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Shapes and abstract elements */}
@@ -21,13 +18,15 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="md:flex items-center justify-between">
           <div className="md:w-1/2 mb-12 md:mb-0">
-            <div className="inline-block px-3 py-1 mb-4 border border-[#E86642] rounded-full text-sm text-[#E86642] font-medium">
-              Limited spots available
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" style={{ fontFamily: 'Codec Pro, sans-serif' }}>
+            <div className="inline-block px-3 py-1 mb-4 border border-[#E86642] rounded-full text-sm text-[#E86642] font-medium">Build Something Today!</div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" style={{
+            fontFamily: 'Codec Pro, sans-serif'
+          }}>
               Build an AI Digital Product in 2 Hours
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg" style={{ fontFamily: 'Biome Light, sans-serif' }}>
+            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg" style={{
+            fontFamily: 'Biome Light, sans-serif'
+          }}>
               Experience AI-powered Design Thinking & Innovation in our 2-hour bootcamp, and take home something real.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -47,13 +46,11 @@ const HeroSection = () => {
 
           <div className="md:w-1/2 relative">
             <div className="relative rounded-lg border border-gray-200 p-4 bg-white/70 backdrop-blur-sm shadow-sm">
-              <img 
-                src="/public/lovable-uploads/6e721774-e49f-4400-8700-e260c1398aca.png" 
-                alt="Students collaborating on digital products" 
-                className="rounded w-full object-cover"
-              />
+              <img src="/public/lovable-uploads/6e721774-e49f-4400-8700-e260c1398aca.png" alt="Students collaborating on digital products" className="rounded w-full object-cover" />
               <div className="absolute -bottom-5 -right-5 bg-[#F4D365] rounded-lg py-3 px-5 shadow-sm">
-                <p className="text-black text-sm font-medium" style={{ fontFamily: 'Biome Light, sans-serif' }}>
+                <p className="text-black text-sm font-medium" style={{
+                fontFamily: 'Biome Light, sans-serif'
+              }}>
                   Over 500+ students trained
                 </p>
               </div>
@@ -64,8 +61,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
