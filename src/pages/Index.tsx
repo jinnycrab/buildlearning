@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/navigation/Navigation';
 import HeroSection from '@/components/home/HeroSection';
@@ -20,8 +19,8 @@ const Index = () => {
       <main>
         <HeroSection />
         <BenefitsSection />
-        <FacilitatorsSection />
         <SupervatorSection />
+        <FacilitatorsSection />
         {/* Other sections will go here */}
       </main>
     </div>
