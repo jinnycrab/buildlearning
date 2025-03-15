@@ -31,12 +31,26 @@ const BenefitItem = ({ conventional, innovative, delay }: BenefitProps) => {
           ${revealed ? 'opacity-50' : 'opacity-100'} transition-opacity duration-500`}>
           <div className="absolute -bottom-3 left-5 w-4 h-4 bg-white border-b border-r border-gray-200 transform rotate-45"></div>
           <p className="font-codec text-lg text-gray-800">
-            <span className="inline-block mb-1 text-xs text-gray-500 italic">From existing providers:</span>
-            <br />
             {conventional}
             {revealed && (
               <span className="absolute inset-0 flex items-center justify-center">
-                <X className="text-brand-orange w-14 h-14 stroke-[3px] animate-fade-in opacity-80" 
+                {/* Chalk-like crossing out effect */}
+                <svg className="absolute w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <path 
+                    d="M10,45 C20,50 30,40 40,50 C50,60 60,40 70,50 C80,60 90,45 95,55" 
+                    className="stroke-brand-orange animate-fade-in" 
+                    strokeWidth="4" 
+                    strokeLinecap="round"
+                    fill="none"
+                    style={{
+                      strokeDasharray: '120',
+                      strokeDashoffset: '120',
+                      animation: 'chalk-dash 1.5s ease forwards'
+                    }}
+                  />
+                </svg>
+                
+                <X className="text-brand-orange w-8 h-8 animate-fade-in opacity-70" 
                    style={{ filter: 'drop-shadow(0px 0px 1px rgba(232, 102, 66, 0.5))' }} />
               </span>
             )}
@@ -45,7 +59,7 @@ const BenefitItem = ({ conventional, innovative, delay }: BenefitProps) => {
 
         {/* Our innovative approach */}
         <div 
-          className={`bg-white/70 backdrop-blur-sm border-2 border-brand-green p-5 rounded-lg ml-8 
+          className={`bg-white/70 backdrop-blur-sm border border-brand-green p-5 rounded-lg ml-8 
             transform transition-all duration-700 ease-out
             ${revealed 
               ? 'translate-y-0 opacity-100' 
