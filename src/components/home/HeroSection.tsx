@@ -26,7 +26,7 @@ const HeroSection = () => {
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg" style={{
             fontFamily: 'Biome Light, sans-serif'
-          }}>Experience AI-powered design thinking and innovation in our 2-hour bootcamp, and take home something real.</p>
+          }}>Experience AI-powered design thinking and innovation in our 2-hour bootcamp, and build a real prototype.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="bg-[#E86642] hover:bg-[#E86642]/90 text-white rounded-full py-6 px-8 flex items-center gap-2 text-base">
                 <Link to="/camps">
