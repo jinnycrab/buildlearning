@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from '@/components/ui/button';
+import BuildLogo from '/lovable-uploads/85ed0275-0f08-4b17-bc76-90fc15721483.png';
 
 const Navigation = () => {
   const isMobile = useIsMobile();
@@ -23,7 +24,7 @@ const Navigation = () => {
         <nav className={`rounded-full border border-[#f05127] bg-white/80 backdrop-blur-md px-6 py-4 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
           <Link to="/" className="flex items-center gap-3">
             <img 
-              src="/lovable-uploads/85ed0275-0f08-4b17-bc76-90fc15721483.png" 
+              src={BuildLogo}
               alt="Build Learning Logo" 
               className="h-14 w-14"
             />
