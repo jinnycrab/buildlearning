@@ -74,10 +74,8 @@ const HeroSection = () => {
             <motion.div 
               whileHover={{ scale: 1.05 }} 
               whileTap={{ scale: 0.95 }}
-              className="relative group"
+              className="relative rounded-full overflow-hidden"
             >
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#f05127] via-[#1f69ad] to-[#93ce98] opacity-80 group-hover:opacity-100 blur-sm group-hover:blur transition-all duration-300"></div>
-              
               <motion.div 
                 animate={{ 
                   background: [
@@ -92,11 +90,11 @@ const HeroSection = () => {
                   repeat: Infinity,
                   repeatType: "loop"
                 }}
-                className="absolute inset-0 rounded-full opacity-70"
+                className="absolute inset-0 rounded-full"
               />
               
               <Button asChild className="relative px-8 py-7 text-lg rounded-full bg-transparent hover:bg-white/10 transition-all duration-300 z-10 text-white font-medium">
-                <Link to="/camps">
+                <Link to="/camps" className="flex items-center">
                   Build Something Today!
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
