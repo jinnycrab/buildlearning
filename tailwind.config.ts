@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,7 +21,7 @@ export default {
     extend: {
       fontFamily: {
         codec: ['Codec Pro', 'sans-serif'],
-        biome: ['Biome', 'sans-serif'],
+        biome: ['Inter', 'sans-serif'], // Using Inter as a fallback for Biome
       },
       colors: {
         border: "hsl(var(--border))",
@@ -28,11 +29,12 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        "brand-orange": "#E86642",
-        "brand-green": "#8CC084",
-        "brand-yellow": "#F4D365",
-        "brand-blue": "#4D88C4",
-        "brand-cream": "#F9F3E3",
+        // Brand colors based on provided image
+        "brand-orange": "#E86642", // Dominant brand color (orange/rust)
+        "brand-green": "#8CC084", // Brand color (mint green)
+        "brand-yellow": "#F4D365", // Brand color (yellow)
+        "brand-blue": "#4D88C4", // Dominant brand color (blue)
+        "brand-cream": "#F9F3E3", // Brand color (cream)
         primary: {
           DEFAULT: "#2A2B2E",
           foreground: "#F5F3F0",
