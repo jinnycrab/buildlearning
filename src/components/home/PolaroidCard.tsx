@@ -37,8 +37,8 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
       style={{ 
         transform: `rotate(${rotation}deg)`, 
         transformStyle: 'preserve-3d',
-        maxWidth: '350px',
-        height: '450px'
+        width: '280px',
+        height: '380px'
       }}
       whileHover={{ scale: scale * 1.05, transition: { duration: 0.3 } }}
     >
@@ -58,16 +58,20 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
             overflow: 'hidden'
           }}
         >
-          <div className="bg-white p-3 rounded-lg h-[80%] overflow-hidden mb-3">
+          <div className="bg-white p-3 rounded-lg h-[75%] overflow-hidden mb-3 shadow-inner">
             <img 
               src={imageSrc} 
               alt={title} 
               className="w-full h-full object-cover rounded-md"
+              onError={(e) => {
+                console.error(`Error loading image: ${imageSrc}`);
+                (e.target as HTMLImageElement).src = '/placeholder.svg';
+              }}
             />
           </div>
           <div className="text-center">
-            <h3 className="text-2xl font-bold font-codec">{title}</h3>
-            <p className="font-inter text-sm font-medium opacity-80">{subtitle}</p>
+            <h3 className="text-xl font-bold font-codec text-gray-800">{title}</h3>
+            <p className="font-inter text-sm font-medium text-gray-700">{subtitle}</p>
           </div>
         </motion.div>
 
@@ -82,10 +86,10 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
           }}
         >
           <div className="bg-white/90 p-6 rounded-lg shadow-inner h-full w-full flex flex-col justify-center">
-            <h3 className="text-2xl font-bold mb-3 font-codec">{title}</h3>
-            <p className="text-lg mb-2 font-inter">{subtitle}</p>
-            <p className="text-muted-foreground text-sm mt-2 font-inter">{fullText}</p>
-            <p className="mt-4 text-sm font-medium italic text-muted-foreground">Click to flip back</p>
+            <h3 className="text-xl font-bold mb-3 font-codec text-gray-800">{title}</h3>
+            <p className="text-md mb-2 font-inter text-gray-700">{subtitle}</p>
+            <p className="text-gray-600 text-sm mt-2 font-inter leading-relaxed">{fullText}</p>
+            <p className="mt-4 text-sm font-medium italic text-gray-500">Click to flip back</p>
           </div>
         </motion.div>
       </motion.div>

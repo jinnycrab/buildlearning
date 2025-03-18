@@ -27,7 +27,7 @@ const WhoWeHelpSection = () => {
       title: "Individuals",
       subtitle: "Create passion projects",
       fullText: "Our 6-week program is designed to transform your ideas into a commercially viable digital product. Through hands-on learning and AI-driven design thinking, you'll incubate your ideas, refine your thought process, and launch your product into the market, all within six weeks.",
-      imageSrc: "/lovable-uploads/01d2284e-94af-48ff-b920-30ab6c6a6b4d.png", // Placeholder until user uploads individual image
+      imageSrc: "/lovable-uploads/01d2284e-94af-48ff-b920-30ab6c6a6b4d.png",
       cardColor: "bg-soft-green",
       rotation: 5,
       scale: 0.95
@@ -53,14 +53,14 @@ const WhoWeHelpSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-4 lg:gap-2 relative">
-          {/* We'll arrange the cards with slight overlap for desktop, and stacked for mobile */}
-          <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-start gap-16 md:gap-4">
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-8 lg:gap-12 relative">
+          {/* We'll arrange the cards with slight offset for desktop, and stacked for mobile */}
+          <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-center gap-16 md:gap-6">
             {audiences.map((audience, index) => (
               <div 
                 key={audience.title} 
-                className={`transform ${index === 0 ? 'md:translate-x-4 md:-translate-y-4' : ''} ${index === 2 ? 'md:-translate-x-4 md:-translate-y-4' : ''}`}
-                style={{ zIndex: 1 }} 
+                className={`transform md:mx-4 ${index === 0 ? 'md:-translate-y-4' : ''} ${index === 2 ? 'md:-translate-y-4' : ''}`}
+                style={{ zIndex: index === 1 ? 2 : 1 }}
               >
                 <PolaroidCard
                   title={audience.title}
