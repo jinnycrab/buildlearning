@@ -39,7 +39,7 @@ const Navigation = () => {
             }}
             className="absolute inset-0 rounded-full opacity-100"
           />
-          <nav className="relative rounded-full bg-white/80 backdrop-blur-md m-[1px] px-6 py-4 flex items-center justify-between transition-all duration-300 z-10">
+          <nav className="relative rounded-full bg-white/90 backdrop-blur-sm m-[1px] px-6 py-4 flex items-center justify-between transition-all duration-300 z-10">
             <Link to="/" className="flex items-center gap-3">
               <img 
                 src={BuildLogo}
