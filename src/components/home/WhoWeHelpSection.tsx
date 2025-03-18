@@ -60,7 +60,7 @@ const WhoWeHelpSection = () => {
               <div 
                 key={audience.title} 
                 className={`transform ${index === 0 ? 'md:translate-x-4 md:-translate-y-4' : ''} ${index === 2 ? 'md:-translate-x-4 md:-translate-y-4' : ''}`}
-                style={{ zIndex: 1 }} {/* Fixed: replaced function with static z-index */}
+                style={{ zIndex: 1 }} 
               >
                 <PolaroidCard
                   title={audience.title}
