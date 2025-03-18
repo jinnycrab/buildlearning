@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 const HeroSection = () => {
   return <section className="relative pt-40 md:pt-48 pb-32 overflow-hidden bg-white">
       <div className="container mx-auto px-4 relative">
@@ -69,12 +71,31 @@ const HeroSection = () => {
           duration: 0.6,
           delay: 0.6
         }}>
-            <motion.div whileHover={{
-            scale: 1.05
-          }} whileTap={{
-            scale: 0.95
-          }}>
-              <Button asChild className="bg-[#1f69ad] hover:bg-[#1f69ad]/90 text-white rounded-full py-7 px-8 text-lg flex items-center gap-2 shadow-lg shadow-[#1f69ad]/20">
+            <motion.div 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#E86642] via-[#4D88C4] to-[#8CC084] opacity-70 group-hover:opacity-100 blur-sm group-hover:blur transition-all duration-300"></div>
+              
+              <motion.div 
+                animate={{ 
+                  background: [
+                    'linear-gradient(90deg, #E86642 0%, #4D88C4 50%, #8CC084 100%)',
+                    'linear-gradient(90deg, #8CC084 0%, #E86642 50%, #4D88C4 100%)',
+                    'linear-gradient(90deg, #4D88C4 0%, #8CC084 50%, #E86642 100%)',
+                    'linear-gradient(90deg, #E86642 0%, #4D88C4 50%, #8CC084 100%)'
+                  ] 
+                }}
+                transition={{ 
+                  duration: 8, 
+                  repeat: Infinity,
+                  repeatType: "loop"
+                }}
+                className="absolute inset-0 rounded-full opacity-30 group-hover:opacity-50"
+              />
+              
+              <Button asChild className="relative px-8 py-7 text-lg rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-xl text-white font-medium hover:bg-white/20 transition-all duration-300 z-10">
                 <Link to="/camps">
                   Build Something Today!
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -86,4 +107,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
