@@ -25,9 +25,9 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/85ed0275-0f08-4b17-bc76-90fc15721483.png" 
               alt="Build Learning Logo" 
-              className="h-10 w-10"
+              className="h-14 w-14"
             />
-            <div className="flex flex-col leading-tight">
+            <div className="flex flex-col leading-none">
               <span className="font-codec text-lg font-bold text-primary">Build</span>
               <span className="font-codec text-lg font-bold text-primary">Learning</span>
             </div>
