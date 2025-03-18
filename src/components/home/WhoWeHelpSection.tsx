@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import PolaroidCard from './PolaroidCard';
@@ -34,7 +35,7 @@ const WhoWeHelpSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50/70 backdrop-blur-sm relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -74,9 +75,6 @@ const WhoWeHelpSection = () => {
           </div>
         </div>
       </div>
-      
-      <div className="absolute top-20 left-0 w-32 h-32 bg-brand-green/30 rounded-full blur-2xl -z-10 backdrop-blur-sm"></div>
-      <div className="absolute bottom-20 right-0 w-40 h-40 bg-brand-orange/30 rounded-full blur-2xl -z-10 backdrop-blur-sm"></div>
     </section>
   );
 };
