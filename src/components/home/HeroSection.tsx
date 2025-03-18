@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -7,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-24 md:pt-32 pb-20 overflow-hidden bg-[#f8eec4]">
+    <section className="relative pt-40 md:pt-48 pb-32 overflow-hidden bg-[#f8eec4]">
       <div className="container mx-auto px-4 relative">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
