@@ -3,30 +3,18 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 const HeroSection = () => {
-  return <section className="relative pt-40 md:pt-48 pb-32 overflow-hidden bg-white">
+  return (
+    <section className="relative pt-40 md:pt-48 pb-32 overflow-hidden bg-white">
       <div className="container mx-auto px-4 relative">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6
-      }} className="text-center max-w-4xl mx-auto">
-          <motion.h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8" style={{
-          fontFamily: 'Codec Pro, sans-serif'
-        }} initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.2
-        }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center max-w-4xl mx-auto">
+          <motion.h1 
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 font-codec"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <span className="text-gray-800">
               Build a Digital Product
             </span>
@@ -34,16 +22,12 @@ const HeroSection = () => {
             <span className="text-gray-800">in just 2 Hours</span>
           </motion.h1>
           
-          <motion.p className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto" style={{
-          fontFamily: 'Biome Light, sans-serif'
-        }} initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          duration: 0.6,
-          delay: 0.4
-        }}>
+          <motion.p 
+            className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto font-biome"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             Experience AI-powered design thinking and innovation 
             <span className="relative inline-block mx-2">
               <span className="relative z-10">in our 2-hour bootcamp</span>
@@ -84,6 +68,8 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
