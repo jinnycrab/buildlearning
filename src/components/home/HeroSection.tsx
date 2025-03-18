@@ -1,8 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -43,30 +40,6 @@ const HeroSection = () => {
             </span>
             and build something today.
           </motion.p>
-          
-          <motion.div className="flex justify-center" initial={{
-          opacity: 0,
-          y: 10
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.6
-        }}>
-            <motion.div whileHover={{
-            scale: 1.05
-          }} whileTap={{
-            scale: 0.95
-          }}>
-              <Button asChild className="bg-[#1f69ad] hover:bg-[#1f69ad]/90 text-white rounded-full py-7 px-8 text-lg flex items-center gap-2 shadow-lg shadow-[#1f69ad]/20">
-                <Link to="/camps">
-                  Build Something Today!
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </motion.div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
