@@ -21,8 +21,16 @@ const Navigation = () => {
     <header className={`fixed top-12 left-0 right-0 z-50 px-8 transition-all duration-300 ${isScrolled ? 'top-8' : ''}`}>
       <div className="max-w-6xl mx-auto">
         <nav className={`rounded-full border border-[#f05127] bg-white/80 backdrop-blur-md px-6 py-4 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-primary">Build Learning</span>
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src="/lovable-uploads/85ed0275-0f08-4b17-bc76-90fc15721483.png" 
+              alt="Build Learning Logo" 
+              className="h-10 w-10"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="font-codec text-lg font-bold text-primary">Build</span>
+              <span className="font-codec text-lg font-bold text-primary">Learning</span>
+            </div>
           </Link>
 
           {!isMobile && (
