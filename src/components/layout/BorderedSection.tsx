@@ -12,8 +12,13 @@ const BorderedSection: React.FC<BorderedSectionProps> = ({
   className = '', 
   backgroundColor = 'white' 
 }) => {
+  // Handle background color - either use the direct string or apply as a tailwind class
+  const bgColorClass = backgroundColor.startsWith('bg-') 
+    ? backgroundColor 
+    : `bg-[${backgroundColor}]`;
+
   return (
-    <div className={`border border-[#ffffff] rounded-3xl p-8 ${backgroundColor ? `bg-[${backgroundColor}]` : 'bg-white'} ${className}`}>
+    <div className={`border border-[#e5e7eb] rounded-3xl shadow-sm ${backgroundColor === 'white' ? 'bg-white' : bgColorClass} ${className}`}>
       {children}
     </div>
   );

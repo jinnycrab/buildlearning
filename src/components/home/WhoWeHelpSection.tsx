@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import BorderedSection from '../layout/BorderedSection';
 
 interface AudienceCardProps {
   title: string;
@@ -28,7 +29,7 @@ const AudienceCard: React.FC<AudienceCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.1 * index }}
       viewport={{ once: true }}
-      className="flex flex-col space-y-4"
+      className="flex flex-col space-y-4 bg-white p-6 rounded-xl shadow-sm"
     >
       <div className="flex items-start space-x-4">
         <div 
@@ -95,7 +96,7 @@ const WhoWeHelpSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -105,12 +106,44 @@ const WhoWeHelpSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold font-codec">
-            Who We Help?
+            Who We Help
           </h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto font-inter">
+            Our bootcamps are designed for various audiences, each with specific learning objectives and outcomes.
+          </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Left side: Image with stylized border */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <BorderedSection className="p-6 md:p-8 bg-white overflow-hidden">
+              <div className="relative rounded-xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/14cb6424-8530-4d5e-b32f-267908cb5ee3.png" 
+                  alt="Diverse group of people collaborating on design" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="text-lg font-medium font-codec">Collaborative Learning</h3>
+                <p className="text-sm text-muted-foreground font-inter">Building digital products together in our hands-on bootcamps</p>
+              </div>
+            </BorderedSection>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-5 -left-5 w-20 h-20 bg-brand-yellow/20 rounded-full -z-10"></div>
+            <div className="absolute -bottom-5 -right-5 w-16 h-16 bg-brand-blue/20 rounded-full -z-10"></div>
+          </motion.div>
+          
+          {/* Right side: Audience cards */}
+          <div className="space-y-6">
             {audiences.map((audience, index) => (
               <AudienceCard
                 key={audience.title}
@@ -124,6 +157,10 @@ const WhoWeHelpSection = () => {
           </div>
         </div>
       </div>
+      
+      {/* Background decorative elements */}
+      <div className="absolute top-20 left-0 w-32 h-32 bg-brand-green/10 rounded-full blur-2xl -z-10"></div>
+      <div className="absolute bottom-20 right-0 w-40 h-40 bg-brand-orange/10 rounded-full blur-2xl -z-10"></div>
     </section>
   );
 };
