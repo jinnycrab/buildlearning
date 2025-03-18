@@ -76,15 +76,15 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
               className="relative group"
             >
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#E86642] via-[#4D88C4] to-[#8CC084] opacity-70 group-hover:opacity-100 blur-sm group-hover:blur transition-all duration-300"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#f05127] via-[#1f69ad] to-[#93ce98] opacity-80 group-hover:opacity-100 blur-sm group-hover:blur transition-all duration-300"></div>
               
               <motion.div 
                 animate={{ 
                   background: [
-                    'linear-gradient(90deg, #E86642 0%, #4D88C4 50%, #8CC084 100%)',
-                    'linear-gradient(90deg, #8CC084 0%, #E86642 50%, #4D88C4 100%)',
-                    'linear-gradient(90deg, #4D88C4 0%, #8CC084 50%, #E86642 100%)',
-                    'linear-gradient(90deg, #E86642 0%, #4D88C4 50%, #8CC084 100%)'
+                    'linear-gradient(90deg, #f05127 0%, #1f69ad 50%, #93ce98 100%)',
+                    'linear-gradient(90deg, #93ce98 0%, #f9c131 50%, #f05127 100%)',
+                    'linear-gradient(90deg, #1f69ad 0%, #93ce98 50%, #f9c131 100%)',
+                    'linear-gradient(90deg, #f05127 0%, #1f69ad 50%, #93ce98 100%)'
                   ] 
                 }}
                 transition={{ 
@@ -92,7 +92,7 @@ const HeroSection = () => {
                   repeat: Infinity,
                   repeatType: "loop"
                 }}
-                className="absolute inset-0 rounded-full opacity-30 group-hover:opacity-50"
+                className="absolute inset-0 rounded-full opacity-40 group-hover:opacity-60"
               />
               
               <Button asChild className="relative px-8 py-7 text-lg rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-xl text-white font-medium hover:bg-white/20 transition-all duration-300 z-10">
