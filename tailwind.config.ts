@@ -35,6 +35,15 @@ export default {
         "brand-yellow": "#F4D365", // Brand color (yellow)
         "brand-blue": "#4D88C4", // Dominant brand color (blue)
         "brand-cream": "#F9F3E3", // Brand color (cream)
+        // Soft colors for polaroid cards
+        "soft-green": "#F2FCE2",
+        "soft-yellow": "#FEF7CD",
+        "soft-orange": "#FDE1D3",
+        "soft-purple": "#E5DEFF",
+        "soft-pink": "#FFDEE2",
+        "soft-peach": "#FDE1D3",
+        "soft-blue": "#D3E4FD",
+        "soft-gray": "#F1F0FB",
         primary: {
           DEFAULT: "#2A2B2E",
           foreground: "#F5F3F0",

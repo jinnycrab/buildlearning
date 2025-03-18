@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -100,8 +101,19 @@ body:not(:hover)::-webkit-scrollbar-thumb {
   font-family: 'Inter', sans-serif;
 }
 
+/* 3D Card Flip Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
