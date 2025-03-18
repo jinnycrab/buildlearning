@@ -92,10 +92,10 @@ const HeroSection = () => {
                   repeat: Infinity,
                   repeatType: "loop"
                 }}
-                className="absolute inset-0 rounded-full opacity-40 group-hover:opacity-60"
+                className="absolute inset-0 rounded-full opacity-70"
               />
               
-              <Button asChild className="relative px-8 py-7 text-lg rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-xl text-white font-medium hover:bg-white/20 transition-all duration-300 z-10">
+              <Button asChild className="relative px-8 py-7 text-lg rounded-full bg-transparent hover:bg-white/10 transition-all duration-300 z-10 text-white font-medium">
                 <Link to="/camps">
                   Build Something Today!
                   <ArrowRight className="ml-2 h-5 w-5" />
