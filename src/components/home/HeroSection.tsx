@@ -6,7 +6,16 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
-  return <section className="relative pt-40 md:pt-48 pb-32 overflow-hidden bg-white">
+  return (
+    <section className="relative pt-40 md:pt-48 pb-32 overflow-hidden">
+      {/* Vignette overlay for hero section */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-gray-100 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/50 pointer-events-none"></div>
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white via-white to-transparent pointer-events-none"></div>
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-gray-100 via-gray-100/90 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white via-white to-transparent pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-r from-transparent via-white to-white pointer-events-none"></div>
+      
       <div className="container mx-auto px-4 relative">
         <motion.div initial={{
         opacity: 0,
@@ -105,6 +114,9 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </div>
+      
+      {/* Divider with gentle shadow to separate hero from content */}
+      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-100 to-transparent"></div>
     </section>;
 };
 
