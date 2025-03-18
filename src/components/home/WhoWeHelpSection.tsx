@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import PolaroidCard from './PolaroidCard';
@@ -9,7 +8,7 @@ const WhoWeHelpSection = () => {
       title: "Schools",
       subtitle: "Learn design thinking",
       fullText: "Our sessions are designed to be practical, engaging, and free from unnecessary theory. Every student will leave with a working prototype, embodying the principles of hands-on learning. We strongly support the vision of Design Education 2050, believing that integrating AI-powered design thinking and innovation is crucial for equipping students with future-ready skills.",
-      imageSrc: "/lovable-uploads/f49c814b-acb6-403c-8ee0-73f465d15ac1.png",
+      imageSrc: "/lovable-uploads/7ba12e5d-51c8-49d7-aae1-e3e777c9b377.png",
       cardColor: "#93ce98",
       rotation: -5,
       scale: 1
@@ -18,7 +17,7 @@ const WhoWeHelpSection = () => {
       title: "Corporates",
       subtitle: "Build innovative culture",
       fullText: "Our corporate workshops are designed to foster a culture of innovation and creative problem-solving. Every participant will leave with a working prototype and a deeper understanding of how to harness AI for strategic advantage. We believe that integrating AI-powered design thinking is essential for driving business innovation and equipping teams with the skills to thrive in a rapidly evolving market.",
-      imageSrc: "/lovable-uploads/f6ea3be9-e3fd-468e-bf04-ba4cb89616ef.png", 
+      imageSrc: "/lovable-uploads/be72d76d-d1ab-473a-99a8-66f5ee0e4c9f.png", 
       cardColor: "#f9c131",
       rotation: 0,
       scale: 1
@@ -76,7 +75,6 @@ const WhoWeHelpSection = () => {
         </div>
       </div>
       
-      {/* Background decorative elements with glassmorphism */}
       <div className="absolute top-20 left-0 w-32 h-32 bg-brand-green/30 rounded-full blur-2xl -z-10 backdrop-blur-sm"></div>
       <div className="absolute bottom-20 right-0 w-40 h-40 bg-brand-orange/30 rounded-full blur-2xl -z-10 backdrop-blur-sm"></div>
     </section>
