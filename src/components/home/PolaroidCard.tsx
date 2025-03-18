@@ -27,6 +27,9 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
     setIsFlipped(!isFlipped);
   };
 
+  // Convert the fullText to bullet points
+  const textPoints = fullText.split('. ').filter(point => point.trim().length > 0);
+
   return (
     <motion.div
       className="relative perspective-1000 cursor-pointer hover:z-10"
@@ -37,8 +40,8 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
       style={{ 
         transform: `rotate(${rotation}deg)`, 
         transformStyle: 'preserve-3d',
-        width: '320px',
-        height: '440px'
+        width: '360px',
+        height: '480px'
       }}
       whileHover={{ scale: scale * 1.05, transition: { duration: 0.3 } }}
     >
@@ -80,7 +83,7 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
           </div>
         </motion.div>
 
-        {/* Back of card (Content) */}
+        {/* Back of card (Content) - Now with bullet points */}
         <motion.div
           className="absolute w-full h-full p-5 rounded-xl shadow-lg backface-hidden flex flex-col justify-center items-center"
           style={{ 
@@ -96,7 +99,11 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
           }}
         >
           <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-inner h-full w-full flex flex-col justify-center border border-white/50">
-            <p className="text-gray-700 font-inter text-lg leading-relaxed overflow-y-auto max-h-full">{fullText}</p>
+            <ul className="text-gray-700 font-inter text-md leading-relaxed overflow-y-auto max-h-full list-disc pl-6 space-y-2">
+              {textPoints.map((point, index) => (
+                <li key={index}>{point.trim()}</li>
+              ))}
+            </ul>
           </div>
         </motion.div>
       </motion.div>
