@@ -9,17 +9,17 @@ const WhoWeHelpSection = () => {
       title: "Schools",
       subtitle: "Learn design thinking",
       fullText: "Our sessions are designed to be practical, engaging, and free from unnecessary theory. Every student will leave with a working prototype, embodying the principles of hands-on learning. We strongly support the vision of Design Education 2050, believing that integrating AI-powered design thinking and innovation is crucial for equipping students with future-ready skills.",
-      imageSrc: "/lovable-uploads/166bd9fc-ab3f-4f68-ab8d-af3416372b44.png",
-      cardColor: "bg-soft-blue",
+      imageSrc: "/lovable-uploads/f49c814b-acb6-403c-8ee0-73f465d15ac1.png",
+      cardColor: "#93ce98",
       rotation: -5,
-      scale: 0.95
+      scale: 1
     },
     {
       title: "Corporates",
       subtitle: "Build innovative culture",
       fullText: "Our corporate workshops are designed to foster a culture of innovation and creative problem-solving. Every participant will leave with a working prototype and a deeper understanding of how to harness AI for strategic advantage. We believe that integrating AI-powered design thinking is essential for driving business innovation and equipping teams with the skills to thrive in a rapidly evolving market.",
-      imageSrc: "/lovable-uploads/14cb6424-8530-4d5e-b32f-267908cb5ee3.png", 
-      cardColor: "bg-soft-orange",
+      imageSrc: "/lovable-uploads/f6ea3be9-e3fd-468e-bf04-ba4cb89616ef.png", 
+      cardColor: "#f9c131",
       rotation: 0,
       scale: 1
     },
@@ -27,10 +27,10 @@ const WhoWeHelpSection = () => {
       title: "Individuals",
       subtitle: "Create passion projects",
       fullText: "Our 6-week program is designed to transform your ideas into a commercially viable digital product. Through hands-on learning and AI-driven design thinking, you'll incubate your ideas, refine your thought process, and launch your product into the market, all within six weeks.",
-      imageSrc: "/lovable-uploads/01d2284e-94af-48ff-b920-30ab6c6a6b4d.png",
-      cardColor: "bg-soft-green",
+      imageSrc: "/lovable-uploads/41bfc7cb-f220-406f-ba54-b1cb14db41ba.png",
+      cardColor: "#1f69ad",
       rotation: 5,
-      scale: 0.95
+      scale: 1
     }
   ];
 
@@ -54,7 +54,6 @@ const WhoWeHelpSection = () => {
         </motion.div>
 
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-8 lg:gap-12 relative">
-          {/* We'll arrange the cards with slight offset for desktop, and stacked for mobile */}
           <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-center gap-16 md:gap-6">
             {audiences.map((audience, index) => (
               <div 

@@ -51,8 +51,9 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
       >
         {/* Front of card (Polaroid style) */}
         <motion.div
-          className={`absolute w-full h-full rounded-xl shadow-lg p-4 ${cardColor} backface-hidden`}
+          className="absolute w-full h-full rounded-xl shadow-lg p-4 backface-hidden"
           style={{ 
+            backgroundColor: cardColor,
             backfaceVisibility: 'hidden',
             willChange: 'transform',
             overflow: 'hidden'
@@ -77,8 +78,9 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
 
         {/* Back of card (Content) */}
         <motion.div
-          className={`absolute w-full h-full p-5 rounded-xl shadow-lg ${cardColor} backface-hidden flex flex-col justify-center items-center text-center`}
+          className="absolute w-full h-full p-5 rounded-xl shadow-lg backface-hidden flex flex-col justify-center items-center"
           style={{ 
+            backgroundColor: cardColor,
             backfaceVisibility: 'hidden',
             willChange: 'transform',
             transform: 'rotateY(180deg)',
@@ -86,10 +88,7 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
           }}
         >
           <div className="bg-white/90 p-6 rounded-lg shadow-inner h-full w-full flex flex-col justify-center">
-            <h3 className="text-xl font-bold mb-3 font-codec text-gray-800">{title}</h3>
-            <p className="text-md mb-2 font-inter text-gray-700">{subtitle}</p>
-            <p className="text-gray-600 text-sm mt-2 font-inter leading-relaxed">{fullText}</p>
-            <p className="mt-4 text-sm font-medium italic text-gray-500">Click to flip back</p>
+            <p className="text-gray-700 font-inter leading-relaxed overflow-y-auto max-h-full">{fullText}</p>
           </div>
         </motion.div>
       </motion.div>
