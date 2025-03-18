@@ -13,7 +13,7 @@ const BorderedSection: React.FC<BorderedSectionProps> = ({
   backgroundColor = 'white' 
 }) => {
   return (
-    <div className={`border border-[#ffffff] rounded-3xl p-8 ${className}`} style={{ backgroundColor }}>
+    <div className={`border border-[#ffffff] rounded-3xl p-8 ${backgroundColor ? `bg-[${backgroundColor}]` : 'bg-white'} ${className}`}>
       {children}
     </div>
   );
