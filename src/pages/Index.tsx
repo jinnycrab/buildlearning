@@ -24,10 +24,10 @@ const Index = () => {
       
       <main>
         <HeroSection />
+        <WhoWeHelpSection />
         <BenefitsSection />
         <SupervatorSection />
         <FacilitatorsSection />
-        <WhoWeHelpSection />
         <div id="contact">
           <ContactSection />
         </div>
