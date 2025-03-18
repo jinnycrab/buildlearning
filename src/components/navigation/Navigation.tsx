@@ -63,7 +63,7 @@ const Navigation = () => {
                 <Link to="/individuals" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Individuals
                 </Link>
-                <Button className="bg-[#f05127] hover:bg-[#f05127]/90 text-white rounded-full">
+                <Button className="bg-black hover:bg-black/90 text-white rounded-full">
                   Let's Chat
                 </Button>
               </div>
