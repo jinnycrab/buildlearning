@@ -24,7 +24,23 @@ const Index = () => {
       
       <main>
         {/* Hero section with its own vignette effect */}
-        <HeroSection />
+        <div className="relative bg-black rounded-3xl mx-4 mb-16 overflow-hidden shadow-2xl">
+          {/* Colorful decorative elements at the top of the vignette */}
+          <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-[#f05127] via-[#1f69ad] to-[#93ce98]"></div>
+          
+          <HeroSection />
+          
+          {/* Colorful decorative elements at the bottom of the vignette */}
+          <div className="absolute bottom-0 left-0 right-0">
+            <div className="h-8 w-full overflow-hidden">
+              <img 
+                src="/lovable-uploads/52e522f2-090c-49bd-ab84-02660115f853.png" 
+                alt="Colorful blocks" 
+                className="w-full object-cover" 
+              />
+            </div>
+          </div>
+        </div>
         
         {/* Content sections with a separate vignette */}
         <div className="relative bg-black rounded-3xl mx-4 overflow-hidden shadow-2xl">
