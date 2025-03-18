@@ -53,8 +53,8 @@ const WhoWeHelpSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-8 lg:gap-12 relative">
-          <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-center gap-16 md:gap-6">
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-12 lg:gap-16 relative">
+          <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-center gap-16 md:gap-8">
             {audiences.map((audience, index) => (
               <div 
                 key={audience.title} 

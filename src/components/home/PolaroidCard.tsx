@@ -37,8 +37,8 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
       style={{ 
         transform: `rotate(${rotation}deg)`, 
         transformStyle: 'preserve-3d',
-        width: '280px',
-        height: '380px'
+        width: '320px',
+        height: '440px'
       }}
       whileHover={{ scale: scale * 1.05, transition: { duration: 0.3 } }}
     >
@@ -75,8 +75,8 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
             />
           </div>
           <div className="text-center">
-            <h3 className="text-xl font-bold font-codec text-gray-800 drop-shadow-sm">{title}</h3>
-            <p className="font-inter text-sm font-medium text-gray-700">{subtitle}</p>
+            <h3 className="text-2xl font-bold font-codec text-gray-800 drop-shadow-sm">{title}</h3>
+            <p className="font-inter text-base font-medium text-gray-700">{subtitle}</p>
           </div>
         </motion.div>
 
@@ -96,7 +96,7 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
           }}
         >
           <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-inner h-full w-full flex flex-col justify-center border border-white/50">
-            <p className="text-gray-700 font-inter leading-relaxed overflow-y-auto max-h-full">{fullText}</p>
+            <p className="text-gray-700 font-inter text-lg leading-relaxed overflow-y-auto max-h-full">{fullText}</p>
           </div>
         </motion.div>
       </motion.div>
