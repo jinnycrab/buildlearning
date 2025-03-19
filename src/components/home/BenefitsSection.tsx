@@ -7,7 +7,7 @@ const features = [
   {
     id: 'pedagogy',
     title: 'Pedagogy',
-    description: "We'll fill this in later with specific information about our pedagogical approach and what makes it different.",
+    description: "While many other providers stop at theory, we have a money-back guarantee that you will learn the fundamentals of user research, innovation, with a working digital prototype to show at the end of 2 hours",
     icon: Lightbulb,
     color: '#93ce98', // green
     image: '/lovable-uploads/65a81c1d-edd1-4bd3-b653-af5bee0bc5c1.png' // Placeholder image, replace with actual image
@@ -15,7 +15,7 @@ const features = [
   {
     id: 'technology',
     title: 'Technology',
-    description: "We'll update this with information about the technology we use and how it enhances the learning experience.",
+    description: "We developed an in-house EdTech that is your innovation co-pilot, guiding you through the research-to-innovation process with personalized aids and inspiration",
     icon: Cpu,
     color: '#f9c131', // yellow
     image: '/lovable-uploads/65a81c1d-edd1-4bd3-b653-af5bee0bc5c1.png' // Placeholder image, replace with actual image
@@ -23,7 +23,7 @@ const features = [
   {
     id: 'people',
     title: 'People',
-    description: "We'll add details about our team and what makes them uniquely qualified to deliver our programs.",
+    description: "We have built a network of young and talented design thinkers and innovators, ready to inspire you with their experience in industry",
     icon: Users, 
     color: '#1f69ad', // blue
     image: '/lovable-uploads/65a81c1d-edd1-4bd3-b653-af5bee0bc5c1.png' // Placeholder image, replace with actual image
