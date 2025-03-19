@@ -9,7 +9,7 @@ const features = [
     title: 'Pedagogy',
     description: "While many other providers stop at theory, we have a money-back guarantee that you will learn the fundamentals of user research, innovation, with a working digital prototype to show at the end of 2 hours",
     color: '#93ce98', // green
-    image: '/lovable-uploads/65a81c1d-edd1-4bd3-b653-af5bee0bc5c1.png' // Placeholder image, replace with actual image
+    image: '/lovable-uploads/6f0c084a-3ea7-403b-8daa-65c6aeeec790.png' // Updated image for pedagogy
   },
   {
     id: 'technology',
