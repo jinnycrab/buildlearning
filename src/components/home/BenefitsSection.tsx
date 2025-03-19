@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
@@ -8,7 +9,7 @@ const features = [
     title: 'Pedagogy',
     description: "While many other providers stop at theory, we have a money-back guarantee that you will learn the fundamentals of user research, innovation, with a working digital prototype to show at the end of 2 hours",
     color: '#93ce98', // green
-    image: '/lovable-uploads/85ed0275-0f08-4b17-bc76-90fc15721483.png' // Updated image path for pedagogy
+    image: '/lovable-uploads/9fdfc800-6908-4f46-8f80-5081d31c7f50.png' // Updated image path for pedagogy
   },
   {
     id: 'technology',
