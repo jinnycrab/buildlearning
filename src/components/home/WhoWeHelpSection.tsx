@@ -27,7 +27,7 @@ const WhoWeHelpSection = () => {
     rotation: 5,
     scale: 1
   }];
-  return <section className="py-24 relative overflow-hidden bg-stone-50">
+  return <section className="py-24 relative overflow-hidden bg-white">
       <div className="container mx-auto px-4">
         <motion.div initial={{
         opacity: 0,
