@@ -1,68 +1,46 @@
-
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { X } from 'lucide-react';
+import BorderedSection from '../layout/BorderedSection';
+import { Lightbulb, Cpu, Users } from 'lucide-react';
 
-interface BenefitProps {
-  conventional: string;
-  innovative: string;
-  delay: number;
-}
-
-const BenefitItem = ({
-  conventional,
-  innovative,
-  delay
-}: BenefitProps) => {
-  const itemRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(itemRef, {
+// Feature card component for the three categories
+const FeatureCard = ({ 
+  title, 
+  description, 
+  icon: Icon,
+  delay = 0 
+}: { 
+  title: string; 
+  description: string; 
+  icon: React.ElementType;
+  delay?: number;
+}) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(cardRef, {
     once: true,
-    amount: 0.5
+    amount: 0.3,
   });
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (isInView) {
-      const timer = setTimeout(() => {
-        setRevealed(true);
-      }, delay);
-      return () => clearTimeout(timer);
-    }
-  }, [isInView, delay]);
 
   return (
-    <div ref={itemRef} className="mb-14 relative">
-      <div className="relative">
-        {/* Conventional approach (speech bubble) */}
-        <div className={`relative bg-white border border-gray-200 p-5 rounded-lg mb-6 shadow-sm 
-          ${revealed ? 'opacity-50' : 'opacity-100'} transition-opacity duration-500`}>
-          <div className="absolute -bottom-3 left-5 w-4 h-4 bg-white border-b border-r border-gray-200 transform rotate-45"></div>
-          <p className="font-codec text-lg text-gray-800">
-            {conventional}
-            {revealed && <span className="absolute inset-0 flex items-center justify-center">
-                {/* Chalk-like crossing out effect */}
-                <svg className="absolute w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                  <path d="M10,45 C20,50 30,40 40,50 C50,60 60,40 70,50 C80,60 90,45 95,55" className="stroke-brand-orange animate-fade-in" strokeWidth="4" strokeLinecap="round" fill="none" style={{
-                strokeDasharray: '120',
-                strokeDashoffset: '120',
-                animation: 'chalk-dash 1.5s ease forwards'
-              }} />
-                </svg>
-                
-                <X className="text-brand-orange w-8 h-8 animate-fade-in opacity-70" style={{
-              filter: 'drop-shadow(0px 0px 1px rgba(232, 102, 66, 0.5))'
-            }} />
-              </span>}
-          </p>
+    <div 
+      ref={cardRef}
+      className={`transform transition-all duration-700 delay-${delay} ease-out
+        ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+    >
+      <BorderedSection className="h-full p-8 hover:shadow-md transition-shadow duration-300">
+        <div className="flex flex-col h-full">
+          <div className="mb-6 flex items-center">
+            <div className="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center mr-4">
+              <Icon className="w-6 h-6 text-gray-800" />
+            </div>
+            <h3 className="text-2xl font-bold font-codec text-gray-800">{title}</h3>
+          </div>
+          
+          <div className="font-inter text-gray-700 flex-grow">
+            {description}
+          </div>
         </div>
-
-        {/* Our innovative approach */}
-        <div className={`bg-white border border-brand-green p-5 rounded-lg ml-8 
-            transform transition-all duration-700 ease-out
-            ${revealed ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <p className="font-biome text-lg text-gray-800">{innovative}</p>
-        </div>
-      </div>
+      </BorderedSection>
     </div>
   );
 };
@@ -74,56 +52,38 @@ const BenefitsSection = () => {
     amount: 0.1
   });
 
-  // Add keyframes to document head
-  useEffect(() => {
-    // Create a style element
-    const styleEl = document.createElement('style');
-
-    // Add the keyframes CSS
-    styleEl.innerHTML = `
-      @keyframes chalk-dash {
-        to {
-          stroke-dashoffset: 0;
-        }
-      }
-    `;
-
-    // Append to the document head
-    document.head.appendChild(styleEl);
-
-    // Clean up when component unmounts
-    return () => {
-      document.head.removeChild(styleEl);
-    };
-  }, []);
-
   return (
-    <section className="py-20 relative overflow-hidden bg-white" ref={sectionRef}>
-      <div className="container mx-auto px-4">
-        <h2 className={`text-3xl md:text-4xl font-bold mb-12 text-center transform transition-all duration-700 ease-out
-            ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{
-          fontFamily: 'Codec Pro, sans-serif'
-        }}>
-          Others teach theory, we put them into practice
+    <section className="py-24 relative overflow-hidden" ref={sectionRef}>
+      {/* Glassmorphic background with gradient flow similar to WhoWeHelpSection */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#5d5b4d]/20 to-white/90 backdrop-blur-[2px] z-0"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className={`text-3xl md:text-4xl font-bold mb-16 text-center transform transition-all duration-700 ease-out
+            ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            style={{ fontFamily: 'Codec Pro, sans-serif' }}>
+          What makes us different?
         </h2>
 
-        <div className="max-w-3xl mx-auto">
-          <BenefitItem 
-            conventional="Empathy is important" 
-            innovative="We teach you the craft of writing interview questions and recruiting respondents, so you can truly empathize with your users." 
-            delay={500} 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FeatureCard 
+            title="Pedagogy" 
+            description="We'll fill this in later with specific information about our pedagogical approach and what makes it different."
+            icon={Lightbulb}
+            delay={100}
           />
           
-          <BenefitItem 
-            conventional="Iteration and Ideation is about the divergent process" 
-            innovative="Our educational tool developed in-house personalizes your ideation and iteration process, helping you innovate more effectively." 
-            delay={1000} 
+          <FeatureCard 
+            title="Technology" 
+            description="We'll update this with information about the technology we use and how it enhances the learning experience."
+            icon={Cpu}
+            delay={200}
           />
           
-          <BenefitItem 
-            conventional="Prototype so that you can get feedback" 
-            innovative="We teach you how to create and demo real app prototypes in just 90 minutes, completing the design thinking loop." 
-            delay={1500} 
+          <FeatureCard 
+            title="People" 
+            description="We'll add details about our team and what makes them uniquely qualified to deliver our programs."
+            icon={Users}
+            delay={300}
           />
         </div>
       </div>
