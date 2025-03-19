@@ -1,6 +1,6 @@
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Lightbulb, Cpu, Users } from 'lucide-react';
 
 // Feature data
 const features = [
@@ -8,7 +8,6 @@ const features = [
     id: 'pedagogy',
     title: 'Pedagogy',
     description: "While many other providers stop at theory, we have a money-back guarantee that you will learn the fundamentals of user research, innovation, with a working digital prototype to show at the end of 2 hours",
-    icon: Lightbulb,
     color: '#93ce98', // green
     image: '/lovable-uploads/65a81c1d-edd1-4bd3-b653-af5bee0bc5c1.png' // Placeholder image, replace with actual image
   },
@@ -16,7 +15,6 @@ const features = [
     id: 'technology',
     title: 'Technology',
     description: "We developed an in-house EdTech that is your innovation co-pilot, guiding you through the research-to-innovation process with personalized aids and inspiration",
-    icon: Cpu,
     color: '#f9c131', // yellow
     image: '/lovable-uploads/65a81c1d-edd1-4bd3-b653-af5bee0bc5c1.png' // Placeholder image, replace with actual image
   },
@@ -24,7 +22,6 @@ const features = [
     id: 'people',
     title: 'People',
     description: "We have built a network of young and talented design thinkers and innovators, ready to inspire you with their experience in industry",
-    icon: Users, 
     color: '#1f69ad', // blue
     image: '/lovable-uploads/65a81c1d-edd1-4bd3-b653-af5bee0bc5c1.png' // Placeholder image, replace with actual image
   }
@@ -85,11 +82,7 @@ const BenefitsSection = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="w-full lg:w-1/2"
               >
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4"
-                    style={{ backgroundColor: `${feature.color}30` }}>
-                    <feature.icon className="w-6 h-6 text-gray-800" />
-                  </div>
+                <div className="mb-6">
                   <h3 className="text-3xl font-bold font-codec text-gray-800">{feature.title}</h3>
                 </div>
                 
