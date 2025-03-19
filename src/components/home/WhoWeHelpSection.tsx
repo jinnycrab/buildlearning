@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import PolaroidCard from './PolaroidCard';
-
 const WhoWeHelpSection = () => {
   const audiences = [{
     title: "Schools",
@@ -29,57 +27,19 @@ const WhoWeHelpSection = () => {
     rotation: 5,
     scale: 1
   }];
-  
-  return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Glassmorphic background with flowing gradient */}
-      <div className="absolute inset-0 -z-10">
-        <div 
-          className="absolute inset-0 w-full h-full backdrop-blur-[100px]"
-          style={{
-            background: `radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(93, 91, 77, 0.7) 100%)`,
-          }}
-        />
-        <div className="absolute h-full w-full overflow-hidden">
-          <motion.div
-            className="absolute w-[150%] h-[150%] -left-[25%] -top-[25%] opacity-40"
-            animate={{
-              backgroundPosition: ['0% 0%', '100% 100%'],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut',
-            }}
-            style={{
-              backgroundImage: `linear-gradient(45deg, #5d5b4d 0%, rgba(255, 255, 255, 0.8) 25%, #5d5b4d 50%, rgba(255, 255, 255, 0.8) 75%, #5d5b4d 100%)`,
-              backgroundSize: '400% 400%',
-              filter: 'blur(60px)',
-            }}
-          />
-        </div>
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          initial={{
-            opacity: 0,
-            y: 20
-          }} 
-          whileInView={{
-            opacity: 1,
-            y: 0
-          }} 
-          transition={{
-            duration: 0.5
-          }} 
-          viewport={{
-            once: true
-          }} 
-          className="text-center mb-16"
-        >
+  return <section className="py-24 relative overflow-hidden bg-stone-50">
+      <div className="container mx-auto px-4">
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.5
+      }} viewport={{
+        once: true
+      }} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-codec">
             Who We Help
           </h2>
@@ -91,30 +51,14 @@ const WhoWeHelpSection = () => {
 
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-12 lg:gap-16 relative">
           <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-center gap-16 md:gap-8">
-            {audiences.map((audience, index) => (
-              <div 
-                key={audience.title} 
-                className={`transform md:mx-4 ${index === 0 ? 'md:-translate-y-4' : ''} ${index === 2 ? 'md:-translate-y-4' : ''}`} 
-                style={{
-                  zIndex: index === 1 ? 2 : 1
-                }}
-              >
-                <PolaroidCard 
-                  title={audience.title} 
-                  subtitle={audience.subtitle} 
-                  fullText={audience.fullText} 
-                  imageSrc={audience.imageSrc} 
-                  cardColor={audience.cardColor} 
-                  rotation={audience.rotation} 
-                  scale={audience.scale} 
-                />
-              </div>
-            ))}
+            {audiences.map((audience, index) => <div key={audience.title} className={`transform md:mx-4 ${index === 0 ? 'md:-translate-y-4' : ''} ${index === 2 ? 'md:-translate-y-4' : ''}`} style={{
+            zIndex: index === 1 ? 2 : 1
+          }}>
+                <PolaroidCard title={audience.title} subtitle={audience.subtitle} fullText={audience.fullText} imageSrc={audience.imageSrc} cardColor={audience.cardColor} rotation={audience.rotation} scale={audience.scale} />
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhoWeHelpSection;
